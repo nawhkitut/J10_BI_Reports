@@ -1,0 +1,37 @@
+.box {
+    padding: 3px 3px;
+  }
+  html,
+  body {
+    font-size: 0.09rem;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+  }
+  .header {
+    grid-column: span 12;
+    display: flex;
+    align-content: center;
+    font-weight: bold;
+    padding: 10px;
+    font-size: 1.3vw !important; 
+    font-family: 'Open Sans'
+  }
+
+  .header .jkr {
+    width: 3vw
+  }
+  .header .j10 {
+    width: 4vw
+  }
+  .navigation-menu {
+    grid-column: span 4;
+  }
+  .main-content {
+    grid-column: span 8;
+  }
+  .footer {
+    grid-column: span 12;
+  }
