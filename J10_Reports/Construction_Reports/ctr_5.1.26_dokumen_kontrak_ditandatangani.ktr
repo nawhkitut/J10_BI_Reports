@@ -9235,9 +9235,7 @@ from project pro, activity act
 
 left join activitycodeassignment acs 
 
-on (act.objectid=acs.ACTIVITYOBJECTID 
-
-and act.PROJECTOBJECTID=acs.PROJECTOBJECTID)
+on (act.objectid=acs.ACTIVITYOBJECTID and act.PROJECTOBJECTID=acs.PROJECTOBJECTID)
 
 where pro.objectid=act.projectobjectid</sql>
     <limit>0</limit>
@@ -9672,7 +9670,7 @@ where pro.objectid=act.projectobjectid</sql>
     </remotesteps>
     <GUI>
       <xloc>400</xloc>
-      <yloc>880</yloc>
+      <yloc>864</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
