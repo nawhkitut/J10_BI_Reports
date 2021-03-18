@@ -974,17 +974,17 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>PEROLEHAN</from>
-      <to>JENIS</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>JENIS</from>
       <to>RMK_Name 2</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
       <from>JENIS_PROJEK</from>
+      <to>JENIS</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>PEROLEHAN</from>
       <to>JENIS</to>
       <enabled>Y</enabled>
     </hop>
@@ -2154,10 +2154,10 @@ COUNT ( CASE WHEN
         <field>PROJECT_ID</field>
       </key>
       <value>
-        <name>PROJECT_ID</name>
-        <rename>PROJECT_ID</rename>
+        <name>J10_KOS_PRJ_SEMASA</name>
+        <rename>J10_KOS_PRJ_SEMASA</rename>
         <default/>
-        <type>Integer</type>
+        <type>BigNumber</type>
       </value>
       <value>
         <name>J10_PL_TAJUK_PROGRAM</name>
@@ -2180,6 +2180,24 @@ COUNT ( CASE WHEN
       <value>
         <name>J10_PL_JENISKONTRAK_PD</name>
         <rename>J10_PL_JENISKONTRAK_PD</rename>
+        <default/>
+        <type>String</type>
+      </value>
+      <value>
+        <name>J10_PL_KATEGORI_IBS</name>
+        <rename>J10_PL_KATEGORI_IBS</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+      <value>
+        <name>J10_PL_KATEGORI_PERBELANTXT</name>
+        <rename>J10_PL_KATEGORI_PERBELANTXT</rename>
+        <default/>
+        <type>String</type>
+      </value>
+      <value>
+        <name>J10_PL_KLASIFIKASI_SDT</name>
+        <rename>J10_PL_KLASIFIKASI_SDT</rename>
         <default/>
         <type>String</type>
       </value>
@@ -2214,76 +2232,16 @@ COUNT ( CASE WHEN
         <type>Timestamp</type>
       </value>
       <value>
-        <name>J10_PL_KLASIFIKASI_SDT</name>
-        <rename>J10_PL_KLASIFIKASI_SDT</rename>
-        <default/>
-        <type>None</type>
-      </value>
-      <value>
-        <name>J10_PL_KATEGORI_IBS</name>
-        <rename>J10_PL_KATEGORI_IBS</rename>
-        <default/>
-        <type>None</type>
-      </value>
-      <value>
-        <name>J10_PL_KATEGORI_PERBELANTXT</name>
-        <rename>J10_PL_KATEGORI_PERBELANTXT</rename>
-        <default/>
-        <type>None</type>
-      </value>
-      <value>
         <name>J10_PL_DAERAH_PD</name>
         <rename>J10_PL_DAERAH_PD</rename>
         <default/>
-        <type>None</type>
+        <type>String</type>
       </value>
       <value>
         <name>UNIFIER_URL</name>
         <rename>UNIFIER_URL</rename>
         <default/>
-        <type>None</type>
-      </value>
-      <value>
-        <name>J10_PL_Kos_projek</name>
-        <rename>J10_PL_Kos_projek</rename>
-        <default/>
-        <type>None</type>
-      </value>
-      <value>
-        <name>projeck_siap</name>
-        <rename>projeck_siap</rename>
-        <default/>
-        <type>Integer</type>
-      </value>
-      <value>
-        <name>J10_PL_Q_Pbataltangguh_PD</name>
-        <rename>J10_PL_Q_Pbataltangguh_PD</rename>
-        <default/>
-        <type>None</type>
-      </value>
-      <value>
-        <name>project_number</name>
-        <rename>project_number</rename>
-        <default/>
-        <type>None</type>
-      </value>
-      <value>
-        <name>J10_KOS_PRJ_SEMASA</name>
-        <rename>J10_KOS_PRJ_SEMASA</rename>
-        <default/>
-        <type>None</type>
-      </value>
-      <value>
-        <name>J_PL_Q_PDTYDTARIKH</name>
-        <rename>J_PL_Q_PDTYDTARIKH</rename>
-        <default/>
-        <type>None</type>
-      </value>
-      <value>
-        <name>J10_PL_TARIKH_VA</name>
-        <rename>J10_PL_TARIKH_VA</rename>
-        <default/>
-        <type>None</type>
+        <type>String</type>
       </value>
       <value>
         <name>J10_PL_KOS_PROJEK</name>
@@ -2310,28 +2268,40 @@ COUNT ( CASE WHEN
         <type>String</type>
       </value>
       <value>
-        <name>J10_PL_TARIKH_BRIF_PROJEK_T</name>
-        <rename>J10_PL_TARIKH_BRIF_PROJEK_T</rename>
+        <name>J_PL_Q_PDTYDTARIKH</name>
+        <rename>J_PL_Q_PDTYDTARIKH</rename>
         <default/>
-        <type>None</type>
-      </value>
-      <value>
-        <name>J10_PL_TARIKH_LAPORAN_VALUE</name>
-        <rename>J10_PL_TARIKH_LAPORAN_VALUE</rename>
-        <default/>
-        <type>None</type>
-      </value>
-      <value>
-        <name>J10_PL_TAPAK_LOKASI</name>
-        <rename>J10_PL_TAPAK_LOKASI</rename>
-        <default/>
-        <type>None</type>
+        <type>Timestamp</type>
       </value>
       <value>
         <name>J10_PL_TARIKH_VA</name>
         <rename>J10_PL_TARIKH_VA</rename>
         <default/>
-        <type>None</type>
+        <type>Timestamp</type>
+      </value>
+      <value>
+        <name>J10_PL_TARIKH_BRIF_PROJEK_T</name>
+        <rename>terima_brif</rename>
+        <default/>
+        <type>Timestamp</type>
+      </value>
+      <value>
+        <name>J10_PL_TAPAK_LOKASI</name>
+        <rename>terima_lokasi</rename>
+        <default/>
+        <type>Timestamp</type>
+      </value>
+      <value>
+        <name>J10_PL_SILING_PERUNTUKAN</name>
+        <rename>terima_kos</rename>
+        <default/>
+        <type>Timestamp</type>
+      </value>
+      <value>
+        <name>J10_PL_TARIKH_LAPORAN_VALUE</name>
+        <rename>terima_va</rename>
+        <default/>
+        <type>Timestamp</type>
       </value>
     </lookup>
     <attributes/>
@@ -2366,7 +2336,7 @@ J10_PL_Jenis_Rekabentuk,J10_PL_Penggunaan_BIM,
 cast (J10_PL_Siling_Projek_yang_d as double precision) as J10_PL_Siling_Projek_yang_d,
 cast (J10_PL_Siling_Projek as double precision) as J10_PL_Siling_Projek,
 J10_PL_Tarikh_Jangka_Mula_P,J10_PL_Tarikh_Jangka_Siap_P,J10_PL_Tarikh_Jangka_Seraha
-from unifier_uxjplpcf_view 
+from unifier_uxjplpcf_view WHERE to_char(uuu_creation_date,'yyyy-MM-dd')>='2021-03-15'
 union
 select record_no,J10_PL_Lokasi_Tapak_Negeri,J10_PL_Kementerian,J10_PL_Nama_Pengurus_Progra,J10_PL_Bukan_Pejabat_HOPT,J10_PL_Rancangan_Malaysia_K,J10_PL_JENIS_KONTRAK,J10_PL_Cawangan_Pengurus_Pr,j10_pl_agensi,
 J10_PL_Kategori_Perbelantxt,J10_PL_Kaedah_Perolehan,J10_PL_TarikhDaftar_Projek,J10_PL_Brif_Projek,J10_PL_Tapak_Lokasi,J10_PL_ACAT,
@@ -2374,7 +2344,7 @@ J10_PL_Jenis_Rekabentuk,J10_PL_Penggunaan_BIM,
 cast (J10_PL_Siling_Projek_yang_d as double precision) as J10_PL_Siling_Projek_yang_d,
 cast (J10_PL_Siling_Projek as double precision) as J10_PL_Siling_Projek,
 J10_PL_Tarikh_Jangka_Mula_P,J10_PL_Tarikh_Jangka_Siap_P,J10_PL_Tarikh_Jangka_Seraha
-from unifier_uxjpcnf_view 
+from unifier_uxjpcnf_view WHERE to_char(uuu_creation_date,'yyyy-MM-dd')>='2021-03-15'
 union
 select record_no,J10_PL_Lokasi_Tapak_Negeri,J10_PL_Kementerian,J10_PL_Nama_Pengurus_Progra,J10_PL_Bukan_Pejabat_HOPT,J10_PL_Rancangan_Malaysia_K,J10_PL_JENIS_KONTRAK,J10_PL_Cawangan_Pengurus_Pr,j10_pl_agensi,
 J10_PL_Kategori_Perbelantxt,J10_PL_Kaedah_Perolehan,J10_PL_TarikhDaftar_Projek,J10_PL_Brif_Projek,J10_PL_Tapak_Lokasi,J10_PL_ACAT,
@@ -2382,7 +2352,7 @@ J10_PL_Jenis_Rekabentuk,J10_PL_Penggunaan_BIM,
 cast (J10_PL_Siling_Projek_yang_d as double precision) as J10_PL_Siling_Projek_yang_d,
 cast (J10_PL_Siling_Projek as double precision) as J10_PL_Siling_Projek,
 J10_PL_Tarikh_Jangka_Mula_P,J10_PL_Tarikh_Jangka_Siap_P,J10_PL_Tarikh_Jangka_Seraha
-from unifier_uxjpcs_view 
+from unifier_uxjpcs_view WHERE to_char(uuu_creation_date,'yyyy-MM-dd')>='2021-03-15'
 </sql>
     <limit>0</limit>
     <lookup/>
@@ -3068,6 +3038,12 @@ from unifier_uxjpcs_view
       <value>
         <name>J10_PL_PENGGUNAAN_BIM</name>
         <rename>J10_PL_PENGGUNAAN_BIM</rename>
+        <default/>
+        <type>None</type>
+      </value>
+      <value>
+        <name>UGENPROJECTNUMBER</name>
+        <rename>UGENPROJECTNUMBER</rename>
         <default/>
         <type>None</type>
       </value>
@@ -3889,6 +3865,48 @@ FROM "public".dim_j10_pl_acat
     </GUI>
   </step>
   <step>
+    <name>JENIS</name>
+    <type>StreamLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <from>JENIS_PROJEK</from>
+    <input_sorted>N</input_sorted>
+    <preserve_memory>Y</preserve_memory>
+    <sorted_list>N</sorted_list>
+    <integer_pair>N</integer_pair>
+    <lookup>
+      <key>
+        <name>J10_PL_KLASIFIKASI_SDT</name>
+        <field>option_name</field>
+      </key>
+      <value>
+        <name>OPTION_NAME</name>
+        <rename>JENIS_PROJEK</rename>
+        <default/>
+        <type>None</type>
+      </value>
+    </lookup>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1312</xloc>
+      <yloc>368</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
     <name>JENIS_PROJEK</name>
     <type>TableInput</type>
     <description/>
@@ -4213,8 +4231,8 @@ FROM dim_j10_pl_kaedah_perolehan
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1184</xloc>
-      <yloc>224</yloc>
+      <xloc>1152</xloc>
+      <yloc>208</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -6080,7 +6098,7 @@ FROM dim_J10_PL_Kategori_Perbelanjaan
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1184</xloc>
+      <xloc>1152</xloc>
       <yloc>352</yloc>
       <draw>Y</draw>
     </GUI>
@@ -8736,10 +8754,6 @@ rpdecide='NOT AVAILABLE'
         <rename/>
       </field>
       <field>
-        <name>PROJECT_ID_1</name>
-        <rename/>
-      </field>
-      <field>
         <name>J10_PL_TAJUK_PROGRAM</name>
         <rename/>
       </field>
@@ -8764,27 +8778,11 @@ rpdecide='NOT AVAILABLE'
         <rename/>
       </field>
       <field>
-        <name>J10_PL_TARIKH_JANGKA_MULA_P_1</name>
-        <rename/>
-      </field>
-      <field>
-        <name>J10_PL_TARIKH_JANGKA_SIAP_P_1</name>
-        <rename/>
-      </field>
-      <field>
-        <name>J10_PL_TARIKH_JANGKA_SERAHA_1</name>
-        <rename/>
-      </field>
-      <field>
         <name>J10_PL_KLASIFIKASI_SDT</name>
         <rename/>
       </field>
       <field>
         <name>J10_PL_KATEGORI_IBS</name>
-        <rename/>
-      </field>
-      <field>
-        <name>J10_PL_KATEGORI_PERBELANTXT_1</name>
         <rename/>
       </field>
       <field>
@@ -8805,7 +8803,7 @@ rpdecide='NOT AVAILABLE'
       </field>
       <field>
         <name>J10_PL_Q_PBATALTANGGUH_PD</name>
-        <rename/>
+        <rename>tangguh</rename>
       </field>
       <field>
         <name>PROJECT_NUMBER</name>
@@ -8817,42 +8815,6 @@ rpdecide='NOT AVAILABLE'
       </field>
       <field>
         <name>J_PL_Q_PDTYDTARIKH</name>
-        <rename/>
-      </field>
-      <field>
-        <name>J10_PL_TARIKH_VA</name>
-        <rename/>
-      </field>
-      <field>
-        <name>J10_PL_KOS_PROJEK_1</name>
-        <rename/>
-      </field>
-      <field>
-        <name>PROJECK_SIAP_1</name>
-        <rename/>
-      </field>
-      <field>
-        <name>J10_PL_Q_PBATALTANGGUH_PD_1</name>
-        <rename>tangguh</rename>
-      </field>
-      <field>
-        <name>PROJECT_NUMBER_1</name>
-        <rename/>
-      </field>
-      <field>
-        <name>J10_PL_TARIKH_BRIF_PROJEK_T</name>
-        <rename/>
-      </field>
-      <field>
-        <name>J10_PL_TARIKH_LAPORAN_VALUE</name>
-        <rename/>
-      </field>
-      <field>
-        <name>J10_PL_TAPAK_LOKASI</name>
-        <rename/>
-      </field>
-      <field>
-        <name>J10_PL_TARIKH_VA_1</name>
         <rename/>
       </field>
       <field>
@@ -8916,22 +8878,6 @@ rpdecide='NOT AVAILABLE'
         <rename/>
       </field>
       <field>
-        <name>TERIMA_BRIF1</name>
-        <rename/>
-      </field>
-      <field>
-        <name>TERIMA_LOKASI1</name>
-        <rename/>
-      </field>
-      <field>
-        <name>TERIMA_KOS1</name>
-        <rename/>
-      </field>
-      <field>
-        <name>TERIMA_VA1</name>
-        <rename/>
-      </field>
-      <field>
         <name>P0</name>
         <rename/>
       </field>
@@ -8953,6 +8899,26 @@ rpdecide='NOT AVAILABLE'
       </field>
       <field>
         <name>JENIS_PROJEK</name>
+        <rename/>
+      </field>
+      <field>
+        <name>UGENPROJECTNUMBER</name>
+        <rename/>
+      </field>
+      <field>
+        <name>TERIMA_BRIF1</name>
+        <rename/>
+      </field>
+      <field>
+        <name>TERIMA_LOKASI1</name>
+        <rename/>
+      </field>
+      <field>
+        <name>TERIMA_KOS1</name>
+        <rename/>
+      </field>
+      <field>
+        <name>TERIMA_VA1</name>
         <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
@@ -9168,87 +9134,119 @@ rpdecide='NOT AVAILABLE'
     <fields>
       <field>
         <name>J10_PL_NAMA_PROJEK</name>
+        <rename/>
       </field>
       <field>
         <name>PEJABAT_PROGRAM</name>
+        <rename/>
       </field>
       <field>
         <name>PROJECT_ID</name>
+        <rename/>
       </field>
       <field>
         <name>STATUS</name>
+        <rename/>
       </field>
       <field>
         <name>RECORD_NO</name>
+        <rename/>
       </field>
       <field>
         <name>PEJABAT</name>
+        <rename/>
       </field>
       <field>
         <name>pejabat_jkr</name>
+        <rename/>
       </field>
       <field>
         <name>sk_pejabat_jkr</name>
+        <rename/>
       </field>
       <field>
         <name>sk_pejabat_atas_jkr</name>
+        <rename/>
       </field>
       <field>
         <name>HIERARCHY</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_LOKASI_TAPAK_NEGERI</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_KEMENTERIAN</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_NAMA_PENGURUS_PROGRA</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_BUKAN_PEJABAT_HOPT</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_RANCANGAN_MALAYSIA_K</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_KATEGORI_PERBELANTXT</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_KAEDAH_PEROLEHAN</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_TARIKHDAFTAR_PROJEK</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_ACAT</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_JENIS_REKABENTUK</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_PENGGUNAAN_BIM</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_SILING_PROJEK_YANG_D</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_SILING_PROJEK</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_TARIKH_JANGKA_MULA_P</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_TARIKH_JANGKA_SIAP_P</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_TARIKH_JANGKA_SERAHA</name>
+        <rename/>
       </field>
       <field>
         <name>j10_pl_agensi</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_Cawangan_Pengurus_Pr</name>
+        <rename/>
+      </field>
+      <field>
+        <name>UGENPROJECTNUMBER</name>
+        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -9280,87 +9278,119 @@ rpdecide='NOT AVAILABLE'
     <fields>
       <field>
         <name>J10_PL_NAMA_PROJEK</name>
+        <rename/>
       </field>
       <field>
         <name>PEJABAT_PROGRAM</name>
+        <rename/>
       </field>
       <field>
         <name>PROJECT_ID</name>
+        <rename/>
       </field>
       <field>
         <name>STATUS</name>
+        <rename/>
       </field>
       <field>
         <name>RECORD_NO</name>
+        <rename/>
       </field>
       <field>
         <name>PEJABAT</name>
+        <rename/>
       </field>
       <field>
         <name>pejabat_jkr</name>
+        <rename/>
       </field>
       <field>
         <name>sk_pejabat_jkr</name>
+        <rename/>
       </field>
       <field>
         <name>sk_pejabat_atas_jkr</name>
+        <rename/>
       </field>
       <field>
         <name>HIERARCHY</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_LOKASI_TAPAK_NEGERI</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_KEMENTERIAN</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_NAMA_PENGURUS_PROGRA</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_BUKAN_PEJABAT_HOPT</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_RANCANGAN_MALAYSIA_K</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_KATEGORI_PERBELANTXT</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_KAEDAH_PEROLEHAN</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_TARIKHDAFTAR_PROJEK</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_ACAT</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_JENIS_REKABENTUK</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_PENGGUNAAN_BIM</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_SILING_PROJEK_YANG_D</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_SILING_PROJEK</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_TARIKH_JANGKA_MULA_P</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_TARIKH_JANGKA_SIAP_P</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_TARIKH_JANGKA_SERAHA</name>
+        <rename/>
       </field>
       <field>
         <name>j10_pl_agensi</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_Cawangan_Pengurus_Pr</name>
+        <rename/>
+      </field>
+      <field>
+        <name>UGENPROJECTNUMBER</name>
+        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -9864,10 +9894,6 @@ rpdecide='NOT AVAILABLE'
         <stream_name>PHASE</stream_name>
       </field>
       <field>
-        <column_name>PROJECT_ID_1</column_name>
-        <stream_name>PROJECT_ID_1</stream_name>
-      </field>
-      <field>
         <column_name>J10_PL_TAJUK_PROGRAM</column_name>
         <stream_name>J10_PL_TAJUK_PROGRAM</stream_name>
       </field>
@@ -9892,28 +9918,12 @@ rpdecide='NOT AVAILABLE'
         <stream_name>J_PL_PC_KPA</stream_name>
       </field>
       <field>
-        <column_name>J10_PL_TARIKH_JANGKA_MULA_P_1</column_name>
-        <stream_name>J10_PL_TARIKH_JANGKA_MULA_P_1</stream_name>
-      </field>
-      <field>
-        <column_name>J10_PL_TARIKH_JANGKA_SIAP_P_1</column_name>
-        <stream_name>J10_PL_TARIKH_JANGKA_SIAP_P_1</stream_name>
-      </field>
-      <field>
-        <column_name>J10_PL_TARIKH_JANGKA_SERAHA_1</column_name>
-        <stream_name>J10_PL_TARIKH_JANGKA_SERAHA_1</stream_name>
-      </field>
-      <field>
         <column_name>J10_PL_KLASIFIKASI_SDT</column_name>
         <stream_name>J10_PL_KLASIFIKASI_SDT</stream_name>
       </field>
       <field>
         <column_name>J10_PL_KATEGORI_IBS</column_name>
         <stream_name>J10_PL_KATEGORI_IBS</stream_name>
-      </field>
-      <field>
-        <column_name>J10_PL_KATEGORI_PERBELANTXT_1</column_name>
-        <stream_name>J10_PL_KATEGORI_PERBELANTXT_1</stream_name>
       </field>
       <field>
         <column_name>J10_PL_DAERAH_PD</column_name>
@@ -9932,8 +9942,8 @@ rpdecide='NOT AVAILABLE'
         <stream_name>PROJECK_SIAP</stream_name>
       </field>
       <field>
-        <column_name>J10_PL_Q_PBATALTANGGUH_PD</column_name>
-        <stream_name>J10_PL_Q_PBATALTANGGUH_PD</stream_name>
+        <column_name>tangguh</column_name>
+        <stream_name>tangguh</stream_name>
       </field>
       <field>
         <column_name>PROJECT_NUMBER</column_name>
@@ -9946,42 +9956,6 @@ rpdecide='NOT AVAILABLE'
       <field>
         <column_name>J_PL_Q_PDTYDTARIKH</column_name>
         <stream_name>J_PL_Q_PDTYDTARIKH</stream_name>
-      </field>
-      <field>
-        <column_name>J10_PL_TARIKH_VA</column_name>
-        <stream_name>J10_PL_TARIKH_VA</stream_name>
-      </field>
-      <field>
-        <column_name>J10_PL_KOS_PROJEK_1</column_name>
-        <stream_name>J10_PL_KOS_PROJEK_1</stream_name>
-      </field>
-      <field>
-        <column_name>PROJECK_SIAP_1</column_name>
-        <stream_name>PROJECK_SIAP_1</stream_name>
-      </field>
-      <field>
-        <column_name>tangguh</column_name>
-        <stream_name>tangguh</stream_name>
-      </field>
-      <field>
-        <column_name>PROJECT_NUMBER_1</column_name>
-        <stream_name>PROJECT_NUMBER_1</stream_name>
-      </field>
-      <field>
-        <column_name>J10_PL_TARIKH_BRIF_PROJEK_T</column_name>
-        <stream_name>J10_PL_TARIKH_BRIF_PROJEK_T</stream_name>
-      </field>
-      <field>
-        <column_name>J10_PL_TARIKH_LAPORAN_VALUE</column_name>
-        <stream_name>J10_PL_TARIKH_LAPORAN_VALUE</stream_name>
-      </field>
-      <field>
-        <column_name>J10_PL_TAPAK_LOKASI</column_name>
-        <stream_name>J10_PL_TAPAK_LOKASI</stream_name>
-      </field>
-      <field>
-        <column_name>J10_PL_TARIKH_VA_1</column_name>
-        <stream_name>J10_PL_TARIKH_VA_1</stream_name>
       </field>
       <field>
         <column_name>KAEDAH_PEROLEHAN</column_name>
@@ -10042,406 +10016,6 @@ rpdecide='NOT AVAILABLE'
       <field>
         <column_name>PO_CAW</column_name>
         <stream_name>PO_CAW</stream_name>
-      </field>
-      <field>
-        <column_name>TERIMA_BRIF1</column_name>
-        <stream_name>TERIMA_BRIF1</stream_name>
-      </field>
-      <field>
-        <column_name>TERIMA_LOKASI1</column_name>
-        <stream_name>TERIMA_LOKASI1</stream_name>
-      </field>
-      <field>
-        <column_name>TERIMA_KOS1</column_name>
-        <stream_name>TERIMA_KOS1</stream_name>
-      </field>
-      <field>
-        <column_name>TERIMA_VA1</column_name>
-        <stream_name>TERIMA_VA1</stream_name>
-      </field>
-      <field>
-        <column_name>P0</column_name>
-        <stream_name>P0</stream_name>
-      </field>
-      <field>
-        <column_name>P1</column_name>
-        <stream_name>P1</stream_name>
-      </field>
-      <field>
-        <column_name>P2</column_name>
-        <stream_name>P2</stream_name>
-      </field>
-      <field>
-        <column_name>P3</column_name>
-        <stream_name>P3</stream_name>
-      </field>
-      <field>
-        <column_name>P4</column_name>
-        <stream_name>P4</stream_name>
-      </field>
-      <field>
-        <column_name>J10_PL_NAMA_PROJEK</column_name>
-        <stream_name>J10_PL_NAMA_PROJEK</stream_name>
-      </field>
-      <field>
-        <column_name>PEJABAT_PROGRAM</column_name>
-        <stream_name>PEJABAT_PROGRAM</stream_name>
-      </field>
-      <field>
-        <column_name>PROJECT_ID</column_name>
-        <stream_name>PROJECT_ID</stream_name>
-      </field>
-      <field>
-        <column_name>STATUS</column_name>
-        <stream_name>STATUS</stream_name>
-      </field>
-      <field>
-        <column_name>RECORD_NO</column_name>
-        <stream_name>RECORD_NO</stream_name>
-      </field>
-      <field>
-        <column_name>PEJABAT</column_name>
-        <stream_name>PEJABAT</stream_name>
-      </field>
-      <field>
-        <column_name>pejabat_jkr</column_name>
-        <stream_name>pejabat_jkr</stream_name>
-      </field>
-      <field>
-        <column_name>sk_pejabat_jkr</column_name>
-        <stream_name>sk_pejabat_jkr</stream_name>
-      </field>
-      <field>
-        <column_name>sk_pejabat_atas_jkr</column_name>
-        <stream_name>sk_pejabat_atas_jkr</stream_name>
-      </field>
-      <field>
-        <column_name>HIERARCHY</column_name>
-        <stream_name>HIERARCHY</stream_name>
-      </field>
-      <field>
-        <column_name>J10_PL_LOKASI_TAPAK_NEGERI</column_name>
-        <stream_name>J10_PL_LOKASI_TAPAK_NEGERI</stream_name>
-      </field>
-      <field>
-        <column_name>J10_PL_KEMENTERIAN</column_name>
-        <stream_name>J10_PL_KEMENTERIAN</stream_name>
-      </field>
-      <field>
-        <column_name>J10_PL_NAMA_PENGURUS_PROGRA</column_name>
-        <stream_name>J10_PL_NAMA_PENGURUS_PROGRA</stream_name>
-      </field>
-      <field>
-        <column_name>J10_PL_BUKAN_PEJABAT_HOPT</column_name>
-        <stream_name>J10_PL_BUKAN_PEJABAT_HOPT</stream_name>
-      </field>
-      <field>
-        <column_name>J10_PL_RANCANGAN_MALAYSIA_K</column_name>
-        <stream_name>J10_PL_RANCANGAN_MALAYSIA_K</stream_name>
-      </field>
-      <field>
-        <column_name>J10_PL_KATEGORI_PERBELANTXT</column_name>
-        <stream_name>J10_PL_KATEGORI_PERBELANTXT</stream_name>
-      </field>
-      <field>
-        <column_name>J10_PL_KAEDAH_PEROLEHAN</column_name>
-        <stream_name>J10_PL_KAEDAH_PEROLEHAN</stream_name>
-      </field>
-      <field>
-        <column_name>J10_PL_TARIKHDAFTAR_PROJEK</column_name>
-        <stream_name>J10_PL_TARIKHDAFTAR_PROJEK</stream_name>
-      </field>
-      <field>
-        <column_name>J10_PL_ACAT</column_name>
-        <stream_name>J10_PL_ACAT</stream_name>
-      </field>
-      <field>
-        <column_name>J10_PL_JENIS_REKABENTUK</column_name>
-        <stream_name>J10_PL_JENIS_REKABENTUK</stream_name>
-      </field>
-      <field>
-        <column_name>J10_PL_PENGGUNAAN_BIM</column_name>
-        <stream_name>J10_PL_PENGGUNAAN_BIM</stream_name>
-      </field>
-      <field>
-        <column_name>J10_PL_SILING_PROJEK_YANG_D</column_name>
-        <stream_name>J10_PL_SILING_PROJEK_YANG_D</stream_name>
-      </field>
-      <field>
-        <column_name>J10_PL_SILING_PROJEK</column_name>
-        <stream_name>J10_PL_SILING_PROJEK</stream_name>
-      </field>
-      <field>
-        <column_name>J10_PL_TARIKH_JANGKA_MULA_P</column_name>
-        <stream_name>J10_PL_TARIKH_JANGKA_MULA_P</stream_name>
-      </field>
-      <field>
-        <column_name>J10_PL_TARIKH_JANGKA_SIAP_P</column_name>
-        <stream_name>J10_PL_TARIKH_JANGKA_SIAP_P</stream_name>
-      </field>
-      <field>
-        <column_name>J10_PL_TARIKH_JANGKA_SERAHA</column_name>
-        <stream_name>J10_PL_TARIKH_JANGKA_SERAHA</stream_name>
-      </field>
-      <field>
-        <column_name>j10_pl_agensi</column_name>
-        <stream_name>j10_pl_agensi</stream_name>
-      </field>
-      <field>
-        <column_name>J10_PL_Cawangan_Pengurus_Pr</column_name>
-        <stream_name>J10_PL_Cawangan_Pengurus_Pr</stream_name>
-      </field>
-      <field>
-        <column_name>KATEGORI0</column_name>
-        <stream_name>KATEGORI0</stream_name>
-      </field>
-      <field>
-        <column_name>KATEGORI1</column_name>
-        <stream_name>KATEGORI1</stream_name>
-      </field>
-      <field>
-        <column_name>KATEGORI2</column_name>
-        <stream_name>KATEGORI2</stream_name>
-      </field>
-      <field>
-        <column_name>KATEGORI3</column_name>
-        <stream_name>KATEGORI3</stream_name>
-      </field>
-      <field>
-        <column_name>KATEGORI4</column_name>
-        <stream_name>KATEGORI4</stream_name>
-      </field>
-      <field>
-        <column_name>PMO_TERIMA</column_name>
-        <stream_name>PMO_TERIMA</stream_name>
-      </field>
-      <field>
-        <column_name>TERIMA_BRIF</column_name>
-        <stream_name>TERIMA_BRIF</stream_name>
-      </field>
-      <field>
-        <column_name>TERIMA_KOS</column_name>
-        <stream_name>TERIMA_KOS</stream_name>
-      </field>
-      <field>
-        <column_name>TERIMA_LOKASI</column_name>
-        <stream_name>TERIMA_LOKASI</stream_name>
-      </field>
-      <field>
-        <column_name>TERIMA_VA</column_name>
-        <stream_name>TERIMA_VA</stream_name>
-      </field>
-      <field>
-        <column_name>BELUM_LANTIK_PP</column_name>
-        <stream_name>BELUM_LANTIK_PP</stream_name>
-      </field>
-      <field>
-        <column_name>BELUM_LANTIK_PPP</column_name>
-        <stream_name>BELUM_LANTIK_PPP</stream_name>
-      </field>
-      <field>
-        <column_name>BELUM_LANTIK_HOPT</column_name>
-        <stream_name>BELUM_LANTIK_HOPT</stream_name>
-      </field>
-      <field>
-        <column_name>PHASE</column_name>
-        <stream_name>PHASE</stream_name>
-      </field>
-      <field>
-        <column_name>PROJECT_ID_1</column_name>
-        <stream_name>PROJECT_ID_1</stream_name>
-      </field>
-      <field>
-        <column_name>J10_PL_TAJUK_PROGRAM</column_name>
-        <stream_name>J10_PL_TAJUK_PROGRAM</stream_name>
-      </field>
-      <field>
-        <column_name>J10_PL_N0_RUJUKAN_PROJ</column_name>
-        <stream_name>J10_PL_N0_RUJUKAN_PROJ</stream_name>
-      </field>
-      <field>
-        <column_name>J10_CH_PJBT_SELIA_TAPAK</column_name>
-        <stream_name>J10_CH_PJBT_SELIA_TAPAK</stream_name>
-      </field>
-      <field>
-        <column_name>J10_PL_JENISKONTRAK_PD</column_name>
-        <stream_name>J10_PL_JENISKONTRAK_PD</stream_name>
-      </field>
-      <field>
-        <column_name>J_PL_SP_JENISPEROLEHAN</column_name>
-        <stream_name>J_PL_SP_JENISPEROLEHAN</stream_name>
-      </field>
-      <field>
-        <column_name>J_PL_PC_KPA</column_name>
-        <stream_name>J_PL_PC_KPA</stream_name>
-      </field>
-      <field>
-        <column_name>J10_PL_TARIKH_JANGKA_MULA_P_1</column_name>
-        <stream_name>J10_PL_TARIKH_JANGKA_MULA_P_1</stream_name>
-      </field>
-      <field>
-        <column_name>J10_PL_TARIKH_JANGKA_SIAP_P_1</column_name>
-        <stream_name>J10_PL_TARIKH_JANGKA_SIAP_P_1</stream_name>
-      </field>
-      <field>
-        <column_name>J10_PL_TARIKH_JANGKA_SERAHA_1</column_name>
-        <stream_name>J10_PL_TARIKH_JANGKA_SERAHA_1</stream_name>
-      </field>
-      <field>
-        <column_name>J10_PL_KLASIFIKASI_SDT</column_name>
-        <stream_name>J10_PL_KLASIFIKASI_SDT</stream_name>
-      </field>
-      <field>
-        <column_name>J10_PL_KATEGORI_IBS</column_name>
-        <stream_name>J10_PL_KATEGORI_IBS</stream_name>
-      </field>
-      <field>
-        <column_name>J10_PL_KATEGORI_PERBELANTXT_1</column_name>
-        <stream_name>J10_PL_KATEGORI_PERBELANTXT_1</stream_name>
-      </field>
-      <field>
-        <column_name>J10_PL_DAERAH_PD</column_name>
-        <stream_name>J10_PL_DAERAH_PD</stream_name>
-      </field>
-      <field>
-        <column_name>UNIFIER_URL</column_name>
-        <stream_name>UNIFIER_URL</stream_name>
-      </field>
-      <field>
-        <column_name>J10_PL_KOS_PROJEK</column_name>
-        <stream_name>J10_PL_KOS_PROJEK</stream_name>
-      </field>
-      <field>
-        <column_name>PROJECK_SIAP</column_name>
-        <stream_name>PROJECK_SIAP</stream_name>
-      </field>
-      <field>
-        <column_name>J10_PL_Q_PBATALTANGGUH_PD</column_name>
-        <stream_name>J10_PL_Q_PBATALTANGGUH_PD</stream_name>
-      </field>
-      <field>
-        <column_name>PROJECT_NUMBER</column_name>
-        <stream_name>PROJECT_NUMBER</stream_name>
-      </field>
-      <field>
-        <column_name>J10_KOS_PRJ_SEMASA</column_name>
-        <stream_name>J10_KOS_PRJ_SEMASA</stream_name>
-      </field>
-      <field>
-        <column_name>J_PL_Q_PDTYDTARIKH</column_name>
-        <stream_name>J_PL_Q_PDTYDTARIKH</stream_name>
-      </field>
-      <field>
-        <column_name>J10_PL_TARIKH_VA</column_name>
-        <stream_name>J10_PL_TARIKH_VA</stream_name>
-      </field>
-      <field>
-        <column_name>J10_PL_KOS_PROJEK_1</column_name>
-        <stream_name>J10_PL_KOS_PROJEK_1</stream_name>
-      </field>
-      <field>
-        <column_name>PROJECK_SIAP_1</column_name>
-        <stream_name>PROJECK_SIAP_1</stream_name>
-      </field>
-      <field>
-        <column_name>tangguh</column_name>
-        <stream_name>tangguh</stream_name>
-      </field>
-      <field>
-        <column_name>PROJECT_NUMBER_1</column_name>
-        <stream_name>PROJECT_NUMBER_1</stream_name>
-      </field>
-      <field>
-        <column_name>J10_PL_TARIKH_BRIF_PROJEK_T</column_name>
-        <stream_name>J10_PL_TARIKH_BRIF_PROJEK_T</stream_name>
-      </field>
-      <field>
-        <column_name>J10_PL_TARIKH_LAPORAN_VALUE</column_name>
-        <stream_name>J10_PL_TARIKH_LAPORAN_VALUE</stream_name>
-      </field>
-      <field>
-        <column_name>J10_PL_TAPAK_LOKASI</column_name>
-        <stream_name>J10_PL_TAPAK_LOKASI</stream_name>
-      </field>
-      <field>
-        <column_name>J10_PL_TARIKH_VA_1</column_name>
-        <stream_name>J10_PL_TARIKH_VA_1</stream_name>
-      </field>
-      <field>
-        <column_name>KAEDAH_PEROLEHAN</column_name>
-        <stream_name>KAEDAH_PEROLEHAN</stream_name>
-      </field>
-      <field>
-        <column_name>ROLLING PLAN</column_name>
-        <stream_name>ROLLING PLAN</stream_name>
-      </field>
-      <field>
-        <column_name>RMK</column_name>
-        <stream_name>RMK</stream_name>
-      </field>
-      <field>
-        <column_name>ACAT</column_name>
-        <stream_name>ACAT</stream_name>
-      </field>
-      <field>
-        <column_name>IBS</column_name>
-        <stream_name>IBS</stream_name>
-      </field>
-      <field>
-        <column_name>PENGGUNAAN_BIM</column_name>
-        <stream_name>PENGGUNAAN_BIM</stream_name>
-      </field>
-      <field>
-        <column_name>Jenis_Rekabentuk</column_name>
-        <stream_name>Jenis_Rekabentuk</stream_name>
-      </field>
-      <field>
-        <column_name>PERBELANJAAN</column_name>
-        <stream_name>PERBELANJAAN</stream_name>
-      </field>
-      <field>
-        <column_name>CATATAN</column_name>
-        <stream_name>CATATAN</stream_name>
-      </field>
-      <field>
-        <column_name>rujukan_sppii</column_name>
-        <stream_name>rujukan_sppii</stream_name>
-      </field>
-      <field>
-        <column_name>LOKASI_TAPAK</column_name>
-        <stream_name>LOKASI_TAPAK</stream_name>
-      </field>
-      <field>
-        <column_name>DAERAH</column_name>
-        <stream_name>DAERAH</stream_name>
-      </field>
-      <field>
-        <column_name>KEMENTERIAN</column_name>
-        <stream_name>KEMENTERIAN</stream_name>
-      </field>
-      <field>
-        <column_name>KEMENTERIAN_AGENCY</column_name>
-        <stream_name>KEMENTERIAN_AGENCY</stream_name>
-      </field>
-      <field>
-        <column_name>PO_CAW</column_name>
-        <stream_name>PO_CAW</stream_name>
-      </field>
-      <field>
-        <column_name>TERIMA_BRIF1</column_name>
-        <stream_name>TERIMA_BRIF1</stream_name>
-      </field>
-      <field>
-        <column_name>TERIMA_LOKASI1</column_name>
-        <stream_name>TERIMA_LOKASI1</stream_name>
-      </field>
-      <field>
-        <column_name>TERIMA_KOS1</column_name>
-        <stream_name>TERIMA_KOS1</stream_name>
-      </field>
-      <field>
-        <column_name>TERIMA_VA1</column_name>
-        <stream_name>TERIMA_VA1</stream_name>
       </field>
       <field>
         <column_name>P0</column_name>
@@ -10466,6 +10040,26 @@ rpdecide='NOT AVAILABLE'
       <field>
         <column_name>JENIS_PROJEK</column_name>
         <stream_name>JENIS_PROJEK</stream_name>
+      </field>
+      <field>
+        <column_name>UGENPROJECTNUMBER</column_name>
+        <stream_name>UGENPROJECTNUMBER</stream_name>
+      </field>
+      <field>
+        <column_name>TERIMA_BRIF1</column_name>
+        <stream_name>TERIMA_BRIF1</stream_name>
+      </field>
+      <field>
+        <column_name>TERIMA_LOKASI1</column_name>
+        <stream_name>TERIMA_LOKASI1</stream_name>
+      </field>
+      <field>
+        <column_name>TERIMA_KOS1</column_name>
+        <stream_name>TERIMA_KOS1</stream_name>
+      </field>
+      <field>
+        <column_name>TERIMA_VA1</column_name>
+        <stream_name>TERIMA_VA1</stream_name>
       </field>
     </fields>
     <attributes/>
@@ -10505,7 +10099,7 @@ cast(a.J10_PL_Siling_Projek_yang_d as double precision) as J10_PL_Siling_Projek_
 cast(a.J10_PL_Siling_Projek as double precision) as J10_PL_Siling_Projek,
 a.J10_PL_Tarikh_Jangka_Mula_P,
 a.J10_PL_Tarikh_Jangka_Siap_P,a.J10_PL_Tarikh_Jangka_Seraha,a.J10_PL_BUKAN_PEJABAT_HOPT,
-a.J10_PL_JENIS_REKABENTUK,a.J10_PL_PENGGUNAAN_BIM 
+a.J10_PL_JENIS_REKABENTUK,a.J10_PL_PENGGUNAAN_BIM , b.ugenprojectnumber
 from unifier_upi a 
 left join unifier_us_xjprj b 
 on a.project_id=b.PID
@@ -11093,6 +10687,29 @@ on b.J10_PL_Nama_Pengurus_Progra=userid</sql>
         <date_format_timezone>Asia/Singapore</date_format_timezone>
         <lenient_string_to_number>N</lenient_string_to_number>
       </value-meta>
+      <value-meta>
+        <type>String</type>
+        <storagetype>normal</storagetype>
+        <name>UGENPROJECTNUMBER</name>
+        <length>384</length>
+        <precision>-1</precision>
+        <origin>UPIDeatils</origin>
+        <comments>UGENPROJECTNUMBER</comments>
+        <conversion_Mask/>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_MY</date_format_locale>
+        <date_format_timezone>Asia/Singapore</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
     </row-meta>
     <attributes/>
     <cluster_schema/>
@@ -11149,10 +10766,6 @@ e.J10_PL_Tarikh_VA,
 upi.J10_PL_Tarikh_Brif_Projek_t, 
 upi.J10_PL_Tapak_Lokasi, 
 upi.J10_PL_Siling_Peruntukan, 
-upi.J10_PL_Tarikh_Laporan_Value,
-upi.J10_PL_Tarikh_Brif_Projek_t, 
-upi.J10_PL_Tapak_Lokasi, 
-upi.J10_PL_Siling_Peruntukan, 
 upi.J10_PL_Tarikh_Laporan_Value
 
 
@@ -11203,8 +10816,8 @@ left join unifier_uxjqplan e on upi.project_id=e.project_id
         <type>BigNumber</type>
         <storagetype>normal</storagetype>
         <name>J10_KOS_PRJ_SEMASA</name>
-        <length>50</length>
-        <precision>-127</precision>
+        <length>-1</length>
+        <precision>-1</precision>
         <origin>UPI_Details</origin>
         <comments>J10_KOS_PRJ_SEMASA</comments>
         <conversion_Mask>######0.0###################;-######0.0###################</conversion_Mask>
@@ -11548,8 +11161,8 @@ left join unifier_uxjqplan e on upi.project_id=e.project_id
         <type>BigNumber</type>
         <storagetype>normal</storagetype>
         <name>J10_PL_KOS_PROJEK</name>
-        <length>50</length>
-        <precision>-127</precision>
+        <length>-1</length>
+        <precision>-1</precision>
         <origin>UPI_Details</origin>
         <comments>J10_PL_KOS_PROJEK</comments>
         <conversion_Mask>######0.0###################;-######0.0###################</conversion_Mask>
@@ -13179,48 +12792,6 @@ select project_id,J10_PL_Rujukan_Kod_Projek from unifier_uxjkons_view  where J10
     <GUI>
       <xloc>1648</xloc>
       <yloc>736</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>JENIS</name>
-    <type>StreamLookup</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <from>JENIS_PROJEK</from>
-    <input_sorted>N</input_sorted>
-    <preserve_memory>Y</preserve_memory>
-    <sorted_list>N</sorted_list>
-    <integer_pair>N</integer_pair>
-    <lookup>
-      <key>
-        <name>J10_PL_KLASIFIKASI_SDT</name>
-        <field>option_name</field>
-      </key>
-      <value>
-        <name>OPTION_NAME</name>
-        <rename>JENIS_PROJEK</rename>
-        <default/>
-        <type>None</type>
-      </value>
-    </lookup>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1296</xloc>
-      <yloc>384</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
