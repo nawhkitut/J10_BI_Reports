@@ -3901,8 +3901,8 @@ FROM "public".dim_j10_pl_acat
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1312</xloc>
-      <yloc>368</yloc>
+      <xloc>1296</xloc>
+      <yloc>352</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -11368,98 +11368,6 @@ left join unifier_uxjqplan e on upi.project_id=e.project_id
         <type>Timestamp</type>
         <storagetype>normal</storagetype>
         <name>J10_PL_TARIKH_LAPORAN_VALUE</name>
-        <length>0</length>
-        <precision>-1</precision>
-        <origin>UPI_Details</origin>
-        <comments>J10_PL_TARIKH_LAPORAN_VALUE</comments>
-        <conversion_Mask/>
-        <decimal_symbol>.</decimal_symbol>
-        <grouping_symbol>,</grouping_symbol>
-        <currency_symbol/>
-        <trim_type>none</trim_type>
-        <case_insensitive>N</case_insensitive>
-        <collator_disabled>Y</collator_disabled>
-        <collator_strength>0</collator_strength>
-        <sort_descending>N</sort_descending>
-        <output_padding>N</output_padding>
-        <date_format_lenient>N</date_format_lenient>
-        <date_format_locale>en_MY</date_format_locale>
-        <date_format_timezone>Asia/Singapore</date_format_timezone>
-        <lenient_string_to_number>N</lenient_string_to_number>
-      </value-meta>
-      <value-meta>
-        <type>Timestamp</type>
-        <storagetype>normal</storagetype>
-        <name>J10_PL_TARIKH_BRIF_PROJEK_T_1</name>
-        <length>0</length>
-        <precision>-1</precision>
-        <origin>UPI_Details</origin>
-        <comments>J10_PL_TARIKH_BRIF_PROJEK_T</comments>
-        <conversion_Mask/>
-        <decimal_symbol>.</decimal_symbol>
-        <grouping_symbol>,</grouping_symbol>
-        <currency_symbol/>
-        <trim_type>none</trim_type>
-        <case_insensitive>N</case_insensitive>
-        <collator_disabled>Y</collator_disabled>
-        <collator_strength>0</collator_strength>
-        <sort_descending>N</sort_descending>
-        <output_padding>N</output_padding>
-        <date_format_lenient>N</date_format_lenient>
-        <date_format_locale>en_MY</date_format_locale>
-        <date_format_timezone>Asia/Singapore</date_format_timezone>
-        <lenient_string_to_number>N</lenient_string_to_number>
-      </value-meta>
-      <value-meta>
-        <type>Timestamp</type>
-        <storagetype>normal</storagetype>
-        <name>J10_PL_TAPAK_LOKASI_1</name>
-        <length>0</length>
-        <precision>-1</precision>
-        <origin>UPI_Details</origin>
-        <comments>J10_PL_TAPAK_LOKASI</comments>
-        <conversion_Mask/>
-        <decimal_symbol>.</decimal_symbol>
-        <grouping_symbol>,</grouping_symbol>
-        <currency_symbol/>
-        <trim_type>none</trim_type>
-        <case_insensitive>N</case_insensitive>
-        <collator_disabled>Y</collator_disabled>
-        <collator_strength>0</collator_strength>
-        <sort_descending>N</sort_descending>
-        <output_padding>N</output_padding>
-        <date_format_lenient>N</date_format_lenient>
-        <date_format_locale>en_MY</date_format_locale>
-        <date_format_timezone>Asia/Singapore</date_format_timezone>
-        <lenient_string_to_number>N</lenient_string_to_number>
-      </value-meta>
-      <value-meta>
-        <type>Timestamp</type>
-        <storagetype>normal</storagetype>
-        <name>J10_PL_SILING_PERUNTUKAN_1</name>
-        <length>0</length>
-        <precision>-1</precision>
-        <origin>UPI_Details</origin>
-        <comments>J10_PL_SILING_PERUNTUKAN</comments>
-        <conversion_Mask/>
-        <decimal_symbol>.</decimal_symbol>
-        <grouping_symbol>,</grouping_symbol>
-        <currency_symbol/>
-        <trim_type>none</trim_type>
-        <case_insensitive>N</case_insensitive>
-        <collator_disabled>Y</collator_disabled>
-        <collator_strength>0</collator_strength>
-        <sort_descending>N</sort_descending>
-        <output_padding>N</output_padding>
-        <date_format_lenient>N</date_format_lenient>
-        <date_format_locale>en_MY</date_format_locale>
-        <date_format_timezone>Asia/Singapore</date_format_timezone>
-        <lenient_string_to_number>N</lenient_string_to_number>
-      </value-meta>
-      <value-meta>
-        <type>Timestamp</type>
-        <storagetype>normal</storagetype>
-        <name>J10_PL_TARIKH_LAPORAN_VALUE_1</name>
         <length>0</length>
         <precision>-1</precision>
         <origin>UPI_Details</origin>
