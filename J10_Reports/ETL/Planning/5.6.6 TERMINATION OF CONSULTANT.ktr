@@ -438,15 +438,15 @@
   </notepads>
   <connection>
     <name>J10</name>
-    <server>10.8.69.165</server>
+    <server>10.8.69.233</server>
     <type>ORACLE</type>
     <access>Native</access>
     <database>j10</database>
     <port>1521</port>
-    <username>unifieruat4stg</username>
-    <password>Encrypted 2be98daa603c19b81b90caf648a81bbdd</password>
+    <username>unifieruat4</username>
+    <password>Encrypted 2be98afc86ad29c8dad10ab62cb93bb8e</password>
     <servername/>
-    <data_tablespace>unifieruat4stg</data_tablespace>
+    <data_tablespace>unifieruat4</data_tablespace>
     <index_tablespace/>
     <attributes>
       <attribute>
@@ -1699,6 +1699,223 @@ FROM dim_j10_pl_jenis_projek
     </GUI>
   </step>
   <step>
+    <name>KAEDAH_PEROLEHAN</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>J10_Reports_DM</connection>
+    <sql>SELECT
+  perolehan_id
+, data_name
+, option_value
+, option_name
+FROM dim_j10_pl_kaedah_perolehan
+</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cached_row_meta_active>N</cached_row_meta_active>
+    <row-meta>
+      <value-meta>
+        <type>Integer</type>
+        <storagetype>normal</storagetype>
+        <name>perolehan_id</name>
+        <length>9</length>
+        <precision>0</precision>
+        <origin>KAEDAH_PEROLEHAN</origin>
+        <comments>perolehan_id</comments>
+        <conversion_Mask>####0;-####0</conversion_Mask>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_MY</date_format_locale>
+        <date_format_timezone>Asia/Singapore</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>String</type>
+        <storagetype>normal</storagetype>
+        <name>data_name</name>
+        <length>75</length>
+        <precision>-1</precision>
+        <origin>KAEDAH_PEROLEHAN</origin>
+        <comments>data_name</comments>
+        <conversion_Mask/>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_MY</date_format_locale>
+        <date_format_timezone>Asia/Singapore</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>String</type>
+        <storagetype>normal</storagetype>
+        <name>option_value</name>
+        <length>50</length>
+        <precision>-1</precision>
+        <origin>KAEDAH_PEROLEHAN</origin>
+        <comments>option_value</comments>
+        <conversion_Mask/>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_MY</date_format_locale>
+        <date_format_timezone>Asia/Singapore</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>String</type>
+        <storagetype>normal</storagetype>
+        <name>option_name</name>
+        <length>40</length>
+        <precision>-1</precision>
+        <origin>KAEDAH_PEROLEHAN</origin>
+        <comments>option_name</comments>
+        <conversion_Mask/>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_MY</date_format_locale>
+        <date_format_timezone>Asia/Singapore</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+    </row-meta>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1328</xloc>
+      <yloc>128</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Kementerian 3</name>
+    <type>StreamLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <from>kementerian_look</from>
+    <input_sorted>N</input_sorted>
+    <preserve_memory>Y</preserve_memory>
+    <sorted_list>N</sorted_list>
+    <integer_pair>N</integer_pair>
+    <lookup>
+      <key>
+        <name>J10_PL_KEMENTERIAN</name>
+        <field>kementerian_code</field>
+      </key>
+      <value>
+        <name>kementerian_name</name>
+        <rename>kementerian</rename>
+        <default/>
+        <type>None</type>
+      </value>
+    </lookup>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1184</xloc>
+      <yloc>256</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>PEROLEHAN</name>
+    <type>StreamLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <from>KAEDAH_PEROLEHAN</from>
+    <input_sorted>N</input_sorted>
+    <preserve_memory>Y</preserve_memory>
+    <sorted_list>N</sorted_list>
+    <integer_pair>N</integer_pair>
+    <lookup>
+      <key>
+        <name>J10_PL_KAEDAH_PEROLEHAN</name>
+        <field>OPTION_VALUE</field>
+      </key>
+      <value>
+        <name>OPTION_NAME</name>
+        <rename>kaedah_perolehan</rename>
+        <default/>
+        <type>None</type>
+      </value>
+    </lookup>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1328</xloc>
+      <yloc>272</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
     <name>Pejabat 2</name>
     <type>TableInput</type>
     <description/>
@@ -1893,9 +2110,9 @@ FROM "public".dim_pejabat
     <connection>J10</connection>
     <sql>SELECT distinct NOMBOR_IC,parentorganizationid, REGEXP_REPLACE(NAME, '(\[\d+\]\s)', '') as name
 FROM UNIFIER__J10_MYKJ_API_DATA a
-INNER JOIN LIFERAY_STG.USER_ b ON a.NOMBOR_IC = b.SCREENNAME
-INNER JOIN LIFERAY_STG.USERS_ORGS c ON b.USERID = c.USERID
-INNER JOIN LIFERAY_STG.ORGANIZATION_ d ON c.ORGANIZATIONID = d.ORGANIZATIONID</sql>
+INNER JOIN LIFERAY_PROD.USER_ b ON a.NOMBOR_IC = b.SCREENNAME
+INNER JOIN LIFERAY_PROD.USERS_ORGS c ON b.USERID = c.USERID
+INNER JOIN LIFERAY_PROD.ORGANIZATION_ d ON c.ORGANIZATIONID = d.ORGANIZATIONID</sql>
     <limit>0</limit>
     <lookup/>
     <execute_each_row>N</execute_each_row>
@@ -2538,71 +2755,54 @@ rpdecide='NOT AVAILABLE'
     <fields>
       <field>
         <name>PROJECT_ID</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_NAMA_PROJEK</name>
-        <rename/>
       </field>
       <field>
         <name>PEJABAT_PROGRAM</name>
-        <rename/>
       </field>
       <field>
         <name>UGENPROJECTNUMBER</name>
-        <rename/>
       </field>
       <field>
         <name>STATUS</name>
-        <rename/>
       </field>
       <field>
         <name>PEJABAT</name>
-        <rename/>
       </field>
       <field>
         <name>pejabat_jkr</name>
-        <rename/>
       </field>
       <field>
         <name>sk_pejabat_jkr</name>
-        <rename/>
       </field>
       <field>
         <name>sk_pejabat_atas_jkr</name>
-        <rename/>
       </field>
       <field>
         <name>hierarchy</name>
-        <rename/>
       </field>
       <field>
         <name>RECORD_NO</name>
-        <rename/>
       </field>
       <field>
         <name>project_number</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_NAMAKONTRAKTOR_PER</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_TARIKH_MESYUARAT</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_LOKASI_MESYUARAT</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_TARIKH_DAN_MASA_DP</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_MASA_AKHIR_MESYUARAT</name>
-        <rename/>
       </field>
       <field>
         <name>STATUS_1</name>
@@ -2610,83 +2810,63 @@ rpdecide='NOT AVAILABLE'
       </field>
       <field>
         <name>J10_PL_TARIKHDIHANTA_DOP</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_NOTISPENAMATAN_PD</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_TARIKHSURATNOTIS_DOP</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_TARIKHSURATEN_DOP</name>
-        <rename/>
       </field>
       <field>
         <name>jenis_projek</name>
-        <rename/>
       </field>
       <field>
         <name>rmk</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_TARIKHTAMAT_DOP</name>
-        <rename/>
       </field>
       <field>
         <name>TARIKH</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_SKOP_PROJEK</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_Q_BIDANG</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_NAMA_HODT_UPK</name>
-        <rename/>
       </field>
       <field>
         <name>KOS_PERUNDING</name>
-        <rename/>
       </field>
       <field>
         <name>PENOLONG_PENGURUS_PROGRAM</name>
-        <rename/>
       </field>
       <field>
         <name>PEJABAT_HOPT</name>
-        <rename/>
       </field>
       <field>
         <name>NAMA_HOPT</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_NAMAPENGURUS_SMN</name>
-        <rename/>
       </field>
       <field>
         <name>kementerian</name>
-        <rename/>
       </field>
       <field>
         <name>kaedah_perolehan</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_N0_RUJUKAN_PROJ</name>
-        <rename/>
       </field>
       <field>
         <name>KOS_PROJEK</name>
-        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -4193,130 +4373,6 @@ FROM UNIFIER_USER_VIEW
     </GUI>
   </step>
   <step>
-    <name>project_number</name>
-    <type>TableInput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>J10</connection>
-    <sql>select pid,UGENPROJECTNUMBER from unifier_us_xjprj
-</sql>
-    <limit>0</limit>
-    <lookup/>
-    <execute_each_row>N</execute_each_row>
-    <variables_active>N</variables_active>
-    <lazy_conversion_active>N</lazy_conversion_active>
-    <cached_row_meta_active>N</cached_row_meta_active>
-    <row-meta>
-      <value-meta>
-        <type>Integer</type>
-        <storagetype>normal</storagetype>
-        <name>PID</name>
-        <length>10</length>
-        <precision>0</precision>
-        <origin>project_number</origin>
-        <comments>PID</comments>
-        <conversion_Mask>####0;-####0</conversion_Mask>
-        <decimal_symbol>.</decimal_symbol>
-        <grouping_symbol>,</grouping_symbol>
-        <currency_symbol/>
-        <trim_type>none</trim_type>
-        <case_insensitive>N</case_insensitive>
-        <collator_disabled>Y</collator_disabled>
-        <collator_strength>0</collator_strength>
-        <sort_descending>N</sort_descending>
-        <output_padding>N</output_padding>
-        <date_format_lenient>N</date_format_lenient>
-        <date_format_locale>en_MY</date_format_locale>
-        <date_format_timezone>Asia/Singapore</date_format_timezone>
-        <lenient_string_to_number>N</lenient_string_to_number>
-      </value-meta>
-      <value-meta>
-        <type>String</type>
-        <storagetype>normal</storagetype>
-        <name>UGENPROJECTNUMBER</name>
-        <length>384</length>
-        <precision>-1</precision>
-        <origin>project_number</origin>
-        <comments>UGENPROJECTNUMBER</comments>
-        <conversion_Mask/>
-        <decimal_symbol>.</decimal_symbol>
-        <grouping_symbol>,</grouping_symbol>
-        <currency_symbol/>
-        <trim_type>none</trim_type>
-        <case_insensitive>N</case_insensitive>
-        <collator_disabled>Y</collator_disabled>
-        <collator_strength>0</collator_strength>
-        <sort_descending>N</sort_descending>
-        <output_padding>N</output_padding>
-        <date_format_lenient>N</date_format_lenient>
-        <date_format_locale>en_MY</date_format_locale>
-        <date_format_timezone>Asia/Singapore</date_format_timezone>
-        <lenient_string_to_number>N</lenient_string_to_number>
-      </value-meta>
-    </row-meta>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>448</xloc>
-      <yloc>160</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Kementerian 3</name>
-    <type>StreamLookup</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <from>kementerian_look</from>
-    <input_sorted>N</input_sorted>
-    <preserve_memory>Y</preserve_memory>
-    <sorted_list>N</sorted_list>
-    <integer_pair>N</integer_pair>
-    <lookup>
-      <key>
-        <name>J10_PL_KEMENTERIAN</name>
-        <field>kementerian_code</field>
-      </key>
-      <value>
-        <name>kementerian_name</name>
-        <rename>kementerian</rename>
-        <default/>
-        <type>None</type>
-      </value>
-    </lookup>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1184</xloc>
-      <yloc>256</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
     <name>kementerian_look</name>
     <type>TableInput</type>
     <description/>
@@ -4492,7 +4548,7 @@ FROM UNIFIER_USER_VIEW
     </GUI>
   </step>
   <step>
-    <name>KAEDAH_PEROLEHAN</name>
+    <name>project_number</name>
     <type>TableInput</type>
     <description/>
     <distribute>Y</distribute>
@@ -4502,13 +4558,8 @@ FROM UNIFIER_USER_VIEW
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>J10_Reports_DM</connection>
-    <sql>SELECT
-  perolehan_id
-, data_name
-, option_value
-, option_name
-FROM dim_j10_pl_kaedah_perolehan
+    <connection>J10</connection>
+    <sql>select pid,UGENPROJECTNUMBER from unifier_us_xjprj
 </sql>
     <limit>0</limit>
     <lookup/>
@@ -4520,11 +4571,11 @@ FROM dim_j10_pl_kaedah_perolehan
       <value-meta>
         <type>Integer</type>
         <storagetype>normal</storagetype>
-        <name>perolehan_id</name>
-        <length>9</length>
+        <name>PID</name>
+        <length>10</length>
         <precision>0</precision>
-        <origin>KAEDAH_PEROLEHAN</origin>
-        <comments>perolehan_id</comments>
+        <origin>project_number</origin>
+        <comments>PID</comments>
         <conversion_Mask>####0;-####0</conversion_Mask>
         <decimal_symbol>.</decimal_symbol>
         <grouping_symbol>,</grouping_symbol>
@@ -4543,57 +4594,11 @@ FROM dim_j10_pl_kaedah_perolehan
       <value-meta>
         <type>String</type>
         <storagetype>normal</storagetype>
-        <name>data_name</name>
-        <length>75</length>
+        <name>UGENPROJECTNUMBER</name>
+        <length>384</length>
         <precision>-1</precision>
-        <origin>KAEDAH_PEROLEHAN</origin>
-        <comments>data_name</comments>
-        <conversion_Mask/>
-        <decimal_symbol>.</decimal_symbol>
-        <grouping_symbol>,</grouping_symbol>
-        <currency_symbol/>
-        <trim_type>none</trim_type>
-        <case_insensitive>N</case_insensitive>
-        <collator_disabled>Y</collator_disabled>
-        <collator_strength>0</collator_strength>
-        <sort_descending>N</sort_descending>
-        <output_padding>N</output_padding>
-        <date_format_lenient>N</date_format_lenient>
-        <date_format_locale>en_MY</date_format_locale>
-        <date_format_timezone>Asia/Singapore</date_format_timezone>
-        <lenient_string_to_number>N</lenient_string_to_number>
-      </value-meta>
-      <value-meta>
-        <type>String</type>
-        <storagetype>normal</storagetype>
-        <name>option_value</name>
-        <length>50</length>
-        <precision>-1</precision>
-        <origin>KAEDAH_PEROLEHAN</origin>
-        <comments>option_value</comments>
-        <conversion_Mask/>
-        <decimal_symbol>.</decimal_symbol>
-        <grouping_symbol>,</grouping_symbol>
-        <currency_symbol/>
-        <trim_type>none</trim_type>
-        <case_insensitive>N</case_insensitive>
-        <collator_disabled>Y</collator_disabled>
-        <collator_strength>0</collator_strength>
-        <sort_descending>N</sort_descending>
-        <output_padding>N</output_padding>
-        <date_format_lenient>N</date_format_lenient>
-        <date_format_locale>en_MY</date_format_locale>
-        <date_format_timezone>Asia/Singapore</date_format_timezone>
-        <lenient_string_to_number>N</lenient_string_to_number>
-      </value-meta>
-      <value-meta>
-        <type>String</type>
-        <storagetype>normal</storagetype>
-        <name>option_name</name>
-        <length>40</length>
-        <precision>-1</precision>
-        <origin>KAEDAH_PEROLEHAN</origin>
-        <comments>option_name</comments>
+        <origin>project_number</origin>
+        <comments>UGENPROJECTNUMBER</comments>
         <conversion_Mask/>
         <decimal_symbol>.</decimal_symbol>
         <grouping_symbol>,</grouping_symbol>
@@ -4619,50 +4624,8 @@ FROM dim_j10_pl_kaedah_perolehan
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1328</xloc>
-      <yloc>128</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>PEROLEHAN</name>
-    <type>StreamLookup</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <from>KAEDAH_PEROLEHAN</from>
-    <input_sorted>N</input_sorted>
-    <preserve_memory>Y</preserve_memory>
-    <sorted_list>N</sorted_list>
-    <integer_pair>N</integer_pair>
-    <lookup>
-      <key>
-        <name>J10_PL_KAEDAH_PEROLEHAN</name>
-        <field>OPTION_VALUE</field>
-      </key>
-      <value>
-        <name>OPTION_NAME</name>
-        <rename>kaedah_perolehan</rename>
-        <default/>
-        <type>None</type>
-      </value>
-    </lookup>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1328</xloc>
-      <yloc>272</yloc>
+      <xloc>448</xloc>
+      <yloc>160</yloc>
       <draw>Y</draw>
     </GUI>
   </step>

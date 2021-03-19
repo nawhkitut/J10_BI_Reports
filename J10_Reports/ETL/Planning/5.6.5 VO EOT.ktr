@@ -438,15 +438,15 @@
   </notepads>
   <connection>
     <name>J10</name>
-    <server>10.8.69.165</server>
+    <server>10.8.69.233</server>
     <type>ORACLE</type>
     <access>Native</access>
     <database>j10</database>
     <port>1521</port>
-    <username>unifieruat4stg</username>
-    <password>Encrypted 2be98daa603c19b81b90caf648a81bbdd</password>
+    <username>unifieruat4</username>
+    <password>Encrypted 2be98afc86ad29c8dad10ab62cb93bb8e</password>
     <servername/>
-    <data_tablespace>unifieruat4stg</data_tablespace>
+    <data_tablespace>unifieruat4</data_tablespace>
     <index_tablespace/>
     <attributes>
       <attribute>
@@ -2073,9 +2073,9 @@ FROM "public".dim_pejabat
     <connection>J10</connection>
     <sql>SELECT distinct NOMBOR_IC,parentorganizationid, REGEXP_REPLACE(NAME, '(\[\d+\]\s)', '') as name
 FROM UNIFIER__J10_MYKJ_API_DATA a
-INNER JOIN LIFERAY_STG.USER_ b ON a.NOMBOR_IC = b.SCREENNAME
-INNER JOIN LIFERAY_STG.USERS_ORGS c ON b.USERID = c.USERID
-INNER JOIN LIFERAY_STG.ORGANIZATION_ d ON c.ORGANIZATIONID = d.ORGANIZATIONID</sql>
+INNER JOIN LIFERAY_PROD.USER_ b ON a.NOMBOR_IC = b.SCREENNAME
+INNER JOIN LIFERAY_PROD.USERS_ORGS c ON b.USERID = c.USERID
+INNER JOIN LIFERAY_PROD.ORGANIZATION_ d ON c.ORGANIZATIONID = d.ORGANIZATIONID</sql>
     <limit>0</limit>
     <lookup/>
     <execute_each_row>N</execute_each_row>
@@ -2722,159 +2722,120 @@ rpdecide='NOT AVAILABLE'
     <fields>
       <field>
         <name>J10_PL_NAMA_PROJEK</name>
-        <rename/>
       </field>
       <field>
         <name>PEJABAT_PROGRAM</name>
-        <rename/>
       </field>
       <field>
         <name>UGENPROJECTNUMBER</name>
-        <rename/>
       </field>
       <field>
         <name>PROJECT_ID</name>
-        <rename/>
       </field>
       <field>
         <name>PEJABAT</name>
-        <rename/>
       </field>
       <field>
         <name>pejabat_jkr</name>
-        <rename/>
       </field>
       <field>
         <name>sk_pejabat_jkr</name>
-        <rename/>
       </field>
       <field>
         <name>sk_pejabat_atas_jkr</name>
-        <rename/>
       </field>
       <field>
         <name>hierarchy</name>
-        <rename/>
       </field>
       <field>
         <name>project_number</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_NAMA_PENGURUS_PROGRA</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_BUKAN_PEJABAT_HOPT</name>
-        <rename/>
       </field>
       <field>
         <name>JENIS_PROJEK</name>
-        <rename/>
       </field>
       <field>
         <name>VO</name>
-        <rename/>
       </field>
       <field>
         <name>EOT</name>
-        <rename/>
       </field>
       <field>
         <name>J10_KOS_PRJ_SEMASA</name>
-        <rename/>
       </field>
       <field>
         <name>NAMA_PERUNDING</name>
-        <rename/>
       </field>
       <field>
         <name>TEMPOH_PROJEK</name>
-        <rename/>
       </field>
       <field>
         <name>TARIKH_MULA</name>
-        <rename/>
       </field>
       <field>
         <name>TARIKH_TAMAT_ASAL</name>
-        <rename/>
       </field>
       <field>
         <name>TARIKH_TAMAT_BARU</name>
-        <rename/>
       </field>
       <field>
         <name>JUMLAH_KOS_VO</name>
-        <rename/>
       </field>
       <field>
         <name>JUMLAH_EOT</name>
-        <rename/>
       </field>
       <field>
         <name>BEZA</name>
-        <rename/>
       </field>
       <field>
         <name>JUMLAH_KOS_ASAL</name>
-        <rename/>
       </field>
       <field>
         <name>KOS_TAMBAHAN</name>
-        <rename/>
       </field>
       <field>
         <name>KOS_BARU</name>
-        <rename/>
       </field>
       <field>
         <name>JUMLAH_KOS</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_N0_RUJUKAN_PROJ</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_SKOP_PROJEK</name>
-        <rename/>
       </field>
       <field>
         <name>KOS_PROJEK</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_NAMA_HOPT</name>
-        <rename/>
       </field>
       <field>
         <name>KOS_PERUNDING_SEMASA</name>
-        <rename/>
       </field>
       <field>
         <name>NAMA_HODT</name>
-        <rename/>
       </field>
       <field>
         <name>BIDANG</name>
-        <rename/>
       </field>
       <field>
         <name>rmk</name>
-        <rename/>
       </field>
       <field>
         <name>kaedah_perolehan</name>
-        <rename/>
       </field>
       <field>
         <name>kementerian</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_RUJUKAN_KOD_PROJEK</name>
-        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>

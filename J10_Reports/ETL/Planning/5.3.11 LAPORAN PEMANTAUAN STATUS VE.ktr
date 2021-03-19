@@ -438,15 +438,15 @@
   </notepads>
   <connection>
     <name>J10</name>
-    <server>10.8.69.165</server>
+    <server>10.8.69.233</server>
     <type>ORACLE</type>
     <access>Native</access>
     <database>j10</database>
     <port>1521</port>
-    <username>unifieruat4stg</username>
-    <password>Encrypted 2be98daa603c19b81b90caf648a81bbdd</password>
+    <username>unifieruat4</username>
+    <password>Encrypted 2be98afc86ad29c8dad10ab62cb93bb8e</password>
     <servername/>
-    <data_tablespace>unifieruat4stg</data_tablespace>
+    <data_tablespace>unifieruat4</data_tablespace>
     <index_tablespace/>
     <attributes>
       <attribute>
@@ -2441,8 +2441,8 @@ from unifier_uxjpcs_view</sql>
         <type>String</type>
       </value>
       <value>
-        <name>J10_PL_JENIS_PROJEK</name>
-        <rename>J10_PL_JENIS_PROJEK</rename>
+        <name>J10_PL_KLASIFIKASI_SDT</name>
+        <rename>J10_PL_KLASIFIKASI_SDT</rename>
         <default/>
         <type>Integer</type>
       </value>
@@ -2862,8 +2862,8 @@ select DISTINCT J10_PL_NAMA_PROJEK,upper(J10_PL_Bukan_Pejabat_HOPT) as Pejabat_P
     <integer_pair>N</integer_pair>
     <lookup>
       <key>
-        <name>J10_PL_JENIS_PROJEK</name>
-        <field>option_value</field>
+        <name>J10_PL_KLASIFIKASI_SDT</name>
+        <field>option_name</field>
       </key>
       <value>
         <name>option_name</name>
@@ -4903,9 +4903,9 @@ from  unifier_uxjcpln_view a join unifier_upi b on a.project_id=b.project_id
     <connection>J10</connection>
     <sql>SELECT distinct NOMBOR_IC,parentorganizationid, REGEXP_REPLACE(NAME, '(\[\d+\]\s)', '') as name
 FROM UNIFIER__J10_MYKJ_API_DATA a
-INNER JOIN LIFERAY_STG.USER_ b ON a.NOMBOR_IC = b.SCREENNAME
-INNER JOIN LIFERAY_STG.USERS_ORGS c ON b.USERID = c.USERID
-INNER JOIN LIFERAY_STG.ORGANIZATION_ d ON c.ORGANIZATIONID = d.ORGANIZATIONID</sql>
+INNER JOIN LIFERAY_PROD.USER_ b ON a.NOMBOR_IC = b.SCREENNAME
+INNER JOIN LIFERAY_PROD.USERS_ORGS c ON b.USERID = c.USERID
+INNER JOIN LIFERAY_PROD.ORGANIZATION_ d ON c.ORGANIZATIONID = d.ORGANIZATIONID</sql>
     <limit>0</limit>
     <lookup/>
     <execute_each_row>N</execute_each_row>
@@ -5011,9 +5011,9 @@ INNER JOIN LIFERAY_STG.ORGANIZATION_ d ON c.ORGANIZATIONID = d.ORGANIZATIONID</s
     <connection>J10</connection>
     <sql>SELECT distinct NOMBOR_IC,parentorganizationid, REGEXP_REPLACE(NAME, '(\[\d+\]\s)', '') as name
 FROM UNIFIER__J10_MYKJ_API_DATA a
-INNER JOIN LIFERAY_STG.USER_ b ON a.NOMBOR_IC = b.SCREENNAME
-INNER JOIN LIFERAY_STG.USERS_ORGS c ON b.USERID = c.USERID
-INNER JOIN LIFERAY_STG.ORGANIZATION_ d ON c.ORGANIZATIONID = d.ORGANIZATIONID</sql>
+INNER JOIN LIFERAY_PROD.USER_ b ON a.NOMBOR_IC = b.SCREENNAME
+INNER JOIN LIFERAY_PROD.USERS_ORGS c ON b.USERID = c.USERID
+INNER JOIN LIFERAY_PROD.ORGANIZATION_ d ON c.ORGANIZATIONID = d.ORGANIZATIONID</sql>
     <limit>0</limit>
     <lookup/>
     <execute_each_row>N</execute_each_row>
@@ -5027,7 +5027,7 @@ INNER JOIN LIFERAY_STG.ORGANIZATION_ d ON c.ORGANIZATIONID = d.ORGANIZATIONID</s
         <name>NOMBOR_IC</name>
         <length>750</length>
         <precision>-1</precision>
-        <origin>Pejabat_User 2</origin>
+        <origin>Pejabat_User 2 2</origin>
         <comments>NOMBOR_IC</comments>
         <conversion_Mask/>
         <decimal_symbol>.</decimal_symbol>
@@ -5050,7 +5050,7 @@ INNER JOIN LIFERAY_STG.ORGANIZATION_ d ON c.ORGANIZATIONID = d.ORGANIZATIONID</s
         <name>PARENTORGANIZATIONID</name>
         <length>30</length>
         <precision>0</precision>
-        <origin>Pejabat_User 2</origin>
+        <origin>Pejabat_User 2 2</origin>
         <comments>PARENTORGANIZATIONID</comments>
         <conversion_Mask>######0.0###################;-######0.0###################</conversion_Mask>
         <decimal_symbol>.</decimal_symbol>
@@ -5073,7 +5073,7 @@ INNER JOIN LIFERAY_STG.ORGANIZATION_ d ON c.ORGANIZATIONID = d.ORGANIZATIONID</s
         <name>NAME</name>
         <length>4000</length>
         <precision>-1</precision>
-        <origin>Pejabat_User 2</origin>
+        <origin>Pejabat_User 2 2</origin>
         <comments>NAME</comments>
         <conversion_Mask/>
         <decimal_symbol>.</decimal_symbol>
@@ -6242,7 +6242,7 @@ a.J10_PL_Nama_Pengurus_Progra,
 a.J10_PL_PEJABAT_PENOLONG_PEN,
 a.J10_PL_Bukan_Pejabat_HOPT,
 a.J10_PL_Nama_HOPT ,
-a.J10_PL_JENIS_PROJEK,
+a.J10_PL_KLASIFIKASI_SDT,
 CASE WHEN b.record_no IS NOT NULL THEN 1 ELSE 0 END AS bilangan_ve,
 CASE WHEN b.status = 'VELab_Slesai' THEN 1 ELSE 0 end AS bilangan_siap_ve,
 b.J10_PL_Tarikh_Mula_VE_Lab,
@@ -6678,14 +6678,14 @@ LEFT JOIN unifier_uxjve_view b ON a.PROJECT_ID=b.PROJECT_ID</sql>
         <lenient_string_to_number>N</lenient_string_to_number>
       </value-meta>
       <value-meta>
-        <type>Integer</type>
+        <type>String</type>
         <storagetype>normal</storagetype>
-        <name>J10_PL_JENIS_PROJEK</name>
-        <length>10</length>
-        <precision>0</precision>
+        <name>J10_PL_KLASIFIKASI_SDT</name>
+        <length>750</length>
+        <precision>-1</precision>
         <origin>UPI</origin>
-        <comments>J10_PL_JENIS_PROJEK</comments>
-        <conversion_Mask>####0;-####0</conversion_Mask>
+        <comments>J10_PL_KLASIFIKASI_SDT</comments>
+        <conversion_Mask/>
         <decimal_symbol>.</decimal_symbol>
         <grouping_symbol>,</grouping_symbol>
         <currency_symbol/>
@@ -6935,8 +6935,11 @@ LEFT JOIN unifier_uxjve_view b ON a.PROJECT_ID=b.PROJECT_ID</sql>
     </partitioning>
     <connection>J10</connection>
     <sql>
-select distinct project_id,a.J10_PL_Lokasi_Tapak_Negeri,a.J10_PL_Kementerian,a.J10_PL_Rancangan_Malaysia_K,a.J10_PL_LOKASI_NEGERI,a.J10_PL_JENIS_KONTRAK,a.J10_PL_Cawangan_Pengurus_Pr,a.j10_pl_agensi,
-a.J10_PL_Kategori_Perbelantxt,a.J10_PL_Kaedah_Perolehan,a.J10_PL_TarikhDaftar_Projek,a.J10_PL_Tarikh_Brif_Projek_t,a.J10_PL_Tapak_Lokasi,a.J10_PL_ACAT,FULLNAME as J10_PL_Nama_Pengurus_Progra,a.J10_PL_JENIS_PROJEK,
+select distinct project_id,a.J10_PL_Lokasi_Tapak_Negeri,a.J10_PL_Kementerian,a.J10_PL_Rancangan_Malaysia_K,
+a.J10_PL_LOKASI_NEGERI,a.J10_PL_JENIS_KONTRAK,a.J10_PL_Cawangan_Pengurus_Pr,a.j10_pl_agensi,
+a.J10_PL_Kategori_Perbelantxt,a.J10_PL_Kaedah_Perolehan,a.J10_PL_TarikhDaftar_Projek,
+a.J10_PL_Tarikh_Brif_Projek_t,a.J10_PL_Tapak_Lokasi,a.J10_PL_ACAT,FULLNAME as J10_PL_Nama_Pengurus_Progra,
+a.J10_PL_KLASIFIKASI_SDT,
 a.J10_PL_Siling_Projek_yang_d,a.J10_PL_Siling_Projek,a.J10_PL_Tarikh_Jangka_Mula_P,a.J10_PL_Tarikh_Jangka_Siap_P,a.J10_PL_Tarikh_Jangka_Seraha,a.J10_PL_BUKAN_PEJABAT_HOPT,a.J10_PL_JENIS_REKABENTUK,a.J10_PL_PENGGUNAAN_BIM
 from unifier_upi_view a left join unifier_us_xjprj b on a.project_id=b.PID
 left join unifier_user_view on b.J10_PL_Nama_Pengurus_Progra=userid</sql>
@@ -7293,14 +7296,14 @@ left join unifier_user_view on b.J10_PL_Nama_Pengurus_Progra=userid</sql>
         <lenient_string_to_number>N</lenient_string_to_number>
       </value-meta>
       <value-meta>
-        <type>Integer</type>
+        <type>String</type>
         <storagetype>normal</storagetype>
-        <name>J10_PL_JENIS_PROJEK</name>
-        <length>10</length>
-        <precision>0</precision>
+        <name>J10_PL_KLASIFIKASI_SDT</name>
+        <length>750</length>
+        <precision>-1</precision>
         <origin>UPIDeatils</origin>
-        <comments>J10_PL_JENIS_PROJEK</comments>
-        <conversion_Mask>####0;-####0</conversion_Mask>
+        <comments>J10_PL_KLASIFIKASI_SDT</comments>
+        <conversion_Mask/>
         <decimal_symbol>.</decimal_symbol>
         <grouping_symbol>,</grouping_symbol>
         <currency_symbol/>
@@ -7638,8 +7641,8 @@ left join unifier_user_view on b.J10_PL_Nama_Pengurus_Progra=userid</sql>
         <type>String</type>
       </value>
       <value>
-        <name>J10_PL_JENIS_PROJEK</name>
-        <rename>J10_PL_JENIS_PROJEK</rename>
+        <name>J10_PL_KLASIFIKASI_SDT</name>
+        <rename>J10_PL_KLASIFIKASI_SDT</rename>
         <default/>
         <type>Integer</type>
       </value>

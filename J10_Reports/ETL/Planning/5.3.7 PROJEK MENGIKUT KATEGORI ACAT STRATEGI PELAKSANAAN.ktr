@@ -438,15 +438,15 @@
   </notepads>
   <connection>
     <name>J10</name>
-    <server>10.8.69.165</server>
+    <server>10.8.69.233</server>
     <type>ORACLE</type>
     <access>Native</access>
     <database>j10</database>
     <port>1521</port>
-    <username>unifieruat4stg</username>
-    <password>Encrypted 2be98daa603c19b81b90caf648a81bbdd</password>
+    <username>unifieruat4</username>
+    <password>Encrypted 2be98afc86ad29c8dad10ab62cb93bb8e</password>
     <servername/>
-    <data_tablespace>unifieruat4stg</data_tablespace>
+    <data_tablespace>unifieruat4</data_tablespace>
     <index_tablespace/>
     <attributes>
       <attribute>
@@ -2428,8 +2428,8 @@ FROM "public".dim_j10_pl_acat
     <integer_pair>N</integer_pair>
     <lookup>
       <key>
-        <name>J10_PL_JENIS_PROJEK</name>
-        <field>OPTION_VALUE</field>
+        <name>J10_PL_KLASIFIKASI_SDT</name>
+        <field>option_name</field>
       </key>
       <value>
         <name>OPTION_NAME</name>
@@ -2448,7 +2448,7 @@ FROM "public".dim_j10_pl_acat
     </remotesteps>
     <GUI>
       <xloc>1600</xloc>
-      <yloc>240</yloc>
+      <yloc>224</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -5224,9 +5224,9 @@ from  unifier_uxjcpln_view a join unifier_upi b on a.project_id=b.project_id
     <connection>J10</connection>
     <sql>SELECT distinct NOMBOR_IC,parentorganizationid, REGEXP_REPLACE(NAME, '(\[\d+\]\s)', '') as name
 FROM UNIFIER__J10_MYKJ_API_DATA a
-INNER JOIN LIFERAY_STG.USER_ b ON a.NOMBOR_IC = b.SCREENNAME
-INNER JOIN LIFERAY_STG.USERS_ORGS c ON b.USERID = c.USERID
-INNER JOIN LIFERAY_STG.ORGANIZATION_ d ON c.ORGANIZATIONID = d.ORGANIZATIONID</sql>
+INNER JOIN LIFERAY_PROD.USER_ b ON a.NOMBOR_IC = b.SCREENNAME
+INNER JOIN LIFERAY_PROD.USERS_ORGS c ON b.USERID = c.USERID
+INNER JOIN LIFERAY_PROD.ORGANIZATION_ d ON c.ORGANIZATIONID = d.ORGANIZATIONID</sql>
     <limit>0</limit>
     <lookup/>
     <execute_each_row>N</execute_each_row>
@@ -5332,9 +5332,9 @@ INNER JOIN LIFERAY_STG.ORGANIZATION_ d ON c.ORGANIZATIONID = d.ORGANIZATIONID</s
     <connection>J10</connection>
     <sql>SELECT distinct NOMBOR_IC,parentorganizationid, REGEXP_REPLACE(NAME, '(\[\d+\]\s)', '') as name
 FROM UNIFIER__J10_MYKJ_API_DATA a
-INNER JOIN LIFERAY_STG.USER_ b ON a.NOMBOR_IC = b.SCREENNAME
-INNER JOIN LIFERAY_STG.USERS_ORGS c ON b.USERID = c.USERID
-INNER JOIN LIFERAY_STG.ORGANIZATION_ d ON c.ORGANIZATIONID = d.ORGANIZATIONID</sql>
+INNER JOIN LIFERAY_PROD.USER_ b ON a.NOMBOR_IC = b.SCREENNAME
+INNER JOIN LIFERAY_PROD.USERS_ORGS c ON b.USERID = c.USERID
+INNER JOIN LIFERAY_PROD.ORGANIZATION_ d ON c.ORGANIZATIONID = d.ORGANIZATIONID</sql>
     <limit>0</limit>
     <lookup/>
     <execute_each_row>N</execute_each_row>
@@ -5348,7 +5348,7 @@ INNER JOIN LIFERAY_STG.ORGANIZATION_ d ON c.ORGANIZATIONID = d.ORGANIZATIONID</s
         <name>NOMBOR_IC</name>
         <length>750</length>
         <precision>-1</precision>
-        <origin>Pejabat_User 2</origin>
+        <origin>Pejabat_User 2 2</origin>
         <comments>NOMBOR_IC</comments>
         <conversion_Mask/>
         <decimal_symbol>.</decimal_symbol>
@@ -5371,7 +5371,7 @@ INNER JOIN LIFERAY_STG.ORGANIZATION_ d ON c.ORGANIZATIONID = d.ORGANIZATIONID</s
         <name>PARENTORGANIZATIONID</name>
         <length>30</length>
         <precision>0</precision>
-        <origin>Pejabat_User 2</origin>
+        <origin>Pejabat_User 2 2</origin>
         <comments>PARENTORGANIZATIONID</comments>
         <conversion_Mask>######0.0###################;-######0.0###################</conversion_Mask>
         <decimal_symbol>.</decimal_symbol>
@@ -5394,7 +5394,7 @@ INNER JOIN LIFERAY_STG.ORGANIZATION_ d ON c.ORGANIZATIONID = d.ORGANIZATIONID</s
         <name>NAME</name>
         <length>4000</length>
         <precision>-1</precision>
-        <origin>Pejabat_User 2</origin>
+        <origin>Pejabat_User 2 2</origin>
         <comments>NAME</comments>
         <conversion_Mask/>
         <decimal_symbol>.</decimal_symbol>
@@ -6184,240 +6184,319 @@ rpdecide='NOT AVAILABLE'
     <fields>
       <field>
         <name>J10_PL_NAMA_PROJEK</name>
+        <rename/>
       </field>
       <field>
         <name>PEJABAT_PROGRAM</name>
+        <rename/>
       </field>
       <field>
         <name>UGENPROJECTNUMBER</name>
+        <rename/>
       </field>
       <field>
         <name>PROJECT_ID</name>
+        <rename/>
       </field>
       <field>
         <name>STATUS</name>
+        <rename/>
       </field>
       <field>
         <name>RECORD_NO</name>
+        <rename/>
       </field>
       <field>
         <name>PEJABAT</name>
+        <rename/>
       </field>
       <field>
         <name>Peja</name>
+        <rename/>
       </field>
       <field>
         <name>sk_peja</name>
+        <rename/>
       </field>
       <field>
         <name>Peja_atas</name>
+        <rename/>
       </field>
       <field>
         <name>hier</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_LOKASI_TAPAK_NEGERI</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_KEMENTERIAN</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_RANCANGAN_MALAYSIA_K</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_LOKASI_NEGERI</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_JENIS_KONTRAK</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_CAWANGAN_PENGURUS_PR</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_AGENSI</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_KATEGORI_PERBELANTXT</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_KAEDAH_PEROLEHAN</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_TARIKHDAFTAR_PROJEK</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_BRIF_PROJEK</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_TAPAK_LOKASI</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_ACAT</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_NAMA_PENGURUS_PROGRA</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_PEJABAT_PENOLONG_PEN</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_DAERAH_PD</name>
+        <rename/>
       </field>
       <field>
         <name>project_number</name>
+        <rename/>
       </field>
       <field>
-        <name>J10_PL_JENIS_PROJEK</name>
+        <name>J10_PL_KLASIFIKASI_SDT</name>
+        <rename/>
       </field>
       <field>
         <name>J_PL_SP_JENISPEROLEHAN</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_TAJUK_PROGRAM</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_N0_RUJUKAN_PROJ</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_RUJUKAN_KOD_PROJEK</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_SPPII_NUMBER</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_Q_ULASANQPLAN_DES</name>
+        <rename/>
       </field>
       <field>
         <name>PEJABAT_HOPT</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_TARIKH_BRIF_PROJEK_T</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_TAPAK_LOKASI_1</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_SILING_PERUNTUKAN</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_TARIKH_LAPORAN_VALUE</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_KATEGORI_IBS</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_JENIS_REKABENTUK</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_PENGGUNAAN_BIM</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_KOS_PROJEK_ASAL</name>
+        <rename/>
       </field>
       <field>
         <name>J10_KOS_PRJ_SEMASA</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_SILING_PROJEK_YANG_D</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_SILING_PROJEK</name>
+        <rename/>
       </field>
       <field>
         <name>TARIKH_SAH_BRIF_SKOP</name>
+        <rename/>
       </field>
       <field>
         <name>TARIKH_SIAP_SEBENAR</name>
+        <rename/>
       </field>
       <field>
         <name>J_PL_PC_HOPTDATENEW</name>
+        <rename/>
       </field>
       <field>
         <name>NAMA_HOPT</name>
+        <rename/>
       </field>
       <field>
         <name>J_PL_SP_TSRK</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_TARIKH_JANGKA_IKLAN</name>
+        <rename/>
       </field>
       <field>
         <name>J10_DT_SURAT_DOP</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_TARIKH_JANGKA_MULA_P</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_TARIKH_JANGKA_SIAP_P</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_TARIKH_JANGKA_SERAHA</name>
+        <rename/>
       </field>
       <field>
         <name>TARIKH_SERAHAN_PROJEK_KEPADA_PELANGGAN</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_PENARAFAN_HIJAU_SDT</name>
+        <rename/>
       </field>
       <field>
         <name>acat</name>
+        <rename/>
       </field>
       <field>
         <name>ibs</name>
+        <rename/>
       </field>
       <field>
         <name>kategori_perbelanjaan</name>
+        <rename/>
       </field>
       <field>
         <name>RP1</name>
+        <rename/>
       </field>
       <field>
         <name>RP2</name>
+        <rename/>
       </field>
       <field>
         <name>RP3</name>
+        <rename/>
       </field>
       <field>
         <name>RP4</name>
+        <rename/>
       </field>
       <field>
         <name>RP5</name>
+        <rename/>
       </field>
       <field>
         <name>ROLLING PLAN</name>
+        <rename/>
       </field>
       <field>
         <name>rmk</name>
+        <rename/>
       </field>
       <field>
         <name>kaedah_perolehan</name>
+        <rename/>
       </field>
       <field>
         <name>JENIS_PROJEK</name>
+        <rename/>
       </field>
       <field>
         <name>kementerian_pelanggan</name>
+        <rename/>
       </field>
       <field>
         <name>KEMENTERIAN_AGENCY</name>
+        <rename/>
       </field>
       <field>
         <name>LOKASI_TAPAK</name>
+        <rename/>
       </field>
       <field>
         <name>DAERAH</name>
+        <rename/>
       </field>
       <field>
         <name>kaedah_perlaksanaan</name>
+        <rename/>
       </field>
       <field>
         <name>PMO_TERIMA</name>
+        <rename/>
       </field>
       <field>
         <name>jenis_rekabentuk</name>
+        <rename/>
       </field>
       <field>
         <name>penggunaan_bim</name>
+        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -7245,7 +7324,7 @@ rpdecide='NOT AVAILABLE'
     <sql>select 
 a.project_id,
 a.record_no,
-a.J10_PL_JENIS_PROJEK,
+a.J10_PL_KLASIFIKASI_SDT,
 c.J_PL_SP_jenisperolehan,
 a.J10_PL_Tajuk_Program,
 a.J10_PL_N0_Rujukan_Proj,
@@ -7338,14 +7417,14 @@ left join  unifier_uxjqplan p on a.project_id=p.project_id
         <lenient_string_to_number>N</lenient_string_to_number>
       </value-meta>
       <value-meta>
-        <type>Integer</type>
+        <type>String</type>
         <storagetype>normal</storagetype>
-        <name>J10_PL_JENIS_PROJEK</name>
-        <length>10</length>
-        <precision>0</precision>
+        <name>J10_PL_KLASIFIKASI_SDT</name>
+        <length>750</length>
+        <precision>-1</precision>
         <origin>UPI</origin>
-        <comments>J10_PL_JENIS_PROJEK</comments>
-        <conversion_Mask>####0;-####0</conversion_Mask>
+        <comments>J10_PL_KLASIFIKASI_SDT</comments>
+        <conversion_Mask/>
         <decimal_symbol>.</decimal_symbol>
         <grouping_symbol>,</grouping_symbol>
         <currency_symbol/>
@@ -8087,8 +8166,8 @@ left join  unifier_uxjqplan p on a.project_id=p.project_id
         <field>PROJECT_ID</field>
       </key>
       <value>
-        <name>J10_PL_JENIS_PROJEK</name>
-        <rename>J10_PL_JENIS_PROJEK</rename>
+        <name>J10_PL_KLASIFIKASI_SDT</name>
+        <rename>J10_PL_KLASIFIKASI_SDT</rename>
         <default/>
         <type>Integer</type>
       </value>
