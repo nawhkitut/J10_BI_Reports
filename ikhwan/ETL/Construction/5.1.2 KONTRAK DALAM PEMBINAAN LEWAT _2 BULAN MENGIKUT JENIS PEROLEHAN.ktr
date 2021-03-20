@@ -1658,9 +1658,11 @@ FROM dim_j10_pl_jenis_projek
       <schema_name/>
     </partitioning>
     <connection>J10_Reports_DM</connection>
-    <sql>SELECT id
-,  kaedah_perlaksanaan_id
-, kaedah_perlaksanaan_name
+    <sql>SELECT
+  kaedah_perlaksanaan_id
+, data_name
+, option_name
+, option_value
 FROM "public".dim_kaedah_perlaksanaan
 </sql>
     <limit>0</limit>
@@ -1673,11 +1675,11 @@ FROM "public".dim_kaedah_perlaksanaan
       <value-meta>
         <type>Integer</type>
         <storagetype>normal</storagetype>
-        <name>id</name>
+        <name>kaedah_perlaksanaan_id</name>
         <length>9</length>
         <precision>0</precision>
         <origin>KAEDAH_PERLAKSANAAN</origin>
-        <comments>id</comments>
+        <comments>kaedah_perlaksanaan_id</comments>
         <conversion_Mask>####0;-####0</conversion_Mask>
         <decimal_symbol>.</decimal_symbol>
         <grouping_symbol>,</grouping_symbol>
@@ -1696,11 +1698,11 @@ FROM "public".dim_kaedah_perlaksanaan
       <value-meta>
         <type>String</type>
         <storagetype>normal</storagetype>
-        <name>kaedah_perlaksanaan_id</name>
-        <length>4000</length>
+        <name>data_name</name>
+        <length>75</length>
         <precision>-1</precision>
         <origin>KAEDAH_PERLAKSANAAN</origin>
-        <comments>kaedah_perlaksanaan_id</comments>
+        <comments>data_name</comments>
         <conversion_Mask/>
         <decimal_symbol>.</decimal_symbol>
         <grouping_symbol>,</grouping_symbol>
@@ -1719,11 +1721,34 @@ FROM "public".dim_kaedah_perlaksanaan
       <value-meta>
         <type>String</type>
         <storagetype>normal</storagetype>
-        <name>kaedah_perlaksanaan_name</name>
-        <length>4000</length>
+        <name>option_name</name>
+        <length>40</length>
         <precision>-1</precision>
         <origin>KAEDAH_PERLAKSANAAN</origin>
-        <comments>kaedah_perlaksanaan_name</comments>
+        <comments>option_name</comments>
+        <conversion_Mask/>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_MY</date_format_locale>
+        <date_format_timezone>Asia/Singapore</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>String</type>
+        <storagetype>normal</storagetype>
+        <name>option_value</name>
+        <length>4</length>
+        <precision>-1</precision>
+        <origin>KAEDAH_PERLAKSANAAN</origin>
+        <comments>option_value</comments>
         <conversion_Mask/>
         <decimal_symbol>.</decimal_symbol>
         <grouping_symbol>,</grouping_symbol>
@@ -2327,10 +2352,10 @@ FROM "public".dim_j10_pl_kementerian
     <lookup>
       <key>
         <name>KAEDAH_PERLAKSANAAN</name>
-        <field>kaedah_perlaksanaan_name</field>
+        <field>option_name</field>
       </key>
       <value>
-        <name>kaedah_perlaksanaan_name</name>
+        <name>option_name</name>
         <rename>Kaedah_Perlaksanaan_Name</rename>
         <default/>
         <type>None</type>
@@ -3022,7 +3047,7 @@ b.J10_PL_KATEGORI_IBS,
 b.J10_PL_KATEGORI_PERBELANJAA,
 b.J10_PL_RANCANGAN_MALAYSIA_K,
 b.J10_PL_KAEDAH_PEROLEHAN,
-b.J10_PL_KLASIFIKASI_SDT,
+b.J10_PL_JENIS_PROJEK,
 b.J10_PL_JenisKontrak_PD as KAEDAH_PERLAKSANAAN,
 e.J_PL_SP_jenisperolehan as JENIS_PEROLEHAN,
 b.J10_PL_KOS_PROJEK_ASAL as KOS,
@@ -3342,14 +3367,14 @@ where a.J10_PL_NAMA_PENOLONG_PENGUR!=0 </sql>
         <lenient_string_to_number>N</lenient_string_to_number>
       </value-meta>
       <value-meta>
-        <type>String</type>
+        <type>Integer</type>
         <storagetype>normal</storagetype>
-        <name>J10_PL_KLASIFIKASI_SDT</name>
-        <length>750</length>
-        <precision>-1</precision>
+        <name>J10_PL_JENIS_PROJEK</name>
+        <length>10</length>
+        <precision>0</precision>
         <origin>Project_Information</origin>
-        <comments>J10_PL_KLASIFIKASI_SDT</comments>
-        <conversion_Mask/>
+        <comments>J10_PL_JENIS_PROJEK</comments>
+        <conversion_Mask>####0;-####0</conversion_Mask>
         <decimal_symbol>.</decimal_symbol>
         <grouping_symbol>,</grouping_symbol>
         <currency_symbol/>
@@ -4254,7 +4279,7 @@ b.J10_PL_KATEGORI_IBS,
 b.J10_PL_KATEGORI_PERBELANJAA,
 b.J10_PL_RANCANGAN_MALAYSIA_K,
 b.J10_PL_KAEDAH_PEROLEHAN,
-b.J10_PL_KLASIFIKASI_SDT,
+b.J10_PL_JENIS_PROJEK,
 b.J10_PL_JenisKontrak_PD as KAEDAH_PERLAKSANAAN,
 e.J_PL_SP_jenisperolehan as JENIS_PEROLEHAN,
 b.J10_PL_KOS_PROJEK_ASAL as KOS,
@@ -4576,14 +4601,14 @@ where a.J10_PL_NAMA_PENGURUS_PROGRA!=0 </sql>
         <lenient_string_to_number>N</lenient_string_to_number>
       </value-meta>
       <value-meta>
-        <type>String</type>
+        <type>Integer</type>
         <storagetype>normal</storagetype>
-        <name>J10_PL_KLASIFIKASI_SDT</name>
-        <length>750</length>
-        <precision>-1</precision>
+        <name>J10_PL_JENIS_PROJEK</name>
+        <length>10</length>
+        <precision>0</precision>
         <origin>Project_Information 2</origin>
-        <comments>J10_PL_KLASIFIKASI_SDT</comments>
-        <conversion_Mask/>
+        <comments>J10_PL_JENIS_PROJEK</comments>
+        <conversion_Mask>####0;-####0</conversion_Mask>
         <decimal_symbol>.</decimal_symbol>
         <grouping_symbol>,</grouping_symbol>
         <currency_symbol/>
@@ -5488,7 +5513,7 @@ b.J10_PL_KATEGORI_IBS,
 b.J10_PL_KATEGORI_PERBELANJAA,
 b.J10_PL_RANCANGAN_MALAYSIA_K,
 b.J10_PL_KAEDAH_PEROLEHAN,
-b.J10_PL_KLASIFIKASI_SDT,
+b.J10_PL_JENIS_PROJEK,
 b.J10_PL_JenisKontrak_PD as KAEDAH_PERLAKSANAAN,
 e.J_PL_SP_jenisperolehan as JENIS_PEROLEHAN,
 b.J10_PL_KOS_PROJEK_ASAL as KOS,
@@ -5810,14 +5835,14 @@ where a.J10_PL_NAMA_HOPT !=0 </sql>
         <lenient_string_to_number>N</lenient_string_to_number>
       </value-meta>
       <value-meta>
-        <type>String</type>
+        <type>Integer</type>
         <storagetype>normal</storagetype>
-        <name>J10_PL_KLASIFIKASI_SDT</name>
-        <length>750</length>
-        <precision>-1</precision>
+        <name>J10_PL_JENIS_PROJEK</name>
+        <length>10</length>
+        <precision>0</precision>
         <origin>Project_Information 3</origin>
-        <comments>J10_PL_KLASIFIKASI_SDT</comments>
-        <conversion_Mask/>
+        <comments>J10_PL_JENIS_PROJEK</comments>
+        <conversion_Mask>####0;-####0</conversion_Mask>
         <decimal_symbol>.</decimal_symbol>
         <grouping_symbol>,</grouping_symbol>
         <currency_symbol/>
