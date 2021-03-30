@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <transformation>
   <info>
-    <name>533 STATUS PROJEK YANG DILAKSANAKAN OLEH JKR</name>
+    <name>535 STATUS PROJEK YANG DILAKSANAKAN OLEH JKR (HISTORICAL RMK10 SAHAJA – Q PLAN ASAL)</name>
     <description/>
     <extended_description/>
     <trans_version/>
@@ -1283,7 +1283,8 @@ a.J10_PL_PEJABAT_PENOLONG_PEN as penolong_pengurus_program,
 a.J10_PL_Bukan_Pejabat_HOPT as pejabat_hopt,
 a.J10_PL_Nama_HOPT as nama_hopt
 from unifier_upi_view a left join unifier_us_xjprj b on a.project_id=b.PID
-left join unifier_user_view on b.J10_PL_Nama_Pengurus_Progra=userid</sql>
+left join unifier_user_view on b.J10_PL_Nama_Pengurus_Progra=userid
+</sql>
     <limit>0</limit>
     <lookup/>
     <execute_each_row>N</execute_each_row>
@@ -5490,295 +5491,222 @@ rpdecide='NOT AVAILABLE'
     <fields>
       <field>
         <name>J10_PL_NAMA_PROJEK</name>
-        <rename/>
       </field>
       <field>
         <name>PEJABAT_PROGRAM</name>
-        <rename/>
       </field>
       <field>
         <name>PROJECT_ID</name>
-        <rename/>
       </field>
       <field>
         <name>PEJABAT</name>
-        <rename/>
       </field>
       <field>
         <name>pejabat_jkr</name>
-        <rename/>
       </field>
       <field>
         <name>sk_pejabat_jkr</name>
-        <rename/>
       </field>
       <field>
         <name>sk_pejabat_atas_jkr</name>
-        <rename/>
       </field>
       <field>
         <name>HIERARCHY</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_CAWANGAN_PENGURUS_PR</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_TARIKHDAFTAR_PROJEK</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_NAMA_PENGURUS_PROGRA</name>
-        <rename/>
       </field>
       <field>
         <name>PENOLONG_PENGURUS_PROGRAM</name>
-        <rename/>
       </field>
       <field>
         <name>PEJABAT_HOPT</name>
-        <rename/>
       </field>
       <field>
         <name>NAMA_HOPT</name>
-        <rename/>
       </field>
       <field>
         <name>project_number</name>
-        <rename/>
       </field>
       <field>
         <name>IKUT_JADUAL_TAMAT</name>
-        <rename/>
       </field>
       <field>
         <name>IKUT_JADUAL_SURAT</name>
-        <rename/>
       </field>
       <field>
         <name>IKUT_JADUAL_KONTRAK</name>
-        <rename/>
       </field>
       <field>
         <name>IKUT_JADUAL_SERAHAN</name>
-        <rename/>
       </field>
       <field>
         <name>LKDB_TAMAT</name>
-        <rename/>
       </field>
       <field>
         <name>LLDB_TAMAT</name>
-        <rename/>
       </field>
       <field>
         <name>LKDB_SURAT</name>
-        <rename/>
       </field>
       <field>
         <name>LLDB_SURAT</name>
-        <rename/>
       </field>
       <field>
         <name>LKDB_KONTRAK</name>
-        <rename/>
       </field>
       <field>
         <name>LLDB_KONTRAK</name>
-        <rename/>
       </field>
       <field>
         <name>LKDB_SERAHAN</name>
-        <rename/>
       </field>
       <field>
         <name>LLDB_SERAHAN</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_N0_RUJUKAN_PROJ</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_RUJUKAN_KOD_PROJEK</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_SPPII_NUMBER</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_Q_ULASANQPLAN_DES</name>
-        <rename/>
       </field>
       <field>
         <name>TERIMA_BRIF</name>
-        <rename/>
       </field>
       <field>
         <name>TERIMA_TAPAK</name>
-        <rename/>
       </field>
       <field>
         <name>TERIMA_KOS</name>
-        <rename/>
       </field>
       <field>
         <name>TERIMA_VA</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_KOS_PROJEK_ASAL</name>
-        <rename/>
       </field>
       <field>
         <name>J10_KOS_PRJ_SEMASA</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_SILING_PROJEK_YANG_D</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_SILING_PROJEK</name>
-        <rename/>
       </field>
       <field>
         <name>TARIKH_SAH_BRIF_SKOP</name>
-        <rename/>
       </field>
       <field>
         <name>TARIKH_SIAP_SEBENAR</name>
-        <rename/>
       </field>
       <field>
         <name>J_PL_PC_HOPTDATENEW</name>
-        <rename/>
       </field>
       <field>
         <name>J_PL_SP_TSRK</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_TARIKH_JANGKA_IKLAN</name>
-        <rename/>
       </field>
       <field>
         <name>J10_DT_SURAT_DOP</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_TARIKH_JANGKA_MULA_P</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_TARIKH_JANGKA_SIAP_P</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_TARIKH_JANGKA_SERAHA</name>
-        <rename/>
       </field>
       <field>
         <name>TARIKH_SERAHAN_PROJEK_KEPADA_PELANGGAN</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_PENARAFAN_HIJAU_SDT</name>
-        <rename/>
       </field>
       <field>
         <name>PEGAWAI_PENYEDIA_SURAT</name>
-        <rename/>
       </field>
       <field>
         <name>acat</name>
-        <rename/>
       </field>
       <field>
         <name>ibs</name>
-        <rename/>
       </field>
       <field>
         <name>perbelanjaan</name>
-        <rename/>
       </field>
       <field>
         <name>rmk</name>
-        <rename/>
       </field>
       <field>
         <name>kaedah_perolehan</name>
-        <rename/>
       </field>
       <field>
         <name>JENIS_PROJEK</name>
-        <rename/>
       </field>
       <field>
         <name>kementerian</name>
-        <rename/>
       </field>
       <field>
         <name>KEMENTERIAN_AGENCY</name>
-        <rename/>
       </field>
       <field>
         <name>LOKASI_TAPAK</name>
-        <rename/>
       </field>
       <field>
         <name>DAERAH</name>
-        <rename/>
       </field>
       <field>
         <name>kaedah_perlaksanaan</name>
-        <rename/>
       </field>
       <field>
         <name>PMO_TERIMA</name>
-        <rename/>
       </field>
       <field>
         <name>jenis_rekabentuk</name>
-        <rename/>
       </field>
       <field>
         <name>penggunaan_bim</name>
-        <rename/>
       </field>
       <field>
         <name>TKH_LANTIK_HOPT</name>
-        <rename/>
       </field>
       <field>
         <name>TKH_SAH_REKABENTUK</name>
-        <rename/>
       </field>
       <field>
         <name>UUU_CREATION_DATE</name>
-        <rename/>
       </field>
       <field>
         <name>UUU_RECORD_LAST_UPDATE_DATE</name>
-        <rename/>
       </field>
       <field>
         <name>TARIKH_JANGKA_IKLAN</name>
-        <rename/>
       </field>
       <field>
         <name>TARIKH_SST</name>
-        <rename/>
       </field>
       <field>
         <name>TARIKH_TDK</name>
-        <rename/>
       </field>
       <field>
         <name>TKH_SIAP_SEBENAR</name>
-        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -6293,7 +6221,7 @@ rpdecide='NOT AVAILABLE'
     </partitioning>
     <connection>J10_Reports_DM</connection>
     <schema>public</schema>
-    <table>pln_533_status_projek_dilaksanakan_jkr</table>
+    <table>pln_535_Status_Projek_Yang_Dilaksanakan_Oleh_JKR_Historical_RMK10_Sahaja_Q_Plan_Asal</table>
     <commit>1000</commit>
     <truncate>Y</truncate>
     <ignore_errors>N</ignore_errors>
@@ -6670,6 +6598,7 @@ LEFT JOIN unifier_uxjplpc c ON a.project_id=c.project_id
 LEFT JOIN unifier_uxjqplan d ON a.project_id=d.project_id
 LEFT JOIN unifier_uxbsat e ON a.project_id=e.project_id
 left join  unifier_uxjqplan p on a.project_id=p.project_id
+where d.J10_PL_Q_QplanSeq  = '0001' and a.J10_PL_Rancangan_Malaysia_K = 10
 </sql>
     <limit>0</limit>
     <lookup/>
@@ -7422,6 +7351,29 @@ left join  unifier_uxjqplan p on a.project_id=p.project_id
         <precision>-1</precision>
         <origin>UPI</origin>
         <comments>UUU_RECORD_LAST_UPDATE_DATE</comments>
+        <conversion_Mask/>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_MY</date_format_locale>
+        <date_format_timezone>Asia/Singapore</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>Timestamp</type>
+        <storagetype>normal</storagetype>
+        <name>TKH_SIAP_SEBENAR</name>
+        <length>0</length>
+        <precision>-1</precision>
+        <origin>UPI</origin>
+        <comments>TKH_SIAP_SEBENAR</comments>
         <conversion_Mask/>
         <decimal_symbol>.</decimal_symbol>
         <grouping_symbol>,</grouping_symbol>
@@ -8529,6 +8481,48 @@ where pro.objectid=act.projectobjectid AND act.name IN ('Tamat Fasa Rekabentuk',
     <GUI>
       <xloc>752</xloc>
       <yloc>96</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>jangka_iklan lookup</name>
+    <type>StreamLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <from>tkh_jangka_iklan</from>
+    <input_sorted>N</input_sorted>
+    <preserve_memory>Y</preserve_memory>
+    <sorted_list>N</sorted_list>
+    <integer_pair>N</integer_pair>
+    <lookup>
+      <key>
+        <name>PROJECT_ID</name>
+        <field>PROJECT_ID</field>
+      </key>
+      <value>
+        <name>TARIKH_JANGKA_IKLAN</name>
+        <rename>TARIKH_JANGKA_IKLAN</rename>
+        <default/>
+        <type>Timestamp</type>
+      </value>
+    </lookup>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1008</xloc>
+      <yloc>416</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -9675,48 +9669,6 @@ SELECT K__UUU_SHELL_CREATOR AS PROJECT_ID, J10_PL_Nama_Pegawai_Pendaft AS pegawa
     <GUI>
       <xloc>640</xloc>
       <yloc>96</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>jangka_iklan lookup</name>
-    <type>StreamLookup</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <from>tkh_jangka_iklan</from>
-    <input_sorted>N</input_sorted>
-    <preserve_memory>Y</preserve_memory>
-    <sorted_list>N</sorted_list>
-    <integer_pair>N</integer_pair>
-    <lookup>
-      <key>
-        <name>PROJECT_ID</name>
-        <field>PROJECT_ID</field>
-      </key>
-      <value>
-        <name>TARIKH_JANGKA_IKLAN</name>
-        <rename>TARIKH_JANGKA_IKLAN</rename>
-        <default/>
-        <type>Timestamp</type>
-      </value>
-    </lookup>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1008</xloc>
-      <yloc>416</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
