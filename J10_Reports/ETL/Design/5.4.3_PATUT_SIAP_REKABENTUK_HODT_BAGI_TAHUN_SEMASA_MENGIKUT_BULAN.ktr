@@ -739,16 +739,6 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Stream lookup 4</from>
-      <to>UPI_Details</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>UPI_Details</from>
-      <to>Value mapper</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>pegawai_penyedia</from>
       <to>pegawai lookup  2</to>
       <enabled>Y</enabled>
@@ -829,23 +819,53 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Stream lookup 3</from>
-      <to>Stream lookup 4</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>project_number</from>
-      <to>project_No</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Filter rows</from>
       <to>project_No</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
       <from>project_No</from>
       <to>Patut 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Patut 2 2</from>
+      <to>prev_telah lookup</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>previous_patut</from>
+      <to>Patut 2 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>previous_telah</from>
+      <to>prev_telah lookup</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Filter rows</from>
+      <to>UPI_Details</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>UPI_Details</from>
+      <to>Stream lookup 4</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Stream lookup 4</from>
+      <to>project_No</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Stream lookup 3</from>
+      <to>Patut 2 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>prev_telah lookup</from>
+      <to>Value mapper</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -886,8 +906,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>784</xloc>
-      <yloc>512</yloc>
+      <xloc>1184</xloc>
+      <yloc>416</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1019,8 +1039,8 @@ FROM dim_j10_pl_daerah
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1408</xloc>
-      <yloc>384</yloc>
+      <xloc>1808</xloc>
+      <yloc>288</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1061,8 +1081,8 @@ FROM dim_j10_pl_daerah
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1408</xloc>
-      <yloc>512</yloc>
+      <xloc>1808</xloc>
+      <yloc>416</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1413,8 +1433,8 @@ FROM "public".dim_J10_PL_Kategori_IBS
       </output>
     </remotesteps>
     <GUI>
-      <xloc>864</xloc>
-      <yloc>384</yloc>
+      <xloc>1264</xloc>
+      <yloc>288</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1455,8 +1475,8 @@ FROM "public".dim_J10_PL_Kategori_IBS
       </output>
     </remotesteps>
     <GUI>
-      <xloc>864</xloc>
-      <yloc>512</yloc>
+      <xloc>1264</xloc>
+      <yloc>416</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1588,8 +1608,8 @@ FROM "public".dim_j10_pl_acat
       </output>
     </remotesteps>
     <GUI>
-      <xloc>784</xloc>
-      <yloc>384</yloc>
+      <xloc>1184</xloc>
+      <yloc>288</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1630,8 +1650,8 @@ FROM "public".dim_j10_pl_acat
       </output>
     </remotesteps>
     <GUI>
-      <xloc>592</xloc>
-      <yloc>512</yloc>
+      <xloc>992</xloc>
+      <yloc>416</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1763,8 +1783,8 @@ FROM dim_j10_pl_jenis_projek
       </output>
     </remotesteps>
     <GUI>
-      <xloc>592</xloc>
-      <yloc>368</yloc>
+      <xloc>992</xloc>
+      <yloc>272</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1920,8 +1940,8 @@ FROM
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1264</xloc>
-      <yloc>704</yloc>
+      <xloc>1664</xloc>
+      <yloc>608</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2029,8 +2049,8 @@ FROM "public".dim_kaedah_perlaksanaan
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1408</xloc>
-      <yloc>704</yloc>
+      <xloc>1808</xloc>
+      <yloc>608</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2069,8 +2089,8 @@ FROM dim_j10_pl_kaedah_perolehan
       </output>
     </remotesteps>
     <GUI>
-      <xloc>496</xloc>
-      <yloc>384</yloc>
+      <xloc>896</xloc>
+      <yloc>288</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2202,8 +2222,8 @@ FROM "public".dim_j10_pl_kementerian
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1536</xloc>
-      <yloc>384</yloc>
+      <xloc>1936</xloc>
+      <yloc>288</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2244,8 +2264,8 @@ FROM "public".dim_j10_pl_kementerian
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1408</xloc>
-      <yloc>624</yloc>
+      <xloc>1808</xloc>
+      <yloc>528</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2286,8 +2306,8 @@ FROM "public".dim_j10_pl_kementerian
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1104</xloc>
-      <yloc>512</yloc>
+      <xloc>1504</xloc>
+      <yloc>416</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2328,8 +2348,8 @@ FROM "public".dim_j10_pl_kementerian
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1536</xloc>
-      <yloc>512</yloc>
+      <xloc>1936</xloc>
+      <yloc>416</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2368,8 +2388,8 @@ FROM dim_j10_pl_lokasi_tapak
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1264</xloc>
-      <yloc>384</yloc>
+      <xloc>1664</xloc>
+      <yloc>288</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2410,8 +2430,8 @@ FROM dim_j10_pl_lokasi_tapak
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1264</xloc>
-      <yloc>512</yloc>
+      <xloc>1664</xloc>
+      <yloc>416</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2543,8 +2563,8 @@ FROM dim_J10_PL_Kategori_Perbelanjaan
       </output>
     </remotesteps>
     <GUI>
-      <xloc>976</xloc>
-      <yloc>384</yloc>
+      <xloc>1376</xloc>
+      <yloc>288</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2585,8 +2605,8 @@ FROM dim_J10_PL_Kategori_Perbelanjaan
       </output>
     </remotesteps>
     <GUI>
-      <xloc>496</xloc>
-      <yloc>512</yloc>
+      <xloc>896</xloc>
+      <yloc>416</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2623,7 +2643,7 @@ count(to_char(act.PlannedFinishDate,'MM')) as jumlah_patut_serah
 
 from project pro, activity act 
 left join activitycodeassignment acs on (act.objectid=acs.ACTIVITYOBJECTID and act.PROJECTOBJECTID=acs.PROJECTOBJECTID)
-where pro.objectid=act.projectobjectid and to_char(act.PlannedFinishDate, 'YYYY')=to_char(sysdate,'YYYY') and act.name = 'Plan End in each month'
+where pro.objectid=act.projectobjectid and to_char(act.PlannedFinishDate, 'YYYY')=to_char(sysdate,'YYYY') and act.name = 'Siap Kerja Lead HODT'
 group by pro.id, act.PlannedFinishDate,to_char(act.PlannedFinishDate,'MM')</sql>
     <limit>0</limit>
     <lookup/>
@@ -2987,8 +3007,8 @@ group by pro.id, act.PlannedFinishDate,to_char(act.PlannedFinishDate,'MM')</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>96</xloc>
-      <yloc>544</yloc>
+      <xloc>384</xloc>
+      <yloc>656</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3101,8 +3121,8 @@ group by pro.id, act.PlannedFinishDate,to_char(act.PlannedFinishDate,'MM')</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>208</xloc>
-      <yloc>544</yloc>
+      <xloc>496</xloc>
+      <yloc>656</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3685,8 +3705,8 @@ INNER JOIN LIFERAY_PROD.ORGANIZATION_ d ON c.ORGANIZATIONID = d.ORGANIZATIONID</
       </output>
     </remotesteps>
     <GUI>
-      <xloc>976</xloc>
-      <yloc>512</yloc>
+      <xloc>1376</xloc>
+      <yloc>416</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3842,8 +3862,8 @@ FROM "public".dim_j10_pl_rmk
       </output>
     </remotesteps>
     <GUI>
-      <xloc>688</xloc>
-      <yloc>384</yloc>
+      <xloc>1088</xloc>
+      <yloc>288</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3884,8 +3904,8 @@ FROM "public".dim_j10_pl_rmk
       </output>
     </remotesteps>
     <GUI>
-      <xloc>688</xloc>
-      <yloc>512</yloc>
+      <xloc>1088</xloc>
+      <yloc>416</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -4225,6 +4245,14 @@ FROM "public".dim_j10_pl_rmk
         <name>TKH_SIAP_SEMASA_HOPT</name>
         <rename/>
       </field>
+      <field>
+        <name>PREVIOUS_PATUT</name>
+        <rename/>
+      </field>
+      <field>
+        <name>PREVIOUS_TELAH</name>
+        <rename/>
+      </field>
       <select_unspecified>N</select_unspecified>
     </fields>
     <attributes/>
@@ -4236,8 +4264,8 @@ FROM "public".dim_j10_pl_rmk
       </output>
     </remotesteps>
     <GUI>
-      <xloc>976</xloc>
-      <yloc>688</yloc>
+      <xloc>1376</xloc>
+      <yloc>592</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -4409,8 +4437,8 @@ FROM "public".dim_j10_pl_rmk
       </output>
     </remotesteps>
     <GUI>
-      <xloc>208</xloc>
-      <yloc>624</yloc>
+      <xloc>496</xloc>
+      <yloc>736</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -4547,8 +4575,8 @@ FROM "public".dim_j10_pl_rmk
       </output>
     </remotesteps>
     <GUI>
-      <xloc>208</xloc>
-      <yloc>704</yloc>
+      <xloc>496</xloc>
+      <yloc>448</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -4589,8 +4617,8 @@ FROM "public".dim_j10_pl_rmk
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1264</xloc>
-      <yloc>624</yloc>
+      <xloc>1664</xloc>
+      <yloc>528</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -4631,8 +4659,8 @@ FROM "public".dim_j10_pl_rmk
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1152</xloc>
-      <yloc>624</yloc>
+      <xloc>1552</xloc>
+      <yloc>528</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -4989,6 +5017,14 @@ FROM "public".dim_j10_pl_rmk
         <column_name>TKH_SIAP_SEMASA_HOPT</column_name>
         <stream_name>TKH_SIAP_SEMASA_HOPT</stream_name>
       </field>
+      <field>
+        <column_name>PREVIOUS_PATUT</column_name>
+        <stream_name>PREVIOUS_PATUT</stream_name>
+      </field>
+      <field>
+        <column_name>PREVIOUS_TELAH</column_name>
+        <stream_name>PREVIOUS_TELAH</stream_name>
+      </field>
     </fields>
     <attributes/>
     <cluster_schema/>
@@ -4999,8 +5035,8 @@ FROM "public".dim_j10_pl_rmk
       </output>
     </remotesteps>
     <GUI>
-      <xloc>800</xloc>
-      <yloc>688</yloc>
+      <xloc>1200</xloc>
+      <yloc>592</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -5485,8 +5521,8 @@ order by b.project_id
       </output>
     </remotesteps>
     <GUI>
-      <xloc>80</xloc>
-      <yloc>704</yloc>
+      <xloc>304</xloc>
+      <yloc>448</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -5522,7 +5558,7 @@ count(to_char(act.ActualFinishDate,'MM')) as jumlah_telah_serah
 
 from project pro, activity act 
 left join activitycodeassignment acs on (act.objectid=acs.ACTIVITYOBJECTID and act.PROJECTOBJECTID=acs.PROJECTOBJECTID)
-where pro.objectid=act.projectobjectid and to_char(act.ActualFinishDate, 'YYYY')=to_char(sysdate,'YYYY') and act.name = 'Actual End in each month'
+where pro.objectid=act.projectobjectid and to_char(act.ActualFinishDate, 'YYYY')=to_char(sysdate,'YYYY') and act.name = 'Siap Kerja Lead HODT'
 group by pro.id, act.ActualFinishDate,to_char(act.ActualFinishDate,'MM')</sql>
     <limit>0</limit>
     <lookup/>
@@ -5886,8 +5922,8 @@ group by pro.id, act.ActualFinishDate,to_char(act.ActualFinishDate,'MM')</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>96</xloc>
-      <yloc>624</yloc>
+      <xloc>384</xloc>
+      <yloc>736</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -6575,8 +6611,8 @@ left join unifier_uxjdpla_view b on a.project_id = b.project_id
       </output>
     </remotesteps>
     <GUI>
-      <xloc>80</xloc>
-      <yloc>800</yloc>
+      <xloc>304</xloc>
+      <yloc>368</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -6767,8 +6803,8 @@ left join unifier_uxjdpla_view b on a.project_id = b.project_id
       </output>
     </remotesteps>
     <GUI>
-      <xloc>208</xloc>
-      <yloc>800</yloc>
+      <xloc>496</xloc>
+      <yloc>368</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -7111,8 +7147,8 @@ FROM UNIFIER_USER_VIEW
       </output>
     </remotesteps>
     <GUI>
-      <xloc>336</xloc>
-      <yloc>704</yloc>
+      <xloc>656</xloc>
+      <yloc>432</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -7286,8 +7322,8 @@ FROM UNIFIER_USER_VIEW
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1104</xloc>
-      <yloc>384</yloc>
+      <xloc>1504</xloc>
+      <yloc>288</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -7328,8 +7364,8 @@ FROM UNIFIER_USER_VIEW
       </output>
     </remotesteps>
     <GUI>
-      <xloc>384</xloc>
-      <yloc>512</yloc>
+      <xloc>784</xloc>
+      <yloc>416</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -7412,8 +7448,8 @@ SELECT K__UUU_SHELL_CREATOR AS PROJECT_ID, J10_PL_Nama_Pegawai_Pendaft AS pegawa
       </output>
     </remotesteps>
     <GUI>
-      <xloc>384</xloc>
-      <yloc>384</yloc>
+      <xloc>784</xloc>
+      <yloc>288</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -7562,8 +7598,8 @@ SELECT K__UUU_SHELL_CREATOR AS PROJECT_ID, J10_PL_Nama_Pegawai_Pendaft AS pegawa
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1152</xloc>
-      <yloc>704</yloc>
+      <xloc>1552</xloc>
+      <yloc>608</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -7604,8 +7640,8 @@ SELECT K__UUU_SHELL_CREATOR AS PROJECT_ID, J10_PL_Nama_Pegawai_Pendaft AS pegawa
       </output>
     </remotesteps>
     <GUI>
-      <xloc>208</xloc>
-      <yloc>448</yloc>
+      <xloc>496</xloc>
+      <yloc>560</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -7686,8 +7722,363 @@ SELECT K__UUU_SHELL_CREATOR AS PROJECT_ID, J10_PL_Nama_Pegawai_Pendaft AS pegawa
       </output>
     </remotesteps>
     <GUI>
-      <xloc>96</xloc>
-      <yloc>448</yloc>
+      <xloc>384</xloc>
+      <yloc>560</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Patut 2 2</name>
+    <type>StreamLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <from>previous_patut</from>
+    <input_sorted>N</input_sorted>
+    <preserve_memory>Y</preserve_memory>
+    <sorted_list>N</sorted_list>
+    <integer_pair>N</integer_pair>
+    <lookup>
+      <key>
+        <name>project_number</name>
+        <field>PROJECT_ID</field>
+      </key>
+      <value>
+        <name>PREVIOUS_PATUT</name>
+        <rename>PREVIOUS_PATUT</rename>
+        <default/>
+        <type>BigNumber</type>
+      </value>
+    </lookup>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>496</xloc>
+      <yloc>816</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>prev_telah lookup</name>
+    <type>StreamLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <from>previous_telah</from>
+    <input_sorted>N</input_sorted>
+    <preserve_memory>Y</preserve_memory>
+    <sorted_list>N</sorted_list>
+    <integer_pair>N</integer_pair>
+    <lookup>
+      <key>
+        <name>project_number</name>
+        <field>PROJECT_ID</field>
+      </key>
+      <value>
+        <name>PREVIOUS_TELAH</name>
+        <rename>PREVIOUS_TELAH</rename>
+        <default/>
+        <type>BigNumber</type>
+      </value>
+    </lookup>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>496</xloc>
+      <yloc>896</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>previous_patut</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>p6</connection>
+    <sql>select 
+pro.id as project_id,
+act.PlannedFinishDate,act.name,
+case when to_char(act.PlannedFinishDate,'MM') between 1 and 12 then 1 else 0 end as previous_patut
+
+from project pro, activity act 
+left join activitycodeassignment acs on (act.objectid=acs.ACTIVITYOBJECTID and act.PROJECTOBJECTID=acs.PROJECTOBJECTID)
+where pro.objectid=act.projectobjectid and to_char(act.PlannedFinishDate, 'YYYY')&lt;to_char(sysdate,'YYYY') and act.name = 'Iklan Tender'
+group by pro.id, act.PlannedFinishDate,to_char(act.PlannedFinishDate,'MM'),act.name</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cached_row_meta_active>N</cached_row_meta_active>
+    <row-meta>
+      <value-meta>
+        <type>String</type>
+        <storagetype>normal</storagetype>
+        <name>PROJECT_ID</name>
+        <length>40</length>
+        <precision>-1</precision>
+        <origin>previous_year_patut</origin>
+        <comments>PROJECT_ID</comments>
+        <conversion_Mask/>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_MY</date_format_locale>
+        <date_format_timezone>Asia/Singapore</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>Timestamp</type>
+        <storagetype>normal</storagetype>
+        <name>PLANNEDFINISHDATE</name>
+        <length>0</length>
+        <precision>-1</precision>
+        <origin>previous_year_patut</origin>
+        <comments>PLANNEDFINISHDATE</comments>
+        <conversion_Mask/>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_MY</date_format_locale>
+        <date_format_timezone>Asia/Singapore</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>String</type>
+        <storagetype>normal</storagetype>
+        <name>NAME</name>
+        <length>120</length>
+        <precision>-1</precision>
+        <origin>previous_year_patut</origin>
+        <comments>NAME</comments>
+        <conversion_Mask/>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_MY</date_format_locale>
+        <date_format_timezone>Asia/Singapore</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>BigNumber</type>
+        <storagetype>normal</storagetype>
+        <name>PREVIOUS_PATUT</name>
+        <length>-1</length>
+        <precision>-1</precision>
+        <origin>previous_year_patut</origin>
+        <comments>PREVIOUS_PATUT</comments>
+        <conversion_Mask>######0.0###################;-######0.0###################</conversion_Mask>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_MY</date_format_locale>
+        <date_format_timezone>Asia/Singapore</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+    </row-meta>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>400</xloc>
+      <yloc>816</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>previous_telah</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>p6</connection>
+    <sql>
+select 
+pro.id as project_id,
+act.ActualFinishDate,act.name,
+case when to_char(act.ActualFinishDate,'MM') between 1 and 12 then 1 else 0 end as previous_telah
+
+from project pro, activity act 
+left join activitycodeassignment acs on (act.objectid=acs.ACTIVITYOBJECTID and act.PROJECTOBJECTID=acs.PROJECTOBJECTID)
+where pro.objectid=act.projectobjectid and to_char(act.ActualFinishDate, 'YYYY')&lt;to_char(sysdate,'YYYY') and act.name = 'Iklan Tender'
+group by pro.id, act.ActualFinishDate,to_char(act.ActualFinishDate,'MM'),act.name</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cached_row_meta_active>N</cached_row_meta_active>
+    <row-meta>
+      <value-meta>
+        <type>String</type>
+        <storagetype>normal</storagetype>
+        <name>PROJECT_ID</name>
+        <length>40</length>
+        <precision>-1</precision>
+        <origin>previous_telah</origin>
+        <comments>PROJECT_ID</comments>
+        <conversion_Mask/>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_MY</date_format_locale>
+        <date_format_timezone>Asia/Singapore</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>Timestamp</type>
+        <storagetype>normal</storagetype>
+        <name>ACTUALFINISHDATE</name>
+        <length>0</length>
+        <precision>-1</precision>
+        <origin>previous_telah</origin>
+        <comments>ACTUALFINISHDATE</comments>
+        <conversion_Mask/>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_MY</date_format_locale>
+        <date_format_timezone>Asia/Singapore</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>String</type>
+        <storagetype>normal</storagetype>
+        <name>NAME</name>
+        <length>120</length>
+        <precision>-1</precision>
+        <origin>previous_telah</origin>
+        <comments>NAME</comments>
+        <conversion_Mask/>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_MY</date_format_locale>
+        <date_format_timezone>Asia/Singapore</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>BigNumber</type>
+        <storagetype>normal</storagetype>
+        <name>PREVIOUS</name>
+        <length>-1</length>
+        <precision>-1</precision>
+        <origin>previous_telah</origin>
+        <comments>PREVIOUS</comments>
+        <conversion_Mask>######0.0###################;-######0.0###################</conversion_Mask>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_MY</date_format_locale>
+        <date_format_timezone>Asia/Singapore</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+    </row-meta>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>400</xloc>
+      <yloc>896</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -7699,6 +8090,10 @@ SELECT K__UUU_SHELL_CREATOR AS PROJECT_ID, J10_PL_Nama_Pegawai_Pendaft AS pegawa
   <attributes>
     <group>
       <name>explorerState</name>
+      <attribute>
+        <key>prev_telah lookup</key>
+        <value/>
+      </attribute>
     </group>
   </attributes>
 </transformation>
