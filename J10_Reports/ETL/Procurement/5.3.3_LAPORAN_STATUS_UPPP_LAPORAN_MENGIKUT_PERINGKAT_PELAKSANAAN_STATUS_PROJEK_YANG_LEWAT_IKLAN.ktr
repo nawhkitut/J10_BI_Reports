@@ -951,8 +951,8 @@ a.uuu_record_last_update_date
 
 from unifier_upi_view a
 left join unifier_uxopcniv_view b on a.project_id = b.project_id
-where to_char(a.J10_PL_Tarikh_Jangka_Surat, 'YYYY') &lt; to_char(sysdate, 'YYYY')
-order by a.J10_PL_Tarikh_Jangka_Surat desc
+where to_char(a.J10_PL_Tarikh_Jangka_Iklan, 'YYYY') &lt; to_char(sysdate, 'YYYY')
+order by a.J10_PL_Tarikh_Jangka_Iklan desc
 
 
 
