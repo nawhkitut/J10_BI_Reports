@@ -686,7 +686,7 @@
     <hop>
       <from>Select values</from>
       <to>Table output</to>
-      <enabled>N</enabled>
+      <enabled>Y</enabled>
     </hop>
     <hop>
       <from>Kategori_PMO</from>
