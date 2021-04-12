@@ -682,69 +682,91 @@
     <fields>
       <field>
         <name>PROJECT_ID</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_NAMA_PROJEK</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_TAJUK_PROGRAM</name>
+        <rename/>
       </field>
       <field>
         <name>PEJABAT_PROGRAM</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_KEMENTERIAN</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_AGENSI</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_TARIKHDAFTAR_PROJEK</name>
+        <rename/>
       </field>
       <field>
         <name>PEJABAT_HOPT</name>
+        <rename/>
       </field>
       <field>
         <name>NAMA_HOPT</name>
+        <rename/>
       </field>
       <field>
         <name>RECORD_NO</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_N0_RUJUKAN_PROJ</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_RUJUKAN_KOD_PROJEK</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_SPPII_NUMBER</name>
+        <rename/>
       </field>
       <field>
         <name>TKH_JANGKA_SST</name>
+        <rename/>
       </field>
       <field>
         <name>TKH_MULA_IKLAN</name>
+        <rename/>
       </field>
       <field>
         <name>UUU_CREATION_DATE</name>
+        <rename/>
       </field>
       <field>
         <name>UUU_RECORD_LAST_UPDATE_DATE</name>
+        <rename/>
       </field>
       <field>
         <name>project_number</name>
+        <rename/>
       </field>
       <field>
         <name>kementerian</name>
+        <rename/>
       </field>
       <field>
         <name>KEMENTERIAN_AGENCY</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_TARIKH</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_TARIKH_JANGKA_IKLAN</name>
+        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -929,8 +951,8 @@ a.uuu_record_last_update_date
 
 from unifier_upi_view a
 left join unifier_uxopcniv_view b on a.project_id = b.project_id
-where to_char(a.J10_PL_Tarikh_Jangka_Iklan, 'YYYY') &lt; to_char(sysdate, 'YYYY')
-order by a.J10_PL_Tarikh_Jangka_Iklan desc
+where to_char(a.J10_PL_Tarikh_Jangka_Surat, 'YYYY') &lt; to_char(sysdate, 'YYYY')
+order by a.J10_PL_Tarikh_Jangka_Surat desc
 
 
 
@@ -1800,7 +1822,7 @@ order by a.J10_PL_Tarikh_Jangka_Iklan desc
       </output>
     </remotesteps>
     <GUI>
-      <xloc>736</xloc>
+      <xloc>752</xloc>
       <yloc>80</yloc>
       <draw>Y</draw>
     </GUI>
