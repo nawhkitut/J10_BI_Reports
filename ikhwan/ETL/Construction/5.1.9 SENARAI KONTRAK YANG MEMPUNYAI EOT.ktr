@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <transformation>
   <info>
-    <name>SENARAI KONTRAK YANG MEMPUNYAI EOT</name>
+    <name>5.1.9 SENARAI KONTRAK YANG MEMPUNYAI EOT</name>
     <description/>
     <extended_description/>
     <trans_version/>
@@ -789,16 +789,6 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>UPI_Details 2</from>
-      <to>UPI_Details</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>UPI_Details</from>
-      <to>EOT lookup</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>EOT lookup</from>
       <to>ACAT_Name</to>
       <enabled>Y</enabled>
@@ -876,6 +866,56 @@
     <hop>
       <from>Kementerian 2 2</from>
       <to>Stream lookup 2 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>jangka_iklan lookup</from>
+      <to>tkh_sst lookup</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>pegawai_penyedia</from>
+      <to>pegawai lookup  2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>tarikh_sst</from>
+      <to>tkh_sst lookup</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>tkh_jangka_iklan</from>
+      <to>jangka_iklan lookup</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>tkh_sst lookup</from>
+      <to>tkh_tdk lookup </to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>tkh_tdk</from>
+      <to>tkh_tdk lookup </to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>tkh_tdk lookup </from>
+      <to>pegawai lookup  2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>UPI_Details 2</from>
+      <to>UPI_Details</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>UPI_Details</from>
+      <to>jangka_iklan lookup</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>pegawai lookup  2</from>
+      <to>EOT lookup</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -2735,8 +2775,8 @@ FROM
       </output>
     </remotesteps>
     <GUI>
-      <xloc>688</xloc>
-      <yloc>416</yloc>
+      <xloc>976</xloc>
+      <yloc>672</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3116,8 +3156,8 @@ FROM UNIFIER_UPI)X</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>784</xloc>
-      <yloc>416</yloc>
+      <xloc>1072</xloc>
+      <yloc>672</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -5806,39 +5846,51 @@ rpdecide='NOT AVAILABLE'
     <fields>
       <field>
         <name>J10_PL_NAMA_PROJEK</name>
+        <rename/>
       </field>
       <field>
         <name>PEJABAT_PROGRAM</name>
+        <rename/>
       </field>
       <field>
         <name>PROJECT_ID</name>
+        <rename/>
       </field>
       <field>
         <name>PEJABAT</name>
+        <rename/>
       </field>
       <field>
         <name>pejabat_jkr</name>
+        <rename/>
       </field>
       <field>
         <name>sk_pejabat_jkr</name>
+        <rename/>
       </field>
       <field>
         <name>sk_pejabat_atas_jkr</name>
+        <rename/>
       </field>
       <field>
         <name>HIERARCHY</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_CAWANGAN_PENGURUS_PR</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_AGENSI</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_TARIKHDAFTAR_PROJEK</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_NAMA_PENGURUS_PROGRA</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_PEJABAT_PENOLONG_PEN</name>
@@ -5854,189 +5906,263 @@ rpdecide='NOT AVAILABLE'
       </field>
       <field>
         <name>project_number</name>
+        <rename/>
       </field>
       <field>
         <name>J_PL_SP_JENISPEROLEHAN</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_N0_RUJUKAN_PROJ</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_RUJUKAN_KOD_PROJEK</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_SPPII_NUMBER</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_Q_ULASANQPLAN_DES</name>
+        <rename/>
       </field>
       <field>
         <name>J_PL_SP_TSRK</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_TARIKH_JANGKA_IKLAN</name>
-      </field>
-      <field>
-        <name>TKH_KELUAR_IKLAN</name>
+        <rename/>
       </field>
       <field>
         <name>TKH_KELUAR_SST</name>
+        <rename/>
       </field>
       <field>
         <name>NAMA_PEGAWAI_PENGUASA</name>
+        <rename/>
       </field>
       <field>
         <name>PEJABAT_SELIATAPAK</name>
+        <rename/>
       </field>
       <field>
         <name>KONTRAKTOR</name>
+        <rename/>
       </field>
       <field>
         <name>TARAF_KONTRAKTOR</name>
+        <rename/>
       </field>
       <field>
         <name>TKH_MILIK_TAPAK</name>
+        <rename/>
       </field>
       <field>
         <name>TKH_SIAP_ASAL</name>
+        <rename/>
       </field>
       <field>
         <name>TKH_SIAP_SEMASA</name>
+        <rename/>
       </field>
       <field>
         <name>TKH_SIAP_SEBENAR</name>
+        <rename/>
       </field>
       <field>
         <name>J10_KOS_PRJ_SEMASA</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_KOS_PROJEK_ASAL</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_SILING_PROJEK_YANG_D</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_SILING_PROJEK</name>
+        <rename/>
       </field>
       <field>
         <name>KOS_KONTRAK_ASAL</name>
+        <rename/>
       </field>
       <field>
         <name>KOS_KONTRAK_SEMASA</name>
+        <rename/>
       </field>
       <field>
         <name>UNJURAN</name>
+        <rename/>
       </field>
       <field>
         <name>BAYARAN</name>
+        <rename/>
       </field>
       <field>
         <name>WANG_PENDAHULUAN</name>
+        <rename/>
       </field>
       <field>
         <name>TKH_TAMAT_LANJUTAN</name>
+        <rename/>
       </field>
       <field>
         <name>JUMLAH_APK</name>
+        <rename/>
       </field>
       <field>
         <name>JUMLAH_PHK</name>
+        <rename/>
       </field>
       <field>
         <name>TKH_TERIMA_LUKISAN</name>
+        <rename/>
       </field>
       <field>
         <name>TERIMA_BRIF</name>
+        <rename/>
       </field>
       <field>
         <name>TERIMA_TAPAK</name>
+        <rename/>
       </field>
       <field>
         <name>TERIMA_KOS</name>
+        <rename/>
       </field>
       <field>
         <name>TERIMA_VA</name>
+        <rename/>
       </field>
       <field>
         <name>TARIKH_SAH_BRIF_SKOP</name>
+        <rename/>
       </field>
       <field>
         <name>J_PL_PC_HOPTDATENEW</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_TARIKH_JANGKA_MULA_P</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_TARIKH_JANGKA_SIAP_P</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_TARIKH_JANGKA_SERAHA</name>
+        <rename/>
       </field>
       <field>
         <name>TARIKH_SERAHAN_PROJEK_KEPADA_PELANGGAN</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_PENARAFAN_HIJAU_SDT</name>
+        <rename/>
       </field>
       <field>
         <name>ONE_EOT</name>
+        <rename/>
       </field>
       <field>
         <name>TWO_EOT</name>
+        <rename/>
       </field>
       <field>
         <name>THREE_EOT</name>
+        <rename/>
       </field>
       <field>
         <name>MORE_THREE_EOT</name>
+        <rename/>
       </field>
       <field>
         <name>acat</name>
+        <rename/>
       </field>
       <field>
         <name>ibs</name>
+        <rename/>
       </field>
       <field>
         <name>perbelanjaan</name>
+        <rename/>
       </field>
       <field>
         <name>rmk</name>
+        <rename/>
       </field>
       <field>
         <name>kaedah_perolehan</name>
+        <rename/>
       </field>
       <field>
         <name>JENIS_PROJEK</name>
+        <rename/>
       </field>
       <field>
         <name>kementerian</name>
+        <rename/>
       </field>
       <field>
         <name>KEMENTERIAN_AGENCY</name>
+        <rename/>
       </field>
       <field>
         <name>LOKASI_TAPAK</name>
+        <rename/>
       </field>
       <field>
         <name>DAERAH</name>
+        <rename/>
       </field>
       <field>
         <name>kaedah_perlaksanaan</name>
+        <rename/>
       </field>
       <field>
         <name>PMO_TERIMA</name>
+        <rename/>
       </field>
       <field>
         <name>jenis_rekabentuk</name>
+        <rename/>
       </field>
       <field>
         <name>penggunaan_bim</name>
+        <rename/>
       </field>
       <field>
         <name>UUU_CREATION_DATE</name>
+        <rename/>
       </field>
       <field>
         <name>UUU_RECORD_LAST_UPDATE_DATE</name>
+        <rename/>
+      </field>
+      <field>
+        <name>TARIKH_JANGKA_IKLAN</name>
+        <rename/>
+      </field>
+      <field>
+        <name>tkh_keluar_sst</name>
+        <rename/>
+      </field>
+      <field>
+        <name>TARIKH_TDK</name>
+        <rename/>
+      </field>
+      <field>
+        <name>PEGAWAI_PENYEDIA_SURAT</name>
+        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -6049,8 +6175,8 @@ rpdecide='NOT AVAILABLE'
       </output>
     </remotesteps>
     <GUI>
-      <xloc>688</xloc>
-      <yloc>640</yloc>
+      <xloc>976</xloc>
+      <yloc>896</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -6449,8 +6575,8 @@ rpdecide='NOT AVAILABLE'
       </output>
     </remotesteps>
     <GUI>
-      <xloc>784</xloc>
-      <yloc>512</yloc>
+      <xloc>1072</xloc>
+      <yloc>768</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -6491,8 +6617,8 @@ rpdecide='NOT AVAILABLE'
       </output>
     </remotesteps>
     <GUI>
-      <xloc>688</xloc>
-      <yloc>512</yloc>
+      <xloc>976</xloc>
+      <yloc>768</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -6533,8 +6659,8 @@ rpdecide='NOT AVAILABLE'
       </output>
     </remotesteps>
     <GUI>
-      <xloc>576</xloc>
-      <yloc>512</yloc>
+      <xloc>864</xloc>
+      <yloc>768</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -6660,12 +6786,8 @@ rpdecide='NOT AVAILABLE'
         <stream_name>J10_PL_TARIKH_JANGKA_IKLAN</stream_name>
       </field>
       <field>
-        <column_name>TKH_KELUAR_IKLAN</column_name>
-        <stream_name>TKH_KELUAR_IKLAN</stream_name>
-      </field>
-      <field>
-        <column_name>TKH_KELUAR_SST</column_name>
-        <stream_name>TKH_KELUAR_SST</stream_name>
+        <column_name>tkh_keluar_sst</column_name>
+        <stream_name>tkh_keluar_sst</stream_name>
       </field>
       <field>
         <column_name>NAMA_PEGAWAI_PENGUASA</column_name>
@@ -6875,6 +6997,18 @@ rpdecide='NOT AVAILABLE'
         <column_name>UUU_RECORD_LAST_UPDATE_DATE</column_name>
         <stream_name>UUU_RECORD_LAST_UPDATE_DATE</stream_name>
       </field>
+      <field>
+        <column_name>TARIKH_JANGKA_IKLAN</column_name>
+        <stream_name>TARIKH_JANGKA_IKLAN</stream_name>
+      </field>
+      <field>
+        <column_name>TARIKH_TDK</column_name>
+        <stream_name>TARIKH_TDK</stream_name>
+      </field>
+      <field>
+        <column_name>PEGAWAI_PENYEDIA_SURAT</column_name>
+        <stream_name>PEGAWAI_PENYEDIA_SURAT</stream_name>
+      </field>
     </fields>
     <attributes/>
     <cluster_schema/>
@@ -6885,8 +7019,8 @@ rpdecide='NOT AVAILABLE'
       </output>
     </remotesteps>
     <GUI>
-      <xloc>576</xloc>
-      <yloc>656</yloc>
+      <xloc>864</xloc>
+      <yloc>912</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -6916,8 +7050,6 @@ c.J_PL_SP_TSRK,
 a.J10_PL_Jenis_Rekabentuk,
 a.J10_PL_Penggunaan_BIM,
 a.J10_PL_Tarikh_Jangka_Iklan,
-a.J10_DT_SURAT_DOP as tkh_keluar_iklan,
-a.J10_DT_SST_DOP as tkh_keluar_sst,
 a.J10_NAMA_PEGWAI_PENGASA_UPK as nama_pegawai_penguasa,
 b.J10_CH_PJBT_SELIA_TAPAK as pejabat_seliatapak,
 a.J10_NAMA_KONTRAKTOR_SDT250 as kontraktor,
@@ -7260,52 +7392,6 @@ LEFT JOIN unifier_uxjabd m ON a.project_id=m.project_id
         <precision>-1</precision>
         <origin>UPI</origin>
         <comments>J10_PL_TARIKH_JANGKA_IKLAN</comments>
-        <conversion_Mask/>
-        <decimal_symbol>.</decimal_symbol>
-        <grouping_symbol>,</grouping_symbol>
-        <currency_symbol/>
-        <trim_type>none</trim_type>
-        <case_insensitive>N</case_insensitive>
-        <collator_disabled>Y</collator_disabled>
-        <collator_strength>0</collator_strength>
-        <sort_descending>N</sort_descending>
-        <output_padding>N</output_padding>
-        <date_format_lenient>N</date_format_lenient>
-        <date_format_locale>en_MY</date_format_locale>
-        <date_format_timezone>Asia/Singapore</date_format_timezone>
-        <lenient_string_to_number>N</lenient_string_to_number>
-      </value-meta>
-      <value-meta>
-        <type>Timestamp</type>
-        <storagetype>normal</storagetype>
-        <name>TKH_KELUAR_IKLAN</name>
-        <length>0</length>
-        <precision>-1</precision>
-        <origin>UPI</origin>
-        <comments>TKH_KELUAR_IKLAN</comments>
-        <conversion_Mask/>
-        <decimal_symbol>.</decimal_symbol>
-        <grouping_symbol>,</grouping_symbol>
-        <currency_symbol/>
-        <trim_type>none</trim_type>
-        <case_insensitive>N</case_insensitive>
-        <collator_disabled>Y</collator_disabled>
-        <collator_strength>0</collator_strength>
-        <sort_descending>N</sort_descending>
-        <output_padding>N</output_padding>
-        <date_format_lenient>N</date_format_lenient>
-        <date_format_locale>en_MY</date_format_locale>
-        <date_format_timezone>Asia/Singapore</date_format_timezone>
-        <lenient_string_to_number>N</lenient_string_to_number>
-      </value-meta>
-      <value-meta>
-        <type>Timestamp</type>
-        <storagetype>normal</storagetype>
-        <name>TKH_KELUAR_SST</name>
-        <length>0</length>
-        <precision>-1</precision>
-        <origin>UPI</origin>
-        <comments>TKH_KELUAR_SST</comments>
         <conversion_Mask/>
         <decimal_symbol>.</decimal_symbol>
         <grouping_symbol>,</grouping_symbol>
@@ -8202,18 +8288,6 @@ LEFT JOIN unifier_uxjabd m ON a.project_id=m.project_id
       <value>
         <name>J10_PL_TARIKH_JANGKA_IKLAN</name>
         <rename>J10_PL_TARIKH_JANGKA_IKLAN</rename>
-        <default/>
-        <type>Timestamp</type>
-      </value>
-      <value>
-        <name>TKH_KELUAR_IKLAN</name>
-        <rename>TKH_KELUAR_IKLAN</rename>
-        <default/>
-        <type>Timestamp</type>
-      </value>
-      <value>
-        <name>TKH_KELUAR_SST</name>
-        <rename>TKH_KELUAR_SST</rename>
         <default/>
         <type>Timestamp</type>
       </value>
@@ -9475,8 +9549,8 @@ FROM UNIFIER_USER_VIEW
       </output>
     </remotesteps>
     <GUI>
-      <xloc>576</xloc>
-      <yloc>416</yloc>
+      <xloc>864</xloc>
+      <yloc>672</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -9559,6 +9633,567 @@ FROM UNIFIER_USER_VIEW
     <GUI>
       <xloc>640</xloc>
       <yloc>336</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>jangka_iklan lookup</name>
+    <type>StreamLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <from>tkh_jangka_iklan</from>
+    <input_sorted>N</input_sorted>
+    <preserve_memory>Y</preserve_memory>
+    <sorted_list>N</sorted_list>
+    <integer_pair>N</integer_pair>
+    <lookup>
+      <key>
+        <name>PROJECT_ID</name>
+        <field>PROJECT_ID</field>
+      </key>
+      <value>
+        <name>TARIKH_JANGKA_IKLAN</name>
+        <rename>TARIKH_JANGKA_IKLAN</rename>
+        <default/>
+        <type>Timestamp</type>
+      </value>
+    </lookup>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>608</xloc>
+      <yloc>432</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>pegawai lookup  2</name>
+    <type>StreamLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <from>pegawai_penyedia</from>
+    <input_sorted>N</input_sorted>
+    <preserve_memory>Y</preserve_memory>
+    <sorted_list>N</sorted_list>
+    <integer_pair>N</integer_pair>
+    <lookup>
+      <key>
+        <name>PROJECT_ID</name>
+        <field>PROJECT_ID</field>
+      </key>
+      <value>
+        <name>PEGAWAI_PENYEDIA_SURAT</name>
+        <rename>PEGAWAI_PENYEDIA_SURAT</rename>
+        <default/>
+        <type>String</type>
+      </value>
+    </lookup>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>608</xloc>
+      <yloc>704</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>pegawai_penyedia</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>J10</connection>
+    <sql>SELECT K__UUU_SHELL_CREATOR AS PROJECT_ID, J10_PL_Nama_Pegawai_Pendaft AS pegawai_penyedia_surat FROM unifier_uxjpcnf_view UNION
+SELECT K__UUU_SHELL_CREATOR AS PROJECT_ID, J10_PL_Nama_Pegawai_Pendaft AS pegawai_penyedia_surat FROM unifier_uxjpcs_view UNION
+SELECT K__UUU_SHELL_CREATOR AS PROJECT_ID, J10_PL_Nama_Pegawai_Pendaft AS pegawai_penyedia_surat FROM unifier_uxjplpcf_view
+</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cached_row_meta_active>N</cached_row_meta_active>
+    <row-meta>
+      <value-meta>
+        <type>Integer</type>
+        <storagetype>normal</storagetype>
+        <name>PROJECT_ID</name>
+        <length>10</length>
+        <precision>0</precision>
+        <origin>tkh_tdk 2</origin>
+        <comments>PROJECT_ID</comments>
+        <conversion_Mask>####0;-####0</conversion_Mask>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_MY</date_format_locale>
+        <date_format_timezone>Asia/Singapore</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>String</type>
+        <storagetype>normal</storagetype>
+        <name>PEGAWAI_PENYEDIA_SURAT</name>
+        <length>385</length>
+        <precision>-1</precision>
+        <origin>tkh_tdk 2</origin>
+        <comments>PEGAWAI_PENYEDIA_SURAT</comments>
+        <conversion_Mask/>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_MY</date_format_locale>
+        <date_format_timezone>Asia/Singapore</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+    </row-meta>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>736</xloc>
+      <yloc>704</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>tarikh_sst</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>J10</connection>
+    <sql>SELECT PROJECT_ID,max(J10_DT_SST_DOP) AS tarikh_sst, 'tender terbuka' AS description FROM unifier_uxopapoc WHERE J10_DT_SST_DOP IS NOT NULL GROUP BY PROJECT_ID UNION ALL --tender terbuka
+SELECT PROJECT_ID,max(J10_DT_SST_DOP) AS tarikh_sst, 'tender terbuka pra kelayakan' AS description FROM unifier_uxjapcpq WHERE J10_DT_SST_DOP IS NOT NULL GROUP BY PROJECT_ID UNION ALL--tender terbuka pra kelayakan
+SELECT project_id,max(J10_DT_SST_DOP) AS tarikh_sst, 'tender terhad' AS description FROM unifier_uxltapoc WHERE J10_DT_SST_DOP IS NOT NULL GROUP BY PROJECT_ID UNION ALL--tender terhad
+SELECT PROJECT_ID,max(J10_DT_SST_DOP) AS tarikh_sst, 'rundingan terus' AS description FROM unifier_uxaocrt WHERE J10_DT_SST_DOP IS NOT NULL GROUP BY PROJECT_ID UNION ALL --rundingan terus
+SELECT PROJECT_ID,max(J10_TARIKH_1_DOP) AS tarikh_sst,'tender terbuka nsc' AS description FROM unifier_uxjscboq WHERE J10_TARIKH_1_DOP IS NOT NULL GROUP BY PROJECT_ID UNION ALL --tender terbuka nsc
+SELECT PROJECT_ID,max(J10_TARIKH_1_DOP) AS tarikh_sst, 'tender terhad nsc' FROM unifier_uxnscbqt WHERE J10_TARIKH_1_DOP IS NOT NULL GROUP BY PROJECT_ID UNION ALL --tender terhad nsc
+SELECT PROJECT_ID,max(J10_DT_IDENT_SST_DOP) AS tarikh_sst, 'sebutharga' AS description FROM unifier_uxjmsbhg WHERE J10_DT_IDENT_SST_DOP IS NOT NULL GROUP BY PROJECT_ID --sebutharga
+</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cached_row_meta_active>N</cached_row_meta_active>
+    <row-meta>
+      <value-meta>
+        <type>Integer</type>
+        <storagetype>normal</storagetype>
+        <name>PROJECT_ID</name>
+        <length>10</length>
+        <precision>0</precision>
+        <origin>tarikh_sst</origin>
+        <comments>PROJECT_ID</comments>
+        <conversion_Mask>####0;-####0</conversion_Mask>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_MY</date_format_locale>
+        <date_format_timezone>Asia/Singapore</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>Timestamp</type>
+        <storagetype>normal</storagetype>
+        <name>TARIKH_SST</name>
+        <length>0</length>
+        <precision>-1</precision>
+        <origin>tarikh_sst</origin>
+        <comments>TARIKH_SST</comments>
+        <conversion_Mask/>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_MY</date_format_locale>
+        <date_format_timezone>Asia/Singapore</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>String</type>
+        <storagetype>normal</storagetype>
+        <name>DESCRIPTION</name>
+        <length>28</length>
+        <precision>-1</precision>
+        <origin>tarikh_sst</origin>
+        <comments>DESCRIPTION</comments>
+        <conversion_Mask/>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_MY</date_format_locale>
+        <date_format_timezone>Asia/Singapore</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+    </row-meta>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>736</xloc>
+      <yloc>528</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>tkh_jangka_iklan</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>J10</connection>
+    <sql>SELECT PROJECT_ID,J10_TARI_SURAT_NIAT_DOP AS tarikh_jangka_iklan FROM unifier_uxcivrt UNION --rundingan terus
+SELECT PROJECT_ID,J10_DT_MULA_IKLAN_DOP AS tarikh_jangka_iklan FROM  unifier_uxopcniv UNION --tender terbuka
+SELECT PROJECT_ID,J10_CH_Tarikh_Keluar_Sura AS tarikh_jangka_iklan FROM unifier_uxjpqcin UNION --pra kelayakan
+SELECT PROJECT_ID,J10_DT_DOP AS tarikh_jangka_iklan FROM unifier_uxjltboq union--tender terhad
+SELECT PROJECT_ID,J10_DT_MULA_IKLAN_DOP AS tarikh_jangka_iklan FROM unifier_uxnscciv UNION--nsc tender terbuka
+SELECT PROJECT_ID,J10_DT_DOP AS tarikh_jangka_iklan FROM unifier_uxnsltci UNION --nsc tender terhad
+SELECT PROJECT_ID,J10_DT_NOTIS_SEBUTHARGA_DOP AS tarikh_jangka_iklan FROM unifier_uxjmsbhg  --sebut harga nsc</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cached_row_meta_active>N</cached_row_meta_active>
+    <row-meta>
+      <value-meta>
+        <type>Integer</type>
+        <storagetype>normal</storagetype>
+        <name>PROJECT_ID</name>
+        <length>10</length>
+        <precision>0</precision>
+        <origin>tkh_jangka_iklan</origin>
+        <comments>PROJECT_ID</comments>
+        <conversion_Mask>####0;-####0</conversion_Mask>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_MY</date_format_locale>
+        <date_format_timezone>Asia/Singapore</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>Timestamp</type>
+        <storagetype>normal</storagetype>
+        <name>TARIKH_JANGKA_IKLAN</name>
+        <length>0</length>
+        <precision>-1</precision>
+        <origin>tkh_jangka_iklan</origin>
+        <comments>TARIKH_JANGKA_IKLAN</comments>
+        <conversion_Mask/>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_MY</date_format_locale>
+        <date_format_timezone>Asia/Singapore</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+    </row-meta>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>736</xloc>
+      <yloc>432</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>tkh_sst lookup</name>
+    <type>StreamLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <from>tarikh_sst</from>
+    <input_sorted>N</input_sorted>
+    <preserve_memory>Y</preserve_memory>
+    <sorted_list>N</sorted_list>
+    <integer_pair>N</integer_pair>
+    <lookup>
+      <key>
+        <name>PROJECT_ID</name>
+        <field>PROJECT_ID</field>
+      </key>
+      <value>
+        <name>TARIKH_SST</name>
+        <rename>tkh_keluar_sst</rename>
+        <default/>
+        <type>Timestamp</type>
+      </value>
+    </lookup>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>608</xloc>
+      <yloc>528</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>tkh_tdk</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>J10</connection>
+    <sql>SELECT PROJECT_ID, 'tender terbuka' AS description, max(J10_TAR_TAN_KON_KONTOR_DOP) AS tarikh_tdk FROM unifier_uxcdas WHERE J10_TAR_TAN_KON_KONTOR_DOP IS NOT NULL GROUP BY PROJECT_ID UNION ALL --tender terbuka
+SELECT PROJECT_ID, 'tender terbuka pra kelayakan' AS description ,max(J10_TAR_TAN_KON_KONTOR_DOP) AS tarikh_tdk FROM unifier_uxcqlttp WHERE J10_TAR_TAN_KON_KONTOR_DOP IS NOT NULL GROUP BY PROJECT_ID UNION ALL --ternder terbuka pra kelayakan
+SELECT PROJECT_ID, 'tender terhad' AS description, max(J10_TAR_TAN_KON_KONTOR_DOP) AS tarikh_tdk FROM unifier_uxcqltte WHERE J10_TAR_TAN_KON_KONTOR_DOP IS NOT NULL GROUP BY PROJECT_ID UNION ALL --tender terhad
+SELECT PROJECT_ID, 'rundingan terus' AS description, max(J10_TAR_TAN_KON_KONTOR_DOP) AS tarikh_tdk FROM unifier_uxcdasrt WHERE J10_TAR_TAN_KON_KONTOR_DOP IS NOT NULL GROUP BY PROJECT_ID UNION ALL --rundingan terus
+SELECT PROJECT_ID, 'tender terbuka nsc' AS description, max(J10_DT_DOP) AS tarikh_tdk FROM unifier_uxjnsccd WHERE J10_DT_DOP IS NOT NULL GROUP BY PROJECT_ID UNION ALL --tender terbuka nsc
+SELECT PROJECT_ID, 'tender terbuka nsc' AS description , max(J10_DT_DOP) AS tarikh_tdk FROM unifier_uxjscboq WHERE J10_DT_DOP IS NOT NULL GROUP BY PROJECT_ID UNION ALL --tender terbuka nsc
+SELECT PROJECT_ID, 'tender terhad nsc' AS description, max(J10_DT_DOP) AS tarikh_tdk  FROM unifier_uxnscbqt WHERE J10_DT_DOP IS NOT NULL GROUP BY PROJECT_ID --tender terhad nsc
+</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cached_row_meta_active>N</cached_row_meta_active>
+    <row-meta>
+      <value-meta>
+        <type>Integer</type>
+        <storagetype>normal</storagetype>
+        <name>PROJECT_ID</name>
+        <length>10</length>
+        <precision>0</precision>
+        <origin>tkh_tdk</origin>
+        <comments>PROJECT_ID</comments>
+        <conversion_Mask>####0;-####0</conversion_Mask>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_MY</date_format_locale>
+        <date_format_timezone>Asia/Singapore</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>String</type>
+        <storagetype>normal</storagetype>
+        <name>DESCRIPTION</name>
+        <length>28</length>
+        <precision>-1</precision>
+        <origin>tkh_tdk</origin>
+        <comments>DESCRIPTION</comments>
+        <conversion_Mask/>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_MY</date_format_locale>
+        <date_format_timezone>Asia/Singapore</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>Timestamp</type>
+        <storagetype>normal</storagetype>
+        <name>TARIKH_TDK</name>
+        <length>0</length>
+        <precision>-1</precision>
+        <origin>tkh_tdk</origin>
+        <comments>TARIKH_TDK</comments>
+        <conversion_Mask/>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_MY</date_format_locale>
+        <date_format_timezone>Asia/Singapore</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+    </row-meta>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>736</xloc>
+      <yloc>608</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>tkh_tdk lookup </name>
+    <type>StreamLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <from>tkh_tdk</from>
+    <input_sorted>N</input_sorted>
+    <preserve_memory>Y</preserve_memory>
+    <sorted_list>N</sorted_list>
+    <integer_pair>N</integer_pair>
+    <lookup>
+      <key>
+        <name>PROJECT_ID</name>
+        <field>PROJECT_ID</field>
+      </key>
+      <value>
+        <name>TARIKH_TDK</name>
+        <rename>TARIKH_TDK</rename>
+        <default/>
+        <type>Timestamp</type>
+      </value>
+    </lookup>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>608</xloc>
+      <yloc>608</yloc>
       <draw>Y</draw>
     </GUI>
   </step>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <transformation>
   <info>
-    <name>SENARAI KONTRAK YANG MEMPUNYA EOT - 16 JUN</name>
+    <name>5.1.10 SENARAI KONTRAK YANG MEMPUNYA EOT - 16 JUN</name>
     <description/>
     <extended_description/>
     <trans_version/>
@@ -10077,13 +10077,13 @@ SELECT K__UUU_SHELL_CREATOR AS PROJECT_ID, J10_PL_Nama_Pegawai_Pendaft AS pegawa
       <schema_name/>
     </partitioning>
     <connection>J10</connection>
-    <sql>SELECT PROJECT_ID,J10_DT_SST_DOP AS tarikh_sst, 'tender terbuka' AS description FROM unifier_uxopapoc UNION --tender terbuka
-SELECT PROJECT_ID,J10_DT_SST_DOP AS tarikh_sst, 'tender terbuka pra kelayakan' AS description FROM unifier_uxjapcpq UNION --tender terbuka pra kelayakan
-SELECT project_id,J10_DT_SST_DOP AS tarikh_sst, 'tender terhad' AS description FROM unifier_uxltapoc UNION --tender terhad
-SELECT PROJECT_ID,J10_DT_SST_DOP AS tarikh_sst, 'rundingan terus' AS description FROM unifier_uxaocrt UNION --rundingan terus
-SELECT PROJECT_ID,J10_TARIKH_1_DOP AS tarikh_sst,'tender terbuka nsc' AS description FROM unifier_uxjscboq UNION --tender terbuka nsc
---SELECT PROJECT_ID ,J10_TARIKH_1_DOP AS tarikh_sst FROM unifier_uxnscbqt --tender terhad nsc
-SELECT PROJECT_ID,J10_DT_IDENT_SST_DOP AS tarikh_sst, 'sebutharga' AS description FROM unifier_uxjmsbhg --sebutharga
+    <sql>SELECT PROJECT_ID,max(J10_DT_SST_DOP) AS tarikh_sst, 'tender terbuka' AS description FROM unifier_uxopapoc WHERE J10_DT_SST_DOP IS NOT NULL GROUP BY PROJECT_ID UNION ALL --tender terbuka
+SELECT PROJECT_ID,max(J10_DT_SST_DOP) AS tarikh_sst, 'tender terbuka pra kelayakan' AS description FROM unifier_uxjapcpq WHERE J10_DT_SST_DOP IS NOT NULL GROUP BY PROJECT_ID UNION ALL--tender terbuka pra kelayakan
+SELECT project_id,max(J10_DT_SST_DOP) AS tarikh_sst, 'tender terhad' AS description FROM unifier_uxltapoc WHERE J10_DT_SST_DOP IS NOT NULL GROUP BY PROJECT_ID UNION ALL--tender terhad
+SELECT PROJECT_ID,max(J10_DT_SST_DOP) AS tarikh_sst, 'rundingan terus' AS description FROM unifier_uxaocrt WHERE J10_DT_SST_DOP IS NOT NULL GROUP BY PROJECT_ID UNION ALL --rundingan terus
+SELECT PROJECT_ID,max(J10_TARIKH_1_DOP) AS tarikh_sst,'tender terbuka nsc' AS description FROM unifier_uxjscboq WHERE J10_TARIKH_1_DOP IS NOT NULL GROUP BY PROJECT_ID UNION ALL --tender terbuka nsc
+SELECT PROJECT_ID,max(J10_TARIKH_1_DOP) AS tarikh_sst, 'tender terhad nsc' FROM unifier_uxnscbqt WHERE J10_TARIKH_1_DOP IS NOT NULL GROUP BY PROJECT_ID UNION ALL --tender terhad nsc
+SELECT PROJECT_ID,max(J10_DT_IDENT_SST_DOP) AS tarikh_sst, 'sebutharga' AS description FROM unifier_uxjmsbhg WHERE J10_DT_IDENT_SST_DOP IS NOT NULL GROUP BY PROJECT_ID --sebutharga
 </sql>
     <limit>0</limit>
     <lookup/>
@@ -10098,7 +10098,7 @@ SELECT PROJECT_ID,J10_DT_IDENT_SST_DOP AS tarikh_sst, 'sebutharga' AS descriptio
         <name>PROJECT_ID</name>
         <length>10</length>
         <precision>0</precision>
-        <origin>tkh_jangka_iklan 2</origin>
+        <origin>tarikh_sst</origin>
         <comments>PROJECT_ID</comments>
         <conversion_Mask>####0;-####0</conversion_Mask>
         <decimal_symbol>.</decimal_symbol>
@@ -10121,7 +10121,7 @@ SELECT PROJECT_ID,J10_DT_IDENT_SST_DOP AS tarikh_sst, 'sebutharga' AS descriptio
         <name>TARIKH_SST</name>
         <length>0</length>
         <precision>-1</precision>
-        <origin>tkh_jangka_iklan 2</origin>
+        <origin>tarikh_sst</origin>
         <comments>TARIKH_SST</comments>
         <conversion_Mask/>
         <decimal_symbol>.</decimal_symbol>
@@ -10144,7 +10144,7 @@ SELECT PROJECT_ID,J10_DT_IDENT_SST_DOP AS tarikh_sst, 'sebutharga' AS descriptio
         <name>DESCRIPTION</name>
         <length>28</length>
         <precision>-1</precision>
-        <origin>tkh_jangka_iklan 2</origin>
+        <origin>tarikh_sst</origin>
         <comments>DESCRIPTION</comments>
         <conversion_Mask/>
         <decimal_symbol>.</decimal_symbol>
@@ -10208,7 +10208,7 @@ SELECT PROJECT_ID,J10_DT_NOTIS_SEBUTHARGA_DOP AS tarikh_jangka_iklan FROM unifie
         <name>PROJECT_ID</name>
         <length>10</length>
         <precision>0</precision>
-        <origin>EOT 2</origin>
+        <origin>tkh_jangka_iklan</origin>
         <comments>PROJECT_ID</comments>
         <conversion_Mask>####0;-####0</conversion_Mask>
         <decimal_symbol>.</decimal_symbol>
@@ -10231,7 +10231,7 @@ SELECT PROJECT_ID,J10_DT_NOTIS_SEBUTHARGA_DOP AS tarikh_jangka_iklan FROM unifie
         <name>TARIKH_JANGKA_IKLAN</name>
         <length>0</length>
         <precision>-1</precision>
-        <origin>EOT 2</origin>
+        <origin>tkh_jangka_iklan</origin>
         <comments>TARIKH_JANGKA_IKLAN</comments>
         <conversion_Mask/>
         <decimal_symbol>.</decimal_symbol>
@@ -10317,13 +10317,14 @@ SELECT PROJECT_ID,J10_DT_NOTIS_SEBUTHARGA_DOP AS tarikh_jangka_iklan FROM unifie
       <schema_name/>
     </partitioning>
     <connection>J10</connection>
-    <sql>SELECT PROJECT_ID,J10_TAR_TAN_KON_KONTOR_DOP AS tarikh_tdk FROM unifier_uxcdas UNION --tender terbuka
---SELECT PROJECT_ID,J10_TAR_TAN_KON_KONTOR_DOP AS tarikh_tdk FROM unifier_uxcqlttp UNION --ternder terbuka pra kelayakan
-SELECT PROJECT_ID,J10_TAR_TAN_KON_KONTOR_DOP AS tarikh_tdk FROM unifier_uxcqltte UNION --tender terhad
---SELECT PROJECT_ID,J10_TAR_TAN_KON_KONTOR_DOP AS tarikh_tdk FROM unifier_uxcdasrt UNION --rundingan terus
-SELECT PROJECT_ID,J10_DT_DOP AS tarikh_tdk FROM unifier_uxjnsccd UNION --tender terbuka nsc
-SELECT PROJECT_ID,J10_DT_DOP AS tarikh_tdk FROM unifier_uxjscboq --tender terbuka nsc
---SELECT PROJECT_ID,J10_DT_DOP AS tarikh_tdk FROM unifier_uxnscbqt --tender terhad nsc</sql>
+    <sql>SELECT PROJECT_ID, 'tender terbuka' AS description, max(J10_TAR_TAN_KON_KONTOR_DOP) AS tarikh_tdk FROM unifier_uxcdas WHERE J10_TAR_TAN_KON_KONTOR_DOP IS NOT NULL GROUP BY PROJECT_ID UNION ALL --tender terbuka
+SELECT PROJECT_ID, 'tender terbuka pra kelayakan' AS description ,max(J10_TAR_TAN_KON_KONTOR_DOP) AS tarikh_tdk FROM unifier_uxcqlttp WHERE J10_TAR_TAN_KON_KONTOR_DOP IS NOT NULL GROUP BY PROJECT_ID UNION ALL --ternder terbuka pra kelayakan
+SELECT PROJECT_ID, 'tender terhad' AS description, max(J10_TAR_TAN_KON_KONTOR_DOP) AS tarikh_tdk FROM unifier_uxcqltte WHERE J10_TAR_TAN_KON_KONTOR_DOP IS NOT NULL GROUP BY PROJECT_ID UNION ALL --tender terhad
+SELECT PROJECT_ID, 'rundingan terus' AS description, max(J10_TAR_TAN_KON_KONTOR_DOP) AS tarikh_tdk FROM unifier_uxcdasrt WHERE J10_TAR_TAN_KON_KONTOR_DOP IS NOT NULL GROUP BY PROJECT_ID UNION ALL --rundingan terus
+SELECT PROJECT_ID, 'tender terbuka nsc' AS description, max(J10_DT_DOP) AS tarikh_tdk FROM unifier_uxjnsccd WHERE J10_DT_DOP IS NOT NULL GROUP BY PROJECT_ID UNION ALL --tender terbuka nsc
+SELECT PROJECT_ID, 'tender terbuka nsc' AS description , max(J10_DT_DOP) AS tarikh_tdk FROM unifier_uxjscboq WHERE J10_DT_DOP IS NOT NULL GROUP BY PROJECT_ID UNION ALL --tender terbuka nsc
+SELECT PROJECT_ID, 'tender terhad nsc' AS description, max(J10_DT_DOP) AS tarikh_tdk  FROM unifier_uxnscbqt WHERE J10_DT_DOP IS NOT NULL GROUP BY PROJECT_ID --tender terhad nsc
+</sql>
     <limit>0</limit>
     <lookup/>
     <execute_each_row>N</execute_each_row>
@@ -10337,9 +10338,32 @@ SELECT PROJECT_ID,J10_DT_DOP AS tarikh_tdk FROM unifier_uxjscboq --tender terbuk
         <name>PROJECT_ID</name>
         <length>10</length>
         <precision>0</precision>
-        <origin>tarikh_sst 2</origin>
+        <origin>tkh_tdk</origin>
         <comments>PROJECT_ID</comments>
         <conversion_Mask>####0;-####0</conversion_Mask>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_MY</date_format_locale>
+        <date_format_timezone>Asia/Singapore</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>String</type>
+        <storagetype>normal</storagetype>
+        <name>DESCRIPTION</name>
+        <length>28</length>
+        <precision>-1</precision>
+        <origin>tkh_tdk</origin>
+        <comments>DESCRIPTION</comments>
+        <conversion_Mask/>
         <decimal_symbol>.</decimal_symbol>
         <grouping_symbol>,</grouping_symbol>
         <currency_symbol/>
@@ -10360,7 +10384,7 @@ SELECT PROJECT_ID,J10_DT_DOP AS tarikh_tdk FROM unifier_uxjscboq --tender terbuk
         <name>TARIKH_TDK</name>
         <length>0</length>
         <precision>-1</precision>
-        <origin>tarikh_sst 2</origin>
+        <origin>tkh_tdk</origin>
         <comments>TARIKH_TDK</comments>
         <conversion_Mask/>
         <decimal_symbol>.</decimal_symbol>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <transformation>
   <info>
-    <name>VO EOT</name>
+    <name>5.6.5 VO EOT</name>
     <description/>
     <extended_description/>
     <trans_version/>
@@ -2722,120 +2722,167 @@ rpdecide='NOT AVAILABLE'
     <fields>
       <field>
         <name>J10_PL_NAMA_PROJEK</name>
+        <rename/>
       </field>
       <field>
         <name>PEJABAT_PROGRAM</name>
+        <rename/>
       </field>
       <field>
         <name>UGENPROJECTNUMBER</name>
+        <rename/>
       </field>
       <field>
         <name>PROJECT_ID</name>
+        <rename/>
       </field>
       <field>
         <name>PEJABAT</name>
+        <rename/>
       </field>
       <field>
         <name>pejabat_jkr</name>
+        <rename/>
       </field>
       <field>
         <name>sk_pejabat_jkr</name>
+        <rename/>
       </field>
       <field>
         <name>sk_pejabat_atas_jkr</name>
+        <rename/>
       </field>
       <field>
         <name>hierarchy</name>
+        <rename/>
       </field>
       <field>
         <name>project_number</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_NAMA_PENGURUS_PROGRA</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_BUKAN_PEJABAT_HOPT</name>
+        <rename/>
       </field>
       <field>
         <name>JENIS_PROJEK</name>
+        <rename/>
       </field>
       <field>
         <name>VO</name>
+        <rename/>
       </field>
       <field>
         <name>EOT</name>
+        <rename/>
       </field>
       <field>
         <name>J10_KOS_PRJ_SEMASA</name>
+        <rename/>
       </field>
       <field>
         <name>NAMA_PERUNDING</name>
+        <rename/>
       </field>
       <field>
         <name>TEMPOH_PROJEK</name>
+        <rename/>
       </field>
       <field>
         <name>TARIKH_MULA</name>
+        <rename/>
       </field>
       <field>
         <name>TARIKH_TAMAT_ASAL</name>
+        <rename/>
       </field>
       <field>
         <name>TARIKH_TAMAT_BARU</name>
+        <rename/>
       </field>
       <field>
         <name>JUMLAH_KOS_VO</name>
+        <rename/>
       </field>
       <field>
         <name>JUMLAH_EOT</name>
+        <rename/>
       </field>
       <field>
         <name>BEZA</name>
+        <rename/>
       </field>
       <field>
         <name>JUMLAH_KOS_ASAL</name>
+        <rename/>
       </field>
       <field>
         <name>KOS_TAMBAHAN</name>
+        <rename/>
       </field>
       <field>
         <name>KOS_BARU</name>
+        <rename/>
       </field>
       <field>
         <name>JUMLAH_KOS</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_N0_RUJUKAN_PROJ</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_SKOP_PROJEK</name>
+        <rename/>
       </field>
       <field>
         <name>KOS_PROJEK</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_NAMA_HOPT</name>
+        <rename/>
       </field>
       <field>
         <name>KOS_PERUNDING_SEMASA</name>
+        <rename/>
       </field>
       <field>
         <name>NAMA_HODT</name>
+        <rename/>
       </field>
       <field>
         <name>BIDANG</name>
+        <rename/>
       </field>
       <field>
         <name>rmk</name>
+        <rename/>
       </field>
       <field>
         <name>kaedah_perolehan</name>
+        <rename/>
       </field>
       <field>
         <name>kementerian</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_RUJUKAN_KOD_PROJEK</name>
+        <rename/>
+      </field>
+      <field>
+        <name>UUU_CREATION_DATE</name>
+        <rename/>
+      </field>
+      <field>
+        <name>UUU_RECORD_LAST_UPDATE_DATE</name>
+        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -3103,6 +3150,14 @@ rpdecide='NOT AVAILABLE'
         <column_name>J10_PL_RUJUKAN_KOD_PROJEK</column_name>
         <stream_name>J10_PL_RUJUKAN_KOD_PROJEK</stream_name>
       </field>
+      <field>
+        <column_name>UUU_CREATION_DATE</column_name>
+        <stream_name>UUU_CREATION_DATE</stream_name>
+      </field>
+      <field>
+        <column_name>UUU_RECORD_LAST_UPDATE_DATE</column_name>
+        <stream_name>UUU_RECORD_LAST_UPDATE_DATE</stream_name>
+      </field>
     </fields>
     <attributes/>
     <cluster_schema/>
@@ -3159,7 +3214,9 @@ a.J10_PL_Kaedah_Perolehan,
 CAST(e.J10_PL_Jumlah_Baru_Kos_CA as double precision) as kos_perunding_semasa,
 f.J10_PL_Nama_HODT_UPK as nama_hodt,
 a.J10_PL_Q_Bidang as bidang,
-a.j10_pl_rujukan_kod_projek
+a.j10_pl_rujukan_kod_projek,
+a.uuu_creation_date,
+a.uuu_record_last_update_date
 
 FROM unifier_upi_view a 
 LEFT JOIN unifier_uxjaceot_view b ON a.project_id=b.project_id
@@ -3172,7 +3229,7 @@ left join unifier_uxjdpla_view f on a.project_id=f.project_id</sql>
     <execute_each_row>N</execute_each_row>
     <variables_active>N</variables_active>
     <lazy_conversion_active>N</lazy_conversion_active>
-    <cached_row_meta_active>N</cached_row_meta_active>
+    <cached_row_meta_active>Y</cached_row_meta_active>
     <row-meta>
       <value-meta>
         <type>Integer</type>
@@ -3844,11 +3901,11 @@ left join unifier_uxjdpla_view f on a.project_id=f.project_id</sql>
       <value-meta>
         <type>String</type>
         <storagetype>normal</storagetype>
-        <name>J10_PL_N0_RUJUKAN_PROJ_1</name>
-        <length>384</length>
+        <name>J10_PL_RUJUKAN_KOD_PROJEK</name>
+        <length>96</length>
         <precision>-1</precision>
         <origin>UPI</origin>
-        <comments>J10_PL_N0_RUJUKAN_PROJ</comments>
+        <comments>J10_PL_RUJUKAN_KOD_PROJEK</comments>
         <conversion_Mask/>
         <decimal_symbol>.</decimal_symbol>
         <grouping_symbol>,</grouping_symbol>
@@ -3865,13 +3922,36 @@ left join unifier_uxjdpla_view f on a.project_id=f.project_id</sql>
         <lenient_string_to_number>N</lenient_string_to_number>
       </value-meta>
       <value-meta>
-        <type>String</type>
+        <type>Timestamp</type>
         <storagetype>normal</storagetype>
-        <name>J10_PL_RUJUKAN_KOD_PROJEK</name>
-        <length>96</length>
+        <name>UUU_CREATION_DATE</name>
+        <length>0</length>
         <precision>-1</precision>
         <origin>UPI</origin>
-        <comments>J10_PL_RUJUKAN_KOD_PROJEK</comments>
+        <comments>UUU_CREATION_DATE</comments>
+        <conversion_Mask/>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_MY</date_format_locale>
+        <date_format_timezone>Asia/Singapore</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>Timestamp</type>
+        <storagetype>normal</storagetype>
+        <name>UUU_RECORD_LAST_UPDATE_DATE</name>
+        <length>0</length>
+        <precision>-1</precision>
+        <origin>UPI</origin>
+        <comments>UUU_RECORD_LAST_UPDATE_DATE</comments>
         <conversion_Mask/>
         <decimal_symbol>.</decimal_symbol>
         <grouping_symbol>,</grouping_symbol>
@@ -4096,6 +4176,18 @@ left join unifier_uxjdpla_view f on a.project_id=f.project_id</sql>
         <rename>J10_PL_RUJUKAN_KOD_PROJEK</rename>
         <default/>
         <type>String</type>
+      </value>
+      <value>
+        <name>UUU_CREATION_DATE</name>
+        <rename>UUU_CREATION_DATE</rename>
+        <default/>
+        <type>Timestamp</type>
+      </value>
+      <value>
+        <name>UUU_RECORD_LAST_UPDATE_DATE</name>
+        <rename>UUU_RECORD_LAST_UPDATE_DATE</rename>
+        <default/>
+        <type>Timestamp</type>
       </value>
     </lookup>
     <attributes/>

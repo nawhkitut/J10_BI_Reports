@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <transformation>
   <info>
-    <name>STATUS PROJEK MENGIKUT PERINGKAT PELAKSANAAN PROJEK SECARA TENDER </name>
+    <name>521 STATUS PROJEK MENGIKUT PERINGKAT PELAKSANAAN PROJEK SECARA TENDER </name>
     <description/>
     <extended_description/>
     <trans_version/>
@@ -1394,13 +1394,13 @@ COUNT ( CASE WHEN
 				-- satisfy perancangan
 				kelulusan IN ('Berdaftar_Diterima','Berdaftar_Selesai') AND 
 				-- satisfy rekabentuk
-				GN2 = 1 AND  	
+				GN2 in (1,2,3) AND  	
 				-- satisfy perolehan
-				GN3 IN ('Projek diteruskan ke peringkat selanjutnya', 'Projek diteruskan ke peringkat selanjutnya dengan syarat') AND
+				(GN3 IN ('Projek diteruskan ke peringkat selanjutnya','Projek diteruskan ke peringkat selanjutnya dengan syarat') OR GN3 IS NULL) AND
 	 			-- satisfy pembinaan
-				terima_sst = 1 AND 
+				terima_sst = 1 AND
 				-- do not satisfy handover
-				tarikh IS NULL OR tarikh = 0
+				tarikh IS NULL --OR tarikh = 0
  			THEN 1 END )  AS PHASE_TYPE FROM (
 	-- list of project
 	WITH CH AS (
@@ -1426,7 +1426,7 @@ COUNT ( CASE WHEN
 						CASE WHEN (J10_PK_TAR_KONT_MEM_DOP IS NOT NULL) THEN 1 END AS tarikh
 					FROM  unifier_uxjpenk_view   	-- 2 records	(1315, 1357) # duplicate 1315	
 				 )												-- total 1 record
-			WHERE tarikh = 1 
+			WHERE tarikh IS NULL
 			) handover
 		left JOIN (
 			-- list of project in construction
@@ -1440,6 +1440,9 @@ COUNT ( CASE WHEN
 				UNION ALL 
 				SELECT PROJECT_ID, RECORD_NO, 'Tender_Terbuka' AS jenis_tender, J10_STS_TRMA_KNTRK_SST_PD
 				FROM  unifier_uxopapoc_view 	-- 6 records (1343, 1350, 1353, 1355, 1357, 1359)
+				UNION ALL
+				SELECT PROJECT_ID, RECORD_NO, 'Tender_Terhad' AS jenis_tender, J10_STS_TRMA_KNTRK_SST_PD
+				FROM  unifier_uxltapoc_view
 			)
 			WHERE J10_STS_TRMA_KNTRK_SST_PD = 1 
 		) construction
@@ -1457,6 +1460,9 @@ COUNT ( CASE WHEN
 				UNION ALL 
 				SELECT PROJECT_ID, RECORD_NO, 'Tender_Terbuka' AS jenis_tender, J10_STS_TRMA_KNTRK_SST_PD
 				FROM  unifier_uxopapoc_view 	-- 6 records (1343, 1350, 1353, 1355, 1357, 1359)
+				UNION ALL
+				SELECT PROJECT_ID, RECORD_NO, 'Tender_Terhad' AS jenis_tender, J10_STS_TRMA_KNTRK_SST_PD
+				FROM  unifier_uxltapoc_view
 			)
 			WHERE J10_STS_TRMA_KNTRK_SST_PD = 1 AND 
 			PROJECT_ID NOT IN (
@@ -1474,7 +1480,7 @@ COUNT ( CASE WHEN
 					SELECT DISTINCT PROJECT_ID, J10_PK_TAR_KONT_MEM_DOP AS tarikh
 					FROM  unifier_uxjpenk_view   	-- 2 records	(1315, 1357)	
 				)
-				WHERE tarikh IS NOT NULL  
+				WHERE tarikh IS NULL  
 			)
 		)
 	)
@@ -1784,7 +1790,7 @@ COUNT ( CASE WHEN
 				-- satisfy perancangan
 				kelulusan IN ('Berdaftar_Diterima','Berdaftar_Selesai') AND 
 				-- satisfy rekabentuk
-				GN2 = 1 AND 
+				GN2 in (1,2,3) AND
 				-- do not satisfy perolehan
 				GN3 IS NULL AND
 				-- do not satisfy pembinaan
@@ -1816,7 +1822,7 @@ COUNT ( CASE WHEN
 						CASE WHEN (J10_PK_TAR_KONT_MEM_DOP IS NOT NULL) THEN 1 END AS tarikh
 					FROM  unifier_uxjpenk_view   	-- 2 records	(1315, 1357) # duplicate 1315	
 				 )												-- total 1 record
-			WHERE tarikh = 1 
+			WHERE tarikh is null
 			) handover
 		left JOIN (
 			-- list of project in construction
@@ -1831,7 +1837,7 @@ COUNT ( CASE WHEN
 				SELECT PROJECT_ID, RECORD_NO, 'Tender_Terbuka' AS jenis_tender, J10_STS_TRMA_KNTRK_SST_PD
 				FROM  unifier_uxopapoc_view 	-- 6 records (1343, 1350, 1353, 1355, 1357, 1359)
 			)
-			WHERE J10_STS_TRMA_KNTRK_SST_PD = 1 
+			WHERE J10_STS_TRMA_KNTRK_SST_PD is null
 		) construction
 		ON HANDOVER.project_id = construction.pid
 		UNION ALL 
@@ -1848,7 +1854,7 @@ COUNT ( CASE WHEN
 				SELECT PROJECT_ID, RECORD_NO, 'Tender_Terbuka' AS jenis_tender, J10_STS_TRMA_KNTRK_SST_PD
 				FROM  unifier_uxopapoc_view 	-- 6 records (1343, 1350, 1353, 1355, 1357, 1359)
 			)
-			WHERE J10_STS_TRMA_KNTRK_SST_PD = 1 AND 
+			WHERE J10_STS_TRMA_KNTRK_SST_PD is null AND 
 			PROJECT_ID NOT IN (
 				SELECT DISTINCT PROJECT_ID
 				FROM (
@@ -1864,7 +1870,7 @@ COUNT ( CASE WHEN
 					SELECT DISTINCT PROJECT_ID, J10_PK_TAR_KONT_MEM_DOP AS tarikh
 					FROM  unifier_uxjpenk_view   	-- 2 records	(1315, 1357)	
 				)
-				WHERE tarikh IS NOT NULL  
+				WHERE tarikh IS NULL  
 			)
 		)
 	)
@@ -2117,6 +2123,12 @@ COUNT ( CASE WHEN
         <default/>
         <type>None</type>
       </value>
+      <value>
+        <name>J10_PL_DAERAH_PD</name>
+        <rename>J10_PL_DAERAH_PD</rename>
+        <default/>
+        <type>String</type>
+      </value>
     </lookup>
     <attributes/>
     <cluster_schema/>
@@ -2232,12 +2244,6 @@ COUNT ( CASE WHEN
         <type>None</type>
       </value>
       <value>
-        <name>J10_PL_DAERAH_PD</name>
-        <rename>J10_PL_DAERAH_PD</rename>
-        <default/>
-        <type>None</type>
-      </value>
-      <value>
         <name>UNIFIER_URL</name>
         <rename>UNIFIER_URL</rename>
         <default/>
@@ -2333,6 +2339,18 @@ COUNT ( CASE WHEN
         <default/>
         <type>None</type>
       </value>
+      <value>
+        <name>UUU_CREATION_DATE</name>
+        <rename>UUU_CREATION_DATE</rename>
+        <default/>
+        <type>Timestamp</type>
+      </value>
+      <value>
+        <name>UUU_RECORD_LAST_UPDATE_DATE</name>
+        <rename>UUU_RECORD_LAST_UPDATE_DATE</rename>
+        <default/>
+        <type>Timestamp</type>
+      </value>
     </lookup>
     <attributes/>
     <cluster_schema/>
@@ -2362,17 +2380,17 @@ COUNT ( CASE WHEN
     <connection>J10</connection>
     <sql>select record_no,J10_PL_Lokasi_Tapak_Negeri,J10_PL_Kementerian,J10_PL_Nama_Pengurus_Progra,J10_PL_Bukan_Pejabat_HOPT,J10_PL_Rancangan_Malaysia_K,J10_PL_JENIS_KONTRAK,J10_PL_Cawangan_Pengurus_Pr,j10_pl_agensi,
 J10_PL_Kategori_Perbelantxt,J10_PL_Kaedah_Perolehan,J10_PL_TarikhDaftar_Projek,J10_PL_Brif_Projek,J10_PL_Tapak_Lokasi,J10_PL_ACAT,
-J10_PL_Jenis_Rekabentuk,J10_PL_Penggunaan_BIM,J10_PL_Siling_Projek_yang_d,J10_PL_Siling_Projek,J10_PL_Tarikh_Jangka_Mula_P,J10_PL_Tarikh_Jangka_Siap_P,J10_PL_Tarikh_Jangka_Seraha
+J10_PL_Jenis_Rekabentuk,J10_PL_Penggunaan_BIM,J10_PL_Siling_Projek_yang_d,J10_PL_Siling_Projek,J10_PL_Tarikh_Jangka_Mula_P,J10_PL_Tarikh_Jangka_Siap_P,J10_PL_Tarikh_Jangka_Seraha,J10_PL_DAERAH_PD
 from unifier_uxjplpcf_view WHERE to_char(uuu_creation_date,'yyyy-MM-dd')>='2021-03-15'
 union
 select record_no,J10_PL_Lokasi_Tapak_Negeri,J10_PL_Kementerian,J10_PL_Nama_Pengurus_Progra,J10_PL_Bukan_Pejabat_HOPT,J10_PL_Rancangan_Malaysia_K,J10_PL_JENIS_KONTRAK,J10_PL_Cawangan_Pengurus_Pr,j10_pl_agensi,
 J10_PL_Kategori_Perbelantxt,J10_PL_Kaedah_Perolehan,J10_PL_TarikhDaftar_Projek,J10_PL_Brif_Projek,J10_PL_Tapak_Lokasi,J10_PL_ACAT,
-J10_PL_Jenis_Rekabentuk,J10_PL_Penggunaan_BIM,J10_PL_Siling_Projek_yang_d,J10_PL_Siling_Projek,J10_PL_Tarikh_Jangka_Mula_P,J10_PL_Tarikh_Jangka_Siap_P,J10_PL_Tarikh_Jangka_Seraha
+J10_PL_Jenis_Rekabentuk,J10_PL_Penggunaan_BIM,J10_PL_Siling_Projek_yang_d,J10_PL_Siling_Projek,J10_PL_Tarikh_Jangka_Mula_P,J10_PL_Tarikh_Jangka_Siap_P,J10_PL_Tarikh_Jangka_Seraha,J10_PL_DAERAH_PD
 from unifier_uxjpcnf_view WHERE to_char(uuu_creation_date,'yyyy-MM-dd')>='2021-03-15'
 union
 select record_no,J10_PL_Lokasi_Tapak_Negeri,J10_PL_Kementerian,J10_PL_Nama_Pengurus_Progra,J10_PL_Bukan_Pejabat_HOPT,J10_PL_Rancangan_Malaysia_K,J10_PL_JENIS_KONTRAK,J10_PL_Cawangan_Pengurus_Pr,j10_pl_agensi,
 J10_PL_Kategori_Perbelantxt,J10_PL_Kaedah_Perolehan,J10_PL_TarikhDaftar_Projek,J10_PL_Brif_Projek,J10_PL_Tapak_Lokasi,J10_PL_ACAT,
-J10_PL_Jenis_Rekabentuk,J10_PL_Penggunaan_BIM,J10_PL_Siling_Projek_yang_d,J10_PL_Siling_Projek,J10_PL_Tarikh_Jangka_Mula_P,J10_PL_Tarikh_Jangka_Siap_P,J10_PL_Tarikh_Jangka_Seraha
+J10_PL_Jenis_Rekabentuk,J10_PL_Penggunaan_BIM,J10_PL_Siling_Projek_yang_d,J10_PL_Siling_Projek,J10_PL_Tarikh_Jangka_Mula_P,J10_PL_Tarikh_Jangka_Siap_P,J10_PL_Tarikh_Jangka_Seraha,J10_PL_DAERAH_PD
 from unifier_uxjpcs_view WHERE to_char(uuu_creation_date,'yyyy-MM-dd')>='2021-03-15'
 </sql>
     <limit>0</limit>
@@ -2888,6 +2906,29 @@ from unifier_uxjpcs_view WHERE to_char(uuu_creation_date,'yyyy-MM-dd')>='2021-03
         <date_format_timezone>Asia/Singapore</date_format_timezone>
         <lenient_string_to_number>N</lenient_string_to_number>
       </value-meta>
+      <value-meta>
+        <type>String</type>
+        <storagetype>normal</storagetype>
+        <name>J10_PL_DAERAH_PD</name>
+        <length>384</length>
+        <precision>-1</precision>
+        <origin>Details 3</origin>
+        <comments>J10_PL_DAERAH_PD</comments>
+        <conversion_Mask/>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_MY</date_format_locale>
+        <date_format_timezone>Asia/Singapore</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
     </row-meta>
     <attributes/>
     <cluster_schema/>
@@ -3061,6 +3102,12 @@ from unifier_uxjpcs_view WHERE to_char(uuu_creation_date,'yyyy-MM-dd')>='2021-03
         <rename>J10_PL_PENGGUNAAN_BIM</rename>
         <default/>
         <type>None</type>
+      </value>
+      <value>
+        <name>J10_PL_DAERAH_PD</name>
+        <rename>J10_PL_DAERAH_PD</rename>
+        <default/>
+        <type>String</type>
       </value>
     </lookup>
     <attributes/>
@@ -7505,7 +7552,7 @@ INNER JOIN LIFERAY_PROD.ORGANIZATION_ d ON c.ORGANIZATIONID = d.ORGANIZATIONID</
 						CASE WHEN (J10_PK_TAR_KONT_MEM_DOP IS NOT NULL) THEN 1 END AS tarikh
 					FROM  unifier_uxjpenk_view   	-- 2 records	(1315, 1357) # duplicate 1315	
 				 )												-- total 1 record
-			WHERE tarikh = 1 
+			WHERE tarikh is null
 			) handover
 		left JOIN (
 			-- list of project in construction
@@ -7520,7 +7567,7 @@ INNER JOIN LIFERAY_PROD.ORGANIZATION_ d ON c.ORGANIZATIONID = d.ORGANIZATIONID</
 				SELECT PROJECT_ID, RECORD_NO, 'Tender_Terbuka' AS jenis_tender, J10_STS_TRMA_KNTRK_SST_PD
 				FROM  unifier_uxopapoc_view 	-- 6 records (1343, 1350, 1353, 1355, 1357, 1359)
 			)
-			WHERE J10_STS_TRMA_KNTRK_SST_PD = 1 
+			WHERE J10_STS_TRMA_KNTRK_SST_PD is null 
 		) construction
 		ON HANDOVER.project_id = construction.pid
 		UNION ALL 
@@ -7537,7 +7584,7 @@ INNER JOIN LIFERAY_PROD.ORGANIZATION_ d ON c.ORGANIZATIONID = d.ORGANIZATIONID</
 				SELECT PROJECT_ID, RECORD_NO, 'Tender_Terbuka' AS jenis_tender, J10_STS_TRMA_KNTRK_SST_PD
 				FROM  unifier_uxopapoc_view 	-- 6 records (1343, 1350, 1353, 1355, 1357, 1359)
 			)
-			WHERE J10_STS_TRMA_KNTRK_SST_PD = 1 AND 
+			WHERE J10_STS_TRMA_KNTRK_SST_PD is null AND 
 			PROJECT_ID NOT IN (
 				SELECT DISTINCT PROJECT_ID
 				FROM (
@@ -7553,7 +7600,7 @@ INNER JOIN LIFERAY_PROD.ORGANIZATION_ d ON c.ORGANIZATIONID = d.ORGANIZATIONID</
 					SELECT DISTINCT PROJECT_ID, J10_PK_TAR_KONT_MEM_DOP AS tarikh
 					FROM  unifier_uxjpenk_view   	-- 2 records	(1315, 1357)	
 				)
-				WHERE tarikh IS NOT NULL  
+				WHERE tarikh IS NULL  
 			)
 		)
 	)
@@ -7688,13 +7735,13 @@ COUNT ( CASE WHEN
 				-- satisfy perancangan
 				kelulusan IN ('Berdaftar_Diterima','Berdaftar_Selesai') AND 
 				-- satisfy rekabentuk
-				GN2 = 1 AND  	
+				GN2 in (1,2,3) AND  	
 				-- satisfy perolehan
 				GN3 IN ('Projek diteruskan ke peringkat selanjutnya', 'Projek diteruskan ke peringkat selanjutnya dengan syarat') AND
 	 			-- do not satisfy pembinaan
 				terima_sst IS NULL AND 
 				-- do not satisfy handover
-				tarikh IS NULL OR tarikh = 0
+				tarikh IS NULL --OR tarikh = 0
  			THEN 1 END ) AS PHASE_TYPE FROM (
 	-- list of project
 	WITH CH AS (
@@ -7720,7 +7767,7 @@ COUNT ( CASE WHEN
 						CASE WHEN (J10_PK_TAR_KONT_MEM_DOP IS NOT NULL) THEN 1 END AS tarikh
 					FROM  unifier_uxjpenk_view   	-- 2 records	(1315, 1357) # duplicate 1315	
 				 )												-- total 1 record
-			WHERE tarikh = 1 
+			WHERE tarikh is null
 			) handover
 		left JOIN (
 			-- list of project in construction
@@ -7734,8 +7781,11 @@ COUNT ( CASE WHEN
 				UNION ALL 
 				SELECT PROJECT_ID, RECORD_NO, 'Tender_Terbuka' AS jenis_tender, J10_STS_TRMA_KNTRK_SST_PD
 				FROM  unifier_uxopapoc_view 	-- 6 records (1343, 1350, 1353, 1355, 1357, 1359)
+				UNION ALL
+				SELECT PROJECT_ID, RECORD_NO, 'Tender_Terhad' AS jenis_tender, J10_STS_TRMA_KNTRK_SST_PD
+				FROM  unifier_uxltapoc_view
 			)
-			WHERE J10_STS_TRMA_KNTRK_SST_PD = 1 
+			WHERE J10_STS_TRMA_KNTRK_SST_PD is null
 		) construction
 		ON HANDOVER.project_id = construction.pid
 		UNION ALL 
@@ -7751,8 +7801,11 @@ COUNT ( CASE WHEN
 				UNION ALL 
 				SELECT PROJECT_ID, RECORD_NO, 'Tender_Terbuka' AS jenis_tender, J10_STS_TRMA_KNTRK_SST_PD
 				FROM  unifier_uxopapoc_view 	-- 6 records (1343, 1350, 1353, 1355, 1357, 1359)
+				UNION ALL
+				SELECT PROJECT_ID, RECORD_NO, 'Tender_Terhad' AS jenis_tender, J10_STS_TRMA_KNTRK_SST_PD
+				FROM  unifier_uxltapoc_view
 			)
-			WHERE J10_STS_TRMA_KNTRK_SST_PD = 1 AND 
+			WHERE J10_STS_TRMA_KNTRK_SST_PD is null AND 
 			PROJECT_ID NOT IN (
 				SELECT DISTINCT PROJECT_ID
 				FROM (
@@ -7768,12 +7821,12 @@ COUNT ( CASE WHEN
 					SELECT DISTINCT PROJECT_ID, J10_PK_TAR_KONT_MEM_DOP AS tarikh
 					FROM  unifier_uxjpenk_view   	-- 2 records	(1315, 1357)	
 				)
-				WHERE tarikh IS NOT NULL  
+				WHERE tarikh IS NULL  
 			)
 		)
 	)
 	SELECT DISTINCT K__UUU_SHELL_CREATOR AS pid, NAMA_PROJEK, PROJECT_TYPE, 
-		kelulusan, gn2.J10_PL_Status_GN2 AS GN2, J10_DE_KEP_GN3_PEG_PELULUS AS GN3, 
+		kelulusan, gn2.J10_PL_Status_GN2 AS GN2, J10_DE_KEP_GN3_PEG_PELULUS AS GN3,
 		CH.terima_sst, ch.tarikh
 	FROM (
 		SELECT DISTINCT 
@@ -7793,7 +7846,7 @@ COUNT ( CASE WHEN
 		)
 	LEFT JOIN  UNIFIER_UXJGN2_VIEW gn2   	ON K__UUU_SHELL_CREATOR = gn2.PROJECT_ID
 	LEFT JOIN  UNIFIER_UXGN3_VIEW gn3  	ON K__UUU_SHELL_CREATOR = gn3.PROJECT_ID
-	LEFT JOIN CH										ON K__UUU_SHELL_CREATOR = CH.PROJECT_ID
+	LEFT JOIN  CH ON K__UUU_SHELL_CREATOR = CH.PROJECT_ID
 	)group by pid</sql>
     <limit>0</limit>
     <lookup/>
@@ -8823,6 +8876,12 @@ rpdecide='NOT AVAILABLE'
       <field>
         <name>terima_va1</name>
       </field>
+      <field>
+        <name>UUU_CREATION_DATE</name>
+      </field>
+      <field>
+        <name>UUU_RECORD_LAST_UPDATE_DATE</name>
+      </field>
       <select_unspecified>N</select_unspecified>
     </fields>
     <attributes/>
@@ -9121,6 +9180,9 @@ rpdecide='NOT AVAILABLE'
       <field>
         <name>J10_PL_Cawangan_Pengurus_Pr</name>
       </field>
+      <field>
+        <name>J10_PL_DAERAH_PD</name>
+      </field>
       <select_unspecified>N</select_unspecified>
     </fields>
     <attributes/>
@@ -9235,6 +9297,9 @@ rpdecide='NOT AVAILABLE'
       </field>
       <field>
         <name>J10_PL_Cawangan_Pengurus_Pr</name>
+      </field>
+      <field>
+        <name>J10_PL_DAERAH_PD</name>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -9849,6 +9914,14 @@ rpdecide='NOT AVAILABLE'
         <column_name>PO_CAW</column_name>
         <stream_name>PO_CAW</stream_name>
       </field>
+      <field>
+        <column_name>UUU_CREATION_DATE</column_name>
+        <stream_name>UUU_CREATION_DATE</stream_name>
+      </field>
+      <field>
+        <column_name>UUU_RECORD_LAST_UPDATE_DATE</column_name>
+        <stream_name>UUU_RECORD_LAST_UPDATE_DATE</stream_name>
+      </field>
     </fields>
     <attributes/>
     <cluster_schema/>
@@ -9879,7 +9952,8 @@ rpdecide='NOT AVAILABLE'
     <sql>
 select distinct project_id,a.J10_PL_Lokasi_Tapak_Negeri,a.J10_PL_Kementerian,a.J10_PL_Rancangan_Malaysia_K,a.J10_PL_LOKASI_NEGERI,a.J10_PL_Kementerian,a.J10_PL_JENIS_KONTRAK,a.J10_PL_Cawangan_Pengurus_Pr,a.j10_pl_agensi,
 a.J10_PL_Kategori_Perbelantxt,a.J10_PL_Kaedah_Perolehan,a.J10_PL_TarikhDaftar_Projek,a.J10_PL_Tarikh_Brif_Projek_t,a.J10_PL_Tapak_Lokasi,a.J10_PL_ACAT,FULLNAME as J10_PL_Nama_Pengurus_Progra,a.J10_PL_KLASIFIKASI_SDT,
-a.J10_PL_Siling_Projek_yang_d,a.J10_PL_Siling_Projek,a.J10_PL_Tarikh_Jangka_Mula_P,a.J10_PL_Tarikh_Jangka_Siap_P,a.J10_PL_Tarikh_Jangka_Seraha,a.J10_PL_BUKAN_PEJABAT_HOPT,a.J10_PL_JENIS_REKABENTUK,a.J10_PL_PENGGUNAAN_BIM 
+a.J10_PL_Siling_Projek_yang_d,a.J10_PL_Siling_Projek,a.J10_PL_Tarikh_Jangka_Mula_P,a.J10_PL_Tarikh_Jangka_Siap_P,a.J10_PL_Tarikh_Jangka_Seraha,a.J10_PL_BUKAN_PEJABAT_HOPT,a.J10_PL_JENIS_REKABENTUK,a.J10_PL_PENGGUNAAN_BIM,
+a.J10_PL_DAERAH_PD
 from unifier_upi a left join unifier_us_xjprj b on a.project_id=b.PID
 left join unifier_user_view on b.J10_PL_Nama_Pengurus_Progra=userid</sql>
     <limit>0</limit>
@@ -10508,7 +10582,6 @@ d.J_PL_PC_KPA,
 upi.J10_PL_Tarikh_Jangka_Mula_P,
 upi.J10_PL_Tarikh_Jangka_Siap_P,
 upi.J10_PL_Tarikh_Jangka_Seraha,
-upi.J10_PL_DAERAH_PD,
 upi.UUU_BP_RECORD_URL as unifier_url,
 upi.J10_PL_Kos_projek,
 case when upi.J10_CH_SAH_CPC_DT is not null then 1 else 0 end as projeck_siap,
@@ -10520,10 +10593,9 @@ upi.J10_PL_Tarikh_Brif_Projek_t,
 upi.J10_PL_Tapak_Lokasi, 
 upi.J10_PL_Siling_Peruntukan, 
 upi.J10_PL_Tarikh_Laporan_Value,
-upi.J10_PL_Tarikh_Brif_Projek_t, 
-upi.J10_PL_Tapak_Lokasi, 
-upi.J10_PL_Siling_Peruntukan, 
-upi.J10_PL_Tarikh_Laporan_Value
+upi.uuu_creation_date,
+upi.uuu_record_last_update_date,
+upi.J10_PL_DAERAH_PD
 
 
 
@@ -10871,29 +10943,6 @@ left join unifier_uxjqplan e on upi.project_id=e.project_id
       <value-meta>
         <type>String</type>
         <storagetype>normal</storagetype>
-        <name>J10_PL_DAERAH_PD</name>
-        <length>384</length>
-        <precision>-1</precision>
-        <origin>UPI_Details</origin>
-        <comments>J10_PL_DAERAH_PD</comments>
-        <conversion_Mask/>
-        <decimal_symbol>.</decimal_symbol>
-        <grouping_symbol>,</grouping_symbol>
-        <currency_symbol/>
-        <trim_type>none</trim_type>
-        <case_insensitive>N</case_insensitive>
-        <collator_disabled>Y</collator_disabled>
-        <collator_strength>0</collator_strength>
-        <sort_descending>N</sort_descending>
-        <output_padding>N</output_padding>
-        <date_format_lenient>N</date_format_lenient>
-        <date_format_locale>en_MY</date_format_locale>
-        <date_format_timezone>Asia/Singapore</date_format_timezone>
-        <lenient_string_to_number>N</lenient_string_to_number>
-      </value-meta>
-      <value-meta>
-        <type>String</type>
-        <storagetype>normal</storagetype>
         <name>UNIFIER_URL</name>
         <length>750</length>
         <precision>-1</precision>
@@ -11147,11 +11196,11 @@ left join unifier_uxjqplan e on upi.project_id=e.project_id
       <value-meta>
         <type>Timestamp</type>
         <storagetype>normal</storagetype>
-        <name>J10_PL_TARIKH_BRIF_PROJEK_T_1</name>
+        <name>UUU_CREATION_DATE</name>
         <length>0</length>
         <precision>-1</precision>
         <origin>UPI_Details</origin>
-        <comments>J10_PL_TARIKH_BRIF_PROJEK_T</comments>
+        <comments>UUU_CREATION_DATE</comments>
         <conversion_Mask/>
         <decimal_symbol>.</decimal_symbol>
         <grouping_symbol>,</grouping_symbol>
@@ -11170,11 +11219,11 @@ left join unifier_uxjqplan e on upi.project_id=e.project_id
       <value-meta>
         <type>Timestamp</type>
         <storagetype>normal</storagetype>
-        <name>J10_PL_TAPAK_LOKASI_1</name>
+        <name>UUU_RECORD_LAST_UPDATE_DATE</name>
         <length>0</length>
         <precision>-1</precision>
         <origin>UPI_Details</origin>
-        <comments>J10_PL_TAPAK_LOKASI</comments>
+        <comments>UUU_RECORD_LAST_UPDATE_DATE</comments>
         <conversion_Mask/>
         <decimal_symbol>.</decimal_symbol>
         <grouping_symbol>,</grouping_symbol>
@@ -11191,36 +11240,13 @@ left join unifier_uxjqplan e on upi.project_id=e.project_id
         <lenient_string_to_number>N</lenient_string_to_number>
       </value-meta>
       <value-meta>
-        <type>Timestamp</type>
+        <type>String</type>
         <storagetype>normal</storagetype>
-        <name>J10_PL_SILING_PERUNTUKAN_1</name>
-        <length>0</length>
+        <name>J10_PL_DAERAH_PD</name>
+        <length>384</length>
         <precision>-1</precision>
         <origin>UPI_Details</origin>
-        <comments>J10_PL_SILING_PERUNTUKAN</comments>
-        <conversion_Mask/>
-        <decimal_symbol>.</decimal_symbol>
-        <grouping_symbol>,</grouping_symbol>
-        <currency_symbol/>
-        <trim_type>none</trim_type>
-        <case_insensitive>N</case_insensitive>
-        <collator_disabled>Y</collator_disabled>
-        <collator_strength>0</collator_strength>
-        <sort_descending>N</sort_descending>
-        <output_padding>N</output_padding>
-        <date_format_lenient>N</date_format_lenient>
-        <date_format_locale>en_MY</date_format_locale>
-        <date_format_timezone>Asia/Singapore</date_format_timezone>
-        <lenient_string_to_number>N</lenient_string_to_number>
-      </value-meta>
-      <value-meta>
-        <type>Timestamp</type>
-        <storagetype>normal</storagetype>
-        <name>J10_PL_TARIKH_LAPORAN_VALUE_1</name>
-        <length>0</length>
-        <precision>-1</precision>
-        <origin>UPI_Details</origin>
-        <comments>J10_PL_TARIKH_LAPORAN_VALUE</comments>
+        <comments>J10_PL_DAERAH_PD</comments>
         <conversion_Mask/>
         <decimal_symbol>.</decimal_symbol>
         <grouping_symbol>,</grouping_symbol>
@@ -11247,7 +11273,7 @@ left join unifier_uxjqplan e on upi.project_id=e.project_id
     </remotesteps>
     <GUI>
       <xloc>1072</xloc>
-      <yloc>224</yloc>
+      <yloc>240</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
