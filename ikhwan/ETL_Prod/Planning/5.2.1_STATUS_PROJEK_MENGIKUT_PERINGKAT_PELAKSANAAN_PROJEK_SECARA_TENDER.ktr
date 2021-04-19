@@ -7609,13 +7609,13 @@ FROM "public".dim_pejabat
       <schema_name/>
     </partitioning>
     <connection>J10</connection>
-    <sql>select distinct project_id,J10_PL_NAMA_PROJEK ,upper(j10_DE_pejabat) as PEJABAT_PROGRAM,'Pejabat SO'as pejabat,J10_NAMA_PEGWAI_PENGASA_UPK as pejabat_user  
+    <sql>select distinct project_id,J10_PL_NAMA_PROJEK ,upper(j10_DE_pejabat) as PEJABAT_PROGRAM,'Pejabat Pegawai Penguasa'as pejabat,J10_NAMA_PEGWAI_PENGASA_UPK as pejabat_user  
 from unifier_uxlhodt_view where j10_nama_pegwai_pengasa_upk is not null
 
 union
 
 
-select distinct a.project_id,b.J10_PL_NAMA_PROJEK ,upper(a.J10_CH_PJBT_SELIA_TAPAK) as PEJABAT_PROGRAM,'Pejabat SOR'as pejabat ,b.J10_CH_NAMA_SO as pejabat_user
+select distinct a.project_id,b.J10_PL_NAMA_PROJEK ,upper(a.J10_CH_PJBT_SELIA_TAPAK) as PEJABAT_PROGRAM,'Pejabat WPP Utama'as pejabat ,b.J10_CH_NAMA_SO as pejabat_user
 from  unifier_uxjcpln_view a join unifier_upi b on a.project_id=b.project_id
 
 </sql>
@@ -7699,7 +7699,7 @@ from  unifier_uxjcpln_view a join unifier_upi b on a.project_id=b.project_id
         <type>String</type>
         <storagetype>normal</storagetype>
         <name>PEJABAT</name>
-        <length>11</length>
+        <length>24</length>
         <precision>-1</precision>
         <origin>Pejabat_SO</origin>
         <comments>PEJABAT</comments>
@@ -9166,299 +9166,225 @@ rpdecide='NOT AVAILABLE'
     <fields>
       <field>
         <name>J10_PL_NAMA_PROJEK</name>
-        <rename/>
       </field>
       <field>
         <name>PEJABAT_PROGRAM</name>
-        <rename/>
       </field>
       <field>
         <name>UGENPROJECTNUMBER</name>
-        <rename/>
       </field>
       <field>
         <name>PROJECT_ID</name>
-        <rename/>
       </field>
       <field>
         <name>STATUS</name>
-        <rename/>
       </field>
       <field>
         <name>RECORD_NO</name>
-        <rename/>
       </field>
       <field>
         <name>PEJABAT</name>
-        <rename/>
       </field>
       <field>
         <name>KATEGORI0</name>
-        <rename/>
       </field>
       <field>
         <name>KATEGORI1</name>
-        <rename/>
       </field>
       <field>
         <name>KATEGORI2</name>
-        <rename/>
       </field>
       <field>
         <name>KATEGORI3</name>
-        <rename/>
       </field>
       <field>
         <name>KATEGORI4</name>
-        <rename/>
       </field>
       <field>
         <name>p0</name>
-        <rename/>
       </field>
       <field>
         <name>p1</name>
-        <rename/>
       </field>
       <field>
         <name>p2</name>
-        <rename/>
       </field>
       <field>
         <name>p3</name>
-        <rename/>
       </field>
       <field>
         <name>p4</name>
-        <rename/>
       </field>
       <field>
         <name>BELUM_LANTIK_HOPT</name>
-        <rename/>
       </field>
       <field>
         <name>BELUM_LANTIK_PP</name>
-        <rename/>
       </field>
       <field>
         <name>BELUM_LANTIK_PPP</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_NAMA_PENGURUS_PROGRA</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_BUKAN_PEJABAT_HOPT</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_RANCANGAN_MALAYSIA_K</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_TARIKHDAFTAR_PROJEK</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_JENIS_REKABENTUK</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_PENGGUNAAN_BIM</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_SILING_PROJEK_YANG_D</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_SILING_PROJEK</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_TARIKH_JANGKA_MULA_P</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_TARIKH_JANGKA_SIAP_P</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_TARIKH_JANGKA_SERAHA</name>
-        <rename/>
       </field>
       <field>
         <name>PHASE</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_TAJUK_PROGRAM</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_N0_RUJUKAN_PROJ</name>
-        <rename/>
       </field>
       <field>
         <name>J10_CH_PJBT_SELIA_TAPAK</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_JENISKONTRAK_PD</name>
-        <rename/>
       </field>
       <field>
         <name>KAEDAH_PEROLEHAN</name>
-        <rename/>
       </field>
       <field>
         <name>JENIS_PROJEK</name>
-        <rename/>
       </field>
       <field>
         <name>RMK</name>
-        <rename/>
       </field>
       <field>
         <name>ACAT</name>
-        <rename/>
       </field>
       <field>
         <name>IBS</name>
-        <rename/>
       </field>
       <field>
         <name>PERBELANJAAN</name>
-        <rename/>
       </field>
       <field>
         <name>KEMENTERIAN</name>
-        <rename/>
       </field>
       <field>
         <name>LOKASI_TAPAK</name>
-        <rename/>
       </field>
       <field>
         <name>DAERAH</name>
-        <rename/>
       </field>
       <field>
         <name>pejabat_jkr</name>
-        <rename/>
       </field>
       <field>
         <name>sk_pejabat_atas_jkr</name>
-        <rename/>
       </field>
       <field>
         <name>HIERARCHY</name>
-        <rename/>
       </field>
       <field>
         <name>sk_pejabat_jkr</name>
-        <rename/>
       </field>
       <field>
         <name>UNIFIER_URL</name>
-        <rename/>
       </field>
       <field>
         <name>rujukan_sppii</name>
-        <rename/>
       </field>
       <field>
         <name>CATATAN</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_Kos_projek</name>
-        <rename/>
       </field>
       <field>
         <name>KEMENTERIAN_AGENCY</name>
-        <rename/>
       </field>
       <field>
         <name>projeck_siap</name>
-        <rename/>
       </field>
       <field>
         <name>TANGGUH</name>
-        <rename/>
       </field>
       <field>
         <name>PROJECT_NUMBER</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_Cawangan_Pengurus_Pr</name>
-        <rename/>
       </field>
       <field>
         <name>J10_KOS_PRJ_SEMASA</name>
-        <rename/>
       </field>
       <field>
         <name>J_PL_Q_PDTYDTARIKH</name>
-        <rename/>
       </field>
       <field>
         <name>PMO_TERIMA</name>
-        <rename/>
       </field>
       <field>
         <name>terima_brif</name>
-        <rename/>
       </field>
       <field>
         <name>terima_kos</name>
-        <rename/>
       </field>
       <field>
         <name>terima_lokasi</name>
-        <rename/>
       </field>
       <field>
         <name>terima_va</name>
-        <rename/>
       </field>
       <field>
         <name>PENGGUNAAN_BIM</name>
-        <rename/>
       </field>
       <field>
         <name>Jenis_Rekabentuk</name>
-        <rename/>
       </field>
       <field>
         <name>PO_CAW</name>
-        <rename/>
       </field>
       <field>
         <name>terima_brif1</name>
-        <rename/>
       </field>
       <field>
         <name>terima_kos1</name>
-        <rename/>
       </field>
       <field>
         <name>terima_lokasi1</name>
-        <rename/>
       </field>
       <field>
         <name>terima_va1</name>
-        <rename/>
       </field>
       <field>
         <name>UUU_CREATION_DATE</name>
-        <rename/>
       </field>
       <field>
         <name>UUU_RECORD_LAST_UPDATE_DATE</name>
-        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>

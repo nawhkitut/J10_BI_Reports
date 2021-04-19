@@ -5690,13 +5690,13 @@ FROM "public".dim_pejabat
       <schema_name/>
     </partitioning>
     <connection>J10</connection>
-    <sql>select distinct project_id,J10_PL_NAMA_PROJEK ,upper(j10_DE_pejabat) as PEJABAT_PROGRAM,'Pejabat SO'as pejabat,J10_NAMA_PEGWAI_PENGASA_UPK as pejabat_user  
+    <sql>select distinct project_id,J10_PL_NAMA_PROJEK ,upper(j10_DE_pejabat) as PEJABAT_PROGRAM,'Pejabat Pegawai Penguasa'as pejabat,J10_NAMA_PEGWAI_PENGASA_UPK as pejabat_user  
 from unifier_uxlhodt_view where j10_nama_pegwai_pengasa_upk is not null
 
 union
 
 
-select distinct a.project_id,b.J10_PL_NAMA_PROJEK ,upper(a.J10_CH_PJBT_SELIA_TAPAK) as PEJABAT_PROGRAM,'Pejabat SOR'as pejabat ,b.J10_CH_NAMA_SO as pejabat_user
+select distinct a.project_id,b.J10_PL_NAMA_PROJEK ,upper(a.J10_CH_PJBT_SELIA_TAPAK) as PEJABAT_PROGRAM,'Pejabat WPP Utama'as pejabat ,b.J10_CH_NAMA_SO as pejabat_user
 from  unifier_uxjcpln_view a join unifier_upi b on a.project_id=b.project_id
 
 </sql>
@@ -5780,7 +5780,7 @@ from  unifier_uxjcpln_view a join unifier_upi b on a.project_id=b.project_id
         <type>String</type>
         <storagetype>normal</storagetype>
         <name>PEJABAT</name>
-        <length>11</length>
+        <length>24</length>
         <precision>-1</precision>
         <origin>Pejabat_SO</origin>
         <comments>PEJABAT</comments>
@@ -6811,419 +6811,315 @@ rpdecide='NOT AVAILABLE'
     <fields>
       <field>
         <name>J10_PL_NAMA_PROJEK</name>
-        <rename/>
       </field>
       <field>
         <name>PEJABAT_PROGRAM</name>
-        <rename/>
       </field>
       <field>
         <name>PROJECT_ID</name>
-        <rename/>
       </field>
       <field>
         <name>PEJABAT</name>
-        <rename/>
       </field>
       <field>
         <name>pejabat_jkr</name>
-        <rename/>
       </field>
       <field>
         <name>sk_pejabat_jkr</name>
-        <rename/>
       </field>
       <field>
         <name>sk_pejabat_atas_jkr</name>
-        <rename/>
       </field>
       <field>
         <name>HIERARCHY</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_CAWANGAN_PENGURUS_PR</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_TARIKHDAFTAR_PROJEK</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_TARIKH_BRIF_PROJEK_T</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_NAMA_PENGURUS_PROGRA</name>
-        <rename/>
       </field>
       <field>
         <name>PENOLONG_PENGURUS_PROGRAM</name>
-        <rename/>
       </field>
       <field>
         <name>PEJABAT_HOPT</name>
-        <rename/>
       </field>
       <field>
         <name>NAMA_HOPT</name>
-        <rename/>
       </field>
       <field>
         <name>project_number</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_N0_RUJUKAN_PROJ</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_RUJUKAN_KOD_PROJEK</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_SPPII_NUMBER</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_DAERAH_PD</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_Q_ULASANQPLAN_DES</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_JENIS_REKABENTUK</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_PENGGUNAAN_BIM</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_TARIKH_JANGKA_IKLAN</name>
-        <rename/>
       </field>
       <field>
         <name>TKH_KELUAR_IKLAN</name>
-        <rename/>
       </field>
       <field>
         <name>TKH_KELUAR_SST</name>
-        <rename/>
       </field>
       <field>
         <name>KONTRAKTOR</name>
-        <rename/>
       </field>
       <field>
         <name>TARAF_KONTRAKTOR</name>
-        <rename/>
       </field>
       <field>
         <name>TKH_MILIK_TAPAK</name>
-        <rename/>
       </field>
       <field>
         <name>TKH_SIAP_ASAL</name>
-        <rename/>
       </field>
       <field>
         <name>TKH_SIAP_SEMASA</name>
-        <rename/>
       </field>
       <field>
         <name>TKH_SIAP_SEBENAR</name>
-        <rename/>
       </field>
       <field>
         <name>J10_KOS_PRJ_SEMASA</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_KOS_PROJEK_ASAL</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_SILING_PROJEK_YANG_D</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_SILING_PROJEK</name>
-        <rename/>
       </field>
       <field>
         <name>KOS_KONTRAK_ASAL</name>
-        <rename/>
       </field>
       <field>
         <name>KOS_KONTRAK_SEMASA</name>
-        <rename/>
       </field>
       <field>
         <name>UNJURAN</name>
-        <rename/>
       </field>
       <field>
         <name>BAYARAN</name>
-        <rename/>
       </field>
       <field>
         <name>WANG_PENDAHULUAN</name>
-        <rename/>
       </field>
       <field>
         <name>JUMLAH_APK</name>
-        <rename/>
       </field>
       <field>
         <name>JUMLAH_PHK</name>
-        <rename/>
       </field>
       <field>
         <name>TKH_TERIMA_LUKISAN</name>
-        <rename/>
       </field>
       <field>
         <name>TERIMA_BRIF</name>
-        <rename/>
       </field>
       <field>
         <name>TERIMA_TAPAK</name>
-        <rename/>
       </field>
       <field>
         <name>TERIMA_KOS</name>
-        <rename/>
       </field>
       <field>
         <name>TERIMA_VA</name>
-        <rename/>
       </field>
       <field>
         <name>TARIKH_SAH_BRIF_SKOP</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_TARIKH_JANGKA_MULA_P</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_TARIKH_JANGKA_SIAP_P</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_TARIKH_JANGKA_SERAHA</name>
-        <rename/>
       </field>
       <field>
         <name>TARIKH_SERAHAN_PROJEK_KEPADA_PELANGGAN</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_PENARAFAN_HIJAU_SDT</name>
-        <rename/>
       </field>
       <field>
         <name>UUU_CREATION_DATE</name>
-        <rename/>
       </field>
       <field>
         <name>UUU_RECORD_LAST_UPDATE_DATE</name>
-        <rename/>
       </field>
       <field>
         <name>JAN_PATUT_SERAH</name>
-        <rename/>
       </field>
       <field>
         <name>FEB_PATUT_SERAH</name>
-        <rename/>
       </field>
       <field>
         <name>MAR_PATUT_SERAH</name>
-        <rename/>
       </field>
       <field>
         <name>APR_PATUT_SERAH</name>
-        <rename/>
       </field>
       <field>
         <name>MAY_PATUT_SERAH</name>
-        <rename/>
       </field>
       <field>
         <name>JUN_PATUT_SERAH</name>
-        <rename/>
       </field>
       <field>
         <name>JUL_PATUT_SERAH</name>
-        <rename/>
       </field>
       <field>
         <name>AUG_PATUT_SERAH</name>
-        <rename/>
       </field>
       <field>
         <name>SEP_PATUT_SERAH</name>
-        <rename/>
       </field>
       <field>
         <name>OCT_PATUT_SERAH</name>
-        <rename/>
       </field>
       <field>
         <name>NOV_PATUT_SERAH</name>
-        <rename/>
       </field>
       <field>
         <name>DEC_PATUT_SERAH</name>
-        <rename/>
       </field>
       <field>
         <name>JUMLAH_PATUT_SERAH</name>
-        <rename/>
       </field>
       <field>
         <name>JAN_TELAH_SERAH</name>
-        <rename/>
       </field>
       <field>
         <name>FEB_TELAH_SERAH</name>
-        <rename/>
       </field>
       <field>
         <name>MAR_TELAH_SERAH</name>
-        <rename/>
       </field>
       <field>
         <name>APR_TELAH_SERAH</name>
-        <rename/>
       </field>
       <field>
         <name>MAY_TELAH_SERAH</name>
-        <rename/>
       </field>
       <field>
         <name>JUN_TELAH_SERAH</name>
-        <rename/>
       </field>
       <field>
         <name>JUL_TELAH_SERAH</name>
-        <rename/>
       </field>
       <field>
         <name>AUG_TELAH_SERAH</name>
-        <rename/>
       </field>
       <field>
         <name>SEP_TELAH_SERAH</name>
-        <rename/>
       </field>
       <field>
         <name>OCT_TELAH_SERAH</name>
-        <rename/>
       </field>
       <field>
         <name>NOV_TELAH_SERAH</name>
-        <rename/>
       </field>
       <field>
         <name>DEC_TELAH_SERAH</name>
-        <rename/>
       </field>
       <field>
         <name>JUMLAH_TELAH_SERAH</name>
-        <rename/>
       </field>
       <field>
         <name>acat</name>
-        <rename/>
       </field>
       <field>
         <name>ibs</name>
-        <rename/>
       </field>
       <field>
         <name>perbelanjaan</name>
-        <rename/>
       </field>
       <field>
         <name>rmk</name>
-        <rename/>
       </field>
       <field>
         <name>kaedah_perolehan</name>
-        <rename/>
       </field>
       <field>
         <name>JENIS_PROJEK</name>
-        <rename/>
       </field>
       <field>
         <name>kementerian</name>
-        <rename/>
       </field>
       <field>
         <name>KEMENTERIAN_AGENCY</name>
-        <rename/>
       </field>
       <field>
         <name>LOKASI_TAPAK</name>
-        <rename/>
       </field>
       <field>
         <name>DAERAH</name>
-        <rename/>
       </field>
       <field>
         <name>kaedah_perlaksanaan</name>
-        <rename/>
       </field>
       <field>
         <name>PMO_TERIMA</name>
-        <rename/>
       </field>
       <field>
         <name>jenis_rekabentuk</name>
-        <rename/>
       </field>
       <field>
         <name>penggunaan_bim</name>
-        <rename/>
       </field>
       <field>
         <name>TARIKH_JANGKA_IKLAN</name>
-        <rename/>
       </field>
       <field>
         <name>TARIKH_SST</name>
-        <rename/>
       </field>
       <field>
         <name>TARIKH_TDK</name>
-        <rename/>
       </field>
       <field>
         <name>PEGAWAI_PENYEDIA_SURAT</name>
-        <rename/>
       </field>
       <field>
         <name>NAMA_PEGAWAI_PENGUASA</name>
-        <rename/>
       </field>
       <field>
         <name>PEJABAT_PENGAWAI_PENGUASA</name>
-        <rename/>
       </field>
       <field>
         <name>NAMA_SELIATAPAK</name>
-        <rename/>
       </field>
       <field>
         <name>PEJABAT_SELIATAPAK</name>
-        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>

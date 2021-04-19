@@ -2196,6 +2196,395 @@ FROM "public".dim_j10_pl_kategori_ibs
     </GUI>
   </step>
   <step>
+    <name>Insert / update</name>
+    <type>InsertUpdate</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>J10_Reports_DM</connection>
+    <commit>100</commit>
+    <update_bypassed>N</update_bypassed>
+    <lookup>
+      <schema>public</schema>
+      <table>pln_533_status_projek_dilaksanakan_jkr</table>
+      <key>
+        <name>PROJECT_ID</name>
+        <field>project_id</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>PEJABAT</name>
+        <field>pejabat</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>J10_PL_NAMA_PROJEK</name>
+        <rename>J10_PL_NAMA_PROJEK</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>PEJABAT_PROGRAM</name>
+        <rename>PEJABAT_PROGRAM</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>PROJECT_ID</name>
+        <rename>PROJECT_ID</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>PEJABAT</name>
+        <rename>PEJABAT</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>pejabat_jkr</name>
+        <rename>pejabat_jkr</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>sk_pejabat_jkr</name>
+        <rename>sk_pejabat_jkr</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>sk_pejabat_atas_jkr</name>
+        <rename>sk_pejabat_atas_jkr</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>HIERARCHY</name>
+        <rename>HIERARCHY</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>J10_PL_CAWANGAN_PENGURUS_PR</name>
+        <rename>J10_PL_CAWANGAN_PENGURUS_PR</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>J10_PL_TARIKHDAFTAR_PROJEK</name>
+        <rename>J10_PL_TARIKHDAFTAR_PROJEK</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>J10_PL_NAMA_PENGURUS_PROGRA</name>
+        <rename>J10_PL_NAMA_PENGURUS_PROGRA</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>PENOLONG_PENGURUS_PROGRAM</name>
+        <rename>PENOLONG_PENGURUS_PROGRAM</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>PEJABAT_HOPT</name>
+        <rename>PEJABAT_HOPT</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>NAMA_HOPT</name>
+        <rename>NAMA_HOPT</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>project_number</name>
+        <rename>project_number</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>IKUT_JADUAL_TAMAT</name>
+        <rename>IKUT_JADUAL_TAMAT</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>IKUT_JADUAL_SURAT</name>
+        <rename>IKUT_JADUAL_SURAT</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>IKUT_JADUAL_KONTRAK</name>
+        <rename>IKUT_JADUAL_KONTRAK</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>IKUT_JADUAL_SERAHAN</name>
+        <rename>IKUT_JADUAL_SERAHAN</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>LKDB_TAMAT</name>
+        <rename>LKDB_TAMAT</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>LLDB_TAMAT</name>
+        <rename>LLDB_TAMAT</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>LKDB_SURAT</name>
+        <rename>LKDB_SURAT</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>LLDB_SURAT</name>
+        <rename>LLDB_SURAT</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>LKDB_KONTRAK</name>
+        <rename>LKDB_KONTRAK</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>LLDB_KONTRAK</name>
+        <rename>LLDB_KONTRAK</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>LKDB_SERAHAN</name>
+        <rename>LKDB_SERAHAN</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>LLDB_SERAHAN</name>
+        <rename>LLDB_SERAHAN</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>J10_PL_N0_RUJUKAN_PROJ</name>
+        <rename>J10_PL_N0_RUJUKAN_PROJ</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>J10_PL_RUJUKAN_KOD_PROJEK</name>
+        <rename>J10_PL_RUJUKAN_KOD_PROJEK</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>J10_PL_SPPII_NUMBER</name>
+        <rename>J10_PL_SPPII_NUMBER</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>J10_PL_Q_ULASANQPLAN_DES</name>
+        <rename>J10_PL_Q_ULASANQPLAN_DES</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>TERIMA_BRIF</name>
+        <rename>TERIMA_BRIF</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>TERIMA_TAPAK</name>
+        <rename>TERIMA_TAPAK</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>TERIMA_KOS</name>
+        <rename>TERIMA_KOS</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>TERIMA_VA</name>
+        <rename>TERIMA_VA</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>J10_PL_KOS_PROJEK_ASAL</name>
+        <rename>J10_PL_KOS_PROJEK_ASAL</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>J10_KOS_PRJ_SEMASA</name>
+        <rename>J10_KOS_PRJ_SEMASA</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>J10_PL_SILING_PROJEK_YANG_D</name>
+        <rename>J10_PL_SILING_PROJEK_YANG_D</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>J10_PL_SILING_PROJEK</name>
+        <rename>J10_PL_SILING_PROJEK</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>TARIKH_SAH_BRIF_SKOP</name>
+        <rename>TARIKH_SAH_BRIF_SKOP</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>TARIKH_SIAP_SEBENAR</name>
+        <rename>TARIKH_SIAP_SEBENAR</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>J10_PL_TARIKH_JANGKA_IKLAN</name>
+        <rename>J10_PL_TARIKH_JANGKA_IKLAN</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>J10_DT_SURAT_DOP</name>
+        <rename>J10_DT_SURAT_DOP</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>J10_PL_TARIKH_JANGKA_MULA_P</name>
+        <rename>J10_PL_TARIKH_JANGKA_MULA_P</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>J10_PL_TARIKH_JANGKA_SIAP_P</name>
+        <rename>J10_PL_TARIKH_JANGKA_SIAP_P</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>J10_PL_TARIKH_JANGKA_SERAHA</name>
+        <rename>J10_PL_TARIKH_JANGKA_SERAHA</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>TARIKH_SERAHAN_PROJEK_KEPADA_PELANGGAN</name>
+        <rename>TARIKH_SERAHAN_PROJEK_KEPADA_PELANGGAN</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>J10_PL_PENARAFAN_HIJAU_SDT</name>
+        <rename>J10_PL_PENARAFAN_HIJAU_SDT</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>PEGAWAI_PENYEDIA_SURAT</name>
+        <rename>PEGAWAI_PENYEDIA_SURAT</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>acat</name>
+        <rename>acat</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>ibs</name>
+        <rename>ibs</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>perbelanjaan</name>
+        <rename>perbelanjaan</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>rmk</name>
+        <rename>rmk</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>kaedah_perolehan</name>
+        <rename>kaedah_perolehan</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>JENIS_PROJEK</name>
+        <rename>JENIS_PROJEK</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>kementerian</name>
+        <rename>kementerian</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>KEMENTERIAN_AGENCY</name>
+        <rename>KEMENTERIAN_AGENCY</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>LOKASI_TAPAK</name>
+        <rename>LOKASI_TAPAK</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>DAERAH</name>
+        <rename>DAERAH</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>kaedah_perlaksanaan</name>
+        <rename>kaedah_perlaksanaan</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>PMO_TERIMA</name>
+        <rename>PMO_TERIMA</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>jenis_rekabentuk</name>
+        <rename>jenis_rekabentuk</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>penggunaan_bim</name>
+        <rename>penggunaan_bim</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>UUU_CREATION_DATE</name>
+        <rename>UUU_CREATION_DATE</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>UUU_RECORD_LAST_UPDATE_DATE</name>
+        <rename>UUU_RECORD_LAST_UPDATE_DATE</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>TARIKH_JANGKA_IKLAN</name>
+        <rename>TARIKH_JANGKA_IKLAN</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>TARIKH_SST</name>
+        <rename>TARIKH_SST</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>TARIKH_TDK</name>
+        <rename>TARIKH_TDK</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>TKH_SIAP_SEBENAR</name>
+        <rename>TKH_SIAP_SEBENAR</rename>
+        <update>Y</update>
+      </value>
+    </lookup>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1241</xloc>
+      <yloc>574</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
     <name>J10_PL_ACAT</name>
     <type>TableInput</type>
     <description/>
@@ -4429,13 +4818,13 @@ FROM "public".dim_pejabat
       <schema_name/>
     </partitioning>
     <connection>J10</connection>
-    <sql>select distinct project_id,J10_PL_NAMA_PROJEK ,upper(j10_DE_pejabat) as PEJABAT_PROGRAM,'Pejabat SO'as pejabat,J10_NAMA_PEGWAI_PENGASA_UPK as pejabat_user  
+    <sql>select distinct project_id,J10_PL_NAMA_PROJEK ,upper(j10_DE_pejabat) as PEJABAT_PROGRAM,'Pejabat Pegawai Penguasa'as pejabat,J10_NAMA_PEGWAI_PENGASA_UPK as pejabat_user  
 from unifier_uxlhodt_view where j10_nama_pegwai_pengasa_upk is not null
 
 union
 
 
-select distinct a.project_id,b.J10_PL_NAMA_PROJEK ,upper(a.J10_CH_PJBT_SELIA_TAPAK) as PEJABAT_PROGRAM,'Pejabat SOR'as pejabat ,b.J10_CH_NAMA_SO as pejabat_user
+select distinct a.project_id,b.J10_PL_NAMA_PROJEK ,upper(a.J10_CH_PJBT_SELIA_TAPAK) as PEJABAT_PROGRAM,'Pejabat WPP Utama'as pejabat ,b.J10_CH_NAMA_SO as pejabat_user
 from  unifier_uxjcpln_view a join unifier_upi b on a.project_id=b.project_id
 
 </sql>
@@ -4519,7 +4908,7 @@ from  unifier_uxjcpln_view a join unifier_upi b on a.project_id=b.project_id
         <type>String</type>
         <storagetype>normal</storagetype>
         <name>PEJABAT</name>
-        <length>11</length>
+        <length>24</length>
         <precision>-1</precision>
         <origin>Pejabat_SO</origin>
         <comments>PEJABAT</comments>
@@ -5550,279 +5939,210 @@ rpdecide='NOT AVAILABLE'
     <fields>
       <field>
         <name>J10_PL_NAMA_PROJEK</name>
-        <rename/>
       </field>
       <field>
         <name>PEJABAT_PROGRAM</name>
-        <rename/>
       </field>
       <field>
         <name>PROJECT_ID</name>
-        <rename/>
       </field>
       <field>
         <name>PEJABAT</name>
-        <rename/>
       </field>
       <field>
         <name>pejabat_jkr</name>
-        <rename/>
       </field>
       <field>
         <name>sk_pejabat_jkr</name>
-        <rename/>
       </field>
       <field>
         <name>sk_pejabat_atas_jkr</name>
-        <rename/>
       </field>
       <field>
         <name>HIERARCHY</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_CAWANGAN_PENGURUS_PR</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_TARIKHDAFTAR_PROJEK</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_NAMA_PENGURUS_PROGRA</name>
-        <rename/>
       </field>
       <field>
         <name>PENOLONG_PENGURUS_PROGRAM</name>
-        <rename/>
       </field>
       <field>
         <name>PEJABAT_HOPT</name>
-        <rename/>
       </field>
       <field>
         <name>NAMA_HOPT</name>
-        <rename/>
       </field>
       <field>
         <name>project_number</name>
-        <rename/>
       </field>
       <field>
         <name>IKUT_JADUAL_TAMAT</name>
-        <rename/>
       </field>
       <field>
         <name>IKUT_JADUAL_SURAT</name>
-        <rename/>
       </field>
       <field>
         <name>IKUT_JADUAL_KONTRAK</name>
-        <rename/>
       </field>
       <field>
         <name>IKUT_JADUAL_SERAHAN</name>
-        <rename/>
       </field>
       <field>
         <name>LKDB_TAMAT</name>
-        <rename/>
       </field>
       <field>
         <name>LLDB_TAMAT</name>
-        <rename/>
       </field>
       <field>
         <name>LKDB_SURAT</name>
-        <rename/>
       </field>
       <field>
         <name>LLDB_SURAT</name>
-        <rename/>
       </field>
       <field>
         <name>LKDB_KONTRAK</name>
-        <rename/>
       </field>
       <field>
         <name>LLDB_KONTRAK</name>
-        <rename/>
       </field>
       <field>
         <name>LKDB_SERAHAN</name>
-        <rename/>
       </field>
       <field>
         <name>LLDB_SERAHAN</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_N0_RUJUKAN_PROJ</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_RUJUKAN_KOD_PROJEK</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_SPPII_NUMBER</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_Q_ULASANQPLAN_DES</name>
-        <rename/>
       </field>
       <field>
         <name>TERIMA_BRIF</name>
-        <rename/>
       </field>
       <field>
         <name>TERIMA_TAPAK</name>
-        <rename/>
       </field>
       <field>
         <name>TERIMA_KOS</name>
-        <rename/>
       </field>
       <field>
         <name>TERIMA_VA</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_KOS_PROJEK_ASAL</name>
-        <rename/>
       </field>
       <field>
         <name>J10_KOS_PRJ_SEMASA</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_SILING_PROJEK_YANG_D</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_SILING_PROJEK</name>
-        <rename/>
       </field>
       <field>
         <name>TARIKH_SAH_BRIF_SKOP</name>
-        <rename/>
       </field>
       <field>
         <name>TARIKH_SIAP_SEBENAR</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_TARIKH_JANGKA_IKLAN</name>
-        <rename/>
       </field>
       <field>
         <name>J10_DT_SURAT_DOP</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_TARIKH_JANGKA_MULA_P</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_TARIKH_JANGKA_SIAP_P</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_TARIKH_JANGKA_SERAHA</name>
-        <rename/>
       </field>
       <field>
         <name>TARIKH_SERAHAN_PROJEK_KEPADA_PELANGGAN</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_PENARAFAN_HIJAU_SDT</name>
-        <rename/>
       </field>
       <field>
         <name>PEGAWAI_PENYEDIA_SURAT</name>
-        <rename/>
       </field>
       <field>
         <name>acat</name>
-        <rename/>
       </field>
       <field>
         <name>ibs</name>
-        <rename/>
       </field>
       <field>
         <name>perbelanjaan</name>
-        <rename/>
       </field>
       <field>
         <name>rmk</name>
-        <rename/>
       </field>
       <field>
         <name>kaedah_perolehan</name>
-        <rename/>
       </field>
       <field>
         <name>JENIS_PROJEK</name>
-        <rename/>
       </field>
       <field>
         <name>kementerian</name>
-        <rename/>
       </field>
       <field>
         <name>KEMENTERIAN_AGENCY</name>
-        <rename/>
       </field>
       <field>
         <name>LOKASI_TAPAK</name>
-        <rename/>
       </field>
       <field>
         <name>DAERAH</name>
-        <rename/>
       </field>
       <field>
         <name>kaedah_perlaksanaan</name>
-        <rename/>
       </field>
       <field>
         <name>PMO_TERIMA</name>
-        <rename/>
       </field>
       <field>
         <name>jenis_rekabentuk</name>
-        <rename/>
       </field>
       <field>
         <name>penggunaan_bim</name>
-        <rename/>
       </field>
       <field>
         <name>UUU_CREATION_DATE</name>
-        <rename/>
       </field>
       <field>
         <name>UUU_RECORD_LAST_UPDATE_DATE</name>
-        <rename/>
       </field>
       <field>
         <name>TARIKH_JANGKA_IKLAN</name>
-        <rename/>
       </field>
       <field>
         <name>TARIKH_SST</name>
-        <rename/>
       </field>
       <field>
         <name>TARIKH_TDK</name>
-        <rename/>
       </field>
       <field>
         <name>TKH_SIAP_SEBENAR</name>
-        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -10095,395 +10415,6 @@ SELECT PROJECT_ID, 'tender terhad nsc' AS description, max(J10_DT_DOP) AS tarikh
     <GUI>
       <xloc>1008</xloc>
       <yloc>592</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Insert / update</name>
-    <type>InsertUpdate</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>J10_Reports_DM</connection>
-    <commit>100</commit>
-    <update_bypassed>N</update_bypassed>
-    <lookup>
-      <schema>public</schema>
-      <table>pln_533_status_projek_dilaksanakan_jkr</table>
-      <key>
-        <name>PROJECT_ID</name>
-        <field>project_id</field>
-        <condition>=</condition>
-        <name2/>
-      </key>
-      <key>
-        <name>PEJABAT</name>
-        <field>pejabat</field>
-        <condition>=</condition>
-        <name2/>
-      </key>
-      <value>
-        <name>J10_PL_NAMA_PROJEK</name>
-        <rename>J10_PL_NAMA_PROJEK</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>PEJABAT_PROGRAM</name>
-        <rename>PEJABAT_PROGRAM</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>PROJECT_ID</name>
-        <rename>PROJECT_ID</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>PEJABAT</name>
-        <rename>PEJABAT</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>pejabat_jkr</name>
-        <rename>pejabat_jkr</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>sk_pejabat_jkr</name>
-        <rename>sk_pejabat_jkr</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>sk_pejabat_atas_jkr</name>
-        <rename>sk_pejabat_atas_jkr</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>HIERARCHY</name>
-        <rename>HIERARCHY</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>J10_PL_CAWANGAN_PENGURUS_PR</name>
-        <rename>J10_PL_CAWANGAN_PENGURUS_PR</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>J10_PL_TARIKHDAFTAR_PROJEK</name>
-        <rename>J10_PL_TARIKHDAFTAR_PROJEK</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>J10_PL_NAMA_PENGURUS_PROGRA</name>
-        <rename>J10_PL_NAMA_PENGURUS_PROGRA</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>PENOLONG_PENGURUS_PROGRAM</name>
-        <rename>PENOLONG_PENGURUS_PROGRAM</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>PEJABAT_HOPT</name>
-        <rename>PEJABAT_HOPT</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>NAMA_HOPT</name>
-        <rename>NAMA_HOPT</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>project_number</name>
-        <rename>project_number</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>IKUT_JADUAL_TAMAT</name>
-        <rename>IKUT_JADUAL_TAMAT</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>IKUT_JADUAL_SURAT</name>
-        <rename>IKUT_JADUAL_SURAT</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>IKUT_JADUAL_KONTRAK</name>
-        <rename>IKUT_JADUAL_KONTRAK</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>IKUT_JADUAL_SERAHAN</name>
-        <rename>IKUT_JADUAL_SERAHAN</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>LKDB_TAMAT</name>
-        <rename>LKDB_TAMAT</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>LLDB_TAMAT</name>
-        <rename>LLDB_TAMAT</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>LKDB_SURAT</name>
-        <rename>LKDB_SURAT</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>LLDB_SURAT</name>
-        <rename>LLDB_SURAT</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>LKDB_KONTRAK</name>
-        <rename>LKDB_KONTRAK</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>LLDB_KONTRAK</name>
-        <rename>LLDB_KONTRAK</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>LKDB_SERAHAN</name>
-        <rename>LKDB_SERAHAN</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>LLDB_SERAHAN</name>
-        <rename>LLDB_SERAHAN</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>J10_PL_N0_RUJUKAN_PROJ</name>
-        <rename>J10_PL_N0_RUJUKAN_PROJ</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>J10_PL_RUJUKAN_KOD_PROJEK</name>
-        <rename>J10_PL_RUJUKAN_KOD_PROJEK</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>J10_PL_SPPII_NUMBER</name>
-        <rename>J10_PL_SPPII_NUMBER</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>J10_PL_Q_ULASANQPLAN_DES</name>
-        <rename>J10_PL_Q_ULASANQPLAN_DES</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>TERIMA_BRIF</name>
-        <rename>TERIMA_BRIF</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>TERIMA_TAPAK</name>
-        <rename>TERIMA_TAPAK</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>TERIMA_KOS</name>
-        <rename>TERIMA_KOS</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>TERIMA_VA</name>
-        <rename>TERIMA_VA</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>J10_PL_KOS_PROJEK_ASAL</name>
-        <rename>J10_PL_KOS_PROJEK_ASAL</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>J10_KOS_PRJ_SEMASA</name>
-        <rename>J10_KOS_PRJ_SEMASA</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>J10_PL_SILING_PROJEK_YANG_D</name>
-        <rename>J10_PL_SILING_PROJEK_YANG_D</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>J10_PL_SILING_PROJEK</name>
-        <rename>J10_PL_SILING_PROJEK</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>TARIKH_SAH_BRIF_SKOP</name>
-        <rename>TARIKH_SAH_BRIF_SKOP</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>TARIKH_SIAP_SEBENAR</name>
-        <rename>TARIKH_SIAP_SEBENAR</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>J10_PL_TARIKH_JANGKA_IKLAN</name>
-        <rename>J10_PL_TARIKH_JANGKA_IKLAN</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>J10_DT_SURAT_DOP</name>
-        <rename>J10_DT_SURAT_DOP</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>J10_PL_TARIKH_JANGKA_MULA_P</name>
-        <rename>J10_PL_TARIKH_JANGKA_MULA_P</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>J10_PL_TARIKH_JANGKA_SIAP_P</name>
-        <rename>J10_PL_TARIKH_JANGKA_SIAP_P</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>J10_PL_TARIKH_JANGKA_SERAHA</name>
-        <rename>J10_PL_TARIKH_JANGKA_SERAHA</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>TARIKH_SERAHAN_PROJEK_KEPADA_PELANGGAN</name>
-        <rename>TARIKH_SERAHAN_PROJEK_KEPADA_PELANGGAN</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>J10_PL_PENARAFAN_HIJAU_SDT</name>
-        <rename>J10_PL_PENARAFAN_HIJAU_SDT</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>PEGAWAI_PENYEDIA_SURAT</name>
-        <rename>PEGAWAI_PENYEDIA_SURAT</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>acat</name>
-        <rename>acat</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>ibs</name>
-        <rename>ibs</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>perbelanjaan</name>
-        <rename>perbelanjaan</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>rmk</name>
-        <rename>rmk</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>kaedah_perolehan</name>
-        <rename>kaedah_perolehan</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>JENIS_PROJEK</name>
-        <rename>JENIS_PROJEK</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>kementerian</name>
-        <rename>kementerian</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>KEMENTERIAN_AGENCY</name>
-        <rename>KEMENTERIAN_AGENCY</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>LOKASI_TAPAK</name>
-        <rename>LOKASI_TAPAK</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>DAERAH</name>
-        <rename>DAERAH</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>kaedah_perlaksanaan</name>
-        <rename>kaedah_perlaksanaan</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>PMO_TERIMA</name>
-        <rename>PMO_TERIMA</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>jenis_rekabentuk</name>
-        <rename>jenis_rekabentuk</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>penggunaan_bim</name>
-        <rename>penggunaan_bim</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>UUU_CREATION_DATE</name>
-        <rename>UUU_CREATION_DATE</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>UUU_RECORD_LAST_UPDATE_DATE</name>
-        <rename>UUU_RECORD_LAST_UPDATE_DATE</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>TARIKH_JANGKA_IKLAN</name>
-        <rename>TARIKH_JANGKA_IKLAN</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>TARIKH_SST</name>
-        <rename>TARIKH_SST</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>TARIKH_TDK</name>
-        <rename>TARIKH_TDK</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>TKH_SIAP_SEBENAR</name>
-        <rename>TKH_SIAP_SEBENAR</rename>
-        <update>Y</update>
-      </value>
-    </lookup>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1241</xloc>
-      <yloc>574</yloc>
       <draw>Y</draw>
     </GUI>
   </step>

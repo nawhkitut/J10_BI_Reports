@@ -2660,13 +2660,13 @@ FROM "public".dim_pejabat
       <schema_name/>
     </partitioning>
     <connection>J10</connection>
-    <sql>select distinct project_id,J10_PL_NAMA_PROJEK ,upper(j10_DE_pejabat) as PEJABAT_PROGRAM,'Pejabat SO'as pejabat,J10_NAMA_PEGWAI_PENGASA_UPK as pejabat_user  
+    <sql>select distinct project_id,J10_PL_NAMA_PROJEK ,upper(j10_DE_pejabat) as PEJABAT_PROGRAM,'Pejabat Pegawai Penguasa'as pejabat,J10_NAMA_PEGWAI_PENGASA_UPK as pejabat_user  
 from unifier_uxlhodt_view where j10_nama_pegwai_pengasa_upk is not null
 
 union
 
 
-select distinct a.project_id,b.J10_PL_NAMA_PROJEK ,upper(a.J10_CH_PJBT_SELIA_TAPAK) as PEJABAT_PROGRAM,'Pejabat SOR'as pejabat ,b.J10_CH_NAMA_SO as pejabat_user
+select distinct a.project_id,b.J10_PL_NAMA_PROJEK ,upper(a.J10_CH_PJBT_SELIA_TAPAK) as PEJABAT_PROGRAM,'Pejabat WPP Utama'as pejabat ,b.J10_CH_NAMA_SO as pejabat_user
 from  unifier_uxjcpln_view a join unifier_upi b on a.project_id=b.project_id
 
 </sql>
@@ -2750,7 +2750,7 @@ from  unifier_uxjcpln_view a join unifier_upi b on a.project_id=b.project_id
         <type>String</type>
         <storagetype>normal</storagetype>
         <name>PEJABAT</name>
-        <length>11</length>
+        <length>24</length>
         <precision>-1</precision>
         <origin>Pejabat_SO</origin>
         <comments>PEJABAT</comments>
