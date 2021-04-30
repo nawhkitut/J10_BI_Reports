@@ -614,11 +614,6 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>DAERAH_NAME</from>
-      <to>Kaedah_Perlaksanaan_name</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>IBS</from>
       <to>IBS_Value</to>
       <enabled>Y</enabled>
@@ -978,6 +973,16 @@
       <to>Select values</to>
       <enabled>Y</enabled>
     </hop>
+    <hop>
+      <from>DAERAH_NAME</from>
+      <to>tempat_detection</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>tempat_detection</from>
+      <to>Kaedah_Perlaksanaan_name</to>
+      <enabled>Y</enabled>
+    </hop>
   </order>
   <step>
     <name>ACAT_Name</name>
@@ -1203,8 +1208,8 @@ FROM dim_j10_pl_daerah
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1056</xloc>
-      <yloc>368</yloc>
+      <xloc>1168</xloc>
+      <yloc>336</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1245,8 +1250,8 @@ FROM dim_j10_pl_daerah
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1056</xloc>
-      <yloc>512</yloc>
+      <xloc>1168</xloc>
+      <yloc>480</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2717,6 +2722,11 @@ FROM "public".dim_j10_pl_kategori_ibs
       <value>
         <name>HIERARCHY</name>
         <rename>HIERARCHY</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>lokasi_tempat</name>
+        <rename>lokasi_tempat</rename>
         <update>Y</update>
       </value>
     </lookup>
@@ -4330,8 +4340,8 @@ FROM dim_j10_pl_lokasi_tapak
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1200</xloc>
-      <yloc>368</yloc>
+      <xloc>1312</xloc>
+      <yloc>336</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -4372,8 +4382,8 @@ FROM dim_j10_pl_lokasi_tapak
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1200</xloc>
-      <yloc>512</yloc>
+      <xloc>1360</xloc>
+      <yloc>480</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -6611,6 +6621,10 @@ rpdecide='NOT AVAILABLE'
         <name>HIERARCHY</name>
         <rename/>
       </field>
+      <field>
+        <name>lokasi_tempat</name>
+        <rename/>
+      </field>
       <select_unspecified>N</select_unspecified>
     </fields>
     <attributes/>
@@ -6623,7 +6637,7 @@ rpdecide='NOT AVAILABLE'
     </remotesteps>
     <GUI>
       <xloc>1440</xloc>
-      <yloc>672</yloc>
+      <yloc>656</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -7529,6 +7543,10 @@ rpdecide='NOT AVAILABLE'
       <field>
         <column_name>HIERARCHY</column_name>
         <stream_name>HIERARCHY</stream_name>
+      </field>
+      <field>
+        <column_name>lokasi_tempat</column_name>
+        <stream_name>lokasi_tempat</stream_name>
       </field>
     </fields>
     <attributes/>
@@ -10444,6 +10462,76 @@ SELECT project_id, J10_CH_NAMA_WPP_UTA_TB AS nama_seliatapak, J10_CH_PJBT_WPP_UT
     <GUI>
       <xloc>1152</xloc>
       <yloc>704</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>tempat_detection</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>
+      <jsScript>
+        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>//Script here
+
+var lokasi_tempat;
+
+
+if(LOKASI_TAPAK!=null &amp;&amp; DAERAH!=null)
+{
+
+lokasi_tempat = DAERAH+ ", " +LOKASI_TAPAK;
+}
+else 
+if(LOKASI_TAPAK==null)
+{
+
+lokasi_tempat = DAERAH;
+}
+else
+if(DAERAH==null)
+{
+lokasi_tempat = LOKASI_TAPAK;
+}
+else 
+if(LOKASI_TAPAK==null &amp;&amp; DAERAH==null)
+{
+
+lokasi_tempat = null;
+}</jsScript_script>
+      </jsScript>
+    </jsScripts>
+    <fields>
+      <field>
+        <name>lokasi_tempat</name>
+        <rename>lokasi_tempat</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1057</xloc>
+      <yloc>370</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
