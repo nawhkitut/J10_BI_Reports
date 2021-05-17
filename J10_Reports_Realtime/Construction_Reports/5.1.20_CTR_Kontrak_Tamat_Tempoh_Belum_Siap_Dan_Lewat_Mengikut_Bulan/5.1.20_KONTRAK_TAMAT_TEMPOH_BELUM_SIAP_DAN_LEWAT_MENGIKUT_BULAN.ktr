@@ -2963,26 +2963,44 @@ left join unifier_user_view on b.J10_PL_Nama_Pengurus_Progra=userid</sql>
     </group>
     <fields>
       <field>
-        <aggregate>pfi</aggregate>
-        <subject>pfi</subject>
+        <aggregate>atas2bulan</aggregate>
+        <subject>atas2bulan</subject>
         <type>SUM</type>
         <valuefield/>
       </field>
       <field>
-        <aggregate>wang</aggregate>
-        <subject>wang</subject>
+        <aggregate>bawah2bulan</aggregate>
+        <subject>bawah2bulan</subject>
         <type>SUM</type>
         <valuefield/>
       </field>
       <field>
-        <aggregate>belanja</aggregate>
-        <subject>belanja</subject>
+        <aggregate>kurang_1bulan</aggregate>
+        <subject>kurang_1bulan</subject>
         <type>SUM</type>
         <valuefield/>
       </field>
       <field>
-        <aggregate>pembangunan</aggregate>
-        <subject>pembangunan</subject>
+        <aggregate>lebih_12bulan</aggregate>
+        <subject>lebih_12bulan</subject>
+        <type>SUM</type>
+        <valuefield/>
+      </field>
+      <field>
+        <aggregate>lebih_3bulan</aggregate>
+        <subject>lebih_3bulan</subject>
+        <type>SUM</type>
+        <valuefield/>
+      </field>
+      <field>
+        <aggregate>lebih_6bulan</aggregate>
+        <subject>lebih_6bulan</subject>
+        <type>SUM</type>
+        <valuefield/>
+      </field>
+      <field>
+        <aggregate>lebih_9bulan</aggregate>
+        <subject>lebih_9bulan</subject>
         <type>SUM</type>
         <valuefield/>
       </field>
@@ -4909,312 +4927,419 @@ FROM dim_j10_pl_lokasi_tapak
     <fields>
       <field>
         <name>J10_PL_NAMA_PROJEK</name>
+        <rename/>
       </field>
       <field>
         <name>PEJABAT_PROGRAM</name>
+        <rename/>
       </field>
       <field>
         <name>PROJECT_ID</name>
+        <rename/>
       </field>
       <field>
         <name>PEJABAT</name>
+        <rename/>
       </field>
       <field>
         <name>pejabat_jkr</name>
+        <rename/>
       </field>
       <field>
         <name>sk_pejabat_jkr</name>
+        <rename/>
       </field>
       <field>
         <name>sk_pejabat_atas_jkr</name>
+        <rename/>
       </field>
       <field>
         <name>HIERARCHY</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_CAWANGAN_PENGURUS_PR</name>
+        <rename/>
       </field>
       <field>
         <name>j10_pl_tarikhdaftar_projek</name>
+        <rename/>
       </field>
       <field>
         <name>j10_pl_tarikh_brif_projek_t</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_NAMA_PENGURUS_PROGRA</name>
+        <rename/>
       </field>
       <field>
         <name>PENOLONG_PENGURUS_PROGRAM</name>
+        <rename/>
       </field>
       <field>
         <name>PEJABAT_HOPT</name>
+        <rename/>
       </field>
       <field>
         <name>NAMA_HOPT</name>
+        <rename/>
       </field>
       <field>
         <name>project_number</name>
+        <rename/>
       </field>
       <field>
         <name>RECORD_NO</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_N0_RUJUKAN_PROJ</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_RUJUKAN_KOD_PROJEK</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_SPPII_NUMBER</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_DAERAH_PD</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_Q_ULASANQPLAN_DES</name>
+        <rename/>
       </field>
       <field>
         <name>NAMA_PEGAWAI_PENGUASA</name>
+        <rename/>
       </field>
       <field>
         <name>PEJABAT_SELIATAPAK</name>
+        <rename/>
       </field>
       <field>
         <name>KONTRAKTOR</name>
+        <rename/>
       </field>
       <field>
         <name>TARAF_KONTRAKTOR</name>
+        <rename/>
       </field>
       <field>
         <name>NO_KONTRAK</name>
+        <rename/>
       </field>
       <field>
         <name>tkh_milik_tapak</name>
+        <rename/>
       </field>
       <field>
         <name>tkh_siap_asal</name>
+        <rename/>
       </field>
       <field>
         <name>tkh_siap_semasa</name>
+        <rename/>
       </field>
       <field>
         <name>tkh_siap_sebenar</name>
+        <rename/>
       </field>
       <field>
         <name>tarikh_tamat_bon</name>
+        <rename/>
       </field>
       <field>
         <name>J10_KOS_PRJ_SEMASA</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_KOS_PROJEK_ASAL</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_SILING_PROJEK_YANG_D</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_SILING_PROJEK</name>
+        <rename/>
       </field>
       <field>
         <name>KOS_KONTRAK_ASAL</name>
+        <rename/>
       </field>
       <field>
         <name>KOS_KONTRAK_SEMASA</name>
+        <rename/>
       </field>
       <field>
         <name>BAYARAN_HINGGA_KINI</name>
+        <rename/>
       </field>
       <field>
         <name>BAYARAN_DIPERAKUAN</name>
+        <rename/>
       </field>
       <field>
         <name>UNJURAN</name>
+        <rename/>
       </field>
       <field>
         <name>NILAI</name>
+        <rename/>
       </field>
       <field>
         <name>BAYARAN</name>
+        <rename/>
       </field>
       <field>
         <name>PERCENT_KEMAJUAN_KERJA</name>
+        <rename/>
       </field>
       <field>
         <name>PERCENT_JADUAL_KERJA</name>
+        <rename/>
       </field>
       <field>
         <name>WANG_PENDAHULUAN</name>
+        <rename/>
       </field>
       <field>
         <name>JUMLAH_APK</name>
+        <rename/>
       </field>
       <field>
         <name>JUMLAH_PHK</name>
+        <rename/>
       </field>
       <field>
         <name>j10_pl_tarikh_jangka_seraha</name>
+        <rename/>
       </field>
       <field>
         <name>tkh_serahan_projek</name>
+        <rename/>
       </field>
       <field>
         <name>tkh_tamat_kecacatan</name>
+        <rename/>
       </field>
       <field>
         <name>tkh_terima_lukisan</name>
+        <rename/>
       </field>
       <field>
         <name>terima_brif</name>
+        <rename/>
       </field>
       <field>
         <name>terima_tapak</name>
+        <rename/>
       </field>
       <field>
         <name>terima_kos</name>
+        <rename/>
       </field>
       <field>
         <name>terima_va</name>
+        <rename/>
       </field>
       <field>
         <name>TARIKH_SAH_BRIF_SKOP</name>
+        <rename/>
       </field>
       <field>
         <name>j10_pl_tarikh_jangka_mula_p</name>
+        <rename/>
       </field>
       <field>
         <name>j10_pl_tarikh_jangka_siap_p</name>
+        <rename/>
       </field>
       <field>
         <name>tarikh_serahan_projek_kepada_pelanggan</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_PENARAFAN_HIJAU_SDT</name>
+        <rename/>
       </field>
       <field>
         <name>UUU_CREATION_DATE</name>
+        <rename/>
       </field>
       <field>
         <name>UUU_RECORD_LAST_UPDATE_DATE</name>
+        <rename/>
       </field>
       <field>
         <name>NAMA_PEGAWAI_PENGUASA_1</name>
+        <rename/>
       </field>
       <field>
         <name>PEJABAT_SELIATAPAK_1</name>
+        <rename/>
       </field>
       <field>
         <name>tarikh_jangka_iklan</name>
+        <rename/>
       </field>
       <field>
         <name>tarikh_sst</name>
+        <rename/>
       </field>
       <field>
         <name>tarikh_tdk</name>
+        <rename/>
       </field>
       <field>
         <name>PEGAWAI_PENYEDIA_SURAT</name>
+        <rename/>
       </field>
       <field>
         <name>acat</name>
+        <rename/>
       </field>
       <field>
         <name>ibs</name>
+        <rename/>
       </field>
       <field>
         <name>perbelanjaan</name>
+        <rename/>
       </field>
       <field>
         <name>rmk</name>
+        <rename/>
       </field>
       <field>
         <name>kaedah_perolehan</name>
+        <rename/>
       </field>
       <field>
         <name>jenis_projek</name>
+        <rename/>
       </field>
       <field>
         <name>kementerian</name>
+        <rename/>
       </field>
       <field>
         <name>KEMENTERIAN_AGENCY</name>
+        <rename/>
       </field>
       <field>
         <name>LOKASI_TAPAK</name>
+        <rename/>
       </field>
       <field>
         <name>DAERAH</name>
+        <rename/>
       </field>
       <field>
         <name>kaedah_perlaksanaan</name>
+        <rename/>
       </field>
       <field>
         <name>PMO_TERIMA</name>
+        <rename/>
       </field>
       <field>
         <name>jenis_rekabentuk</name>
+        <rename/>
       </field>
       <field>
         <name>penggunaan_bim</name>
+        <rename/>
       </field>
       <field>
         <name>LEVEL</name>
+        <rename/>
       </field>
       <field>
         <name>RMKK</name>
+        <rename/>
       </field>
       <field>
         <name>IBSS</name>
+        <rename/>
       </field>
       <field>
         <name>KAEDAHPERLAKSANAAN</name>
+        <rename/>
       </field>
       <field>
         <name>JENISPROJEK</name>
+        <rename/>
       </field>
       <field>
         <name>PERBELAN</name>
+        <rename/>
       </field>
       <field>
         <name>PEJABAT1</name>
+        <rename/>
       </field>
       <field>
         <name>ACATT</name>
+        <rename/>
       </field>
       <field>
         <name>pej</name>
+        <rename/>
       </field>
       <field>
         <name>Selector</name>
+        <rename/>
       </field>
       <field>
         <name>pfi</name>
+        <rename/>
       </field>
       <field>
         <name>pembangunan</name>
+        <rename/>
       </field>
       <field>
         <name>belanja</name>
+        <rename/>
       </field>
       <field>
         <name>wang</name>
+        <rename/>
       </field>
       <field>
         <name>jumlah</name>
+        <rename/>
       </field>
       <field>
         <name>lokasi_tempat</name>
+        <rename/>
       </field>
       <field>
         <name>PEJABAT_PARAM</name>
+        <rename/>
       </field>
       <field>
         <name>id</name>
+        <rename/>
       </field>
       <field>
         <name>count_rujukan_sppii</name>
+        <rename/>
       </field>
       <field>
         <name>pembelanjaan</name>
+        <rename/>
+      </field>
+      <field>
+        <name>tarikh_param</name>
+        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -5600,60 +5725,91 @@ FROM dim_j10_pl_lokasi_tapak
     <fields>
       <field>
         <name>skala_ruj_organisasi</name>
+        <rename/>
       </field>
       <field>
         <name>treepath_by_name</name>
+        <rename/>
       </field>
       <field>
         <name>pejabat_jkr</name>
+        <rename/>
       </field>
       <field>
         <name>sk_pejabat_jkr</name>
+        <rename/>
       </field>
       <field>
         <name>sk_pejabat_atas_jkr</name>
+        <rename/>
       </field>
       <field>
         <name>HIERARCHY</name>
+        <rename/>
       </field>
       <field>
         <name>level</name>
+        <rename/>
       </field>
       <field>
         <name>organization</name>
+        <rename/>
       </field>
       <field>
         <name>pej_kem_value</name>
+        <rename/>
       </field>
       <field>
         <name>pej</name>
+        <rename/>
       </field>
       <field>
-        <name>pfi</name>
+        <name>atas2bulan</name>
+        <rename/>
       </field>
       <field>
-        <name>wang</name>
+        <name>bawah2bulan</name>
+        <rename/>
       </field>
       <field>
-        <name>belanja</name>
+        <name>kurang_1bulan</name>
+        <rename/>
       </field>
       <field>
-        <name>pembangunan</name>
+        <name>lebih_12bulan</name>
+        <rename/>
       </field>
       <field>
         <name>jumlah</name>
+        <rename/>
       </field>
       <field>
         <name>PLEVEL</name>
+        <rename/>
       </field>
       <field>
         <name>PEJABAT_PARAM</name>
+        <rename/>
       </field>
       <field>
         <name>PEJ_KEM</name>
+        <rename/>
       </field>
       <field>
         <name>pejkemvalue</name>
+        <rename/>
+      </field>
+      <field>
+        <name>lebih_3bulan</name>
+        <rename/>
+      </field>
+      <field>
+        <name>lebih_6bulan</name>
+        <rename/>
+      </field>
+      <field>
+        <name>lebih_9bulan</name>
+        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -9330,60 +9486,91 @@ rpdecide='NOT AVAILABLE'
     <fields>
       <field>
         <name>skala_ruj_organisasi</name>
+        <rename/>
       </field>
       <field>
         <name>treepath_by_name</name>
+        <rename/>
       </field>
       <field>
         <name>pejabat_jkr</name>
+        <rename/>
       </field>
       <field>
         <name>sk_pejabat_jkr</name>
+        <rename/>
       </field>
       <field>
         <name>sk_pejabat_atas_jkr</name>
+        <rename/>
       </field>
       <field>
         <name>HIERARCHY</name>
+        <rename/>
       </field>
       <field>
         <name>level</name>
+        <rename/>
       </field>
       <field>
         <name>organization</name>
+        <rename/>
       </field>
       <field>
         <name>pej_kem_value</name>
+        <rename/>
       </field>
       <field>
         <name>pej</name>
+        <rename/>
       </field>
       <field>
-        <name>pfi</name>
+        <name>atas2bulan</name>
+        <rename/>
       </field>
       <field>
-        <name>wang</name>
+        <name>bawah2bulan</name>
+        <rename/>
       </field>
       <field>
-        <name>belanja</name>
+        <name>kurang_1bulan</name>
+        <rename/>
       </field>
       <field>
-        <name>pembangunan</name>
+        <name>lebih_12bulan</name>
+        <rename/>
       </field>
       <field>
         <name>jumlah</name>
+        <rename/>
       </field>
       <field>
         <name>PLEVEL</name>
+        <rename/>
       </field>
       <field>
         <name>PEJABAT_PARAM</name>
+        <rename/>
       </field>
       <field>
         <name>PEJ_KEM</name>
+        <rename/>
       </field>
       <field>
         <name>pejkemvalue</name>
+        <rename/>
+      </field>
+      <field>
+        <name>lebih_3bulan</name>
+        <rename/>
+      </field>
+      <field>
+        <name>lebih_6bulan</name>
+        <rename/>
+      </field>
+      <field>
+        <name>lebih_9bulan</name>
+        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
