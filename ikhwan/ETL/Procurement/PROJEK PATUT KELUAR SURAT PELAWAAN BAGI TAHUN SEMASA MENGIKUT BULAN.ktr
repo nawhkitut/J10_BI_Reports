@@ -655,7 +655,7 @@
     <hop>
       <from>Select values</from>
       <to>Table output</to>
-      <enabled>Y</enabled>
+      <enabled>N</enabled>
     </hop>
     <hop>
       <from>UPI</from>
