@@ -30,11 +30,6 @@
         <description/>
       </parameter>
       <parameter>
-        <name>kaedah_perlaksanaan_filter</name>
-        <default_value>Semua</default_value>
-        <description/>
-      </parameter>
-      <parameter>
         <name>kaedah_perolehan_param</name>
         <default_value/>
         <description/>
@@ -669,11 +664,6 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Perbelanjaan Name</from>
-      <to>RMK_Name 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>RMK</from>
       <to>RMK_Name</to>
       <enabled>Y</enabled>
@@ -924,23 +914,8 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Filter rows 6</from>
-      <to>Level 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Filter rows 7</from>
-      <to>Level 3</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>Filters</from>
       <to>level</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Get variables</from>
-      <to>Modified JavaScript value</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
@@ -964,21 +939,6 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Get variables 3 2 2</from>
-      <to>Modified JavaScript value 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Group by</from>
-      <to>Sort rows 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Level 2</from>
-      <to>PROJECTID</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>Merge join</from>
       <to>Get variables 2</to>
       <enabled>Y</enabled>
@@ -986,16 +946,6 @@
     <hop>
       <from>Merge join 2</from>
       <to>Get variables 2 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Modified JavaScript value</from>
-      <to>PEJABAT 3</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Modified JavaScript value 2</from>
-      <to>Filter rows 6</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
@@ -1011,11 +961,6 @@
     <hop>
       <from>PEJABAT 3</from>
       <to>Filters</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>PROJECTID</from>
-      <to>Filter rows 7</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
@@ -1054,11 +999,6 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Sort rows</from>
-      <to>Group by</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>Sort rows 2</from>
       <to>Get variables 3</to>
       <enabled>Y</enabled>
@@ -1075,27 +1015,7 @@
     </hop>
     <hop>
       <from>level</from>
-      <to>Get variables 3 2 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>level</from>
       <to>Sort rows</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Stream lookup 6</from>
-      <to>If field value is null</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>If field value is null</from>
-      <to>Select values</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Select values</from>
-      <to>Get variables</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
@@ -1186,6 +1106,81 @@
     <hop>
       <from>Append streams 2</from>
       <to>Append streams 4</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Sort rows</from>
+      <to>Group by</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Group by</from>
+      <to>Sort rows 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Perbelanjaan Name</from>
+      <to>RMK_Name 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Filter rows 6</from>
+      <to>Level 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Filter rows 7</from>
+      <to>Level 3</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Get variables 3 2 2</from>
+      <to>Modified JavaScript value 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Level 2</from>
+      <to>PROJECTID</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Modified JavaScript value 2</from>
+      <to>Filter rows 6</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>PROJECTID</from>
+      <to>Filter rows 7</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>level</from>
+      <to>Get variables 3 2 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Stream lookup 6</from>
+      <to>Select values</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Get variables</from>
+      <to>Modified JavaScript value</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>If field value is null</from>
+      <to>Get variables</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Select values</from>
+      <to>If field value is null</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Modified JavaScript value</from>
+      <to>PEJABAT 3</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -2598,100 +2593,6 @@ left join unifier_user_view on b.J10_PL_Nama_Pengurus_Progra=userid
     </GUI>
   </step>
   <step>
-    <name>Filter rows 6</name>
-    <type>FilterRows</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <send_true_to>Level 2</send_true_to>
-    <send_false_to/>
-    <compare>
-      <condition>
-        <negated>N</negated>
-        <conditions>
-          <condition>
-            <negated>N</negated>
-            <leftvalue>PEJABAT_PARAM</leftvalue>
-            <function>=</function>
-            <rightvalue>pej</rightvalue>
-          </condition>
-          <condition>
-            <negated>N</negated>
-            <operator>AND</operator>
-            <leftvalue>kaedah_perolehan</leftvalue>
-            <function>=</function>
-            <rightvalue>kaedahPerolehan</rightvalue>
-          </condition>
-          <condition>
-            <negated>N</negated>
-            <operator>AND</operator>
-            <leftvalue>PEJABAT</leftvalue>
-            <function>LIKE</function>
-            <rightvalue>PEJABAT1</rightvalue>
-          </condition>
-        </conditions>
-      </condition>
-    </compare>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1088</xloc>
-      <yloc>1056</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Filter rows 7</name>
-    <type>FilterRows</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <send_true_to>Level 3</send_true_to>
-    <send_false_to/>
-    <compare>
-      <condition>
-        <negated>N</negated>
-        <conditions>
-          <condition>
-            <negated>N</negated>
-            <leftvalue>PROJECT_ID</leftvalue>
-            <function>=</function>
-            <rightvalue>id</rightvalue>
-          </condition>
-        </conditions>
-      </condition>
-    </compare>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1184</xloc>
-      <yloc>1232</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
     <name>Filters</name>
     <type>FilterRows</type>
     <description/>
@@ -2712,42 +2613,35 @@ left join unifier_user_view on b.J10_PL_Nama_Pengurus_Progra=userid
             <negated>N</negated>
             <leftvalue>rmk</leftvalue>
             <function>LIKE</function>
-            <rightvalue>RMKK</rightvalue>
+            <rightvalue>rmk_v</rightvalue>
           </condition>
           <condition>
             <negated>N</negated>
             <operator>AND</operator>
             <leftvalue>ibs</leftvalue>
             <function>LIKE</function>
-            <rightvalue>IBSS</rightvalue>
+            <rightvalue>ibs_v</rightvalue>
           </condition>
           <condition>
             <negated>N</negated>
             <operator>AND</operator>
             <leftvalue>perbelanjaan</leftvalue>
             <function>LIKE</function>
-            <rightvalue>PERBELAN</rightvalue>
+            <rightvalue>perbelanjaan_v</rightvalue>
           </condition>
           <condition>
             <negated>N</negated>
             <operator>AND</operator>
             <leftvalue>acat</leftvalue>
             <function>LIKE</function>
-            <rightvalue>ACATT</rightvalue>
+            <rightvalue>acat_v</rightvalue>
           </condition>
           <condition>
             <negated>N</negated>
             <operator>AND</operator>
             <leftvalue>JENIS_PROJEK</leftvalue>
             <function>LIKE</function>
-            <rightvalue>JENISPROJEK</rightvalue>
-          </condition>
-          <condition>
-            <negated>N</negated>
-            <operator>AND</operator>
-            <leftvalue>kaedah_perlaksanaan</leftvalue>
-            <function>LIKE</function>
-            <rightvalue>KAEDAHPERLAKSANAAN</rightvalue>
+            <rightvalue>jenis_projek_v</rightvalue>
           </condition>
         </conditions>
       </condition>
@@ -2763,129 +2657,6 @@ left join unifier_user_view on b.J10_PL_Nama_Pengurus_Progra=userid
     <GUI>
       <xloc>1088</xloc>
       <yloc>688</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Get variables</name>
-    <type>GetVariable</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <field>
-        <name>LEVEL</name>
-        <variable>${LEVEL}</variable>
-        <type>Integer</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>RMKK</name>
-        <variable>${rmk_filter}</variable>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>IBSS</name>
-        <variable>${ibs_filter}</variable>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>KAEDAHPERLAKSANAAN</name>
-        <variable>${kaedah_perlaksanaan_filter}</variable>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>JENISPROJEK</name>
-        <variable>${projek_filter}</variable>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>PERBELAN</name>
-        <variable>${kategori_perbelanjaan_filter}</variable>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>PEJABAT1</name>
-        <variable>${pejabat_filter}</variable>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>ACATT</name>
-        <variable>${acat_filter}</variable>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1376</xloc>
-      <yloc>576</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3058,69 +2829,6 @@ left join unifier_user_view on b.J10_PL_Nama_Pengurus_Progra=userid
     </GUI>
   </step>
   <step>
-    <name>Get variables 3 2 2</name>
-    <type>GetVariable</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <field>
-        <name>PEJABAT_PARAM</name>
-        <variable>${sk_pejabat_jkr_param}</variable>
-        <type>Integer</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>id</name>
-        <variable>${id}</variable>
-        <type>Integer</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>kaedah_perolehan_param</name>
-        <variable>${kaedah_perolehan_param}</variable>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1088</xloc>
-      <yloc>912</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
     <name>Group by</name>
     <type>GroupBy</type>
     <description/>
@@ -3185,8 +2893,8 @@ left join unifier_user_view on b.J10_PL_Nama_Pengurus_Progra=userid
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1227</xloc>
-      <yloc>865</yloc>
+      <xloc>1232</xloc>
+      <yloc>864</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3269,76 +2977,6 @@ FROM "public".dim_j10_pl_kategori_ibs
     <GUI>
       <xloc>1760</xloc>
       <yloc>224</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>If field value is null</name>
-    <type>IfNull</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <replaceAllByValue/>
-    <replaceAllMask/>
-    <selectFields>Y</selectFields>
-    <selectValuesType>N</selectValuesType>
-    <setEmptyStringAll>N</setEmptyStringAll>
-    <valuetypes>
-      </valuetypes>
-    <fields>
-      <field>
-        <name>ibs</name>
-        <value>NA</value>
-        <mask/>
-        <set_empty_string>N</set_empty_string>
-      </field>
-      <field>
-        <name>perbelanjaan</name>
-        <value>NA</value>
-        <mask/>
-        <set_empty_string>N</set_empty_string>
-      </field>
-      <field>
-        <name>rmk</name>
-        <value>NA</value>
-        <mask/>
-        <set_empty_string>N</set_empty_string>
-      </field>
-      <field>
-        <name>JENIS_PROJEK</name>
-        <value>NA</value>
-        <mask/>
-        <set_empty_string>N</set_empty_string>
-      </field>
-      <field>
-        <name>kaedah_perlaksanaan</name>
-        <value>NA</value>
-        <mask/>
-        <set_empty_string>N</set_empty_string>
-      </field>
-      <field>
-        <name>acat</name>
-        <value>NA</value>
-        <mask/>
-        <set_empty_string>N</set_empty_string>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1200</xloc>
-      <yloc>496</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -4986,697 +4624,6 @@ FROM dim_j10_pl_lokasi_tapak
     </GUI>
   </step>
   <step>
-    <name>Level 2</name>
-    <type>SelectValues</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <field>
-        <name>J10_PL_NAMA_PROJEK</name>
-      </field>
-      <field>
-        <name>PEJABAT_PROGRAM</name>
-      </field>
-      <field>
-        <name>PROJECT_ID</name>
-      </field>
-      <field>
-        <name>PEJABAT</name>
-      </field>
-      <field>
-        <name>pejabat_jkr</name>
-      </field>
-      <field>
-        <name>sk_pejabat_jkr</name>
-      </field>
-      <field>
-        <name>sk_pejabat_atas_jkr</name>
-      </field>
-      <field>
-        <name>HIERARCHY</name>
-      </field>
-      <field>
-        <name>J10_PL_CAWANGAN_PENGURUS_PR</name>
-      </field>
-      <field>
-        <name>j10_pl_tarikhdaftar_projek</name>
-      </field>
-      <field>
-        <name>j10_pl_tarikh_brif_projek_t</name>
-      </field>
-      <field>
-        <name>J10_PL_NAMA_PENGURUS_PROGRA</name>
-      </field>
-      <field>
-        <name>PENOLONG_PENGURUS_PROGRAM</name>
-      </field>
-      <field>
-        <name>PEJABAT_HOPT</name>
-      </field>
-      <field>
-        <name>NAMA_HOPT</name>
-      </field>
-      <field>
-        <name>project_number</name>
-      </field>
-      <field>
-        <name>RECORD_NO</name>
-      </field>
-      <field>
-        <name>J10_PL_N0_RUJUKAN_PROJ</name>
-      </field>
-      <field>
-        <name>J10_PL_RUJUKAN_KOD_PROJEK</name>
-      </field>
-      <field>
-        <name>J10_PL_SPPII_NUMBER</name>
-      </field>
-      <field>
-        <name>J10_PL_DAERAH_PD</name>
-      </field>
-      <field>
-        <name>J10_PL_Q_ULASANQPLAN_DES</name>
-      </field>
-      <field>
-        <name>NAMA_PEGAWAI_PENGUASA</name>
-      </field>
-      <field>
-        <name>PEJABAT_SELIATAPAK</name>
-      </field>
-      <field>
-        <name>KONTRAKTOR</name>
-      </field>
-      <field>
-        <name>TARAF_KONTRAKTOR</name>
-      </field>
-      <field>
-        <name>NO_KONTRAK</name>
-      </field>
-      <field>
-        <name>tkh_milik_tapak</name>
-      </field>
-      <field>
-        <name>tkh_siap_asal</name>
-      </field>
-      <field>
-        <name>tkh_siap_semasa</name>
-      </field>
-      <field>
-        <name>tkh_siap_sebenar</name>
-      </field>
-      <field>
-        <name>tarikh_tamat_bon</name>
-      </field>
-      <field>
-        <name>J10_KOS_PRJ_SEMASA</name>
-      </field>
-      <field>
-        <name>J10_PL_KOS_PROJEK_ASAL</name>
-      </field>
-      <field>
-        <name>J10_PL_SILING_PROJEK_YANG_D</name>
-      </field>
-      <field>
-        <name>J10_PL_SILING_PROJEK</name>
-      </field>
-      <field>
-        <name>KOS_KONTRAK_ASAL</name>
-      </field>
-      <field>
-        <name>KOS_KONTRAK_SEMASA</name>
-      </field>
-      <field>
-        <name>BAYARAN_HINGGA_KINI</name>
-      </field>
-      <field>
-        <name>BAYARAN_DIPERAKUAN</name>
-      </field>
-      <field>
-        <name>UNJURAN</name>
-      </field>
-      <field>
-        <name>NILAI</name>
-      </field>
-      <field>
-        <name>BAYARAN</name>
-      </field>
-      <field>
-        <name>PERCENT_KEMAJUAN_KERJA</name>
-      </field>
-      <field>
-        <name>PERCENT_JADUAL_KERJA</name>
-      </field>
-      <field>
-        <name>WANG_PENDAHULUAN</name>
-      </field>
-      <field>
-        <name>JUMLAH_APK</name>
-      </field>
-      <field>
-        <name>JUMLAH_PHK</name>
-      </field>
-      <field>
-        <name>j10_pl_tarikh_jangka_seraha</name>
-      </field>
-      <field>
-        <name>tkh_serahan_projek</name>
-      </field>
-      <field>
-        <name>tkh_tamat_kecacatan</name>
-      </field>
-      <field>
-        <name>tkh_terima_lukisan</name>
-      </field>
-      <field>
-        <name>terima_brif</name>
-      </field>
-      <field>
-        <name>terima_tapak</name>
-      </field>
-      <field>
-        <name>terima_kos</name>
-      </field>
-      <field>
-        <name>terima_va</name>
-      </field>
-      <field>
-        <name>TARIKH_SAH_BRIF_SKOP</name>
-      </field>
-      <field>
-        <name>j10_pl_tarikh_jangka_mula_p</name>
-      </field>
-      <field>
-        <name>j10_pl_tarikh_jangka_siap_p</name>
-      </field>
-      <field>
-        <name>tarikh_serahan_projek_kepada_pelanggan</name>
-      </field>
-      <field>
-        <name>J10_PL_PENARAFAN_HIJAU_SDT</name>
-      </field>
-      <field>
-        <name>UUU_CREATION_DATE</name>
-      </field>
-      <field>
-        <name>UUU_RECORD_LAST_UPDATE_DATE</name>
-      </field>
-      <field>
-        <name>NAMA_PEGAWAI_PENGUASA_1</name>
-      </field>
-      <field>
-        <name>PEJABAT_SELIATAPAK_1</name>
-      </field>
-      <field>
-        <name>tarikh_jangka_iklan</name>
-      </field>
-      <field>
-        <name>tarikh_sst</name>
-      </field>
-      <field>
-        <name>tarikh_tdk</name>
-      </field>
-      <field>
-        <name>PEGAWAI_PENYEDIA_SURAT</name>
-      </field>
-      <field>
-        <name>acat</name>
-      </field>
-      <field>
-        <name>ibs</name>
-      </field>
-      <field>
-        <name>perbelanjaan</name>
-      </field>
-      <field>
-        <name>rmk</name>
-      </field>
-      <field>
-        <name>kaedah_perolehan</name>
-      </field>
-      <field>
-        <name>jenis_projek</name>
-      </field>
-      <field>
-        <name>kementerian</name>
-      </field>
-      <field>
-        <name>KEMENTERIAN_AGENCY</name>
-      </field>
-      <field>
-        <name>LOKASI_TAPAK</name>
-      </field>
-      <field>
-        <name>DAERAH</name>
-      </field>
-      <field>
-        <name>kaedah_perlaksanaan</name>
-      </field>
-      <field>
-        <name>PMO_TERIMA</name>
-      </field>
-      <field>
-        <name>jenis_rekabentuk</name>
-      </field>
-      <field>
-        <name>penggunaan_bim</name>
-      </field>
-      <field>
-        <name>LEVEL</name>
-      </field>
-      <field>
-        <name>RMKK</name>
-      </field>
-      <field>
-        <name>IBSS</name>
-      </field>
-      <field>
-        <name>KAEDAHPERLAKSANAAN</name>
-      </field>
-      <field>
-        <name>JENISPROJEK</name>
-      </field>
-      <field>
-        <name>PERBELAN</name>
-      </field>
-      <field>
-        <name>PEJABAT1</name>
-      </field>
-      <field>
-        <name>ACATT</name>
-      </field>
-      <field>
-        <name>pej</name>
-      </field>
-      <field>
-        <name>Selector</name>
-      </field>
-      <field>
-        <name>pfi</name>
-      </field>
-      <field>
-        <name>pembangunan</name>
-      </field>
-      <field>
-        <name>belanja</name>
-      </field>
-      <field>
-        <name>wang</name>
-      </field>
-      <field>
-        <name>jumlah</name>
-      </field>
-      <field>
-        <name>lokasi_tempat</name>
-      </field>
-      <field>
-        <name>PEJABAT_PARAM</name>
-      </field>
-      <field>
-        <name>id</name>
-      </field>
-      <field>
-        <name>count_rujukan_sppii</name>
-      </field>
-      <field>
-        <name>pembelanjaan</name>
-      </field>
-      <select_unspecified>N</select_unspecified>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1088</xloc>
-      <yloc>1152</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Level 3</name>
-    <type>SelectValues</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <field>
-        <name>J10_PL_NAMA_PROJEK</name>
-      </field>
-      <field>
-        <name>PEJABAT_PROGRAM</name>
-      </field>
-      <field>
-        <name>PROJECT_ID</name>
-      </field>
-      <field>
-        <name>PEJABAT</name>
-      </field>
-      <field>
-        <name>pejabat_jkr</name>
-      </field>
-      <field>
-        <name>sk_pejabat_jkr</name>
-      </field>
-      <field>
-        <name>sk_pejabat_atas_jkr</name>
-      </field>
-      <field>
-        <name>HIERARCHY</name>
-      </field>
-      <field>
-        <name>J10_PL_CAWANGAN_PENGURUS_PR</name>
-      </field>
-      <field>
-        <name>j10_pl_tarikhdaftar_projek</name>
-      </field>
-      <field>
-        <name>j10_pl_tarikh_brif_projek_t</name>
-      </field>
-      <field>
-        <name>J10_PL_NAMA_PENGURUS_PROGRA</name>
-      </field>
-      <field>
-        <name>PENOLONG_PENGURUS_PROGRAM</name>
-      </field>
-      <field>
-        <name>PEJABAT_HOPT</name>
-      </field>
-      <field>
-        <name>NAMA_HOPT</name>
-      </field>
-      <field>
-        <name>project_number</name>
-      </field>
-      <field>
-        <name>RECORD_NO</name>
-      </field>
-      <field>
-        <name>J10_PL_N0_RUJUKAN_PROJ</name>
-      </field>
-      <field>
-        <name>J10_PL_RUJUKAN_KOD_PROJEK</name>
-      </field>
-      <field>
-        <name>J10_PL_SPPII_NUMBER</name>
-      </field>
-      <field>
-        <name>J10_PL_DAERAH_PD</name>
-      </field>
-      <field>
-        <name>J10_PL_Q_ULASANQPLAN_DES</name>
-      </field>
-      <field>
-        <name>NAMA_PEGAWAI_PENGUASA</name>
-      </field>
-      <field>
-        <name>PEJABAT_SELIATAPAK</name>
-      </field>
-      <field>
-        <name>KONTRAKTOR</name>
-      </field>
-      <field>
-        <name>TARAF_KONTRAKTOR</name>
-      </field>
-      <field>
-        <name>NO_KONTRAK</name>
-      </field>
-      <field>
-        <name>tkh_milik_tapak</name>
-      </field>
-      <field>
-        <name>tkh_siap_asal</name>
-      </field>
-      <field>
-        <name>tkh_siap_semasa</name>
-      </field>
-      <field>
-        <name>tkh_siap_sebenar</name>
-      </field>
-      <field>
-        <name>tarikh_tamat_bon</name>
-      </field>
-      <field>
-        <name>J10_KOS_PRJ_SEMASA</name>
-      </field>
-      <field>
-        <name>J10_PL_KOS_PROJEK_ASAL</name>
-      </field>
-      <field>
-        <name>J10_PL_SILING_PROJEK_YANG_D</name>
-      </field>
-      <field>
-        <name>J10_PL_SILING_PROJEK</name>
-      </field>
-      <field>
-        <name>KOS_KONTRAK_ASAL</name>
-      </field>
-      <field>
-        <name>KOS_KONTRAK_SEMASA</name>
-      </field>
-      <field>
-        <name>BAYARAN_HINGGA_KINI</name>
-      </field>
-      <field>
-        <name>BAYARAN_DIPERAKUAN</name>
-      </field>
-      <field>
-        <name>UNJURAN</name>
-      </field>
-      <field>
-        <name>NILAI</name>
-      </field>
-      <field>
-        <name>BAYARAN</name>
-      </field>
-      <field>
-        <name>PERCENT_KEMAJUAN_KERJA</name>
-      </field>
-      <field>
-        <name>PERCENT_JADUAL_KERJA</name>
-      </field>
-      <field>
-        <name>WANG_PENDAHULUAN</name>
-      </field>
-      <field>
-        <name>JUMLAH_APK</name>
-      </field>
-      <field>
-        <name>JUMLAH_PHK</name>
-      </field>
-      <field>
-        <name>j10_pl_tarikh_jangka_seraha</name>
-      </field>
-      <field>
-        <name>tkh_serahan_projek</name>
-      </field>
-      <field>
-        <name>tkh_tamat_kecacatan</name>
-      </field>
-      <field>
-        <name>tkh_terima_lukisan</name>
-      </field>
-      <field>
-        <name>terima_brif</name>
-      </field>
-      <field>
-        <name>terima_tapak</name>
-      </field>
-      <field>
-        <name>terima_kos</name>
-      </field>
-      <field>
-        <name>terima_va</name>
-      </field>
-      <field>
-        <name>TARIKH_SAH_BRIF_SKOP</name>
-      </field>
-      <field>
-        <name>j10_pl_tarikh_jangka_mula_p</name>
-      </field>
-      <field>
-        <name>j10_pl_tarikh_jangka_siap_p</name>
-      </field>
-      <field>
-        <name>tarikh_serahan_projek_kepada_pelanggan</name>
-      </field>
-      <field>
-        <name>J10_PL_PENARAFAN_HIJAU_SDT</name>
-      </field>
-      <field>
-        <name>UUU_CREATION_DATE</name>
-      </field>
-      <field>
-        <name>UUU_RECORD_LAST_UPDATE_DATE</name>
-      </field>
-      <field>
-        <name>NAMA_PEGAWAI_PENGUASA_1</name>
-      </field>
-      <field>
-        <name>PEJABAT_SELIATAPAK_1</name>
-      </field>
-      <field>
-        <name>tarikh_jangka_iklan</name>
-      </field>
-      <field>
-        <name>tarikh_sst</name>
-      </field>
-      <field>
-        <name>tarikh_tdk</name>
-      </field>
-      <field>
-        <name>PEGAWAI_PENYEDIA_SURAT</name>
-      </field>
-      <field>
-        <name>acat</name>
-      </field>
-      <field>
-        <name>ibs</name>
-      </field>
-      <field>
-        <name>perbelanjaan</name>
-      </field>
-      <field>
-        <name>rmk</name>
-      </field>
-      <field>
-        <name>kaedah_perolehan</name>
-      </field>
-      <field>
-        <name>jenis_projek</name>
-      </field>
-      <field>
-        <name>kementerian</name>
-      </field>
-      <field>
-        <name>KEMENTERIAN_AGENCY</name>
-      </field>
-      <field>
-        <name>LOKASI_TAPAK</name>
-      </field>
-      <field>
-        <name>DAERAH</name>
-      </field>
-      <field>
-        <name>kaedah_perlaksanaan</name>
-      </field>
-      <field>
-        <name>PMO_TERIMA</name>
-      </field>
-      <field>
-        <name>jenis_rekabentuk</name>
-      </field>
-      <field>
-        <name>penggunaan_bim</name>
-      </field>
-      <field>
-        <name>LEVEL</name>
-      </field>
-      <field>
-        <name>RMKK</name>
-      </field>
-      <field>
-        <name>IBSS</name>
-      </field>
-      <field>
-        <name>KAEDAHPERLAKSANAAN</name>
-      </field>
-      <field>
-        <name>JENISPROJEK</name>
-      </field>
-      <field>
-        <name>PERBELAN</name>
-      </field>
-      <field>
-        <name>PEJABAT1</name>
-      </field>
-      <field>
-        <name>ACATT</name>
-      </field>
-      <field>
-        <name>pej</name>
-      </field>
-      <field>
-        <name>Selector</name>
-      </field>
-      <field>
-        <name>pfi</name>
-      </field>
-      <field>
-        <name>pembangunan</name>
-      </field>
-      <field>
-        <name>belanja</name>
-      </field>
-      <field>
-        <name>wang</name>
-      </field>
-      <field>
-        <name>jumlah</name>
-      </field>
-      <field>
-        <name>lokasi_tempat</name>
-      </field>
-      <field>
-        <name>PEJABAT_PARAM</name>
-      </field>
-      <field>
-        <name>id</name>
-      </field>
-      <field>
-        <name>count_rujukan_sppii</name>
-      </field>
-      <field>
-        <name>pembelanjaan</name>
-      </field>
-      <select_unspecified>N</select_unspecified>
-      <meta>
-        <name>TARIKH_SAH_BRIF_SKOP</name>
-        <rename>tarikh_sah_brif_skop</rename>
-        <type>Date</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask>dd-MM-yyyy</conversion_mask>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1184</xloc>
-      <yloc>1136</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
     <name>Level1</name>
     <type>SelectValues</type>
     <description/>
@@ -5689,49 +4636,80 @@ FROM dim_j10_pl_lokasi_tapak
     </partitioning>
     <fields>
       <field>
+        <name>skala_ruj_organisasi</name>
+        <rename/>
+      </field>
+      <field>
         <name>treepath_by_name</name>
+        <rename/>
       </field>
       <field>
         <name>pejabat_jkr</name>
+        <rename/>
       </field>
       <field>
         <name>sk_pejabat_jkr</name>
+        <rename/>
       </field>
       <field>
         <name>sk_pejabat_atas_jkr</name>
+        <rename/>
       </field>
       <field>
         <name>HIERARCHY</name>
+        <rename/>
       </field>
       <field>
         <name>level</name>
+        <rename/>
       </field>
       <field>
         <name>organization</name>
+        <rename/>
       </field>
       <field>
         <name>pej_kem_value</name>
+        <rename/>
       </field>
       <field>
         <name>pej</name>
+        <rename/>
       </field>
       <field>
         <name>rt</name>
+        <rename/>
       </field>
       <field>
         <name>tt</name>
+        <rename/>
       </field>
       <field>
         <name>tb</name>
+        <rename/>
       </field>
       <field>
         <name>tbp</name>
+        <rename/>
       </field>
       <field>
         <name>jumlah</name>
+        <rename/>
       </field>
       <field>
-        <name>skala_ruj_organisasi</name>
+        <name>PLEVEL</name>
+        <rename/>
+      </field>
+      <field>
+        <name>PEJABAT_PARAM</name>
+        <rename/>
+      </field>
+      <field>
+        <name>PEJ_KEM</name>
+        <rename/>
+      </field>
+      <field>
+        <name>pejkemvalue</name>
+        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -5999,243 +4977,6 @@ FROM "public".dim_pejabat where organization='LOKASITAPAK' order by sk_pejabat_j
     </GUI>
   </step>
   <step>
-    <name>Modified JavaScript value</name>
-    <type>ScriptValueMod</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <compatible>N</compatible>
-    <optimizationLevel>9</optimizationLevel>
-    <jsScripts>
-      <jsScript>
-        <jsScript_type>0</jsScript_type>
-        <jsScript_name>Script 1</jsScript_name>
-        <jsScript_script>//Script here
-
-var hir = HIERARCHY;
-
-var val;
-var pej;
-var selector;
-
-
-
-
-if (hir != null){
- val= hir.split(",");
-pej= val[LEVEL];
-}
-
-if(pej == 0 || pej == null){
-pej= val[val.length-1];
-}
-
-if (RMKK == 'Semua'){
-
-RMKK= '%%';
-}
-
-
-if (IBSS == 'Semua'){
-
-IBSS= '%%';
-} 
-
-
-if (KAEDAHPERLAKSANAAN == 'Semua'){
-
-KAEDAHPERLAKSANAAN= '%%';
-}
-
-
-if (JENISPROJEK == 'Semua'){
-
-JENISPROJEK= '%%';
-}
-
-if (PERBELAN == 'Semua'){
-
-PERBELAN= '%%';
-}
-
-
-
-if (ACATT == 'Semua'){
-
-ACATT= '%%';
-}
-
-
-
-
-
-
-</jsScript_script>
-      </jsScript>
-    </jsScripts>
-    <fields>
-      <field>
-        <name>pej</name>
-        <rename>pej</rename>
-        <type>Integer</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <replace>N</replace>
-      </field>
-      <field>
-        <name>RMKK</name>
-        <rename>RMKK</rename>
-        <type>String</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <replace>Y</replace>
-      </field>
-      <field>
-        <name>IBSS</name>
-        <rename>IBSS</rename>
-        <type>String</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <replace>Y</replace>
-      </field>
-      <field>
-        <name>KAEDAHPERLAKSANAAN</name>
-        <rename>KAEDAHPERLAKSANAAN</rename>
-        <type>String</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <replace>Y</replace>
-      </field>
-      <field>
-        <name>JENISPROJEK</name>
-        <rename>JENISPROJEK</rename>
-        <type>String</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <replace>Y</replace>
-      </field>
-      <field>
-        <name>PERBELAN</name>
-        <rename>PERBELAN</rename>
-        <type>String</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <replace>Y</replace>
-      </field>
-      <field>
-        <name>Selector</name>
-        <rename>Selector</rename>
-        <type>String</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <replace>N</replace>
-      </field>
-      <field>
-        <name>ACATT</name>
-        <rename>ACATT</rename>
-        <type>String</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <replace>Y</replace>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1376</xloc>
-      <yloc>688</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Modified JavaScript value 2</name>
-    <type>ScriptValueMod</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <compatible>N</compatible>
-    <optimizationLevel>9</optimizationLevel>
-    <jsScripts>
-      <jsScript>
-        <jsScript_type>0</jsScript_type>
-        <jsScript_name>Script 1</jsScript_name>
-        <jsScript_script>
-var count_rujukan_sppii=0;
-var kaedahPerolehan;
-
-if (kaedah_perolehan == 'Rundingan Terus'){
-kaedahPerolehan='Rundingan Terus';
-}
-
-if (kaedah_perolehan == 'Tender Terhad'){
-kaedahPerolehan='Tender Terhad';
-} 
-if (kaedah_perolehan == "'Tender Terbuka"){
-kaedahPerolehan="'Tender Terbuka";
-}
-
-if (kaedah_perolehan == "'Tender Terbuka (Pra Kelayakan)"){
-kaedahPerolehan="'Tender Terbuka (Pra Kelayakan)";
-}
-
-
-
-if(J10_PL_RUJUKAN_KOD_PROJEK!=null)
-{
-count_rujukan_sppii=1;
-}
-</jsScript_script>
-      </jsScript>
-    </jsScripts>
-    <fields>
-      <field>
-        <name>count_rujukan_sppii</name>
-        <rename>count_rujukan_sppii</rename>
-        <type>Number</type>
-        <length>16</length>
-        <precision>2</precision>
-        <replace>N</replace>
-      </field>
-      <field>
-        <name>kaedahPerolehan</name>
-        <rename>kaedahPerolehan</rename>
-        <type>String</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <replace>N</replace>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1088</xloc>
-      <yloc>976</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
     <name>Modified JavaScript value 3</name>
     <type>ScriptValueMod</type>
     <description/>
@@ -6371,7 +5112,7 @@ pejkemvalue='PEJABAT';
             <operator>AND</operator>
             <leftvalue>PEJABAT</leftvalue>
             <function>LIKE</function>
-            <rightvalue>PEJABAT1</rightvalue>
+            <rightvalue>pejabat_v</rightvalue>
           </condition>
         </conditions>
       </condition>
@@ -6562,59 +5303,6 @@ FROM dim_J10_PL_Kategori_Perbelanjaan
     <GUI>
       <xloc>2256</xloc>
       <yloc>224</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>PROJECTID</name>
-    <type>ScriptValueMod</type>
-    <description/>
-    <distribute>N</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <compatible>N</compatible>
-    <optimizationLevel>9</optimizationLevel>
-    <jsScripts>
-      <jsScript>
-        <jsScript_type>0</jsScript_type>
-        <jsScript_name>Script 1</jsScript_name>
-        <jsScript_script>//Script here
-
-
-
-
-
-if (id == null){
-id=1;
-}
-</jsScript_script>
-      </jsScript>
-    </jsScripts>
-    <fields>
-      <field>
-        <name>id</name>
-        <rename>id</rename>
-        <type>Integer</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <replace>Y</replace>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1088</xloc>
-      <yloc>1232</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -8299,7 +6987,7 @@ from  unifier_uxjcpln_view a join unifier_upi b on a.project_id=b.project_id
       </key>
       <value>
         <name>option_name</name>
-        <rename>PERBELANJAAN</rename>
+        <rename>perbelanjaan</rename>
         <default/>
         <type>None</type>
       </value>
@@ -9194,49 +7882,80 @@ rpdecide='NOT AVAILABLE'
     </partitioning>
     <fields>
       <field>
+        <name>skala_ruj_organisasi</name>
+        <rename/>
+      </field>
+      <field>
         <name>treepath_by_name</name>
+        <rename/>
       </field>
       <field>
         <name>pejabat_jkr</name>
+        <rename/>
       </field>
       <field>
         <name>sk_pejabat_jkr</name>
+        <rename/>
       </field>
       <field>
         <name>sk_pejabat_atas_jkr</name>
+        <rename/>
       </field>
       <field>
         <name>HIERARCHY</name>
+        <rename/>
       </field>
       <field>
         <name>level</name>
+        <rename/>
       </field>
       <field>
         <name>organization</name>
+        <rename/>
       </field>
       <field>
         <name>pej_kem_value</name>
+        <rename/>
       </field>
       <field>
         <name>pej</name>
+        <rename/>
       </field>
       <field>
         <name>rt</name>
+        <rename/>
       </field>
       <field>
         <name>tt</name>
+        <rename/>
       </field>
       <field>
         <name>tb</name>
+        <rename/>
       </field>
       <field>
         <name>tbp</name>
+        <rename/>
       </field>
       <field>
         <name>jumlah</name>
+        <rename/>
       </field>
       <field>
-        <name>skala_ruj_organisasi</name>
+        <name>PLEVEL</name>
+        <rename/>
+      </field>
+      <field>
+        <name>PEJABAT_PARAM</name>
+        <rename/>
+      </field>
+      <field>
+        <name>PEJ_KEM</name>
+        <rename/>
+      </field>
+      <field>
+        <name>pejkemvalue</name>
+        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -9372,1305 +8091,377 @@ rpdecide='NOT AVAILABLE'
     <fields>
       <field>
         <name>J10_PL_NAMA_PROJEK</name>
+        <rename/>
       </field>
       <field>
         <name>PEJABAT_PROGRAM</name>
+        <rename/>
       </field>
       <field>
         <name>PROJECT_ID</name>
+        <rename/>
       </field>
       <field>
         <name>PEJABAT</name>
+        <rename/>
       </field>
       <field>
         <name>pejabat_jkr</name>
+        <rename/>
       </field>
       <field>
         <name>sk_pejabat_jkr</name>
+        <rename/>
       </field>
       <field>
         <name>sk_pejabat_atas_jkr</name>
+        <rename/>
       </field>
       <field>
         <name>HIERARCHY</name>
+        <rename/>
+      </field>
+      <field>
+        <name>J10_PL_LOKASI_TAPAK_NEGERI</name>
+        <rename/>
+      </field>
+      <field>
+        <name>J10_PL_DAERAH_PD</name>
+        <rename/>
+      </field>
+      <field>
+        <name>J10_PL_KEMENTERIAN</name>
+        <rename/>
+      </field>
+      <field>
+        <name>J10_PL_RANCANGAN_MALAYSIA_K</name>
+        <rename/>
+      </field>
+      <field>
+        <name>J10_PL_LOKASI_NEGERI</name>
+        <rename/>
+      </field>
+      <field>
+        <name>J10_PL_KEMENTERIAN_1</name>
+        <rename/>
+      </field>
+      <field>
+        <name>J10_PL_JENIS_KONTRAK</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_CAWANGAN_PENGURUS_PR</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_AGENSI</name>
+        <rename/>
+      </field>
+      <field>
+        <name>J10_PL_KATEGORI_PERBELANTXT</name>
+        <rename/>
+      </field>
+      <field>
+        <name>J10_PL_KAEDAH_PEROLEHAN</name>
+        <rename>kaedah_perolehan</rename>
       </field>
       <field>
         <name>J10_PL_TARIKHDAFTAR_PROJEK</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_TARIKH_BRIF_PROJEK_T</name>
+        <rename/>
+      </field>
+      <field>
+        <name>J10_PL_TAPAK_LOKASI</name>
+        <rename/>
+      </field>
+      <field>
+        <name>J10_PL_ACAT</name>
+        <rename/>
+      </field>
+      <field>
+        <name>J10_PL_KATEGORI_IBS</name>
+        <rename/>
+      </field>
+      <field>
+        <name>J10_PL_KLASIFIKASI_SDT</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_NAMA_PENGURUS_PROGRA</name>
+        <rename/>
+      </field>
+      <field>
+        <name>J10_PL_KLASIFIKASI_SDT_1</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_TARIKH_JANGKA_MULA_P</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_TARIKH_JANGKA_SIAP_P</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_TARIKH_JANGKA_SERAHA</name>
+        <rename/>
+      </field>
+      <field>
+        <name>J10_PL_JENIS_REKABENTUK</name>
+        <rename/>
+      </field>
+      <field>
+        <name>J10_PL_PENGGUNAAN_BIM</name>
+        <rename/>
       </field>
       <field>
         <name>project_number</name>
+        <rename/>
+      </field>
+      <field>
+        <name>J10_PL_NAMA_PROJEK_1</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_N0_RUJUKAN_PROJ</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_RUJUKAN_KOD_PROJEK</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_Q_ULASANQPLAN_DES</name>
+        <rename/>
+      </field>
+      <field>
+        <name>J10_PL_AGENSI_1</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_NAMAPENGURUS_SMN</name>
+        <rename/>
+      </field>
+      <field>
+        <name>J10_PL_NAMA_PENGURUS_PROGRA_1</name>
+        <rename/>
       </field>
       <field>
         <name>PEJABAT_HOPT</name>
+        <rename/>
       </field>
       <field>
         <name>NAMA_HOPT</name>
+        <rename/>
       </field>
       <field>
         <name>PENOLONG_PENGURUS_PROGRAM</name>
+        <rename/>
+      </field>
+      <field>
+        <name>J10_PL_TARIKHDAFTAR_PROJEK_1</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_BRIF_PROJEK</name>
+        <rename/>
+      </field>
+      <field>
+        <name>J10_PL_TAPAK_LOKASI_1</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_KOS_PROJEK</name>
+        <rename/>
       </field>
       <field>
         <name>J_PL_PC_KPA</name>
+        <rename/>
       </field>
       <field>
         <name>J10_KOS_PRJ_SEMASA</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_SILING_PROJEK_YANG_D</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_SILING_PROJEK</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_TARIKH_JANGKA_SURAT</name>
+        <rename/>
       </field>
       <field>
         <name>J10_CH_TARIKH_SIAP_SEBENAR</name>
+        <rename/>
       </field>
       <field>
         <name>TARIKH_SERAHAN_PROJEK_KEPADA_PELANGGAN</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_TARIKH</name>
+        <rename/>
       </field>
       <field>
         <name>TERIMA_BRIF</name>
+        <rename/>
       </field>
       <field>
         <name>TERIMA_LOKASI</name>
+        <rename/>
       </field>
       <field>
         <name>TERIMA_KOS</name>
+        <rename/>
       </field>
       <field>
         <name>TERIMA_VA</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_PENARAFAN_HIJAU_SDT</name>
+        <rename/>
       </field>
       <field>
         <name>UUU_CREATION_DATE</name>
+        <rename/>
       </field>
       <field>
         <name>UUU_RECORD_LAST_UPDATE_DATE</name>
+        <rename/>
       </field>
       <field>
         <name>TARIKH_SAH_BRIF_SKOP</name>
+        <rename/>
       </field>
       <field>
         <name>TARIKH_JANGKA_IKLAN</name>
+        <rename/>
       </field>
       <field>
         <name>TARIKH_SST</name>
+        <rename/>
       </field>
       <field>
         <name>TARIKH_TDK</name>
+        <rename/>
       </field>
       <field>
         <name>PEGAWAI_PENYEDIA_SURAT</name>
+        <rename/>
       </field>
       <field>
         <name>ACAT</name>
+        <rename/>
       </field>
       <field>
         <name>IBS</name>
+        <rename/>
       </field>
       <field>
-        <name>PERBELANJAAN</name>
+        <name>perbelanjaan</name>
+        <rename/>
+      </field>
+      <field>
+        <name>RP1</name>
+        <rename/>
+      </field>
+      <field>
+        <name>RP2</name>
+        <rename/>
+      </field>
+      <field>
+        <name>RP3</name>
+        <rename/>
+      </field>
+      <field>
+        <name>RP4</name>
+        <rename/>
+      </field>
+      <field>
+        <name>RP5</name>
+        <rename/>
+      </field>
+      <field>
+        <name>ROLLING PLAN</name>
+        <rename/>
       </field>
       <field>
         <name>RMK</name>
+        <rename/>
       </field>
       <field>
         <name>KAEDAH_PEROLEHAN</name>
-      </field>
-      <field>
-        <name>JENIS_PROJEK</name>
-      </field>
-      <field>
-        <name>KEMENTERIAN</name>
-      </field>
-      <field>
-        <name>KEMENTERIAN_AGENCY</name>
-      </field>
-      <field>
-        <name>LOKASI_TAPAK</name>
-      </field>
-      <field>
-        <name>DAERAH</name>
-      </field>
-      <field>
-        <name>Kaedah_Perlaksanaan</name>
-      </field>
-      <field>
-        <name>PMO_TERIMA</name>
-      </field>
-      <field>
-        <name>jenis_rekabentuk</name>
-      </field>
-      <field>
-        <name>penggunaan_bim</name>
+        <rename/>
       </field>
       <field>
         <name>rt</name>
+        <rename/>
       </field>
       <field>
         <name>tt</name>
+        <rename/>
       </field>
       <field>
         <name>tb</name>
+        <rename/>
       </field>
       <field>
         <name>tbp</name>
+        <rename/>
       </field>
       <field>
         <name>jumlah</name>
+        <rename/>
+      </field>
+      <field>
+        <name>JENIS_PROJEK</name>
+        <rename/>
+      </field>
+      <field>
+        <name>KEMENTERIAN</name>
+        <rename/>
+      </field>
+      <field>
+        <name>KEMENTERIAN_AGENCY</name>
+        <rename/>
+      </field>
+      <field>
+        <name>LOKASI_TAPAK</name>
+        <rename/>
+      </field>
+      <field>
+        <name>DAERAH</name>
+        <rename/>
+      </field>
+      <field>
+        <name>lokasi_tempat</name>
+        <rename/>
+      </field>
+      <field>
+        <name>Kaedah_Perlaksanaan</name>
+        <rename/>
+      </field>
+      <field>
+        <name>PMO_TERIMA</name>
+        <rename/>
+      </field>
+      <field>
+        <name>jenis_rekabentuk</name>
+        <rename/>
+      </field>
+      <field>
+        <name>penggunaan_bim</name>
+        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
-      <meta>
-        <name>J10_PL_NAMA_PROJEK</name>
-        <rename>J10_PL_NAMA_PROJEK</rename>
-        <type>None</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>PEJABAT_PROGRAM</name>
-        <rename>PEJABAT_PROGRAM</rename>
-        <type>None</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>PROJECT_ID</name>
-        <rename>PROJECT_ID</rename>
-        <type>None</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>PEJABAT</name>
-        <rename>PEJABAT</rename>
-        <type>None</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>pejabat_jkr</name>
-        <rename>pejabat_jkr</rename>
-        <type>None</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>sk_pejabat_jkr</name>
-        <rename>sk_pejabat_jkr</rename>
-        <type>None</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>sk_pejabat_atas_jkr</name>
-        <rename>sk_pejabat_atas_jkr</rename>
-        <type>None</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>HIERARCHY</name>
-        <rename>HIERARCHY</rename>
-        <type>None</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>J10_PL_CAWANGAN_PENGURUS_PR</name>
-        <rename>J10_PL_CAWANGAN_PENGURUS_PR</rename>
-        <type>None</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>J10_PL_AGENSI</name>
-        <rename>J10_PL_AGENSI</rename>
-        <type>None</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>J10_PL_TARIKHDAFTAR_PROJEK</name>
-        <rename>J10_PL_TARIKHDAFTAR_PROJEK</rename>
-        <type>None</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>J10_PL_TARIKH_BRIF_PROJEK_T</name>
-        <rename>J10_PL_TARIKH_BRIF_PROJEK_T</rename>
-        <type>None</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>J10_PL_NAMA_PENGURUS_PROGRA</name>
-        <rename>J10_PL_NAMA_PENGURUS_PROGRA</rename>
-        <type>None</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>J10_PL_TARIKH_JANGKA_MULA_P</name>
-        <rename>J10_PL_TARIKH_JANGKA_MULA_P</rename>
-        <type>None</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>J10_PL_TARIKH_JANGKA_SIAP_P</name>
-        <rename>J10_PL_TARIKH_JANGKA_SIAP_P</rename>
-        <type>None</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>J10_PL_TARIKH_JANGKA_SERAHA</name>
-        <rename>J10_PL_TARIKH_JANGKA_SERAHA</rename>
-        <type>None</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>project_number</name>
-        <rename>project_number</rename>
-        <type>None</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>J10_PL_N0_RUJUKAN_PROJ</name>
-        <rename>J10_PL_N0_RUJUKAN_PROJ</rename>
-        <type>None</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>J10_PL_RUJUKAN_KOD_PROJEK</name>
-        <rename>J10_PL_RUJUKAN_KOD_PROJEK</rename>
-        <type>None</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>J10_PL_Q_ULASANQPLAN_DES</name>
-        <rename>J10_PL_Q_ULASANQPLAN_DES</rename>
-        <type>None</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>J10_PL_NAMAPENGURUS_SMN</name>
-        <rename>J10_PL_NAMAPENGURUS_SMN</rename>
-        <type>None</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>PEJABAT_HOPT</name>
-        <rename>PEJABAT_HOPT</rename>
-        <type>None</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>NAMA_HOPT</name>
-        <rename>NAMA_HOPT</rename>
-        <type>None</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>PENOLONG_PENGURUS_PROGRAM</name>
-        <rename>PENOLONG_PENGURUS_PROGRAM</rename>
-        <type>None</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>J10_PL_BRIF_PROJEK</name>
-        <rename>J10_PL_BRIF_PROJEK</rename>
-        <type>None</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>J10_PL_KOS_PROJEK</name>
-        <rename>J10_PL_KOS_PROJEK</rename>
-        <type>None</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>J_PL_PC_KPA</name>
-        <rename>J_PL_PC_KPA</rename>
-        <type>None</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>J10_KOS_PRJ_SEMASA</name>
-        <rename>J10_KOS_PRJ_SEMASA</rename>
-        <type>None</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>J10_PL_SILING_PROJEK_YANG_D</name>
-        <rename>J10_PL_SILING_PROJEK_YANG_D</rename>
-        <type>None</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>J10_PL_SILING_PROJEK</name>
-        <rename>J10_PL_SILING_PROJEK</rename>
-        <type>None</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>J10_PL_TARIKH_JANGKA_SURAT</name>
-        <rename>J10_PL_TARIKH_JANGKA_SURAT</rename>
-        <type>None</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>J10_CH_TARIKH_SIAP_SEBENAR</name>
-        <rename>J10_CH_TARIKH_SIAP_SEBENAR</rename>
-        <type>None</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>TARIKH_SERAHAN_PROJEK_KEPADA_PELANGGAN</name>
-        <rename>TARIKH_SERAHAN_PROJEK_KEPADA_PELANGGAN</rename>
-        <type>None</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>J10_PL_TARIKH</name>
-        <rename>J10_PL_TARIKH</rename>
-        <type>None</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>TERIMA_BRIF</name>
-        <rename>TERIMA_BRIF</rename>
-        <type>None</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>TERIMA_LOKASI</name>
-        <rename>TERIMA_LOKASI</rename>
-        <type>None</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>TERIMA_KOS</name>
-        <rename>TERIMA_KOS</rename>
-        <type>None</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>TERIMA_VA</name>
-        <rename>TERIMA_VA</rename>
-        <type>None</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>J10_PL_PENARAFAN_HIJAU_SDT</name>
-        <rename>J10_PL_PENARAFAN_HIJAU_SDT</rename>
-        <type>None</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>UUU_CREATION_DATE</name>
-        <rename>UUU_CREATION_DATE</rename>
-        <type>None</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>UUU_RECORD_LAST_UPDATE_DATE</name>
-        <rename>UUU_RECORD_LAST_UPDATE_DATE</rename>
-        <type>None</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>TARIKH_SAH_BRIF_SKOP</name>
-        <rename>TARIKH_SAH_BRIF_SKOP</rename>
-        <type>None</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>TARIKH_JANGKA_IKLAN</name>
-        <rename>TARIKH_JANGKA_IKLAN</rename>
-        <type>None</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>TARIKH_SST</name>
-        <rename>TARIKH_SST</rename>
-        <type>None</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>TARIKH_TDK</name>
-        <rename>TARIKH_TDK</rename>
-        <type>None</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>PEGAWAI_PENYEDIA_SURAT</name>
-        <rename>PEGAWAI_PENYEDIA_SURAT</rename>
-        <type>None</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>ACAT</name>
-        <rename>ACAT</rename>
-        <type>None</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>IBS</name>
-        <rename>IBS</rename>
-        <type>None</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>PERBELANJAAN</name>
-        <rename>PERBELANJAAN</rename>
-        <type>None</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>RMK</name>
-        <rename>RMK</rename>
-        <type>None</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>KAEDAH_PEROLEHAN</name>
-        <rename>KAEDAH_PEROLEHAN</rename>
-        <type>None</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>JENIS_PROJEK</name>
-        <rename>JENIS_PROJEK</rename>
-        <type>None</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>KEMENTERIAN</name>
-        <rename>KEMENTERIAN</rename>
-        <type>None</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>KEMENTERIAN_AGENCY</name>
-        <rename>KEMENTERIAN_AGENCY</rename>
-        <type>None</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>LOKASI_TAPAK</name>
-        <rename>LOKASI_TAPAK</rename>
-        <type>None</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>DAERAH</name>
-        <rename>DAERAH</rename>
-        <type>None</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>Kaedah_Perlaksanaan</name>
-        <rename>Kaedah_Perlaksanaan</rename>
-        <type>None</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>PMO_TERIMA</name>
-        <rename>PMO_TERIMA</rename>
-        <type>None</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>jenis_rekabentuk</name>
-        <rename>jenis_rekabentuk</rename>
-        <type>None</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>penggunaan_bim</name>
-        <rename>penggunaan_bim</rename>
-        <type>None</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>rt</name>
-        <rename>rt</rename>
-        <type>None</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>tt</name>
-        <rename>tt</rename>
-        <type>None</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>tb</name>
-        <rename>tb</rename>
-        <type>None</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>tbp</name>
-        <rename>tbp</rename>
-        <type>None</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
-      <meta>
-        <name>jumlah</name>
-        <rename>jumlah</rename>
-        <type>None</type>
-        <length>-2</length>
-        <precision>-2</precision>
-        <conversion_mask/>
-        <date_format_lenient>false</date_format_lenient>
-        <date_format_locale/>
-        <date_format_timezone/>
-        <lenient_string_to_number>false</lenient_string_to_number>
-        <encoding/>
-        <decimal_symbol/>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <storage_type/>
-      </meta>
     </fields>
     <attributes/>
     <cluster_schema/>
@@ -10681,8 +8472,8 @@ rpdecide='NOT AVAILABLE'
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1200</xloc>
-      <yloc>576</yloc>
+      <xloc>1216</xloc>
+      <yloc>496</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -13286,7 +11077,7 @@ FROM "public".dim_pejabat where organization='LOKASITAPAK'
     <name>level</name>
     <type>SelectValues</type>
     <description/>
-    <distribute>N</distribute>
+    <distribute>Y</distribute>
     <custom_distribution/>
     <copies>1</copies>
     <partitioning>
@@ -13296,234 +11087,421 @@ FROM "public".dim_pejabat where organization='LOKASITAPAK'
     <fields>
       <field>
         <name>J10_PL_NAMA_PROJEK</name>
+        <rename/>
       </field>
       <field>
         <name>PEJABAT_PROGRAM</name>
+        <rename/>
       </field>
       <field>
         <name>PROJECT_ID</name>
+        <rename/>
       </field>
       <field>
         <name>PEJABAT</name>
+        <rename/>
       </field>
       <field>
         <name>pejabat_jkr</name>
+        <rename/>
       </field>
       <field>
         <name>sk_pejabat_jkr</name>
+        <rename/>
       </field>
       <field>
         <name>sk_pejabat_atas_jkr</name>
+        <rename/>
       </field>
       <field>
         <name>HIERARCHY</name>
+        <rename/>
+      </field>
+      <field>
+        <name>J10_PL_LOKASI_TAPAK_NEGERI</name>
+        <rename/>
+      </field>
+      <field>
+        <name>J10_PL_DAERAH_PD</name>
+        <rename/>
+      </field>
+      <field>
+        <name>J10_PL_KEMENTERIAN</name>
+        <rename/>
+      </field>
+      <field>
+        <name>J10_PL_RANCANGAN_MALAYSIA_K</name>
+        <rename/>
+      </field>
+      <field>
+        <name>J10_PL_LOKASI_NEGERI</name>
+        <rename/>
+      </field>
+      <field>
+        <name>J10_PL_KEMENTERIAN_1</name>
+        <rename/>
+      </field>
+      <field>
+        <name>J10_PL_JENIS_KONTRAK</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_CAWANGAN_PENGURUS_PR</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_AGENSI</name>
+        <rename/>
+      </field>
+      <field>
+        <name>J10_PL_KATEGORI_PERBELANTXT</name>
+        <rename/>
+      </field>
+      <field>
+        <name>kaedah_perolehan</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_TARIKHDAFTAR_PROJEK</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_TARIKH_BRIF_PROJEK_T</name>
+        <rename/>
+      </field>
+      <field>
+        <name>J10_PL_TAPAK_LOKASI</name>
+        <rename/>
+      </field>
+      <field>
+        <name>J10_PL_ACAT</name>
+        <rename/>
+      </field>
+      <field>
+        <name>J10_PL_KATEGORI_IBS</name>
+        <rename/>
+      </field>
+      <field>
+        <name>J10_PL_KLASIFIKASI_SDT</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_NAMA_PENGURUS_PROGRA</name>
+        <rename/>
+      </field>
+      <field>
+        <name>J10_PL_KLASIFIKASI_SDT_1</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_TARIKH_JANGKA_MULA_P</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_TARIKH_JANGKA_SIAP_P</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_TARIKH_JANGKA_SERAHA</name>
+        <rename/>
+      </field>
+      <field>
+        <name>J10_PL_JENIS_REKABENTUK</name>
+        <rename/>
+      </field>
+      <field>
+        <name>J10_PL_PENGGUNAAN_BIM</name>
+        <rename/>
       </field>
       <field>
         <name>project_number</name>
+        <rename/>
+      </field>
+      <field>
+        <name>J10_PL_NAMA_PROJEK_1</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_N0_RUJUKAN_PROJ</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_RUJUKAN_KOD_PROJEK</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_Q_ULASANQPLAN_DES</name>
+        <rename/>
+      </field>
+      <field>
+        <name>J10_PL_AGENSI_1</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_NAMAPENGURUS_SMN</name>
+        <rename/>
+      </field>
+      <field>
+        <name>J10_PL_NAMA_PENGURUS_PROGRA_1</name>
+        <rename/>
       </field>
       <field>
         <name>PEJABAT_HOPT</name>
+        <rename/>
       </field>
       <field>
         <name>NAMA_HOPT</name>
+        <rename/>
       </field>
       <field>
         <name>PENOLONG_PENGURUS_PROGRAM</name>
+        <rename/>
+      </field>
+      <field>
+        <name>J10_PL_TARIKHDAFTAR_PROJEK_1</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_BRIF_PROJEK</name>
+        <rename/>
+      </field>
+      <field>
+        <name>J10_PL_TAPAK_LOKASI_1</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_KOS_PROJEK</name>
+        <rename/>
       </field>
       <field>
         <name>J_PL_PC_KPA</name>
+        <rename/>
       </field>
       <field>
         <name>J10_KOS_PRJ_SEMASA</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_SILING_PROJEK_YANG_D</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_SILING_PROJEK</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_TARIKH_JANGKA_SURAT</name>
+        <rename/>
       </field>
       <field>
         <name>J10_CH_TARIKH_SIAP_SEBENAR</name>
+        <rename/>
       </field>
       <field>
         <name>TARIKH_SERAHAN_PROJEK_KEPADA_PELANGGAN</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_TARIKH</name>
+        <rename/>
       </field>
       <field>
         <name>TERIMA_BRIF</name>
+        <rename/>
       </field>
       <field>
         <name>TERIMA_LOKASI</name>
+        <rename/>
       </field>
       <field>
         <name>TERIMA_KOS</name>
+        <rename/>
       </field>
       <field>
         <name>TERIMA_VA</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_PENARAFAN_HIJAU_SDT</name>
+        <rename/>
       </field>
       <field>
         <name>UUU_CREATION_DATE</name>
+        <rename/>
       </field>
       <field>
         <name>UUU_RECORD_LAST_UPDATE_DATE</name>
+        <rename/>
       </field>
       <field>
         <name>TARIKH_SAH_BRIF_SKOP</name>
+        <rename/>
       </field>
       <field>
         <name>TARIKH_JANGKA_IKLAN</name>
+        <rename/>
       </field>
       <field>
         <name>TARIKH_SST</name>
+        <rename/>
       </field>
       <field>
         <name>TARIKH_TDK</name>
+        <rename/>
       </field>
       <field>
         <name>PEGAWAI_PENYEDIA_SURAT</name>
+        <rename/>
       </field>
       <field>
         <name>ACAT</name>
+        <rename/>
       </field>
       <field>
         <name>IBS</name>
+        <rename/>
       </field>
       <field>
-        <name>PERBELANJAAN</name>
+        <name>perbelanjaan</name>
+        <rename/>
+      </field>
+      <field>
+        <name>RP1</name>
+        <rename/>
+      </field>
+      <field>
+        <name>RP2</name>
+        <rename/>
+      </field>
+      <field>
+        <name>RP3</name>
+        <rename/>
+      </field>
+      <field>
+        <name>RP4</name>
+        <rename/>
+      </field>
+      <field>
+        <name>RP5</name>
+        <rename/>
+      </field>
+      <field>
+        <name>ROLLING PLAN</name>
+        <rename/>
       </field>
       <field>
         <name>RMK</name>
+        <rename/>
       </field>
       <field>
-        <name>KAEDAH_PEROLEHAN</name>
-      </field>
-      <field>
-        <name>JENIS_PROJEK</name>
-      </field>
-      <field>
-        <name>KEMENTERIAN</name>
-      </field>
-      <field>
-        <name>KEMENTERIAN_AGENCY</name>
-      </field>
-      <field>
-        <name>LOKASI_TAPAK</name>
-      </field>
-      <field>
-        <name>DAERAH</name>
-      </field>
-      <field>
-        <name>Kaedah_Perlaksanaan</name>
-      </field>
-      <field>
-        <name>PMO_TERIMA</name>
-      </field>
-      <field>
-        <name>jenis_rekabentuk</name>
-      </field>
-      <field>
-        <name>penggunaan_bim</name>
-      </field>
-      <field>
-        <name>LEVEL</name>
-      </field>
-      <field>
-        <name>RMKK</name>
-      </field>
-      <field>
-        <name>IBSS</name>
-      </field>
-      <field>
-        <name>KAEDAHPERLAKSANAAN</name>
-      </field>
-      <field>
-        <name>JENISPROJEK</name>
-      </field>
-      <field>
-        <name>PERBELAN</name>
-      </field>
-      <field>
-        <name>PEJABAT1</name>
-      </field>
-      <field>
-        <name>ACATT</name>
-      </field>
-      <field>
-        <name>pej</name>
-      </field>
-      <field>
-        <name>Selector</name>
+        <name>KAEDAH_PEROLEHAN_1</name>
+        <rename/>
       </field>
       <field>
         <name>rt</name>
+        <rename/>
       </field>
       <field>
         <name>tt</name>
+        <rename/>
       </field>
       <field>
         <name>tb</name>
+        <rename/>
       </field>
       <field>
         <name>tbp</name>
+        <rename/>
       </field>
       <field>
         <name>jumlah</name>
+        <rename/>
+      </field>
+      <field>
+        <name>JENIS_PROJEK</name>
+        <rename/>
+      </field>
+      <field>
+        <name>KEMENTERIAN</name>
+        <rename/>
+      </field>
+      <field>
+        <name>KEMENTERIAN_AGENCY</name>
+        <rename/>
+      </field>
+      <field>
+        <name>LOKASI_TAPAK</name>
+        <rename/>
+      </field>
+      <field>
+        <name>DAERAH</name>
+        <rename/>
+      </field>
+      <field>
+        <name>lokasi_tempat</name>
+        <rename/>
+      </field>
+      <field>
+        <name>Kaedah_Perlaksanaan</name>
+        <rename/>
+      </field>
+      <field>
+        <name>PMO_TERIMA</name>
+        <rename/>
+      </field>
+      <field>
+        <name>jenis_rekabentuk</name>
+        <rename/>
+      </field>
+      <field>
+        <name>penggunaan_bim</name>
+        <rename/>
+      </field>
+      <field>
+        <name>LEVEL</name>
+        <rename/>
+      </field>
+      <field>
+        <name>rmk_v</name>
+        <rename/>
+      </field>
+      <field>
+        <name>ibs_v</name>
+        <rename/>
+      </field>
+      <field>
+        <name>jenis_projek_v</name>
+        <rename/>
+      </field>
+      <field>
+        <name>perbelanjaan_v</name>
+        <rename/>
+      </field>
+      <field>
+        <name>pejabat_v</name>
+        <rename/>
+      </field>
+      <field>
+        <name>acat_v</name>
+        <rename/>
+      </field>
+      <field>
+        <name>hir</name>
+        <rename/>
+      </field>
+      <field>
+        <name>val</name>
+        <rename/>
+      </field>
+      <field>
+        <name>pej</name>
+        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
       <meta>
-        <name>JENIS_PROJEK</name>
-        <rename>jenis_projek</rename>
-        <type>String</type>
+        <name>rt</name>
+        <rename>rt</rename>
+        <type>Number</type>
         <length>-2</length>
         <precision>-2</precision>
         <conversion_mask/>
@@ -13538,9 +11516,60 @@ FROM "public".dim_pejabat where organization='LOKASITAPAK'
         <storage_type/>
       </meta>
       <meta>
-        <name>KAEDAH_PEROLEHAN</name>
-        <rename>kaedah_perolehan</rename>
-        <type>String</type>
+        <name>tt</name>
+        <rename>tt</rename>
+        <type>Number</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>tb</name>
+        <rename>tb</rename>
+        <type>Number</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>tbp</name>
+        <rename>tbp</rename>
+        <type>Number</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>jumlah</name>
+        <rename>jumlah</rename>
+        <type>Number</type>
         <length>-2</length>
         <precision>-2</precision>
         <conversion_mask/>
@@ -14126,34 +12155,34 @@ if (KAEDAH_PEROLEHAN == 'Rundingan terus'){
 rt=1;
 } else
 {
-rt=null;
+rt=0;
 }
 
 if (KAEDAH_PEROLEHAN == 'Tender Terhad'){
 tt=1;
 } else
 {
-tt=null;
+tt=0;
 }
 
 if (KAEDAH_PEROLEHAN == 'Tender Terbuka'){
 tb=1;
 } else
 {
-tb=null;
+tb=0;
 }
 
 if (KAEDAH_PEROLEHAN == 'Tender Terbuka (Pra Kelayakan)'){
 tbp=1;
 } else
 {
-tbp=null;
+tbp=0;
 }
 
-if (KAEDAH_PEROLEHAN == KAEDAH_PEROLEHAN){
+ if (KAEDAH_PEROLEHAN == KAEDAH_PEROLEHAN){
 jumlah=1;
 }else{
-jumlah=null;
+jumlah=0;
 }</jsScript_script>
       </jsScript>
     </jsScripts>
@@ -14751,6 +12780,1304 @@ SELECT PROJECT_ID, 'tender terhad nsc' AS description, max(J10_DT_DOP) AS tarikh
     <GUI>
       <xloc>1232</xloc>
       <yloc>224</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Filter rows 6</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <send_true_to>Level 2</send_true_to>
+    <send_false_to/>
+    <compare>
+      <condition>
+        <negated>N</negated>
+        <conditions>
+          <condition>
+            <negated>N</negated>
+            <leftvalue>PEJABAT_PARAM</leftvalue>
+            <function>=</function>
+            <rightvalue>pej</rightvalue>
+          </condition>
+          <condition>
+            <negated>N</negated>
+            <operator>AND</operator>
+            <leftvalue>kaedah_perolehan</leftvalue>
+            <function>=</function>
+            <rightvalue>kaedahPerolehan</rightvalue>
+          </condition>
+          <condition>
+            <negated>N</negated>
+            <operator>AND</operator>
+            <leftvalue>PEJABAT</leftvalue>
+            <function>LIKE</function>
+            <rightvalue>pejabat_v</rightvalue>
+          </condition>
+        </conditions>
+      </condition>
+    </compare>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1088</xloc>
+      <yloc>1024</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Filter rows 7</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <send_true_to>Level 3</send_true_to>
+    <send_false_to/>
+    <compare>
+      <condition>
+        <negated>N</negated>
+        <conditions>
+          <condition>
+            <negated>N</negated>
+            <leftvalue>PROJECT_ID</leftvalue>
+            <function>=</function>
+            <rightvalue>id</rightvalue>
+          </condition>
+        </conditions>
+      </condition>
+    </compare>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1184</xloc>
+      <yloc>1200</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Get variables 3 2 2</name>
+    <type>GetVariable</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>PEJABAT_PARAM</name>
+        <variable>${sk_pejabat_jkr_param}</variable>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>id</name>
+        <variable>${id}</variable>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>kaedah_perolehan_param</name>
+        <variable>${kaedah_perolehan_param}</variable>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1088</xloc>
+      <yloc>880</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Level 2</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>J10_PL_NAMA_PROJEK</name>
+      </field>
+      <field>
+        <name>PEJABAT_PROGRAM</name>
+      </field>
+      <field>
+        <name>PROJECT_ID</name>
+      </field>
+      <field>
+        <name>PEJABAT</name>
+      </field>
+      <field>
+        <name>pejabat_jkr</name>
+      </field>
+      <field>
+        <name>sk_pejabat_jkr</name>
+      </field>
+      <field>
+        <name>sk_pejabat_atas_jkr</name>
+      </field>
+      <field>
+        <name>HIERARCHY</name>
+      </field>
+      <field>
+        <name>J10_PL_CAWANGAN_PENGURUS_PR</name>
+      </field>
+      <field>
+        <name>j10_pl_tarikhdaftar_projek</name>
+      </field>
+      <field>
+        <name>j10_pl_tarikh_brif_projek_t</name>
+      </field>
+      <field>
+        <name>J10_PL_NAMA_PENGURUS_PROGRA</name>
+      </field>
+      <field>
+        <name>PENOLONG_PENGURUS_PROGRAM</name>
+      </field>
+      <field>
+        <name>PEJABAT_HOPT</name>
+      </field>
+      <field>
+        <name>NAMA_HOPT</name>
+      </field>
+      <field>
+        <name>project_number</name>
+      </field>
+      <field>
+        <name>RECORD_NO</name>
+      </field>
+      <field>
+        <name>J10_PL_N0_RUJUKAN_PROJ</name>
+      </field>
+      <field>
+        <name>J10_PL_RUJUKAN_KOD_PROJEK</name>
+      </field>
+      <field>
+        <name>J10_PL_SPPII_NUMBER</name>
+      </field>
+      <field>
+        <name>J10_PL_DAERAH_PD</name>
+      </field>
+      <field>
+        <name>J10_PL_Q_ULASANQPLAN_DES</name>
+      </field>
+      <field>
+        <name>NAMA_PEGAWAI_PENGUASA</name>
+      </field>
+      <field>
+        <name>PEJABAT_SELIATAPAK</name>
+      </field>
+      <field>
+        <name>KONTRAKTOR</name>
+      </field>
+      <field>
+        <name>TARAF_KONTRAKTOR</name>
+      </field>
+      <field>
+        <name>NO_KONTRAK</name>
+      </field>
+      <field>
+        <name>tkh_milik_tapak</name>
+      </field>
+      <field>
+        <name>tkh_siap_asal</name>
+      </field>
+      <field>
+        <name>tkh_siap_semasa</name>
+      </field>
+      <field>
+        <name>tkh_siap_sebenar</name>
+      </field>
+      <field>
+        <name>tarikh_tamat_bon</name>
+      </field>
+      <field>
+        <name>J10_KOS_PRJ_SEMASA</name>
+      </field>
+      <field>
+        <name>J10_PL_KOS_PROJEK_ASAL</name>
+      </field>
+      <field>
+        <name>J10_PL_SILING_PROJEK_YANG_D</name>
+      </field>
+      <field>
+        <name>J10_PL_SILING_PROJEK</name>
+      </field>
+      <field>
+        <name>KOS_KONTRAK_ASAL</name>
+      </field>
+      <field>
+        <name>KOS_KONTRAK_SEMASA</name>
+      </field>
+      <field>
+        <name>BAYARAN_HINGGA_KINI</name>
+      </field>
+      <field>
+        <name>BAYARAN_DIPERAKUAN</name>
+      </field>
+      <field>
+        <name>UNJURAN</name>
+      </field>
+      <field>
+        <name>NILAI</name>
+      </field>
+      <field>
+        <name>BAYARAN</name>
+      </field>
+      <field>
+        <name>PERCENT_KEMAJUAN_KERJA</name>
+      </field>
+      <field>
+        <name>PERCENT_JADUAL_KERJA</name>
+      </field>
+      <field>
+        <name>WANG_PENDAHULUAN</name>
+      </field>
+      <field>
+        <name>JUMLAH_APK</name>
+      </field>
+      <field>
+        <name>JUMLAH_PHK</name>
+      </field>
+      <field>
+        <name>j10_pl_tarikh_jangka_seraha</name>
+      </field>
+      <field>
+        <name>tkh_serahan_projek</name>
+      </field>
+      <field>
+        <name>tkh_tamat_kecacatan</name>
+      </field>
+      <field>
+        <name>tkh_terima_lukisan</name>
+      </field>
+      <field>
+        <name>terima_brif</name>
+      </field>
+      <field>
+        <name>terima_tapak</name>
+      </field>
+      <field>
+        <name>terima_kos</name>
+      </field>
+      <field>
+        <name>terima_va</name>
+      </field>
+      <field>
+        <name>TARIKH_SAH_BRIF_SKOP</name>
+      </field>
+      <field>
+        <name>j10_pl_tarikh_jangka_mula_p</name>
+      </field>
+      <field>
+        <name>j10_pl_tarikh_jangka_siap_p</name>
+      </field>
+      <field>
+        <name>tarikh_serahan_projek_kepada_pelanggan</name>
+      </field>
+      <field>
+        <name>J10_PL_PENARAFAN_HIJAU_SDT</name>
+      </field>
+      <field>
+        <name>UUU_CREATION_DATE</name>
+      </field>
+      <field>
+        <name>UUU_RECORD_LAST_UPDATE_DATE</name>
+      </field>
+      <field>
+        <name>NAMA_PEGAWAI_PENGUASA_1</name>
+      </field>
+      <field>
+        <name>PEJABAT_SELIATAPAK_1</name>
+      </field>
+      <field>
+        <name>tarikh_jangka_iklan</name>
+      </field>
+      <field>
+        <name>tarikh_sst</name>
+      </field>
+      <field>
+        <name>tarikh_tdk</name>
+      </field>
+      <field>
+        <name>PEGAWAI_PENYEDIA_SURAT</name>
+      </field>
+      <field>
+        <name>acat</name>
+      </field>
+      <field>
+        <name>ibs</name>
+      </field>
+      <field>
+        <name>perbelanjaan</name>
+      </field>
+      <field>
+        <name>rmk</name>
+      </field>
+      <field>
+        <name>kaedah_perolehan</name>
+      </field>
+      <field>
+        <name>jenis_projek</name>
+      </field>
+      <field>
+        <name>kementerian</name>
+      </field>
+      <field>
+        <name>KEMENTERIAN_AGENCY</name>
+      </field>
+      <field>
+        <name>LOKASI_TAPAK</name>
+      </field>
+      <field>
+        <name>DAERAH</name>
+      </field>
+      <field>
+        <name>kaedah_perlaksanaan</name>
+      </field>
+      <field>
+        <name>PMO_TERIMA</name>
+      </field>
+      <field>
+        <name>jenis_rekabentuk</name>
+      </field>
+      <field>
+        <name>penggunaan_bim</name>
+      </field>
+      <field>
+        <name>LEVEL</name>
+      </field>
+      <field>
+        <name>RMKK</name>
+      </field>
+      <field>
+        <name>IBSS</name>
+      </field>
+      <field>
+        <name>KAEDAHPERLAKSANAAN</name>
+      </field>
+      <field>
+        <name>JENISPROJEK</name>
+      </field>
+      <field>
+        <name>PERBELAN</name>
+      </field>
+      <field>
+        <name>PEJABAT1</name>
+      </field>
+      <field>
+        <name>ACATT</name>
+      </field>
+      <field>
+        <name>pej</name>
+      </field>
+      <field>
+        <name>Selector</name>
+      </field>
+      <field>
+        <name>pfi</name>
+      </field>
+      <field>
+        <name>pembangunan</name>
+      </field>
+      <field>
+        <name>belanja</name>
+      </field>
+      <field>
+        <name>wang</name>
+      </field>
+      <field>
+        <name>jumlah</name>
+      </field>
+      <field>
+        <name>lokasi_tempat</name>
+      </field>
+      <field>
+        <name>PEJABAT_PARAM</name>
+      </field>
+      <field>
+        <name>id</name>
+      </field>
+      <field>
+        <name>count_rujukan_sppii</name>
+      </field>
+      <field>
+        <name>pembelanjaan</name>
+      </field>
+      <select_unspecified>N</select_unspecified>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1088</xloc>
+      <yloc>1120</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Level 3</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>J10_PL_NAMA_PROJEK</name>
+      </field>
+      <field>
+        <name>PEJABAT_PROGRAM</name>
+      </field>
+      <field>
+        <name>PROJECT_ID</name>
+      </field>
+      <field>
+        <name>PEJABAT</name>
+      </field>
+      <field>
+        <name>pejabat_jkr</name>
+      </field>
+      <field>
+        <name>sk_pejabat_jkr</name>
+      </field>
+      <field>
+        <name>sk_pejabat_atas_jkr</name>
+      </field>
+      <field>
+        <name>HIERARCHY</name>
+      </field>
+      <field>
+        <name>J10_PL_CAWANGAN_PENGURUS_PR</name>
+      </field>
+      <field>
+        <name>j10_pl_tarikhdaftar_projek</name>
+      </field>
+      <field>
+        <name>j10_pl_tarikh_brif_projek_t</name>
+      </field>
+      <field>
+        <name>J10_PL_NAMA_PENGURUS_PROGRA</name>
+      </field>
+      <field>
+        <name>PENOLONG_PENGURUS_PROGRAM</name>
+      </field>
+      <field>
+        <name>PEJABAT_HOPT</name>
+      </field>
+      <field>
+        <name>NAMA_HOPT</name>
+      </field>
+      <field>
+        <name>project_number</name>
+      </field>
+      <field>
+        <name>RECORD_NO</name>
+      </field>
+      <field>
+        <name>J10_PL_N0_RUJUKAN_PROJ</name>
+      </field>
+      <field>
+        <name>J10_PL_RUJUKAN_KOD_PROJEK</name>
+      </field>
+      <field>
+        <name>J10_PL_SPPII_NUMBER</name>
+      </field>
+      <field>
+        <name>J10_PL_DAERAH_PD</name>
+      </field>
+      <field>
+        <name>J10_PL_Q_ULASANQPLAN_DES</name>
+      </field>
+      <field>
+        <name>NAMA_PEGAWAI_PENGUASA</name>
+      </field>
+      <field>
+        <name>PEJABAT_SELIATAPAK</name>
+      </field>
+      <field>
+        <name>KONTRAKTOR</name>
+      </field>
+      <field>
+        <name>TARAF_KONTRAKTOR</name>
+      </field>
+      <field>
+        <name>NO_KONTRAK</name>
+      </field>
+      <field>
+        <name>tkh_milik_tapak</name>
+      </field>
+      <field>
+        <name>tkh_siap_asal</name>
+      </field>
+      <field>
+        <name>tkh_siap_semasa</name>
+      </field>
+      <field>
+        <name>tkh_siap_sebenar</name>
+      </field>
+      <field>
+        <name>tarikh_tamat_bon</name>
+      </field>
+      <field>
+        <name>J10_KOS_PRJ_SEMASA</name>
+      </field>
+      <field>
+        <name>J10_PL_KOS_PROJEK_ASAL</name>
+      </field>
+      <field>
+        <name>J10_PL_SILING_PROJEK_YANG_D</name>
+      </field>
+      <field>
+        <name>J10_PL_SILING_PROJEK</name>
+      </field>
+      <field>
+        <name>KOS_KONTRAK_ASAL</name>
+      </field>
+      <field>
+        <name>KOS_KONTRAK_SEMASA</name>
+      </field>
+      <field>
+        <name>BAYARAN_HINGGA_KINI</name>
+      </field>
+      <field>
+        <name>BAYARAN_DIPERAKUAN</name>
+      </field>
+      <field>
+        <name>UNJURAN</name>
+      </field>
+      <field>
+        <name>NILAI</name>
+      </field>
+      <field>
+        <name>BAYARAN</name>
+      </field>
+      <field>
+        <name>PERCENT_KEMAJUAN_KERJA</name>
+      </field>
+      <field>
+        <name>PERCENT_JADUAL_KERJA</name>
+      </field>
+      <field>
+        <name>WANG_PENDAHULUAN</name>
+      </field>
+      <field>
+        <name>JUMLAH_APK</name>
+      </field>
+      <field>
+        <name>JUMLAH_PHK</name>
+      </field>
+      <field>
+        <name>j10_pl_tarikh_jangka_seraha</name>
+      </field>
+      <field>
+        <name>tkh_serahan_projek</name>
+      </field>
+      <field>
+        <name>tkh_tamat_kecacatan</name>
+      </field>
+      <field>
+        <name>tkh_terima_lukisan</name>
+      </field>
+      <field>
+        <name>terima_brif</name>
+      </field>
+      <field>
+        <name>terima_tapak</name>
+      </field>
+      <field>
+        <name>terima_kos</name>
+      </field>
+      <field>
+        <name>terima_va</name>
+      </field>
+      <field>
+        <name>TARIKH_SAH_BRIF_SKOP</name>
+      </field>
+      <field>
+        <name>j10_pl_tarikh_jangka_mula_p</name>
+      </field>
+      <field>
+        <name>j10_pl_tarikh_jangka_siap_p</name>
+      </field>
+      <field>
+        <name>tarikh_serahan_projek_kepada_pelanggan</name>
+      </field>
+      <field>
+        <name>J10_PL_PENARAFAN_HIJAU_SDT</name>
+      </field>
+      <field>
+        <name>UUU_CREATION_DATE</name>
+      </field>
+      <field>
+        <name>UUU_RECORD_LAST_UPDATE_DATE</name>
+      </field>
+      <field>
+        <name>NAMA_PEGAWAI_PENGUASA_1</name>
+      </field>
+      <field>
+        <name>PEJABAT_SELIATAPAK_1</name>
+      </field>
+      <field>
+        <name>tarikh_jangka_iklan</name>
+      </field>
+      <field>
+        <name>tarikh_sst</name>
+      </field>
+      <field>
+        <name>tarikh_tdk</name>
+      </field>
+      <field>
+        <name>PEGAWAI_PENYEDIA_SURAT</name>
+      </field>
+      <field>
+        <name>acat</name>
+      </field>
+      <field>
+        <name>ibs</name>
+      </field>
+      <field>
+        <name>perbelanjaan</name>
+      </field>
+      <field>
+        <name>rmk</name>
+      </field>
+      <field>
+        <name>kaedah_perolehan</name>
+      </field>
+      <field>
+        <name>jenis_projek</name>
+      </field>
+      <field>
+        <name>kementerian</name>
+      </field>
+      <field>
+        <name>KEMENTERIAN_AGENCY</name>
+      </field>
+      <field>
+        <name>LOKASI_TAPAK</name>
+      </field>
+      <field>
+        <name>DAERAH</name>
+      </field>
+      <field>
+        <name>kaedah_perlaksanaan</name>
+      </field>
+      <field>
+        <name>PMO_TERIMA</name>
+      </field>
+      <field>
+        <name>jenis_rekabentuk</name>
+      </field>
+      <field>
+        <name>penggunaan_bim</name>
+      </field>
+      <field>
+        <name>LEVEL</name>
+      </field>
+      <field>
+        <name>RMKK</name>
+      </field>
+      <field>
+        <name>IBSS</name>
+      </field>
+      <field>
+        <name>KAEDAHPERLAKSANAAN</name>
+      </field>
+      <field>
+        <name>JENISPROJEK</name>
+      </field>
+      <field>
+        <name>PERBELAN</name>
+      </field>
+      <field>
+        <name>PEJABAT1</name>
+      </field>
+      <field>
+        <name>ACATT</name>
+      </field>
+      <field>
+        <name>pej</name>
+      </field>
+      <field>
+        <name>Selector</name>
+      </field>
+      <field>
+        <name>pfi</name>
+      </field>
+      <field>
+        <name>pembangunan</name>
+      </field>
+      <field>
+        <name>belanja</name>
+      </field>
+      <field>
+        <name>wang</name>
+      </field>
+      <field>
+        <name>jumlah</name>
+      </field>
+      <field>
+        <name>lokasi_tempat</name>
+      </field>
+      <field>
+        <name>PEJABAT_PARAM</name>
+      </field>
+      <field>
+        <name>id</name>
+      </field>
+      <field>
+        <name>count_rujukan_sppii</name>
+      </field>
+      <field>
+        <name>pembelanjaan</name>
+      </field>
+      <select_unspecified>N</select_unspecified>
+      <meta>
+        <name>TARIKH_SAH_BRIF_SKOP</name>
+        <rename>tarikh_sah_brif_skop</rename>
+        <type>Date</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>dd-MM-yyyy</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1184</xloc>
+      <yloc>1104</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Modified JavaScript value 2</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>
+      <jsScript>
+        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>
+var count_rujukan_sppii=0;
+var kaedahPerolehan;
+
+if (kaedah_perolehan == 'Rundingan Terus'){
+kaedahPerolehan='Rundingan Terus';
+}
+
+if (kaedah_perolehan == 'Tender Terhad'){
+kaedahPerolehan='Tender Terhad';
+} 
+if (kaedah_perolehan == "'Tender Terbuka"){
+kaedahPerolehan="'Tender Terbuka";
+}
+
+if (kaedah_perolehan == "'Tender Terbuka (Pra Kelayakan)"){
+kaedahPerolehan="'Tender Terbuka (Pra Kelayakan)";
+}
+
+
+
+if(J10_PL_RUJUKAN_KOD_PROJEK!=null)
+{
+count_rujukan_sppii=1;
+}
+</jsScript_script>
+      </jsScript>
+    </jsScripts>
+    <fields>
+      <field>
+        <name>count_rujukan_sppii</name>
+        <rename>count_rujukan_sppii</rename>
+        <type>Number</type>
+        <length>16</length>
+        <precision>2</precision>
+        <replace>N</replace>
+      </field>
+      <field>
+        <name>kaedahPerolehan</name>
+        <rename>kaedahPerolehan</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1088</xloc>
+      <yloc>944</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>PROJECTID</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>
+      <jsScript>
+        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>//Script here
+
+
+
+
+
+if (id == null){
+id=1;
+}
+</jsScript_script>
+      </jsScript>
+    </jsScripts>
+    <fields>
+      <field>
+        <name>id</name>
+        <rename>id</rename>
+        <type>Integer</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>Y</replace>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1088</xloc>
+      <yloc>1200</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Get variables</name>
+    <type>GetVariable</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>LEVEL</name>
+        <variable>${LEVEL}</variable>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>rmk_v</name>
+        <variable>${rmk_filter}</variable>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>ibs_v</name>
+        <variable>${ibs_filter}</variable>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>jenis_projek_v</name>
+        <variable>${projek_filter}</variable>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>perbelanjaan_v</name>
+        <variable>${kategori_perbelanjaan_filter}</variable>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>pejabat_v</name>
+        <variable>${pejabat_filter}</variable>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>acat_v</name>
+        <variable>${acat_filter}</variable>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1360</xloc>
+      <yloc>592</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>If field value is null</name>
+    <type>IfNull</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <replaceAllByValue/>
+    <replaceAllMask/>
+    <selectFields>Y</selectFields>
+    <selectValuesType>N</selectValuesType>
+    <setEmptyStringAll>N</setEmptyStringAll>
+    <valuetypes>
+      </valuetypes>
+    <fields>
+      <field>
+        <name>acat</name>
+        <value>NA</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>ibs</name>
+        <value>NA</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>perbelanjaan</name>
+        <value>NA</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>rmk</name>
+        <value>NA</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>jenis_projek</name>
+        <value>NA</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1216</xloc>
+      <yloc>576</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Modified JavaScript value</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>
+      <jsScript>
+        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>//Script here
+
+var hir = HIERARCHY;
+
+var val;
+var pej;
+
+
+if (hir != null){
+ val= hir.split(",");
+pej= val[LEVEL];
+}
+
+if(LEVEL >2)
+{
+if(pej == 0 || pej == null){
+pej= val[val.length-1];
+}
+}
+
+if (rmk_v == 'Semua')
+{
+	rmk_v= '%%';
+}
+if (ibs_v == 'Semua')
+{
+	ibs_v= '%%';
+} 
+if (jenis_projek_v == 'Semua')
+{
+	jenis_projek_v= '%%';
+}
+if (perbelanjaan_v == 'Semua')
+{
+	perbelanjaan_v= '%%';
+}
+
+if (acat_v == 'Semua')
+{
+	acat_v= '%%';
+}
+
+
+
+
+</jsScript_script>
+      </jsScript>
+    </jsScripts>
+    <fields>
+      <field>
+        <name>hir</name>
+        <rename>hir</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>
+      <field>
+        <name>val</name>
+        <rename>val</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>
+      <field>
+        <name>pej</name>
+        <rename>pej</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>
+      <field>
+        <name>rmk_v</name>
+        <rename>rmk_v</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>Y</replace>
+      </field>
+      <field>
+        <name>ibs_v</name>
+        <rename>ibs_v</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>Y</replace>
+      </field>
+      <field>
+        <name>jenis_projek_v</name>
+        <rename>jenis_projek_v</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>Y</replace>
+      </field>
+      <field>
+        <name>perbelanjaan_v</name>
+        <rename>perbelanjaan_v</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>Y</replace>
+      </field>
+      <field>
+        <name>acat_v</name>
+        <rename>acat_v</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>Y</replace>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1360</xloc>
+      <yloc>688</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
