@@ -5094,10 +5094,12 @@ if (PEJ_KEM == 'KEMENTERIAN'){
 
 pejkemvalue='KEMENTERIAN';
 }
-else{
-pejkemvalue='PEJABAT';
+ else if(PEJ_KEM=='Lokasi Tapak'){
+pejkemvalue='LOKASITAPAK';
 }
-</jsScript_script>
+else{
+pejkemvalue='PEJABAT'
+}</jsScript_script>
       </jsScript>
     </jsScripts>
     <fields>
@@ -5143,16 +5145,17 @@ pejkemvalue='PEJABAT';
         <jsScript_name>Script 1</jsScript_name>
         <jsScript_script>//Script here
 
-
-
 var pejkemvalue;
 
 if (PEJ_KEM == 'KEMENTERIAN'){
 
 pejkemvalue='KEMENTERIAN';
 }
+ else if(PEJ_KEM=='Lokasi Tapak'){
+pejkemvalue='LOKASITAPAK';
+}
 else{
-pejkemvalue='PEJABAT';
+pejkemvalue='PEJABAT'
 }
 </jsScript_script>
       </jsScript>
@@ -6967,7 +6970,7 @@ order by sk_pejabat_jkr
 
 
 if (PEJABAT_PARAM == null){
-PEJABAT_PARAM=1;
+PEJABAT_PARAM=9999;
 }
 </jsScript_script>
       </jsScript>
@@ -8602,104 +8605,205 @@ rpdecide='NOT AVAILABLE'
     <fields>
       <field>
         <name>J10_PL_NAMA_PROJEK</name>
+        <rename/>
       </field>
       <field>
         <name>PEJABAT_PROGRAM</name>
+        <rename/>
       </field>
       <field>
         <name>PROJECT_ID</name>
+        <rename/>
       </field>
       <field>
         <name>PEJABAT</name>
+        <rename/>
       </field>
       <field>
         <name>pejabat_jkr</name>
+        <rename/>
       </field>
       <field>
         <name>sk_pejabat_jkr</name>
+        <rename/>
       </field>
       <field>
         <name>sk_pejabat_atas_jkr</name>
+        <rename/>
       </field>
       <field>
         <name>HIERARCHY</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_CAWANGAN_PENGURUS_PR</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_TARIKHDAFTAR_PROJEK</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_NAMA_PENGURUS_PROGRA</name>
+        <rename/>
       </field>
       <field>
         <name>PENOLONG_PENGURUS_PROGRAM</name>
+        <rename/>
       </field>
       <field>
         <name>PEJABAT_HOPT</name>
+        <rename/>
       </field>
       <field>
         <name>NAMA_HOPT</name>
+        <rename/>
       </field>
       <field>
         <name>project_number</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_N0_RUJUKAN_PROJ</name>
+        <rename/>
       </field>
       <field>
         <name>RUJUKAN_NSC</name>
+        <rename/>
       </field>
       <field>
         <name>KOS_KONTRAK_SEMASA</name>
+        <rename/>
       </field>
       <field>
         <name>J10_CH_CATATAN_MEEKANIKAL</name>
+        <rename/>
       </field>
       <field>
         <name>J10_CH_CATATAN_ELEKTRIK</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_SKOP_PROJEK</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_TARIKH_JANGKA_MULA_P</name>
+        <rename/>
       </field>
       <field>
         <name>J10_PL_TARIKH_JANGKA_SIAP_P</name>
+        <rename/>
       </field>
       <field>
         <name>ELEKTRIKAL</name>
+        <rename/>
       </field>
       <field>
         <name>MEKANIKAL</name>
+        <rename/>
       </field>
       <field>
         <name>PHASE</name>
+        <rename/>
       </field>
       <field>
         <name>rmk</name>
+        <rename/>
       </field>
       <field>
         <name>KEMENTERIAN_AGENCY</name>
+        <rename/>
       </field>
       <field>
         <name>kementerian</name>
+        <rename/>
       </field>
       <field>
         <name>JENIS_PROJEK</name>
+        <rename/>
       </field>
       <field>
         <name>TARIKH_SERAHAN_PROJEK_KEPADA_PELANGGAN</name>
+        <rename/>
       </field>
       <field>
         <name>UUU_CREATION_DATE</name>
+        <rename/>
       </field>
       <field>
         <name>UUU_RECORD_LAST_UPDATE_DATE</name>
+        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
+      <meta>
+        <name>J10_PL_TARIKHDAFTAR_PROJEK</name>
+        <rename>J10_PL_TARIKHDAFTAR_PROJEK</rename>
+        <type>None</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>J10_PL_TARIKH_JANGKA_MULA_P</name>
+        <rename>J10_PL_TARIKH_JANGKA_MULA_P</rename>
+        <type>None</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>J10_PL_TARIKH_JANGKA_SIAP_P</name>
+        <rename>J10_PL_TARIKH_JANGKA_SIAP_P</rename>
+        <type>None</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>TARIKH_SERAHAN_PROJEK_KEPADA_PELANGGAN</name>
+        <rename>TARIKH_SERAHAN_PROJEK_KEPADA_PELANGGAN</rename>
+        <type>None</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
     </fields>
     <attributes/>
     <cluster_schema/>
@@ -8711,7 +8815,7 @@ rpdecide='NOT AVAILABLE'
     </remotesteps>
     <GUI>
       <xloc>1440</xloc>
-      <yloc>416</yloc>
+      <yloc>400</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
