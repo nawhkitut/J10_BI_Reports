@@ -35,16 +35,6 @@
         <description/>
       </parameter>
       <parameter>
-        <name>kaedah_perlaksanaan_param</name>
-        <default_value/>
-        <description/>
-      </parameter>
-      <parameter>
-        <name>kaedah_perolehan_filter</name>
-        <default_value>Semua</default_value>
-        <description/>
-      </parameter>
-      <parameter>
         <name>kategori_perbelanjaan_filter</name>
         <default_value>Semua</default_value>
         <description/>
@@ -2700,13 +2690,6 @@ left join unifier_user_view on b.J10_PL_Nama_Pengurus_Progra=userid</sql>
           <condition>
             <negated>N</negated>
             <operator>AND</operator>
-            <leftvalue>kaedah_perolehan</leftvalue>
-            <function>LIKE</function>
-            <rightvalue>kaedah_perolehan_v</rightvalue>
-          </condition>
-          <condition>
-            <negated>N</negated>
-            <operator>AND</operator>
             <leftvalue>jenis_projek</leftvalue>
             <function>LIKE</function>
             <rightvalue>jenis_projek_v</rightvalue>
@@ -2798,18 +2781,6 @@ left join unifier_user_view on b.J10_PL_Nama_Pengurus_Progra=userid</sql>
       <field>
         <name>perbelanjaan_v</name>
         <variable>${kategori_perbelanjaan_filter}</variable>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>kaedah_perolehan_v</name>
-        <variable>${kaedah_perolehan_filter}</variable>
         <type>String</type>
         <format/>
         <currency/>
@@ -3115,20 +3086,20 @@ left join unifier_user_view on b.J10_PL_Nama_Pengurus_Progra=userid</sql>
     </group>
     <fields>
       <field>
-        <aggregate>telahcpcbelumcmgd</aggregate>
-        <subject>telahcpcbelumcmgd</subject>
+        <aggregate>telah_cpc_belum_cmgd</aggregate>
+        <subject>telah_cpc_belum_cmgd</subject>
         <type>SUM</type>
         <valuefield/>
       </field>
       <field>
-        <aggregate>belumsah</aggregate>
-        <subject>belumsah</subject>
+        <aggregate>belum_sah</aggregate>
+        <subject>belum_sah</subject>
         <type>SUM</type>
         <valuefield/>
       </field>
       <field>
-        <aggregate>telahsah</aggregate>
-        <subject>telahsah</subject>
+        <aggregate>telah_sah</aggregate>
+        <subject>telah_sah</subject>
         <type>SUM</type>
         <valuefield/>
       </field>
@@ -3361,12 +3332,6 @@ FROM "public".dim_j10_pl_kategori_ibs
       </field>
       <field>
         <name>rmk</name>
-        <value>NA</value>
-        <mask/>
-        <set_empty_string>N</set_empty_string>
-      </field>
-      <field>
-        <name>kaedah_perolehan</name>
         <value>NA</value>
         <mask/>
         <set_empty_string>N</set_empty_string>
@@ -5372,10 +5337,6 @@ FROM dim_j10_pl_lokasi_tapak
         <rename/>
       </field>
       <field>
-        <name>kaedah_perolehan_v</name>
-        <rename/>
-      </field>
-      <field>
         <name>pejabat_v</name>
         <rename/>
       </field>
@@ -5404,11 +5365,7 @@ FROM dim_j10_pl_lokasi_tapak
         <rename/>
       </field>
       <field>
-        <name>kaedah_perlaksanaan_param</name>
-        <rename/>
-      </field>
-      <field>
-        <name>project_phase_param</name>
+        <name>build_param</name>
         <rename/>
       </field>
       <field>
@@ -5416,11 +5373,15 @@ FROM dim_j10_pl_lokasi_tapak
         <rename/>
       </field>
       <field>
-        <name>kaedah_perlaksanaan_new</name>
+        <name>telah_cpc_belum_cmgd_new</name>
         <rename/>
       </field>
       <field>
-        <name>project_phase_new</name>
+        <name>belum_sah_new</name>
+        <rename/>
+      </field>
+      <field>
+        <name>telah_sah_new</name>
         <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
@@ -5776,10 +5737,6 @@ FROM dim_j10_pl_lokasi_tapak
         <rename/>
       </field>
       <field>
-        <name>kaedah_perolehan_v</name>
-        <rename/>
-      </field>
-      <field>
         <name>pejabat_v</name>
         <rename/>
       </field>
@@ -5808,11 +5765,7 @@ FROM dim_j10_pl_lokasi_tapak
         <rename/>
       </field>
       <field>
-        <name>kaedah_perlaksanaan_param</name>
-        <rename/>
-      </field>
-      <field>
-        <name>project_phase_param</name>
+        <name>build_param</name>
         <rename/>
       </field>
       <field>
@@ -5820,11 +5773,15 @@ FROM dim_j10_pl_lokasi_tapak
         <rename/>
       </field>
       <field>
-        <name>kaedah_perlaksanaan_new</name>
+        <name>telah_cpc_belum_cmgd_new</name>
         <rename/>
       </field>
       <field>
-        <name>project_phase_new</name>
+        <name>belum_sah_new</name>
+        <rename/>
+      </field>
+      <field>
+        <name>telah_sah_new</name>
         <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
@@ -5896,18 +5853,6 @@ FROM dim_j10_pl_lokasi_tapak
         <rename/>
       </field>
       <field>
-        <name>telahcpcbelumcmgd</name>
-        <rename/>
-      </field>
-      <field>
-        <name>belumsah</name>
-        <rename/>
-      </field>
-      <field>
-        <name>telahsah</name>
-        <rename/>
-      </field>
-      <field>
         <name>plevel</name>
         <rename/>
       </field>
@@ -5921,6 +5866,18 @@ FROM dim_j10_pl_lokasi_tapak
       </field>
       <field>
         <name>pejkemvalue</name>
+        <rename/>
+      </field>
+      <field>
+        <name>telah_cpc_belum_cmgd</name>
+        <rename/>
+      </field>
+      <field>
+        <name>belum_sah</name>
+        <rename/>
+      </field>
+      <field>
+        <name>telah_sah</name>
         <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
@@ -6241,10 +6198,6 @@ if (perbelanjaan_v == 'Semua')
 {
 	perbelanjaan_v= '%%';
 }
-if (kaedah_perolehan_v == 'Semua')
-{
-	kaedah_perolehan_v= '%%';
-}
 
 if (acat_v == 'Semua')
 {
@@ -6309,14 +6262,6 @@ if (acat_v == 'Semua')
       <field>
         <name>perbelanjaan_v</name>
         <rename>perbelanjaan_v</rename>
-        <type>String</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <replace>Y</replace>
-      </field>
-      <field>
-        <name>kaedah_perolehan_v</name>
-        <rename>kaedah_perolehan_v</rename>
         <type>String</type>
         <length>-1</length>
         <precision>-1</precision>
@@ -9435,15 +9380,15 @@ rpdecide='NOT AVAILABLE'
         <rename/>
       </field>
       <field>
-        <name>telahcpcbelumcmgd</name>
+        <name>telah_cpc_belum_cmgd</name>
         <rename/>
       </field>
       <field>
-        <name>belumsah</name>
+        <name>belum_sah</name>
         <rename/>
       </field>
       <field>
-        <name>telahsah</name>
+        <name>telah_sah</name>
         <rename/>
       </field>
       <field>
@@ -9531,15 +9476,15 @@ rpdecide='NOT AVAILABLE'
         <rename/>
       </field>
       <field>
-        <name>telahcpcbelumcmgd</name>
+        <name>telah_cpc_belum_cmgd</name>
         <rename/>
       </field>
       <field>
-        <name>belumsah</name>
+        <name>belum_sah</name>
         <rename/>
       </field>
       <field>
-        <name>telahsah</name>
+        <name>telah_sah</name>
         <rename/>
       </field>
       <field>
@@ -9897,7 +9842,7 @@ rpdecide='NOT AVAILABLE'
         <type>Date</type>
         <length>-2</length>
         <precision>-2</precision>
-        <conversion_mask/>
+        <conversion_mask>dd-MM-yyyy</conversion_mask>
         <date_format_lenient>false</date_format_lenient>
         <date_format_locale/>
         <date_format_timezone/>
@@ -9914,7 +9859,7 @@ rpdecide='NOT AVAILABLE'
         <type>Date</type>
         <length>-2</length>
         <precision>-2</precision>
-        <conversion_mask/>
+        <conversion_mask>dd-MM-yyyy</conversion_mask>
         <date_format_lenient>false</date_format_lenient>
         <date_format_locale/>
         <date_format_timezone/>
@@ -9931,7 +9876,7 @@ rpdecide='NOT AVAILABLE'
         <type>Date</type>
         <length>-2</length>
         <precision>-2</precision>
-        <conversion_mask/>
+        <conversion_mask>dd-MM-yyyy</conversion_mask>
         <date_format_lenient>false</date_format_lenient>
         <date_format_locale/>
         <date_format_timezone/>
@@ -9948,7 +9893,7 @@ rpdecide='NOT AVAILABLE'
         <type>Date</type>
         <length>-2</length>
         <precision>-2</precision>
-        <conversion_mask/>
+        <conversion_mask>dd-MM-yyyy</conversion_mask>
         <date_format_lenient>false</date_format_lenient>
         <date_format_locale/>
         <date_format_timezone/>
@@ -9965,7 +9910,7 @@ rpdecide='NOT AVAILABLE'
         <type>Date</type>
         <length>-2</length>
         <precision>-2</precision>
-        <conversion_mask/>
+        <conversion_mask>dd-MM-yyyy</conversion_mask>
         <date_format_lenient>false</date_format_lenient>
         <date_format_locale/>
         <date_format_timezone/>
@@ -9982,7 +9927,7 @@ rpdecide='NOT AVAILABLE'
         <type>Date</type>
         <length>-2</length>
         <precision>-2</precision>
-        <conversion_mask/>
+        <conversion_mask>dd-MM-yyyy</conversion_mask>
         <date_format_lenient>false</date_format_lenient>
         <date_format_locale/>
         <date_format_timezone/>
@@ -9999,7 +9944,7 @@ rpdecide='NOT AVAILABLE'
         <type>Date</type>
         <length>-2</length>
         <precision>-2</precision>
-        <conversion_mask/>
+        <conversion_mask>dd-MM-yyyy</conversion_mask>
         <date_format_lenient>false</date_format_lenient>
         <date_format_locale/>
         <date_format_timezone/>
@@ -10016,7 +9961,7 @@ rpdecide='NOT AVAILABLE'
         <type>Date</type>
         <length>-2</length>
         <precision>-2</precision>
-        <conversion_mask/>
+        <conversion_mask>dd-MM-yyyy</conversion_mask>
         <date_format_lenient>false</date_format_lenient>
         <date_format_locale/>
         <date_format_timezone/>
@@ -10033,7 +9978,7 @@ rpdecide='NOT AVAILABLE'
         <type>Date</type>
         <length>-2</length>
         <precision>-2</precision>
-        <conversion_mask/>
+        <conversion_mask>dd-MM-yyyy</conversion_mask>
         <date_format_lenient>false</date_format_lenient>
         <date_format_locale/>
         <date_format_timezone/>
@@ -10050,7 +9995,7 @@ rpdecide='NOT AVAILABLE'
         <type>Date</type>
         <length>-2</length>
         <precision>-2</precision>
-        <conversion_mask/>
+        <conversion_mask>dd-MM-yyyy</conversion_mask>
         <date_format_lenient>false</date_format_lenient>
         <date_format_locale/>
         <date_format_timezone/>
@@ -12452,6 +12397,84 @@ LEFT JOIN unifier_uxssp_view c ON b.project_id=c.project_id</sql>
     </GUI>
   </step>
   <step>
+    <name>asbuild_detection</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>
+      <jsScript>
+        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>//Script here
+
+var telahcpcbelumcmgd=0, belumsah=0, telahsah=0;
+
+
+if (TELAH_CPC_BELUM_CMGD!=0)
+	telahcpcbelumcmgd= TELAH_CPC_BELUM_CMGD;
+else
+	telahcpcbelumcmgd= 0;
+
+if (BELUM_SAH!=0)
+	belumsah= BELUM_SAH;
+else
+	belumsah= 0;
+
+if (TELAH_SAH!=0)
+	telahsah= TELAH_SAH;
+else
+	telahsah= 0;</jsScript_script>
+      </jsScript>
+    </jsScripts>
+    <fields>
+      <field>
+        <name>belumsah</name>
+        <rename>belumsah</rename>
+        <type>Number</type>
+        <length>16</length>
+        <precision>2</precision>
+        <replace>N</replace>
+      </field>
+      <field>
+        <name>telahcpcbelumcmgd</name>
+        <rename>telahcpcbelumcmgd</rename>
+        <type>Number</type>
+        <length>16</length>
+        <precision>2</precision>
+        <replace>N</replace>
+      </field>
+      <field>
+        <name>telahsah</name>
+        <rename>telahsah</rename>
+        <type>Number</type>
+        <length>16</length>
+        <precision>2</precision>
+        <replace>N</replace>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1392</xloc>
+      <yloc>688</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
     <name>daerah 2</name>
     <type>TableInput</type>
     <description/>
@@ -13316,10 +13339,6 @@ FROM "public".dim_pejabat where organization='LOKASITAPAK'
       </field>
       <field>
         <name>perbelanjaan_v</name>
-        <rename/>
-      </field>
-      <field>
-        <name>kaedah_perolehan_v</name>
         <rename/>
       </field>
       <field>
@@ -14332,84 +14351,6 @@ lokasi_tempat = null;
       <draw>Y</draw>
     </GUI>
   </step>
-  <step>
-    <name>asbuild_detection</name>
-    <type>ScriptValueMod</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <compatible>N</compatible>
-    <optimizationLevel>9</optimizationLevel>
-    <jsScripts>
-      <jsScript>
-        <jsScript_type>0</jsScript_type>
-        <jsScript_name>Script 1</jsScript_name>
-        <jsScript_script>//Script here
-
-var telahcpcbelumcmgd=0, belumsah=0, telahsah=0;
-
-
-if (TELAH_CPC_BELUM_CMGD!=0)
-	telahcpcbelumcmgd= TELAH_CPC_BELUM_CMGD;
-else
-	telahcpcbelumcmgd= 0;
-
-if (BELUM_SAH!=0)
-	belumsah= BELUM_SAH;
-else
-	belumsah= 0;
-
-if (TELAH_SAH!=0)
-	telahsah= TELAH_SAH;
-else
-	telahsah= 0;</jsScript_script>
-      </jsScript>
-    </jsScripts>
-    <fields>
-      <field>
-        <name>belumsah</name>
-        <rename>belumsah</rename>
-        <type>Number</type>
-        <length>16</length>
-        <precision>2</precision>
-        <replace>N</replace>
-      </field>
-      <field>
-        <name>telahcpcbelumcmgd</name>
-        <rename>telahcpcbelumcmgd</rename>
-        <type>Number</type>
-        <length>16</length>
-        <precision>2</precision>
-        <replace>N</replace>
-      </field>
-      <field>
-        <name>telahsah</name>
-        <rename>telahsah</rename>
-        <type>Number</type>
-        <length>16</length>
-        <precision>2</precision>
-        <replace>N</replace>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>1392</xloc>
-      <yloc>688</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
   <step_error_handling>
   </step_error_handling>
   <slave-step-copy-partition-distribution>
@@ -14418,10 +14359,6 @@ else
   <attributes>
     <group>
       <name>explorerState</name>
-      <attribute>
-        <key>asbuild_detection</key>
-        <value/>
-      </attribute>
     </group>
   </attributes>
 </transformation>

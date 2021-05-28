@@ -30,16 +30,6 @@
         <description/>
       </parameter>
       <parameter>
-        <name>kaedah_perlaksanaan_param</name>
-        <default_value/>
-        <description/>
-      </parameter>
-      <parameter>
-        <name>kaedah_perolehan_filter</name>
-        <default_value>Semua</default_value>
-        <description/>
-      </parameter>
-      <parameter>
         <name>kategori_perbelanjaan_filter</name>
         <default_value>Semua</default_value>
         <description/>
@@ -2676,13 +2666,6 @@ left join unifier_user_view on b.J10_PL_Nama_Pengurus_Progra=userid</sql>
           <condition>
             <negated>N</negated>
             <operator>AND</operator>
-            <leftvalue>kaedah_perolehan</leftvalue>
-            <function>LIKE</function>
-            <rightvalue>kaedah_perolehan_v</rightvalue>
-          </condition>
-          <condition>
-            <negated>N</negated>
-            <operator>AND</operator>
             <leftvalue>jenis_projek</leftvalue>
             <function>LIKE</function>
             <rightvalue>jenis_projek_v</rightvalue>
@@ -2706,8 +2689,8 @@ left join unifier_user_view on b.J10_PL_Nama_Pengurus_Progra=userid</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>897</xloc>
-      <yloc>963</yloc>
+      <xloc>896</xloc>
+      <yloc>960</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2774,18 +2757,6 @@ left join unifier_user_view on b.J10_PL_Nama_Pengurus_Progra=userid</sql>
       <field>
         <name>perbelanjaan_v</name>
         <variable>${kategori_perbelanjaan_filter}</variable>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>kaedah_perolehan_v</name>
-        <variable>${kaedah_perolehan_filter}</variable>
         <type>String</type>
         <format/>
         <currency/>
@@ -3060,8 +3031,8 @@ left join unifier_user_view on b.J10_PL_Nama_Pengurus_Progra=userid</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>993</xloc>
-      <yloc>1059</yloc>
+      <xloc>992</xloc>
+      <yloc>1056</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3091,8 +3062,8 @@ left join unifier_user_view on b.J10_PL_Nama_Pengurus_Progra=userid</sql>
     </group>
     <fields>
       <field>
-        <aggregate>jumlah</aggregate>
-        <subject>jumlah</subject>
+        <aggregate>sah_cpc</aggregate>
+        <subject>sah_cpc</subject>
         <type>SUM</type>
         <valuefield/>
       </field>
@@ -3325,12 +3296,6 @@ FROM "public".dim_j10_pl_kategori_ibs
       </field>
       <field>
         <name>rmk</name>
-        <value>NA</value>
-        <mask/>
-        <set_empty_string>N</set_empty_string>
-      </field>
-      <field>
-        <name>kaedah_perolehan</name>
         <value>NA</value>
         <mask/>
         <set_empty_string>N</set_empty_string>
@@ -5212,11 +5177,11 @@ FROM dim_j10_pl_lokasi_tapak
         <rename/>
       </field>
       <field>
-        <name>TKH_SAH_BRIF_SKOP</name>
+        <name>tkh_sah_brif_skop</name>
         <rename/>
       </field>
       <field>
-        <name>TKH_TAMAT_KECACATAN</name>
+        <name>tkh_tamat_kecacatan</name>
         <rename/>
       </field>
       <field>
@@ -5316,10 +5281,6 @@ FROM dim_j10_pl_lokasi_tapak
         <rename/>
       </field>
       <field>
-        <name>kaedah_perolehan_v</name>
-        <rename/>
-      </field>
-      <field>
         <name>pejabat_v</name>
         <rename/>
       </field>
@@ -5348,11 +5309,7 @@ FROM dim_j10_pl_lokasi_tapak
         <rename/>
       </field>
       <field>
-        <name>kaedah_perlaksanaan_param</name>
-        <rename/>
-      </field>
-      <field>
-        <name>project_phase_param</name>
+        <name>kpi_param</name>
         <rename/>
       </field>
       <field>
@@ -5360,11 +5317,7 @@ FROM dim_j10_pl_lokasi_tapak
         <rename/>
       </field>
       <field>
-        <name>kaedah_perlaksanaan_new</name>
-        <rename/>
-      </field>
-      <field>
-        <name>project_phase_new</name>
+        <name>sah_cpc_new</name>
         <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
@@ -5596,11 +5549,11 @@ FROM dim_j10_pl_lokasi_tapak
         <rename/>
       </field>
       <field>
-        <name>TKH_SAH_BRIF_SKOP</name>
+        <name>tkh_sah_brif_skop</name>
         <rename/>
       </field>
       <field>
-        <name>TKH_TAMAT_KECACATAN</name>
+        <name>tkh_tamat_kecacatan</name>
         <rename/>
       </field>
       <field>
@@ -5700,10 +5653,6 @@ FROM dim_j10_pl_lokasi_tapak
         <rename/>
       </field>
       <field>
-        <name>kaedah_perolehan_v</name>
-        <rename/>
-      </field>
-      <field>
         <name>pejabat_v</name>
         <rename/>
       </field>
@@ -5732,11 +5681,7 @@ FROM dim_j10_pl_lokasi_tapak
         <rename/>
       </field>
       <field>
-        <name>kaedah_perlaksanaan_param</name>
-        <rename/>
-      </field>
-      <field>
-        <name>project_phase_param</name>
+        <name>kpi_param</name>
         <rename/>
       </field>
       <field>
@@ -5744,11 +5689,7 @@ FROM dim_j10_pl_lokasi_tapak
         <rename/>
       </field>
       <field>
-        <name>kaedah_perlaksanaan_new</name>
-        <rename/>
-      </field>
-      <field>
-        <name>project_phase_new</name>
+        <name>sah_cpc_new</name>
         <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
@@ -5820,7 +5761,7 @@ FROM dim_j10_pl_lokasi_tapak
         <rename/>
       </field>
       <field>
-        <name>jumlah</name>
+        <name>sah_cpc</name>
         <rename/>
       </field>
       <field>
@@ -6157,10 +6098,6 @@ if (perbelanjaan_v == 'Semua')
 {
 	perbelanjaan_v= '%%';
 }
-if (kaedah_perolehan_v == 'Semua')
-{
-	kaedah_perolehan_v= '%%';
-}
 
 if (acat_v == 'Semua')
 {
@@ -6225,14 +6162,6 @@ if (acat_v == 'Semua')
       <field>
         <name>perbelanjaan_v</name>
         <rename>perbelanjaan_v</rename>
-        <type>String</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <replace>Y</replace>
-      </field>
-      <field>
-        <name>kaedah_perolehan_v</name>
-        <rename>kaedah_perolehan_v</rename>
         <type>String</type>
         <length>-1</length>
         <precision>-1</precision>
@@ -6344,11 +6273,6 @@ else
         <jsScript_type>0</jsScript_type>
         <jsScript_name>Script 1</jsScript_name>
         <jsScript_script>//Script here
-
-
-
-
-
 var pejkemvalue;
 
 if (PEJ_KEM == 'KEMENTERIAN'){
@@ -6405,11 +6329,6 @@ pejkemvalue='PEJABAT'
         <jsScript_type>0</jsScript_type>
         <jsScript_name>Script 1</jsScript_name>
         <jsScript_script>//Script here
-
-
-
-
-
 var pejkemvalue;
 
 if (PEJ_KEM == 'KEMENTERIAN'){
@@ -9333,7 +9252,7 @@ rpdecide='NOT AVAILABLE'
         <rename/>
       </field>
       <field>
-        <name>jumlah</name>
+        <name>sah_cpc</name>
         <rename/>
       </field>
       <field>
@@ -9421,7 +9340,7 @@ rpdecide='NOT AVAILABLE'
         <rename/>
       </field>
       <field>
-        <name>jumlah</name>
+        <name>sah_cpc</name>
         <rename/>
       </field>
       <field>
@@ -9759,7 +9678,7 @@ rpdecide='NOT AVAILABLE'
         <type>Date</type>
         <length>-2</length>
         <precision>-2</precision>
-        <conversion_mask/>
+        <conversion_mask>dd-MM-yyyy</conversion_mask>
         <date_format_lenient>false</date_format_lenient>
         <date_format_locale/>
         <date_format_timezone/>
@@ -9776,7 +9695,7 @@ rpdecide='NOT AVAILABLE'
         <type>Date</type>
         <length>-2</length>
         <precision>-2</precision>
-        <conversion_mask/>
+        <conversion_mask>dd-MM-yyyy</conversion_mask>
         <date_format_lenient>false</date_format_lenient>
         <date_format_locale/>
         <date_format_timezone/>
@@ -9793,7 +9712,7 @@ rpdecide='NOT AVAILABLE'
         <type>Date</type>
         <length>-2</length>
         <precision>-2</precision>
-        <conversion_mask/>
+        <conversion_mask>dd-MM-yyyy</conversion_mask>
         <date_format_lenient>false</date_format_lenient>
         <date_format_locale/>
         <date_format_timezone/>
@@ -9810,7 +9729,7 @@ rpdecide='NOT AVAILABLE'
         <type>Date</type>
         <length>-2</length>
         <precision>-2</precision>
-        <conversion_mask/>
+        <conversion_mask>dd-MM-yyyy</conversion_mask>
         <date_format_lenient>false</date_format_lenient>
         <date_format_locale/>
         <date_format_timezone/>
@@ -9827,7 +9746,7 @@ rpdecide='NOT AVAILABLE'
         <type>Date</type>
         <length>-2</length>
         <precision>-2</precision>
-        <conversion_mask/>
+        <conversion_mask>dd-MM-yyyy</conversion_mask>
         <date_format_lenient>false</date_format_lenient>
         <date_format_locale/>
         <date_format_timezone/>
@@ -9844,7 +9763,7 @@ rpdecide='NOT AVAILABLE'
         <type>Date</type>
         <length>-2</length>
         <precision>-2</precision>
-        <conversion_mask/>
+        <conversion_mask>dd-MM-yyyy</conversion_mask>
         <date_format_lenient>false</date_format_lenient>
         <date_format_locale/>
         <date_format_timezone/>
@@ -9861,7 +9780,7 @@ rpdecide='NOT AVAILABLE'
         <type>Date</type>
         <length>-2</length>
         <precision>-2</precision>
-        <conversion_mask/>
+        <conversion_mask>dd-MM-yyyy</conversion_mask>
         <date_format_lenient>false</date_format_lenient>
         <date_format_locale/>
         <date_format_timezone/>
@@ -9878,7 +9797,7 @@ rpdecide='NOT AVAILABLE'
         <type>Date</type>
         <length>-2</length>
         <precision>-2</precision>
-        <conversion_mask/>
+        <conversion_mask>dd-MM-yyyy</conversion_mask>
         <date_format_lenient>false</date_format_lenient>
         <date_format_locale/>
         <date_format_timezone/>
@@ -9895,7 +9814,7 @@ rpdecide='NOT AVAILABLE'
         <type>Date</type>
         <length>-2</length>
         <precision>-2</precision>
-        <conversion_mask/>
+        <conversion_mask>dd-MM-yyyy</conversion_mask>
         <date_format_lenient>false</date_format_lenient>
         <date_format_locale/>
         <date_format_timezone/>
@@ -9912,7 +9831,41 @@ rpdecide='NOT AVAILABLE'
         <type>Date</type>
         <length>-2</length>
         <precision>-2</precision>
-        <conversion_mask/>
+        <conversion_mask>dd-MM-yyyy</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>TKH_SAH_BRIF_SKOP</name>
+        <rename>tkh_sah_brif_skop</rename>
+        <type>Date</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>dd-MM-yyyy</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
+      <meta>
+        <name>TKH_TAMAT_KECACATAN</name>
+        <rename>tkh_tamat_kecacatan</rename>
+        <type>Date</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask>dd-MM-yyyy</conversion_mask>
         <date_format_lenient>false</date_format_lenient>
         <date_format_locale/>
         <date_format_timezone/>
@@ -12100,6 +12053,71 @@ LEFT JOIN unifier_uxpkd t ON a.project_id=t.project_id</sql>
     </GUI>
   </step>
   <step>
+    <name>cpc_detection</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>
+      <jsScript>
+        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>//Script here
+
+var sah_cpc=0;
+var jumlah=0;
+
+if (SAH_CPC_BELUM_TUTUP_AKAUN!=0)
+	sah_cpc= SAH_CPC_BELUM_TUTUP_AKAUN;
+else
+	sah_cpc= 0;
+
+
+if (SAH_CPC_BELUM_TUTUP_AKAUN!=0)
+	jumlah++;
+</jsScript_script>
+      </jsScript>
+    </jsScripts>
+    <fields>
+      <field>
+        <name>jumlah</name>
+        <rename>jumlah</rename>
+        <type>Number</type>
+        <length>16</length>
+        <precision>2</precision>
+        <replace>N</replace>
+      </field>
+      <field>
+        <name>sah_cpc</name>
+        <rename>sah_cpc</rename>
+        <type>Number</type>
+        <length>16</length>
+        <precision>2</precision>
+        <replace>N</replace>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>608</xloc>
+      <yloc>144</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
     <name>daerah 2</name>
     <type>TableInput</type>
     <description/>
@@ -12843,11 +12861,11 @@ FROM "public".dim_pejabat where organization='LOKASITAPAK'
         <rename/>
       </field>
       <field>
-        <name>TKH_SAH_BRIF_SKOP</name>
+        <name>tkh_sah_brif_skop</name>
         <rename/>
       </field>
       <field>
-        <name>TKH_TAMAT_KECACATAN</name>
+        <name>tkh_tamat_kecacatan</name>
         <rename/>
       </field>
       <field>
@@ -12947,10 +12965,6 @@ FROM "public".dim_pejabat where organization='LOKASITAPAK'
         <rename/>
       </field>
       <field>
-        <name>kaedah_perolehan_v</name>
-        <rename/>
-      </field>
-      <field>
         <name>pejabat_v</name>
         <rename/>
       </field>
@@ -12983,6 +12997,76 @@ FROM "public".dim_pejabat where organization='LOKASITAPAK'
     <GUI>
       <xloc>993</xloc>
       <yloc>963</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>lokasi tempat</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>
+      <jsScript>
+        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>//Script here
+
+var lokasi_tempat;
+
+
+if(LOKASI_TAPAK!=null &amp;&amp; DAERAH!=null)
+{
+
+lokasi_tempat = DAERAH+ ", " +LOKASI_TAPAK;
+}
+else 
+if(LOKASI_TAPAK==null)
+{
+
+lokasi_tempat = DAERAH;
+}
+else
+if(DAERAH==null)
+{
+lokasi_tempat = LOKASI_TAPAK;
+}
+else 
+if(LOKASI_TAPAK==null &amp;&amp; DAERAH==null)
+{
+
+lokasi_tempat = null;
+}</jsScript_script>
+      </jsScript>
+    </jsScripts>
+    <fields>
+      <field>
+        <name>lokasi_tempat</name>
+        <rename>lokasi_tempat</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>976</xloc>
+      <yloc>560</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -13890,141 +13974,6 @@ SELECT project_id, J10_CH_NAMA_WPP_UTA_TB AS nama_seliatapak, J10_CH_PJBT_WPP_UT
       <draw>Y</draw>
     </GUI>
   </step>
-  <step>
-    <name>cpc_detection</name>
-    <type>ScriptValueMod</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <compatible>N</compatible>
-    <optimizationLevel>9</optimizationLevel>
-    <jsScripts>
-      <jsScript>
-        <jsScript_type>0</jsScript_type>
-        <jsScript_name>Script 1</jsScript_name>
-        <jsScript_script>//Script here
-
-var sah_cpc=0;
-var jumlah=0;
-
-if (SAH_CPC_BELUM_TUTUP_AKAUN!=0)
-	sah_cpc= SAH_CPC_BELUM_TUTUP_AKAUN;
-else
-	sah_cpc= 0;
-
-
-if (SAH_CPC_BELUM_TUTUP_AKAUN!=0)
-	jumlah++;
-</jsScript_script>
-      </jsScript>
-    </jsScripts>
-    <fields>
-      <field>
-        <name>jumlah</name>
-        <rename>jumlah</rename>
-        <type>Number</type>
-        <length>16</length>
-        <precision>2</precision>
-        <replace>N</replace>
-      </field>
-      <field>
-        <name>sah_cpc</name>
-        <rename>sah_cpc</rename>
-        <type>Number</type>
-        <length>16</length>
-        <precision>2</precision>
-        <replace>N</replace>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>608</xloc>
-      <yloc>144</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>lokasi tempat</name>
-    <type>ScriptValueMod</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <compatible>N</compatible>
-    <optimizationLevel>9</optimizationLevel>
-    <jsScripts>
-      <jsScript>
-        <jsScript_type>0</jsScript_type>
-        <jsScript_name>Script 1</jsScript_name>
-        <jsScript_script>//Script here
-
-var lokasi_tempat;
-
-
-if(LOKASI_TAPAK!=null &amp;&amp; DAERAH!=null)
-{
-
-lokasi_tempat = DAERAH+ ", " +LOKASI_TAPAK;
-}
-else 
-if(LOKASI_TAPAK==null)
-{
-
-lokasi_tempat = DAERAH;
-}
-else
-if(DAERAH==null)
-{
-lokasi_tempat = LOKASI_TAPAK;
-}
-else 
-if(LOKASI_TAPAK==null &amp;&amp; DAERAH==null)
-{
-
-lokasi_tempat = null;
-}</jsScript_script>
-      </jsScript>
-    </jsScripts>
-    <fields>
-      <field>
-        <name>lokasi_tempat</name>
-        <rename>lokasi_tempat</rename>
-        <type>String</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <replace>N</replace>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>976</xloc>
-      <yloc>560</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
   <step_error_handling>
   </step_error_handling>
   <slave-step-copy-partition-distribution>
@@ -14033,10 +13982,6 @@ lokasi_tempat = null;
   <attributes>
     <group>
       <name>explorerState</name>
-      <attribute>
-        <key>cpc_detection</key>
-        <value/>
-      </attribute>
     </group>
   </attributes>
 </transformation>
