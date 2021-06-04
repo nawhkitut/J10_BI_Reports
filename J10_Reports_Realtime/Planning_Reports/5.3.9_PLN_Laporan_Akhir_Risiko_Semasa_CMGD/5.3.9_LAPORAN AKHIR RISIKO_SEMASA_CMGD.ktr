@@ -446,12 +446,12 @@
     <server>10.8.69.233</server>
     <type>ORACLE</type>
     <access>Native</access>
-    <database>j10</database>
+    <database>J10</database>
     <port>1521</port>
     <username>unifier</username>
     <password>Encrypted 2be98afc86aa7f2e4cb0ca079d89baac8</password>
     <servername/>
-    <data_tablespace>unifier</data_tablespace>
+    <data_tablespace/>
     <index_tablespace/>
     <attributes>
       <attribute>
@@ -3426,195 +3426,147 @@ from unifier_uxjplpcf
     <fields>
       <field>
         <name>J10_PL_NAMA_PROJEK</name>
-        <rename/>
       </field>
       <field>
         <name>PEJABAT_PROGRAM</name>
-        <rename/>
       </field>
       <field>
         <name>PROJECT_ID</name>
-        <rename/>
       </field>
       <field>
         <name>PEJABAT</name>
-        <rename/>
       </field>
       <field>
         <name>pejabat_jkr</name>
-        <rename/>
       </field>
       <field>
         <name>sk_pejabat_jkr</name>
-        <rename/>
       </field>
       <field>
         <name>sk_pejabat_atas_jkr</name>
-        <rename/>
       </field>
       <field>
         <name>HIERARCHY</name>
-        <rename/>
       </field>
       <field>
         <name>PROJECT_ID_1</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_LOKASI_TAPAK_NEGERI</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_KEMENTERIAN</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_DAERAH_PD</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_KEMENTERIAN_1</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_AGENSI</name>
-        <rename/>
       </field>
       <field>
         <name>project_number</name>
-        <rename/>
       </field>
       <field>
         <name>PROJECT_ID_2</name>
-        <rename/>
       </field>
       <field>
         <name>TAJUK_PROJEK</name>
-        <rename/>
       </field>
       <field>
         <name>KOD_SSPII</name>
-        <rename/>
       </field>
       <field>
         <name>KEMENTERIAN</name>
-        <rename/>
       </field>
       <field>
         <name>PENGURUS_RISIKO</name>
-        <rename/>
       </field>
       <field>
         <name>JABATAN</name>
-        <rename/>
       </field>
       <field>
         <name>TKH_SIAP_PROJEK</name>
-        <rename/>
       </field>
       <field>
         <name>NAMA_KONTRAKTOR</name>
-        <rename/>
       </field>
       <field>
         <name>ALAMAT_KONTRAKTOR</name>
-        <rename/>
       </field>
       <field>
         <name>J10_HO_SEMUA_PEN_CB</name>
-        <rename/>
       </field>
       <field>
         <name>BILANGAN_RISIKO</name>
-        <rename/>
       </field>
       <field>
         <name>RENDAH</name>
-        <rename/>
       </field>
       <field>
         <name>EKSTREM</name>
-        <rename/>
       </field>
       <field>
         <name>TINGGI</name>
-        <rename/>
       </field>
       <field>
         <name>SEDERHANA</name>
-        <rename/>
       </field>
       <field>
         <name>NO_RUJUKAN</name>
-        <rename/>
       </field>
       <field>
         <name>PERISTIWA_RISIKO</name>
-        <rename/>
       </field>
       <field>
         <name>KADAR_ASAL</name>
-        <rename/>
       </field>
       <field>
         <name>KADAR_AKHIR</name>
-        <rename/>
       </field>
       <field>
         <name>TINDAKAN</name>
-        <rename/>
       </field>
       <field>
         <name>CATATAN</name>
-        <rename/>
       </field>
       <field>
         <name>X_NO_RUJUKAN</name>
-        <rename/>
       </field>
       <field>
         <name>X_PERISTIWA_RISIKO</name>
-        <rename/>
       </field>
       <field>
         <name>X_KADAR_ASAL</name>
-        <rename/>
       </field>
       <field>
         <name>X_KADAR_AKHIR</name>
-        <rename/>
       </field>
       <field>
         <name>X_TINDAKAN</name>
-        <rename/>
       </field>
       <field>
         <name>X_CATATAN</name>
-        <rename/>
       </field>
       <field>
         <name>PENCAPAIAN</name>
-        <rename/>
       </field>
       <field>
         <name>KEMENTERIAN_1</name>
-        <rename/>
       </field>
       <field>
         <name>KEMENTERIAN_AGENCY</name>
-        <rename/>
       </field>
       <field>
         <name>LOKASI_TAPAK</name>
-        <rename/>
       </field>
       <field>
         <name>DAERAH</name>
-        <rename/>
       </field>
       <field>
         <name>lokasi_tempat</name>
-        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -6432,7 +6384,7 @@ WHERE c.J10_PL_STATUSTINDAKAN_PD = '4 Gl - Gagal'</sql>
         <type>Date</type>
         <length>-2</length>
         <precision>-2</precision>
-        <conversion_mask>dd-MM-yyyy</conversion_mask>
+        <conversion_mask>dd/MM/yyyy</conversion_mask>
         <date_format_lenient>false</date_format_lenient>
         <date_format_locale/>
         <date_format_timezone/>

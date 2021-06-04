@@ -6584,7 +6584,7 @@ else
     </remotesteps>
     <GUI>
       <xloc>640</xloc>
-      <yloc>1056</yloc>
+      <yloc>1072</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -10356,19 +10356,15 @@ rpdecide='NOT AVAILABLE'
       </field>
       <field>
         <name>pejabat_jkr</name>
-        <rename/>
       </field>
       <field>
         <name>sk_pejabat_jkr</name>
-        <rename/>
       </field>
       <field>
         <name>sk_pejabat_atas_jkr</name>
-        <rename/>
       </field>
       <field>
         <name>HIERARCHY</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_CAWANGAN_PENGURUS_PR</name>
@@ -10376,7 +10372,6 @@ rpdecide='NOT AVAILABLE'
       </field>
       <field>
         <name>J10_PL_TARIKHDAFTAR_PROJEK</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_NAMA_PENGURUS_PROGRA</name>
@@ -10384,27 +10379,21 @@ rpdecide='NOT AVAILABLE'
       </field>
       <field>
         <name>J10_PL_TARIKH_JANGKA_MULA_P</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_TARIKH_JANGKA_SIAP_P</name>
-        <rename/>
       </field>
       <field>
         <name>J10_PL_TARIKH_JANGKA_SERAHA</name>
-        <rename/>
       </field>
       <field>
         <name>PHASE</name>
-        <rename/>
       </field>
       <field>
         <name>project_number</name>
-        <rename/>
       </field>
       <field>
         <name>TAJUK_PROGRAM</name>
-        <rename/>
       </field>
       <field>
         <name>RUJUKAN</name>
@@ -10424,11 +10413,9 @@ rpdecide='NOT AVAILABLE'
       </field>
       <field>
         <name>TARIKH_PENDAFTARAN_PROJEK</name>
-        <rename/>
       </field>
       <field>
         <name>TARIKH_LANTIK_HOPT</name>
-        <rename/>
       </field>
       <field>
         <name>PWGAWAI_PENGUASA</name>
@@ -10448,19 +10435,15 @@ rpdecide='NOT AVAILABLE'
       </field>
       <field>
         <name>TRARIKH_MILIK_TAPAK</name>
-        <rename/>
       </field>
       <field>
         <name>TARIKH_SIAP_ASAL</name>
-        <rename/>
       </field>
       <field>
         <name>TARIKH_SIAP_SEMASA</name>
-        <rename/>
       </field>
       <field>
         <name>TARIKH_SIAP_SEBENAR</name>
-        <rename/>
       </field>
       <field>
         <name>KOS_KONTRAK_SEMASA</name>
@@ -10500,39 +10483,30 @@ rpdecide='NOT AVAILABLE'
       </field>
       <field>
         <name>TARIKH_JANGKA_SERAHAN_PROJEK_KEPADA_PELANGGAN</name>
-        <rename/>
       </field>
       <field>
         <name>TARIKH_SERAHAN_PROJEK_KEPADA_PELANGGAN</name>
-        <rename/>
       </field>
       <field>
         <name>TARIKH_TERIMA_LUKISAN_SIAP_BINA</name>
-        <rename/>
       </field>
       <field>
         <name>UNIFIER_URL</name>
-        <rename/>
       </field>
       <field>
         <name>TARIKH_TAMAT_TEMPOH_KECACATAN</name>
-        <rename/>
       </field>
       <field>
         <name>TERIMA_BRIF</name>
-        <rename/>
       </field>
       <field>
         <name>TERIMA_TAPAK</name>
-        <rename/>
       </field>
       <field>
         <name>TERIMA_KOS</name>
-        <rename/>
       </field>
       <field>
         <name>TERIMA_VA</name>
-        <rename/>
       </field>
       <field>
         <name>PENOLONG_PENGURUS_PROGRAM</name>
@@ -10552,11 +10526,9 @@ rpdecide='NOT AVAILABLE'
       </field>
       <field>
         <name>UUU_CREATION_DATE</name>
-        <rename/>
       </field>
       <field>
         <name>UUU_RECORD_LAST_UPDATE_DATE</name>
-        <rename/>
       </field>
       <field>
         <name>ACAT_NAME</name>
@@ -10588,7 +10560,6 @@ rpdecide='NOT AVAILABLE'
       </field>
       <field>
         <name>KEMENTERIAN_AGENCY</name>
-        <rename/>
       </field>
       <field>
         <name>LOKASI_TAPAK</name>
@@ -10604,7 +10575,6 @@ rpdecide='NOT AVAILABLE'
       </field>
       <field>
         <name>lokasi_tempat</name>
-        <rename/>
       </field>
       <field>
         <name>PMO_TERIMA</name>
@@ -10612,19 +10582,15 @@ rpdecide='NOT AVAILABLE'
       </field>
       <field>
         <name>jenis_rekabentuk</name>
-        <rename/>
       </field>
       <field>
         <name>TARIKH_JANGKA_IKLAN</name>
-        <rename/>
       </field>
       <field>
         <name>TARIKH_SST</name>
-        <rename/>
       </field>
       <field>
         <name>TARIKH_TDK</name>
-        <rename/>
       </field>
       <field>
         <name>PEGAWAI_PENYEDIA_SURAT</name>
@@ -10632,103 +10598,78 @@ rpdecide='NOT AVAILABLE'
       </field>
       <field>
         <name>penggunaan_bim</name>
-        <rename/>
       </field>
       <field>
         <name>kd_1</name>
-        <rename/>
       </field>
       <field>
         <name>kp_1</name>
-        <rename/>
       </field>
       <field>
         <name>kdk_1</name>
-        <rename/>
       </field>
       <field>
         <name>kpk_1</name>
-        <rename/>
       </field>
       <field>
         <name>j_1</name>
-        <rename/>
       </field>
       <field>
         <name>k_1</name>
-        <rename/>
       </field>
       <field>
         <name>kd_2</name>
-        <rename/>
       </field>
       <field>
         <name>kp_2</name>
-        <rename/>
       </field>
       <field>
         <name>kdk_2</name>
-        <rename/>
       </field>
       <field>
         <name>kpk_2</name>
-        <rename/>
       </field>
       <field>
         <name>j_2</name>
-        <rename/>
       </field>
       <field>
         <name>k_2</name>
-        <rename/>
       </field>
       <field>
         <name>kd_3</name>
-        <rename/>
       </field>
       <field>
         <name>kp_3</name>
-        <rename/>
       </field>
       <field>
         <name>kdk_3</name>
-        <rename/>
       </field>
       <field>
         <name>kpk_3</name>
-        <rename/>
       </field>
       <field>
         <name>j_3</name>
-        <rename/>
       </field>
       <field>
         <name>k_3</name>
-        <rename/>
       </field>
       <field>
         <name>kd_4</name>
-        <rename/>
       </field>
       <field>
         <name>kp_4</name>
-        <rename/>
       </field>
       <field>
         <name>kdk_4</name>
-        <rename/>
       </field>
       <field>
         <name>kpk_4</name>
-        <rename/>
       </field>
       <field>
         <name>j_4</name>
-        <rename/>
       </field>
       <field>
         <name>k_4</name>
-        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
       <meta>
