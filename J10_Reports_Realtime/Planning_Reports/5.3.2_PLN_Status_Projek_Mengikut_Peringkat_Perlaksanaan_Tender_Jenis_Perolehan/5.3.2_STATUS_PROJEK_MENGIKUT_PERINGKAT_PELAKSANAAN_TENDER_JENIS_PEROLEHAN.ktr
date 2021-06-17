@@ -26,7 +26,7 @@
       </parameter>
       <parameter>
         <name>id</name>
-        <default_value>1327</default_value>
+        <default_value/>
         <description/>
       </parameter>
       <parameter>
@@ -36,7 +36,7 @@
       </parameter>
       <parameter>
         <name>kaedah_perolehan_param</name>
-        <default_value>Tender Terbuka</default_value>
+        <default_value/>
         <description/>
       </parameter>
       <parameter>
@@ -51,7 +51,7 @@
       </parameter>
       <parameter>
         <name>project_phase_param</name>
-        <default_value>PLANNING</default_value>
+        <default_value/>
         <description/>
       </parameter>
       <parameter>
@@ -66,7 +66,7 @@
       </parameter>
       <parameter>
         <name>sk_pejabat_jkr_param</name>
-        <default_value>309423</default_value>
+        <default_value/>
         <description/>
       </parameter>
     </parameters>
@@ -949,6 +949,11 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
+      <from>Pejabat</from>
+      <to>USER 2 2 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
       <from>Lokasitapak 2</from>
       <to>lt_2</to>
       <enabled>Y</enabled>
@@ -966,11 +971,6 @@
     <hop>
       <from>lt_2</from>
       <to>lt_3</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Pejabat</from>
-      <to>USER 2 2 2</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
@@ -6390,8 +6390,8 @@ FROM "public".dim_pejabat where organization='LOKASITAPAK' order by sk_pejabat_j
       </output>
     </remotesteps>
     <GUI>
-      <xloc>160</xloc>
-      <yloc>992</yloc>
+      <xloc>240</xloc>
+      <yloc>752</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -7091,6 +7091,59 @@ FROM dim_J10_PL_Kategori_Perbelanjaan
     </GUI>
   </step>
   <step>
+    <name>PROJECTID</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>
+      <jsScript>
+        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>//Script here
+
+
+
+
+
+if (id== null){
+id=1;
+}
+</jsScript_script>
+      </jsScript>
+    </jsScripts>
+    <fields>
+      <field>
+        <name>id</name>
+        <rename>id</rename>
+        <type>Integer</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>Y</replace>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>912</xloc>
+      <yloc>1088</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
     <name>Pejabat</name>
     <type>TableInput</type>
     <description/>
@@ -7230,59 +7283,6 @@ from  unifier_uxjcpln_view a join unifier_upi b on a.project_id=b.project_id</sq
     <GUI>
       <xloc>176</xloc>
       <yloc>208</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>PROJECTID</name>
-    <type>ScriptValueMod</type>
-    <description/>
-    <distribute>N</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <compatible>N</compatible>
-    <optimizationLevel>9</optimizationLevel>
-    <jsScripts>
-      <jsScript>
-        <jsScript_type>0</jsScript_type>
-        <jsScript_name>Script 1</jsScript_name>
-        <jsScript_script>//Script here
-
-
-
-
-
-if (id== null){
-id=1;
-}
-</jsScript_script>
-      </jsScript>
-    </jsScripts>
-    <fields>
-      <field>
-        <name>id</name>
-        <rename>id</rename>
-        <type>Integer</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <replace>Y</replace>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>912</xloc>
-      <yloc>1088</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -9020,8 +9020,8 @@ from unifier_uxjplpcf
       </output>
     </remotesteps>
     <GUI>
-      <xloc>384</xloc>
-      <yloc>992</yloc>
+      <xloc>464</xloc>
+      <yloc>752</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -11125,8 +11125,8 @@ rpdecide='NOT AVAILABLE'
       </output>
     </remotesteps>
     <GUI>
-      <xloc>64</xloc>
-      <yloc>992</yloc>
+      <xloc>144</xloc>
+      <yloc>752</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -12938,8 +12938,8 @@ FROM "public".dim_pejabat where organization='LOKASITAPAK'
       </output>
     </remotesteps>
     <GUI>
-      <xloc>272</xloc>
-      <yloc>992</yloc>
+      <xloc>352</xloc>
+      <yloc>752</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -14419,8 +14419,8 @@ else {kos_jumlah_4=0;}
       </output>
     </remotesteps>
     <GUI>
-      <xloc>432</xloc>
-      <yloc>752</yloc>
+      <xloc>512</xloc>
+      <yloc>512</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -14670,8 +14670,8 @@ from unifier_upi a left join sys_data_option on J10_PL_Lokasi_Tapak_Negeri=OPTIO
       </output>
     </remotesteps>
     <GUI>
-      <xloc>64</xloc>
-      <yloc>784</yloc>
+      <xloc>144</xloc>
+      <yloc>544</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -14712,8 +14712,8 @@ from unifier_upi a left join sys_data_option on J10_PL_Lokasi_Tapak_Negeri=OPTIO
       </output>
     </remotesteps>
     <GUI>
-      <xloc>64</xloc>
-      <yloc>880</yloc>
+      <xloc>144</xloc>
+      <yloc>640</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -14754,8 +14754,8 @@ from unifier_upi a left join sys_data_option on J10_PL_Lokasi_Tapak_Negeri=OPTIO
       </output>
     </remotesteps>
     <GUI>
-      <xloc>160</xloc>
-      <yloc>880</yloc>
+      <xloc>240</xloc>
+      <yloc>640</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -14818,8 +14818,8 @@ from unifier_upi a left join sys_data_option on J10_PL_Lokasi_Tapak_Negeri=OPTIO
       </output>
     </remotesteps>
     <GUI>
-      <xloc>272</xloc>
-      <yloc>880</yloc>
+      <xloc>352</xloc>
+      <yloc>640</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -14872,8 +14872,8 @@ from unifier_upi a left join sys_data_option on J10_PL_Lokasi_Tapak_Negeri=OPTIO
       </output>
     </remotesteps>
     <GUI>
-      <xloc>384</xloc>
-      <yloc>880</yloc>
+      <xloc>464</xloc>
+      <yloc>640</yloc>
       <draw>Y</draw>
     </GUI>
   </step>

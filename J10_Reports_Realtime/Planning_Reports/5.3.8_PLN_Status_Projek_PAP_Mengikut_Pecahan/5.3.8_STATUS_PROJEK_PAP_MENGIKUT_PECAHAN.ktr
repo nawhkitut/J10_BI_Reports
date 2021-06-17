@@ -4916,7 +4916,7 @@ from unifier_upi a left join sys_data_option on J10_PL_Kementerian=OPTION_VALUE 
       </output>
     </remotesteps>
     <GUI>
-      <xloc>144</xloc>
+      <xloc>32</xloc>
       <yloc>528</yloc>
       <draw>Y</draw>
     </GUI>
@@ -5097,7 +5097,7 @@ FROM "public".dim_pejabat
       </output>
     </remotesteps>
     <GUI>
-      <xloc>208</xloc>
+      <xloc>176</xloc>
       <yloc>400</yloc>
       <draw>Y</draw>
     </GUI>
@@ -6461,8 +6461,8 @@ FROM "public".dim_pejabat where organization='LOKASITAPAK' order by sk_pejabat_j
       </output>
     </remotesteps>
     <GUI>
-      <xloc>304</xloc>
-      <yloc>864</yloc>
+      <xloc>400</xloc>
+      <yloc>816</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -8648,8 +8648,8 @@ from unifier_uxjplpcf
       </output>
     </remotesteps>
     <GUI>
-      <xloc>496</xloc>
-      <yloc>864</yloc>
+      <xloc>592</xloc>
+      <yloc>816</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -10461,8 +10461,8 @@ rpdecide='NOT AVAILABLE'
       </output>
     </remotesteps>
     <GUI>
-      <xloc>592</xloc>
-      <yloc>624</yloc>
+      <xloc>688</xloc>
+      <yloc>576</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -10735,7 +10735,7 @@ rpdecide='NOT AVAILABLE'
       </output>
     </remotesteps>
     <GUI>
-      <xloc>224</xloc>
+      <xloc>176</xloc>
       <yloc>528</yloc>
       <draw>Y</draw>
     </GUI>
@@ -10789,8 +10789,8 @@ rpdecide='NOT AVAILABLE'
       </output>
     </remotesteps>
     <GUI>
-      <xloc>496</xloc>
-      <yloc>752</yloc>
+      <xloc>592</xloc>
+      <yloc>704</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -10831,8 +10831,8 @@ rpdecide='NOT AVAILABLE'
       </output>
     </remotesteps>
     <GUI>
-      <xloc>304</xloc>
-      <yloc>752</yloc>
+      <xloc>400</xloc>
+      <yloc>704</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -10895,8 +10895,8 @@ rpdecide='NOT AVAILABLE'
       </output>
     </remotesteps>
     <GUI>
-      <xloc>384</xloc>
-      <yloc>752</yloc>
+      <xloc>480</xloc>
+      <yloc>704</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -10937,8 +10937,8 @@ rpdecide='NOT AVAILABLE'
       </output>
     </remotesteps>
     <GUI>
-      <xloc>192</xloc>
-      <yloc>752</yloc>
+      <xloc>288</xloc>
+      <yloc>704</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -11145,8 +11145,8 @@ rpdecide='NOT AVAILABLE'
       </output>
     </remotesteps>
     <GUI>
-      <xloc>192</xloc>
-      <yloc>864</yloc>
+      <xloc>288</xloc>
+      <yloc>816</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -14708,8 +14708,8 @@ FROM "public".dim_pejabat where organization='LOKASITAPAK'
       </output>
     </remotesteps>
     <GUI>
-      <xloc>384</xloc>
-      <yloc>864</yloc>
+      <xloc>480</xloc>
+      <yloc>816</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -15856,8 +15856,8 @@ from unifier_upi a left join sys_data_option on J10_PL_Lokasi_Tapak_Negeri=OPTIO
       </output>
     </remotesteps>
     <GUI>
-      <xloc>192</xloc>
-      <yloc>656</yloc>
+      <xloc>288</xloc>
+      <yloc>608</yloc>
       <draw>Y</draw>
     </GUI>
   </step>

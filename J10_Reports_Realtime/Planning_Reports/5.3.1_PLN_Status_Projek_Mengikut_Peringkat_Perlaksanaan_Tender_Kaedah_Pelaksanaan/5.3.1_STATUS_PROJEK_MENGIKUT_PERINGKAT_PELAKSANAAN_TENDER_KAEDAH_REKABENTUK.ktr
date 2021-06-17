@@ -2575,23 +2575,23 @@ COUNT ( CASE WHEN
           <condition>
             <negated>N</negated>
             <operator>AND</operator>
-            <leftvalue>PEJABAT</leftvalue>
+            <leftvalue>pejabat</leftvalue>
             <function>LIKE</function>
             <rightvalue>pejabat_v</rightvalue>
           </condition>
           <condition>
             <negated>N</negated>
             <operator>AND</operator>
-            <leftvalue>kaedah_perlaksanaan_new</leftvalue>
+            <leftvalue>kaedah_perlaksanaan_name</leftvalue>
             <function>LIKE</function>
-            <rightvalue>kaedah_perlaksanaan_name</rightvalue>
+            <rightvalue>kaedah_perlaksanaan_new</rightvalue>
           </condition>
           <condition>
             <negated>N</negated>
             <operator>AND</operator>
-            <leftvalue>project_phase_new</leftvalue>
+            <leftvalue>PHASE</leftvalue>
             <function>LIKE</function>
-            <rightvalue>PHASE</rightvalue>
+            <rightvalue>project_phase_new</rightvalue>
           </condition>
         </conditions>
       </condition>
@@ -6209,8 +6209,8 @@ FROM "public".dim_pejabat where organization='LOKASITAPAK' order by sk_pejabat_j
       </output>
     </remotesteps>
     <GUI>
-      <xloc>112</xloc>
-      <yloc>720</yloc>
+      <xloc>176</xloc>
+      <yloc>768</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -7048,7 +7048,7 @@ union
 select distinct project_id,a.J10_PL_NAMA_PROJEK,upper(b.J10_PL_Pejabat_Penolong_Pen) as Pejabat_Program,'Penolong Pengurus Program' as Pejabat
 from unifier_upi a left join unifier_us_xjprj b on a.project_id=b.PID
 union
-select distinct project_id,a.J10_PL_NAMA_PROJEK,upper(b.J10_PL_Pejabat_Penolong_Pen) as Pejabat_Program,'HOPT' as Pejabat 
+select distinct project_id,a.J10_PL_NAMA_PROJEK,upper(b.J10_PL_Bukan_Pejabat_HOPT) as Pejabat_Program,'HOPT' as Pejabat 
 from unifier_upi a left join unifier_us_xjprj b on a.project_id=b.PID
 
 --new update from pejabat wpp and remove pejabat user column
@@ -8906,8 +8906,8 @@ from unifier_uxjplpcf
       </output>
     </remotesteps>
     <GUI>
-      <xloc>304</xloc>
-      <yloc>720</yloc>
+      <xloc>368</xloc>
+      <yloc>768</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -10557,8 +10557,8 @@ rpdecide='NOT AVAILABLE'
       </output>
     </remotesteps>
     <GUI>
-      <xloc>304</xloc>
-      <yloc>480</yloc>
+      <xloc>368</xloc>
+      <yloc>528</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -10927,8 +10927,8 @@ rpdecide='NOT AVAILABLE'
       </output>
     </remotesteps>
     <GUI>
-      <xloc>304</xloc>
-      <yloc>608</yloc>
+      <xloc>368</xloc>
+      <yloc>656</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -10969,8 +10969,8 @@ rpdecide='NOT AVAILABLE'
       </output>
     </remotesteps>
     <GUI>
-      <xloc>112</xloc>
-      <yloc>608</yloc>
+      <xloc>176</xloc>
+      <yloc>656</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -11033,8 +11033,8 @@ rpdecide='NOT AVAILABLE'
       </output>
     </remotesteps>
     <GUI>
-      <xloc>192</xloc>
-      <yloc>608</yloc>
+      <xloc>256</xloc>
+      <yloc>656</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -11075,8 +11075,8 @@ rpdecide='NOT AVAILABLE'
       </output>
     </remotesteps>
     <GUI>
-      <xloc>16</xloc>
-      <yloc>608</yloc>
+      <xloc>64</xloc>
+      <yloc>656</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -11241,8 +11241,8 @@ rpdecide='NOT AVAILABLE'
       </output>
     </remotesteps>
     <GUI>
-      <xloc>16</xloc>
-      <yloc>720</yloc>
+      <xloc>64</xloc>
+      <yloc>768</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -13391,8 +13391,8 @@ FROM "public".dim_pejabat where organization='LOKASITAPAK'
       </output>
     </remotesteps>
     <GUI>
-      <xloc>192</xloc>
-      <yloc>720</yloc>
+      <xloc>256</xloc>
+      <yloc>768</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -14715,8 +14715,8 @@ from unifier_upi a left join sys_data_option on J10_PL_Lokasi_Tapak_Negeri=OPTIO
       </output>
     </remotesteps>
     <GUI>
-      <xloc>16</xloc>
-      <yloc>512</yloc>
+      <xloc>64</xloc>
+      <yloc>560</yloc>
       <draw>Y</draw>
     </GUI>
   </step>

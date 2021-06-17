@@ -3168,7 +3168,7 @@ FROM "public".dim_pejabat where organization='LOKASITAPAK' order by sk_pejabat_j
       </output>
     </remotesteps>
     <GUI>
-      <xloc>192</xloc>
+      <xloc>224</xloc>
       <yloc>736</yloc>
       <draw>Y</draw>
     </GUI>
@@ -4955,7 +4955,7 @@ from unifier_uxjplpcf
       </output>
     </remotesteps>
     <GUI>
-      <xloc>448</xloc>
+      <xloc>480</xloc>
       <yloc>736</yloc>
       <draw>Y</draw>
     </GUI>
@@ -5416,7 +5416,7 @@ from unifier_uxjplpcf
       </output>
     </remotesteps>
     <GUI>
-      <xloc>480</xloc>
+      <xloc>512</xloc>
       <yloc>496</yloc>
       <draw>Y</draw>
     </GUI>
@@ -5500,8 +5500,8 @@ from unifier_uxjplpcf
       </output>
     </remotesteps>
     <GUI>
-      <xloc>800</xloc>
-      <yloc>480</yloc>
+      <xloc>880</xloc>
+      <yloc>400</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -5772,7 +5772,7 @@ from unifier_uxjplpcf
       </output>
     </remotesteps>
     <GUI>
-      <xloc>64</xloc>
+      <xloc>96</xloc>
       <yloc>736</yloc>
       <draw>Y</draw>
     </GUI>
@@ -7024,7 +7024,7 @@ FROM "public".dim_pejabat where organization='LOKASITAPAK'
       </output>
     </remotesteps>
     <GUI>
-      <xloc>304</xloc>
+      <xloc>336</xloc>
       <yloc>736</yloc>
       <draw>Y</draw>
     </GUI>
@@ -7685,7 +7685,7 @@ from unifier_upi a left join sys_data_option on J10_PL_Lokasi_Tapak_Negeri=OPTIO
       </output>
     </remotesteps>
     <GUI>
-      <xloc>64</xloc>
+      <xloc>96</xloc>
       <yloc>528</yloc>
       <draw>Y</draw>
     </GUI>
@@ -7727,7 +7727,7 @@ from unifier_upi a left join sys_data_option on J10_PL_Lokasi_Tapak_Negeri=OPTIO
       </output>
     </remotesteps>
     <GUI>
-      <xloc>64</xloc>
+      <xloc>96</xloc>
       <yloc>624</yloc>
       <draw>Y</draw>
     </GUI>
@@ -7769,7 +7769,7 @@ from unifier_upi a left join sys_data_option on J10_PL_Lokasi_Tapak_Negeri=OPTIO
       </output>
     </remotesteps>
     <GUI>
-      <xloc>192</xloc>
+      <xloc>224</xloc>
       <yloc>624</yloc>
       <draw>Y</draw>
     </GUI>
@@ -7833,7 +7833,7 @@ from unifier_upi a left join sys_data_option on J10_PL_Lokasi_Tapak_Negeri=OPTIO
       </output>
     </remotesteps>
     <GUI>
-      <xloc>304</xloc>
+      <xloc>336</xloc>
       <yloc>624</yloc>
       <draw>Y</draw>
     </GUI>
@@ -7887,7 +7887,7 @@ from unifier_upi a left join sys_data_option on J10_PL_Lokasi_Tapak_Negeri=OPTIO
       </output>
     </remotesteps>
     <GUI>
-      <xloc>448</xloc>
+      <xloc>480</xloc>
       <yloc>624</yloc>
       <draw>Y</draw>
     </GUI>

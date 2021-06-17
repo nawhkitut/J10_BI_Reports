@@ -5894,8 +5894,8 @@ FROM "public".dim_pejabat where organization='LOKASITAPAK' order by sk_pejabat_j
       </output>
     </remotesteps>
     <GUI>
-      <xloc>176</xloc>
-      <yloc>928</yloc>
+      <xloc>240</xloc>
+      <yloc>816</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -6742,8 +6742,7 @@ select distinct project_id,J10_PL_NAMA_PROJEK ,upper(j10_DE_pejabat) as Pejabat_
 from unifier_uxlhodt_view where j10_nama_pegwai_pengasa_upk is not null
 union
 select distinct a.project_id,b.J10_PL_NAMA_PROJEK ,upper(a.J10_CH_PJBT_SELIA_TAPAK) as Pejabat_Program, 'WPP Utama'as pejabat 
-from  unifier_uxjcpln_view a join unifier_upi b on a.project_id=b.project_id
-</sql>
+from  unifier_uxjcpln_view a join unifier_upi b on a.project_id=b.project_id</sql>
     <limit>0</limit>
     <lookup/>
     <execute_each_row>N</execute_each_row>
@@ -8156,8 +8155,8 @@ from unifier_uxjplpcf
       </output>
     </remotesteps>
     <GUI>
-      <xloc>480</xloc>
-      <yloc>928</yloc>
+      <xloc>544</xloc>
+      <yloc>816</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -9571,8 +9570,8 @@ rpdecide='NOT AVAILABLE'
       </output>
     </remotesteps>
     <GUI>
-      <xloc>480</xloc>
-      <yloc>720</yloc>
+      <xloc>544</xloc>
+      <yloc>608</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -9899,8 +9898,8 @@ rpdecide='NOT AVAILABLE'
       </output>
     </remotesteps>
     <GUI>
-      <xloc>480</xloc>
-      <yloc>816</yloc>
+      <xloc>544</xloc>
+      <yloc>704</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -9941,8 +9940,8 @@ rpdecide='NOT AVAILABLE'
       </output>
     </remotesteps>
     <GUI>
-      <xloc>176</xloc>
-      <yloc>816</yloc>
+      <xloc>240</xloc>
+      <yloc>704</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -10005,8 +10004,8 @@ rpdecide='NOT AVAILABLE'
       </output>
     </remotesteps>
     <GUI>
-      <xloc>320</xloc>
-      <yloc>816</yloc>
+      <xloc>384</xloc>
+      <yloc>704</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -10047,8 +10046,8 @@ rpdecide='NOT AVAILABLE'
       </output>
     </remotesteps>
     <GUI>
-      <xloc>48</xloc>
-      <yloc>816</yloc>
+      <xloc>112</xloc>
+      <yloc>704</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -10255,8 +10254,8 @@ rpdecide='NOT AVAILABLE'
       </output>
     </remotesteps>
     <GUI>
-      <xloc>48</xloc>
-      <yloc>960</yloc>
+      <xloc>112</xloc>
+      <yloc>848</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -11513,8 +11512,8 @@ FROM "public".dim_pejabat where organization='LOKASITAPAK'
       </output>
     </remotesteps>
     <GUI>
-      <xloc>320</xloc>
-      <yloc>928</yloc>
+      <xloc>384</xloc>
+      <yloc>816</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -13182,8 +13181,8 @@ from unifier_upi a left join sys_data_option on J10_PL_Lokasi_Tapak_Negeri=OPTIO
       </output>
     </remotesteps>
     <GUI>
-      <xloc>48</xloc>
-      <yloc>720</yloc>
+      <xloc>112</xloc>
+      <yloc>608</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
