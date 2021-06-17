@@ -929,11 +929,6 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Get variables 3 2 2</from>
-      <to>Modified JavaScript value 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>Group by</from>
       <to>Sort rows 2</to>
       <enabled>Y</enabled>
@@ -1035,11 +1030,6 @@
     </hop>
     <hop>
       <from>level</from>
-      <to>Get variables 3 2 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>level</from>
       <to>Sort rows</to>
       <enabled>Y</enabled>
     </hop>
@@ -1096,6 +1086,16 @@
     <hop>
       <from>Filter rows 3</from>
       <to>Select </to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>level</from>
+      <to>Get variables 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Get variables 2</from>
+      <to>Modified JavaScript value 2</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -2168,69 +2168,6 @@ FROM dim_j10_pl_daerah
     <GUI>
       <xloc>1728</xloc>
       <yloc>896</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Get variables 3 2 2</name>
-    <type>GetVariable</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <field>
-        <name>sk_pejabat_jkr_param</name>
-        <variable>${sk_pejabat_jkr_param}</variable>
-        <type>Integer</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>id</name>
-        <variable>${id}</variable>
-        <type>Integer</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-      </field>
-      <field>
-        <name>bulan_surat_param</name>
-        <variable>${bulan_surat_param}</variable>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-      </field>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>896</xloc>
-      <yloc>784</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -11803,8 +11740,8 @@ lokasi_tempat = null;
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1904</xloc>
-      <yloc>352</yloc>
+      <xloc>1888</xloc>
+      <yloc>336</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -12565,6 +12502,69 @@ previous=PREVIOUS_PATUT+PREVIOUS_TELAH;</jsScript_script>
     <GUI>
       <xloc>496</xloc>
       <yloc>992</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Get variables 2</name>
+    <type>GetVariable</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>sk_pejabat_jkr_param</name>
+        <variable>${sk_pejabat_jkr_param}</variable>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>id</name>
+        <variable>${id}</variable>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>bulan_surat_param</name>
+        <variable>${bulan_surat_param}</variable>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>896</xloc>
+      <yloc>768</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
