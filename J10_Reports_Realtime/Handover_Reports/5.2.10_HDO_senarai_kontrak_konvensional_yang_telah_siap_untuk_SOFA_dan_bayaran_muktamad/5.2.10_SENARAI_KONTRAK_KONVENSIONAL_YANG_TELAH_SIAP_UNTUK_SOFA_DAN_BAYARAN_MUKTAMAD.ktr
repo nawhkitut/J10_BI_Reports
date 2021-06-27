@@ -35,11 +35,6 @@
         <description/>
       </parameter>
       <parameter>
-        <name>kpi_param</name>
-        <default_value/>
-        <description/>
-      </parameter>
-      <parameter>
         <name>pejabat_filter</name>
         <default_value>Pengurus Program</default_value>
         <description/>
@@ -56,6 +51,11 @@
       </parameter>
       <parameter>
         <name>sk_pejabat_jkr_param</name>
+        <default_value/>
+        <description/>
+      </parameter>
+      <parameter>
+        <name>sofa_param</name>
         <default_value/>
         <description/>
       </parameter>
@@ -594,168 +594,8 @@
   </connection>
   <order>
     <hop>
-      <from>UPI</from>
-      <to>UPI_Details</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>ACAT_Name</from>
       <to>IBS_Value</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>DAERAH</from>
-      <to>DAERAH_NAME</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>IBS</from>
-      <to>IBS_Value</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>J10_PL_ACAT</from>
-      <to>ACAT_Name</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>JENIS_PROJEK</from>
-      <to>JENIS</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>KAEDAH_PERLAKSANAAN</from>
-      <to>Kaedah_Perlaksanaan_name</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>KAEDAH_PEROLEHAN</from>
-      <to>PEROLEHAN</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>LOKASI_TAPAK</from>
-      <to>LOKASI_TAPAK_NEGERI</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>LOKASI_TAPAK_NEGERI</from>
-      <to>DAERAH_NAME</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>PERBELANJAAN</from>
-      <to>Perbelanjaan Name</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>PEROLEHAN</from>
-      <to>JENIS</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Deatils</from>
-      <to>Details</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>IBS_Value</from>
-      <to>Perbelanjaan Name</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>kementerian_look</from>
-      <to>Kementerian 3</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>JENIS</from>
-      <to>Kementerian 3</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>kementerian_look 2</from>
-      <to>Kementerian 3 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Kementerian 3</from>
-      <to>Kementerian 3 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Kementerian 3 2</from>
-      <to>LOKASI_TAPAK_NEGERI</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>project_number</from>
-      <to>UPI_Details 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>UPI_Details 2</from>
-      <to>UPI_Details</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>RMK 2</from>
-      <to>RMK_Name 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>RMK</from>
-      <to>RMK_Name</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Perbelanjaan Name</from>
-      <to>RMK_Name 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>RMK_Name 2</from>
-      <to>ROLLING PLAN</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>ROLLING PLAN</from>
-      <to>RMK_Name</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>RMK_Name</from>
-      <to>PEROLEHAN</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Kategori_PMO</from>
-      <to>Stream lookup 4</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Jenis_Rekabentuk</from>
-      <to>Stream lookup 5</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Kaedah_Perlaksanaan_name</from>
-      <to>Stream lookup 5</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Stream lookup 5</from>
-      <to>Stream lookup 4</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>penggunaan_bim</from>
-      <to>Stream lookup 6</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Stream lookup 4</from>
-      <to>Stream lookup 6</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
@@ -769,98 +609,28 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Kementerian 2</from>
-      <to>Stream lookup 2</to>
+      <from>DAERAH</from>
+      <to>DAERAH_NAME</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Kementerian 2 2</from>
-      <to>Stream lookup 2 2</to>
+      <from>DAERAH_NAME</from>
+      <to>lokasi tempat</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Kementerian 2 3</from>
-      <to>Stream lookup 2 2</to>
+      <from>Deatils</from>
+      <to>Details</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Pejabat 2</from>
-      <to>USER 2 2 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Select values 2</from>
-      <to>Append streams 3</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Select values 3</from>
-      <to>Append streams 3</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Stream lookup 2</from>
-      <to>Select values 3</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Stream lookup 2 2</from>
-      <to>Stream lookup 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>USER 2 2 2</from>
-      <to>Select values 2</to>
+      <from>Details</from>
+      <to>UPI_Details 2</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
       <from>Filter rows</from>
       <to>Details</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>pegawai_penyedia</from>
-      <to>pegawai lookup  2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Stream lookup 6</from>
-      <to>pegawai lookup  2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>pegawai penguasa</from>
-      <to>pegawai penguasa lookup</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>pegawai penguasa lookup</from>
-      <to>Stream lookup 4 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>pejabat pegawai penguasa</from>
-      <to>Stream lookup 4 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>seliatapak</from>
-      <to>seliatapak lookup</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Stream lookup 4 2</from>
-      <to>seliatapak lookup</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>seliatapak lookup</from>
-      <to>Select values</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>pegawai lookup  2</from>
-      <to>pegawai penguasa lookup</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
@@ -949,13 +719,103 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
+      <from>IBS</from>
+      <to>IBS_Value</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>IBS_Value</from>
+      <to>Perbelanjaan Name</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
       <from>If field value is null</from>
       <to>Get variables</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
+      <from>J10_PL_ACAT</from>
+      <to>ACAT_Name</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>JENIS</from>
+      <to>Kementerian 3</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>JENIS_PROJEK</from>
+      <to>JENIS</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Jenis_Rekabentuk</from>
+      <to>Stream lookup 5</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>KAEDAH_PERLAKSANAAN</from>
+      <to>Kaedah_Perlaksanaan_name</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>KAEDAH_PEROLEHAN</from>
+      <to>PEROLEHAN</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Kaedah_Perlaksanaan_name</from>
+      <to>Stream lookup 5</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Kategori_PMO</from>
+      <to>Stream lookup 4</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Kementerian 2</from>
+      <to>Stream lookup 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Kementerian 2 2</from>
+      <to>Stream lookup 2 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Kementerian 2 3</from>
+      <to>Stream lookup 2 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Kementerian 3</from>
+      <to>Kementerian 3 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Kementerian 3 2</from>
+      <to>LOKASI_TAPAK_NEGERI</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>LOKASI_TAPAK</from>
+      <to>LOKASI_TAPAK_NEGERI</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>LOKASI_TAPAK_NEGERI</from>
+      <to>DAERAH_NAME</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
       <from>Level 2</from>
       <to>PROJECTID</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Lokasitapak 2</from>
+      <to>Stream lookup 2 2 3</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
@@ -994,8 +854,28 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
+      <from>PERBELANJAAN</from>
+      <to>Perbelanjaan Name</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>PEROLEHAN</from>
+      <to>JENIS</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
       <from>PROJECTID</from>
       <to>Filter rows 7</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Pejabat</from>
+      <to>USER 2 2 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Pejabat 2</from>
+      <to>USER 2 2 2</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
@@ -1024,6 +904,41 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
+      <from>Perbelanjaan Name</from>
+      <to>RMK_Name 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Project_ID 2</from>
+      <to>Stream lookup 2 2 2 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>RMK</from>
+      <to>RMK_Name</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>RMK 2</from>
+      <to>RMK_Name 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>RMK_Name</from>
+      <to>PEROLEHAN</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>RMK_Name 2</from>
+      <to>ROLLING PLAN</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>ROLLING PLAN</from>
+      <to>RMK_Name</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
       <from>Select </from>
       <to>Filter rows 5</to>
       <enabled>Y</enabled>
@@ -1031,6 +946,26 @@
     <hop>
       <from>Select Rows</from>
       <to>Level1</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Select values</from>
+      <to>If field value is null</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Select values 2</from>
+      <to>Append streams 3</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Select values 3</from>
+      <to>Append streams 3</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Select values 3 2 3</from>
+      <to>Append streams 4</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
@@ -1054,33 +989,13 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>level</from>
-      <to>Get variables 3 2 2</to>
+      <from>Stream lookup 2</from>
+      <to>Select values 3</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>level</from>
-      <to>Sort rows</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Select values</from>
-      <to>If field value is null</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Pejabat</from>
-      <to>USER 2 2 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Lokasitapak 2</from>
-      <to>Stream lookup 2 2 3</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Project_ID 2</from>
-      <to>Stream lookup 2 2 2 2</to>
+      <from>Stream lookup 2 2</from>
+      <to>Stream lookup 2</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
@@ -1104,38 +1019,48 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
+      <from>Stream lookup 4</from>
+      <to>Stream lookup 6</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Stream lookup 4 2</from>
+      <to>seliatapak lookup</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Stream lookup 5</from>
+      <to>Stream lookup 4</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Stream lookup 6</from>
+      <to>pegawai lookup  2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
       <from>Table input</from>
       <to>Stream lookup 3 2</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>daerah 2</from>
-      <to>Stream lookup 2 4</to>
+      <from>UPI</from>
+      <to>UPI_Details</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>lokasitapak</from>
-      <to>Stream lookup 3 2</to>
+      <from>UPI_Details</from>
+      <to>bil look up</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>DAERAH_NAME</from>
-      <to>lokasi tempat</to>
+      <from>UPI_Details 2</from>
+      <to>UPI_Details</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>lokasi tempat</from>
-      <to>Kaedah_Perlaksanaan_name</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Select values 3 2 3</from>
-      <to>Append streams 4</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Details</from>
-      <to>UPI_Details 2</to>
+      <from>USER 2 2 2</from>
+      <to>Select values 2</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
@@ -1144,17 +1069,102 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>siap sofa</from>
-      <to>siap sofa lookup</to>
+      <from>daerah 2</from>
+      <to>Stream lookup 2 4</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>UPI_Details</from>
-      <to>siap sofa lookup</to>
+      <from>kementerian_look</from>
+      <to>Kementerian 3</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>siap sofa lookup</from>
+      <from>kementerian_look 2</from>
+      <to>Kementerian 3 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>bil</from>
+      <to>bil look up</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>bil look up</from>
+      <to>anggaran lookup</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>level</from>
+      <to>Get variables 3 2 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>level</from>
+      <to>Sort rows</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>lokasi tempat</from>
+      <to>Kaedah_Perlaksanaan_name</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>lokasitapak</from>
+      <to>Stream lookup 3 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>pegawai lookup  2</from>
+      <to>pegawai penguasa lookup</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>pegawai penguasa</from>
+      <to>pegawai penguasa lookup</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>pegawai penguasa lookup</from>
+      <to>Stream lookup 4 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>pegawai_penyedia</from>
+      <to>pegawai lookup  2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>pejabat pegawai penguasa</from>
+      <to>Stream lookup 4 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>penggunaan_bim</from>
+      <to>Stream lookup 6</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>project_number</from>
+      <to>UPI_Details 2</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>seliatapak</from>
+      <to>seliatapak lookup</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>seliatapak lookup</from>
+      <to>Select values</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>anggaran</from>
+      <to>anggaran lookup</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>anggaran lookup</from>
       <to>cpc_detection</to>
       <enabled>Y</enabled>
     </hop>
@@ -1196,8 +1206,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>912</xloc>
-      <yloc>240</yloc>
+      <xloc>896</xloc>
+      <yloc>208</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1223,8 +1233,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>400</xloc>
-      <yloc>544</yloc>
+      <xloc>384</xloc>
+      <yloc>512</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1250,8 +1260,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>448</xloc>
-      <yloc>336</yloc>
+      <xloc>432</xloc>
+      <yloc>304</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1383,8 +1393,8 @@ FROM dim_j10_pl_daerah
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1056</xloc>
-      <yloc>368</yloc>
+      <xloc>1040</xloc>
+      <yloc>336</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1425,8 +1435,8 @@ FROM dim_j10_pl_daerah
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1056</xloc>
-      <yloc>512</yloc>
+      <xloc>1040</xloc>
+      <yloc>480</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2037,8 +2047,8 @@ left join unifier_user_view on b.J10_PL_Nama_Pengurus_Progra=userid</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>560</xloc>
-      <yloc>352</yloc>
+      <xloc>544</xloc>
+      <yloc>320</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2211,8 +2221,8 @@ left join unifier_user_view on b.J10_PL_Nama_Pengurus_Progra=userid</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>560</xloc>
-      <yloc>240</yloc>
+      <xloc>544</xloc>
+      <yloc>208</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2236,8 +2246,8 @@ left join unifier_user_view on b.J10_PL_Nama_Pengurus_Progra=userid</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1937</xloc>
-      <yloc>1315</yloc>
+      <xloc>1920</xloc>
+      <yloc>1280</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2261,8 +2271,8 @@ left join unifier_user_view on b.J10_PL_Nama_Pengurus_Progra=userid</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2017</xloc>
-      <yloc>995</yloc>
+      <xloc>2000</xloc>
+      <yloc>960</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2305,8 +2315,8 @@ left join unifier_user_view on b.J10_PL_Nama_Pengurus_Progra=userid</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>432</xloc>
-      <yloc>240</yloc>
+      <xloc>416</xloc>
+      <yloc>208</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2340,8 +2350,8 @@ left join unifier_user_view on b.J10_PL_Nama_Pengurus_Progra=userid</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1937</xloc>
-      <yloc>1171</yloc>
+      <xloc>1920</xloc>
+      <yloc>1136</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2375,8 +2385,8 @@ left join unifier_user_view on b.J10_PL_Nama_Pengurus_Progra=userid</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2017</xloc>
-      <yloc>883</yloc>
+      <xloc>2000</xloc>
+      <yloc>848</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2431,8 +2441,8 @@ left join unifier_user_view on b.J10_PL_Nama_Pengurus_Progra=userid</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1473</xloc>
-      <yloc>963</yloc>
+      <xloc>1456</xloc>
+      <yloc>928</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2475,8 +2485,8 @@ left join unifier_user_view on b.J10_PL_Nama_Pengurus_Progra=userid</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2129</xloc>
-      <yloc>1171</yloc>
+      <xloc>2112</xloc>
+      <yloc>1136</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2513,9 +2523,72 @@ left join unifier_user_view on b.J10_PL_Nama_Pengurus_Progra=userid</sql>
           <condition>
             <negated>N</negated>
             <operator>AND</operator>
-            <leftvalue>sah_cpc</leftvalue>
+            <leftvalue>bil_a1</leftvalue>
             <function>=</function>
-            <rightvalue>sah_cpc_new</rightvalue>
+            <rightvalue>bil_a1_new</rightvalue>
+          </condition>
+          <condition>
+            <negated>N</negated>
+            <operator>AND</operator>
+            <leftvalue>bil_a2</leftvalue>
+            <function>=</function>
+            <rightvalue>bil_a2_new</rightvalue>
+          </condition>
+          <condition>
+            <negated>N</negated>
+            <operator>AND</operator>
+            <leftvalue>bil_b1</leftvalue>
+            <function>=</function>
+            <rightvalue>bil_b1_new</rightvalue>
+          </condition>
+          <condition>
+            <negated>N</negated>
+            <operator>AND</operator>
+            <leftvalue>bil_b2</leftvalue>
+            <function>=</function>
+            <rightvalue>bil_b2_new</rightvalue>
+          </condition>
+          <condition>
+            <negated>N</negated>
+            <operator>AND</operator>
+            <leftvalue>bil_c</leftvalue>
+            <function>=</function>
+            <rightvalue>bil_c_new</rightvalue>
+          </condition>
+          <condition>
+            <negated>N</negated>
+            <operator>AND</operator>
+            <leftvalue>kos_a1</leftvalue>
+            <function>=</function>
+            <rightvalue>kos_a1_new</rightvalue>
+          </condition>
+          <condition>
+            <negated>N</negated>
+            <operator>AND</operator>
+            <leftvalue>kos_a2</leftvalue>
+            <function>=</function>
+            <rightvalue>kos_a2_new</rightvalue>
+          </condition>
+          <condition>
+            <negated>N</negated>
+            <operator>AND</operator>
+            <leftvalue>kos_b1</leftvalue>
+            <function>=</function>
+            <rightvalue>kos_b1_new</rightvalue>
+          </condition>
+          <condition>
+            <negated>N</negated>
+            <operator>AND</operator>
+            <leftvalue>kos_b2</leftvalue>
+            <function>=</function>
+            <rightvalue>kos_b2_new</rightvalue>
+          </condition>
+          <condition>
+            <negated>N</negated>
+            <operator>AND</operator>
+            <leftvalue>kos_c</leftvalue>
+            <function>=</function>
+            <rightvalue>kos_c_new</rightvalue>
           </condition>
         </conditions>
       </condition>
@@ -2529,8 +2602,8 @@ left join unifier_user_view on b.J10_PL_Nama_Pengurus_Progra=userid</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>993</xloc>
-      <yloc>1219</yloc>
+      <xloc>976</xloc>
+      <yloc>1184</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2569,8 +2642,8 @@ left join unifier_user_view on b.J10_PL_Nama_Pengurus_Progra=userid</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1137</xloc>
-      <yloc>1027</yloc>
+      <xloc>1120</xloc>
+      <yloc>992</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2637,8 +2710,8 @@ left join unifier_user_view on b.J10_PL_Nama_Pengurus_Progra=userid</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>896</xloc>
-      <yloc>960</yloc>
+      <xloc>880</xloc>
+      <yloc>928</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2748,8 +2821,8 @@ left join unifier_user_view on b.J10_PL_Nama_Pengurus_Progra=userid</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1217</xloc>
-      <yloc>851</yloc>
+      <xloc>1200</xloc>
+      <yloc>816</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2787,8 +2860,8 @@ left join unifier_user_view on b.J10_PL_Nama_Pengurus_Progra=userid</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1665</xloc>
-      <yloc>1171</yloc>
+      <xloc>1648</xloc>
+      <yloc>1136</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2826,8 +2899,8 @@ left join unifier_user_view on b.J10_PL_Nama_Pengurus_Progra=userid</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1729</xloc>
-      <yloc>883</yloc>
+      <xloc>1712</xloc>
+      <yloc>848</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2877,8 +2950,8 @@ left join unifier_user_view on b.J10_PL_Nama_Pengurus_Progra=userid</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1393</xloc>
-      <yloc>963</yloc>
+      <xloc>1376</xloc>
+      <yloc>928</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2916,8 +2989,8 @@ left join unifier_user_view on b.J10_PL_Nama_Pengurus_Progra=userid</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1825</xloc>
-      <yloc>1091</yloc>
+      <xloc>1808</xloc>
+      <yloc>1056</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -2958,8 +3031,8 @@ left join unifier_user_view on b.J10_PL_Nama_Pengurus_Progra=userid</sql>
         <trim_type>none</trim_type>
       </field>
       <field>
-        <name>kpi_param</name>
-        <variable>${kpi_param}</variable>
+        <name>sofa_param</name>
+        <variable>${sofa_param}</variable>
         <type>String</type>
         <format/>
         <currency/>
@@ -2979,8 +3052,8 @@ left join unifier_user_view on b.J10_PL_Nama_Pengurus_Progra=userid</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>992</xloc>
-      <yloc>1056</yloc>
+      <xloc>976</xloc>
+      <yloc>1024</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3010,8 +3083,62 @@ left join unifier_user_view on b.J10_PL_Nama_Pengurus_Progra=userid</sql>
     </group>
     <fields>
       <field>
-        <aggregate>sah_cpc</aggregate>
-        <subject>sah_cpc</subject>
+        <aggregate>bil_a1</aggregate>
+        <subject>bil_a1</subject>
+        <type>SUM</type>
+        <valuefield/>
+      </field>
+      <field>
+        <aggregate>bil_a2</aggregate>
+        <subject>bil_a2</subject>
+        <type>SUM</type>
+        <valuefield/>
+      </field>
+      <field>
+        <aggregate>bil_b1</aggregate>
+        <subject>bil_b1</subject>
+        <type>SUM</type>
+        <valuefield/>
+      </field>
+      <field>
+        <aggregate>bil_b2</aggregate>
+        <subject>bil_b2</subject>
+        <type>SUM</type>
+        <valuefield/>
+      </field>
+      <field>
+        <aggregate>bil_c</aggregate>
+        <subject>bil_c</subject>
+        <type>SUM</type>
+        <valuefield/>
+      </field>
+      <field>
+        <aggregate>kos_a1</aggregate>
+        <subject>kos_a1</subject>
+        <type>SUM</type>
+        <valuefield/>
+      </field>
+      <field>
+        <aggregate>kos_a2</aggregate>
+        <subject>kos_a2</subject>
+        <type>SUM</type>
+        <valuefield/>
+      </field>
+      <field>
+        <aggregate>kos_b1</aggregate>
+        <subject>kos_b1</subject>
+        <type>SUM</type>
+        <valuefield/>
+      </field>
+      <field>
+        <aggregate>kos_b2</aggregate>
+        <subject>kos_b2</subject>
+        <type>SUM</type>
+        <valuefield/>
+      </field>
+      <field>
+        <aggregate>kos_c</aggregate>
+        <subject>kos_c</subject>
         <type>SUM</type>
         <valuefield/>
       </field>
@@ -3025,8 +3152,8 @@ left join unifier_user_view on b.J10_PL_Nama_Pengurus_Progra=userid</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1185</xloc>
-      <yloc>963</yloc>
+      <xloc>1168</xloc>
+      <yloc>928</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3158,8 +3285,8 @@ FROM "public".dim_j10_pl_kategori_ibs
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1008</xloc>
-      <yloc>128</yloc>
+      <xloc>992</xloc>
+      <yloc>96</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3200,8 +3327,8 @@ FROM "public".dim_j10_pl_kategori_ibs
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1008</xloc>
-      <yloc>240</yloc>
+      <xloc>992</xloc>
+      <yloc>208</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3264,8 +3391,8 @@ FROM "public".dim_j10_pl_kategori_ibs
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1489</xloc>
-      <yloc>851</yloc>
+      <xloc>1472</xloc>
+      <yloc>816</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3397,8 +3524,8 @@ FROM "public".dim_j10_pl_acat
       </output>
     </remotesteps>
     <GUI>
-      <xloc>912</xloc>
-      <yloc>128</yloc>
+      <xloc>896</xloc>
+      <yloc>96</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3439,8 +3566,8 @@ FROM "public".dim_j10_pl_acat
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1600</xloc>
-      <yloc>240</yloc>
+      <xloc>1584</xloc>
+      <yloc>208</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3572,8 +3699,8 @@ FROM dim_j10_pl_jenis_projek
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1600</xloc>
-      <yloc>112</yloc>
+      <xloc>1584</xloc>
+      <yloc>80</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3729,8 +3856,8 @@ FROM
       </output>
     </remotesteps>
     <GUI>
-      <xloc>784</xloc>
-      <yloc>384</yloc>
+      <xloc>768</xloc>
+      <yloc>352</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3838,8 +3965,8 @@ FROM "public".dim_kaedah_perlaksanaan
       </output>
     </remotesteps>
     <GUI>
-      <xloc>912</xloc>
-      <yloc>368</yloc>
+      <xloc>896</xloc>
+      <yloc>336</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3971,8 +4098,8 @@ FROM dim_j10_pl_kaedah_perolehan
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1520</xloc>
-      <yloc>112</yloc>
+      <xloc>1504</xloc>
+      <yloc>80</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -4013,8 +4140,8 @@ FROM dim_j10_pl_kaedah_perolehan
       </output>
     </remotesteps>
     <GUI>
-      <xloc>912</xloc>
-      <yloc>512</yloc>
+      <xloc>896</xloc>
+      <yloc>480</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -4110,8 +4237,8 @@ FROM UNIFIER_UPI)X</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>672</xloc>
-      <yloc>416</yloc>
+      <xloc>656</xloc>
+      <yloc>384</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -4291,8 +4418,8 @@ FROM "public".dim_pejabat
       </output>
     </remotesteps>
     <GUI>
-      <xloc>176</xloc>
-      <yloc>480</yloc>
+      <xloc>160</xloc>
+      <yloc>448</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -4467,8 +4594,8 @@ from unifier_upi a left join sys_data_option on J10_PL_Kementerian=OPTION_VALUE 
       </output>
     </remotesteps>
     <GUI>
-      <xloc>32</xloc>
-      <yloc>592</yloc>
+      <xloc>16</xloc>
+      <yloc>560</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -4648,8 +4775,8 @@ FROM "public".dim_pejabat
       </output>
     </remotesteps>
     <GUI>
-      <xloc>96</xloc>
-      <yloc>480</yloc>
+      <xloc>80</xloc>
+      <yloc>448</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -4690,8 +4817,8 @@ FROM "public".dim_pejabat
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1456</xloc>
-      <yloc>320</yloc>
+      <xloc>1440</xloc>
+      <yloc>288</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -4732,8 +4859,8 @@ FROM "public".dim_pejabat
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1360</xloc>
-      <yloc>400</yloc>
+      <xloc>1344</xloc>
+      <yloc>368</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -4865,8 +4992,8 @@ FROM dim_j10_pl_lokasi_tapak
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1232</xloc>
-      <yloc>368</yloc>
+      <xloc>1216</xloc>
+      <yloc>336</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -4907,8 +5034,8 @@ FROM dim_j10_pl_lokasi_tapak
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1232</xloc>
-      <yloc>512</yloc>
+      <xloc>1216</xloc>
+      <yloc>480</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -4949,6 +5076,9 @@ FROM dim_j10_pl_lokasi_tapak
         <name>HIERARCHY</name>
       </field>
       <field>
+        <name>J10_CH_SAH_CPC_DT</name>
+      </field>
+      <field>
         <name>sah_cpc_belum_tutup_akaun</name>
       </field>
       <field>
@@ -5006,6 +5136,24 @@ FROM dim_j10_pl_lokasi_tapak
         <name>kelas_pkk</name>
       </field>
       <field>
+        <name>TKH_MILIK_TAPAK</name>
+      </field>
+      <field>
+        <name>TKH_SIAP_ASAL</name>
+      </field>
+      <field>
+        <name>TKH_SIAP_SEMASA</name>
+      </field>
+      <field>
+        <name>TKH_SIAP_SEBENAR</name>
+      </field>
+      <field>
+        <name>TKH_SERAHAN_PROJEK</name>
+      </field>
+      <field>
+        <name>TKH_LUKISAN_SIAP_BINA</name>
+      </field>
+      <field>
         <name>j10_kos_prj_semasa</name>
       </field>
       <field>
@@ -5022,6 +5170,15 @@ FROM dim_j10_pl_lokasi_tapak
       </field>
       <field>
         <name>byrn_hingga_kini</name>
+      </field>
+      <field>
+        <name>J10_PL_TARIKH_JANGKA_MULA_P</name>
+      </field>
+      <field>
+        <name>J10_PL_TARIKH_JANGKA_SIAP_P</name>
+      </field>
+      <field>
+        <name>J10_PL_TARIKH_JANGKA_SERAHA</name>
       </field>
       <field>
         <name>terima_brif</name>
@@ -5043,6 +5200,12 @@ FROM dim_j10_pl_lokasi_tapak
       </field>
       <field>
         <name>j10_pl_penarafan_hijau_sdt</name>
+      </field>
+      <field>
+        <name>TKH_SAH_BRIF_SKOP</name>
+      </field>
+      <field>
+        <name>TKH_TAMAT_KECACATAN</name>
       </field>
       <field>
         <name>acat</name>
@@ -5102,6 +5265,36 @@ FROM dim_j10_pl_lokasi_tapak
         <name>lokasi_tempat</name>
       </field>
       <field>
+        <name>bil_a1</name>
+      </field>
+      <field>
+        <name>bil_a2</name>
+      </field>
+      <field>
+        <name>bil_b1</name>
+      </field>
+      <field>
+        <name>bil_b2</name>
+      </field>
+      <field>
+        <name>bil_c</name>
+      </field>
+      <field>
+        <name>kos_a1</name>
+      </field>
+      <field>
+        <name>kos_a2</name>
+      </field>
+      <field>
+        <name>kos_b1</name>
+      </field>
+      <field>
+        <name>kos_b2</name>
+      </field>
+      <field>
+        <name>kos_c</name>
+      </field>
+      <field>
         <name>LEVEL</name>
       </field>
       <field>
@@ -5138,13 +5331,40 @@ FROM dim_j10_pl_lokasi_tapak
         <name>id</name>
       </field>
       <field>
-        <name>kpi_param</name>
+        <name>sofa_param</name>
       </field>
       <field>
         <name>count_rujukan_sppii</name>
       </field>
       <field>
-        <name>sah_cpc_new</name>
+        <name>bil_a1_new</name>
+      </field>
+      <field>
+        <name>bil_a2_new</name>
+      </field>
+      <field>
+        <name>bil_b1_new</name>
+      </field>
+      <field>
+        <name>bil_b2_new</name>
+      </field>
+      <field>
+        <name>bil_c_new</name>
+      </field>
+      <field>
+        <name>kos_a1_new</name>
+      </field>
+      <field>
+        <name>kos_a2_new</name>
+      </field>
+      <field>
+        <name>kos_b1_new</name>
+      </field>
+      <field>
+        <name>kos_b2_new</name>
+      </field>
+      <field>
+        <name>kos_c_new</name>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -5157,8 +5377,8 @@ FROM dim_j10_pl_lokasi_tapak
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1137</xloc>
-      <yloc>1219</yloc>
+      <xloc>1120</xloc>
+      <yloc>1184</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -5199,6 +5419,9 @@ FROM dim_j10_pl_lokasi_tapak
         <name>HIERARCHY</name>
       </field>
       <field>
+        <name>J10_CH_SAH_CPC_DT</name>
+      </field>
+      <field>
         <name>sah_cpc_belum_tutup_akaun</name>
       </field>
       <field>
@@ -5256,6 +5479,24 @@ FROM dim_j10_pl_lokasi_tapak
         <name>kelas_pkk</name>
       </field>
       <field>
+        <name>TKH_MILIK_TAPAK</name>
+      </field>
+      <field>
+        <name>TKH_SIAP_ASAL</name>
+      </field>
+      <field>
+        <name>TKH_SIAP_SEMASA</name>
+      </field>
+      <field>
+        <name>TKH_SIAP_SEBENAR</name>
+      </field>
+      <field>
+        <name>TKH_SERAHAN_PROJEK</name>
+      </field>
+      <field>
+        <name>TKH_LUKISAN_SIAP_BINA</name>
+      </field>
+      <field>
         <name>j10_kos_prj_semasa</name>
       </field>
       <field>
@@ -5272,6 +5513,15 @@ FROM dim_j10_pl_lokasi_tapak
       </field>
       <field>
         <name>byrn_hingga_kini</name>
+      </field>
+      <field>
+        <name>J10_PL_TARIKH_JANGKA_MULA_P</name>
+      </field>
+      <field>
+        <name>J10_PL_TARIKH_JANGKA_SIAP_P</name>
+      </field>
+      <field>
+        <name>J10_PL_TARIKH_JANGKA_SERAHA</name>
       </field>
       <field>
         <name>terima_brif</name>
@@ -5293,6 +5543,12 @@ FROM dim_j10_pl_lokasi_tapak
       </field>
       <field>
         <name>j10_pl_penarafan_hijau_sdt</name>
+      </field>
+      <field>
+        <name>TKH_SAH_BRIF_SKOP</name>
+      </field>
+      <field>
+        <name>TKH_TAMAT_KECACATAN</name>
       </field>
       <field>
         <name>acat</name>
@@ -5352,6 +5608,36 @@ FROM dim_j10_pl_lokasi_tapak
         <name>lokasi_tempat</name>
       </field>
       <field>
+        <name>bil_a1</name>
+      </field>
+      <field>
+        <name>bil_a2</name>
+      </field>
+      <field>
+        <name>bil_b1</name>
+      </field>
+      <field>
+        <name>bil_b2</name>
+      </field>
+      <field>
+        <name>bil_c</name>
+      </field>
+      <field>
+        <name>kos_a1</name>
+      </field>
+      <field>
+        <name>kos_a2</name>
+      </field>
+      <field>
+        <name>kos_b1</name>
+      </field>
+      <field>
+        <name>kos_b2</name>
+      </field>
+      <field>
+        <name>kos_c</name>
+      </field>
+      <field>
         <name>LEVEL</name>
       </field>
       <field>
@@ -5388,13 +5674,40 @@ FROM dim_j10_pl_lokasi_tapak
         <name>id</name>
       </field>
       <field>
-        <name>kpi_param</name>
+        <name>sofa_param</name>
       </field>
       <field>
         <name>count_rujukan_sppii</name>
       </field>
       <field>
-        <name>sah_cpc_new</name>
+        <name>bil_a1_new</name>
+      </field>
+      <field>
+        <name>bil_a2_new</name>
+      </field>
+      <field>
+        <name>bil_b1_new</name>
+      </field>
+      <field>
+        <name>bil_b2_new</name>
+      </field>
+      <field>
+        <name>bil_c_new</name>
+      </field>
+      <field>
+        <name>kos_a1_new</name>
+      </field>
+      <field>
+        <name>kos_a2_new</name>
+      </field>
+      <field>
+        <name>kos_b1_new</name>
+      </field>
+      <field>
+        <name>kos_b2_new</name>
+      </field>
+      <field>
+        <name>kos_c_new</name>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -5407,8 +5720,8 @@ FROM dim_j10_pl_lokasi_tapak
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1249</xloc>
-      <yloc>1027</yloc>
+      <xloc>1232</xloc>
+      <yloc>992</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -5455,7 +5768,34 @@ FROM dim_j10_pl_lokasi_tapak
         <name>pej</name>
       </field>
       <field>
-        <name>sah_cpc</name>
+        <name>bil_a1</name>
+      </field>
+      <field>
+        <name>bil_a2</name>
+      </field>
+      <field>
+        <name>bil_b1</name>
+      </field>
+      <field>
+        <name>bil_b2</name>
+      </field>
+      <field>
+        <name>bil_c</name>
+      </field>
+      <field>
+        <name>kos_a1</name>
+      </field>
+      <field>
+        <name>kos_a2</name>
+      </field>
+      <field>
+        <name>kos_b1</name>
+      </field>
+      <field>
+        <name>kos_b2</name>
+      </field>
+      <field>
+        <name>kos_c</name>
       </field>
       <field>
         <name>plevel</name>
@@ -5480,8 +5820,8 @@ FROM dim_j10_pl_lokasi_tapak
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2129</xloc>
-      <yloc>1011</yloc>
+      <xloc>2112</xloc>
+      <yloc>976</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -5661,8 +6001,8 @@ FROM "public".dim_pejabat where organization='LOKASITAPAK' order by sk_pejabat_j
       </output>
     </remotesteps>
     <GUI>
-      <xloc>368</xloc>
-      <yloc>848</yloc>
+      <xloc>352</xloc>
+      <yloc>816</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -5695,8 +6035,8 @@ FROM "public".dim_pejabat where organization='LOKASITAPAK' order by sk_pejabat_j
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1473</xloc>
-      <yloc>1107</yloc>
+      <xloc>1456</xloc>
+      <yloc>1072</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -5729,8 +6069,8 @@ FROM "public".dim_pejabat where organization='LOKASITAPAK' order by sk_pejabat_j
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1633</xloc>
-      <yloc>883</yloc>
+      <xloc>1616</xloc>
+      <yloc>848</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -5874,8 +6214,8 @@ if (acat_v == 'Semua')
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1041</xloc>
-      <yloc>851</yloc>
+      <xloc>1024</xloc>
+      <yloc>816</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -5897,18 +6237,28 @@ if (acat_v == 'Semua')
         <jsScript_type>0</jsScript_type>
         <jsScript_name>Script 1</jsScript_name>
         <jsScript_script>var count_rujukan_sppii=0;
-var sah_cpc_new=0;
-
+var bil_a1_new=0, bil_a2_new=0, bil_b1_new=0, bil_b2_new=0, bil_c_new=0;
+var kos_a1_new=0, kos_a2_new=0, kos_b1_new=0, kos_b2_new=0, kos_c_new=0;
 
 if(j10_pl_rujukan_kod_projek!=null)
 {
 count_rujukan_sppii=1;
 }
 
-if (kpi_param == 'sah')
-	sah_cpc_new= 1;
-else
-	sah_cpc_new=sah_cpc;
+if (sofa_param == 'bil_a1')bil_a1_new= 1;
+if (sofa_param == 'bil_a2')bil_a2_new= 1;
+if (sofa_param == 'bil_b1')bil_b1_new= 1;
+if (sofa_param == 'bil_b2')bil_b2_new= 1;
+if (sofa_param == 'bil_c')bil_c_new= 1;
+
+if (sofa_param == 'kos_a1')kos_a1_new= 1;
+if (sofa_param == 'kos_a2')kos_a2_new= 1;
+if (sofa_param == 'kos_b1')kos_b1_new= 1;
+if (sofa_param == 'kos_b2')kos_b2_new= 1;
+if (sofa_param == 'kos_c')kos_c_new= 1;
+
+
+
 </jsScript_script>
       </jsScript>
     </jsScripts>
@@ -5922,8 +6272,80 @@ else
         <replace>N</replace>
       </field>
       <field>
-        <name>sah_cpc_new</name>
-        <rename>sah_cpc_new</rename>
+        <name>bil_a1_new</name>
+        <rename>bil_a1_new</rename>
+        <type>Number</type>
+        <length>16</length>
+        <precision>2</precision>
+        <replace>N</replace>
+      </field>
+      <field>
+        <name>bil_a2_new</name>
+        <rename>bil_a2_new</rename>
+        <type>Number</type>
+        <length>16</length>
+        <precision>2</precision>
+        <replace>N</replace>
+      </field>
+      <field>
+        <name>bil_b1_new</name>
+        <rename>bil_b1_new</rename>
+        <type>Number</type>
+        <length>16</length>
+        <precision>2</precision>
+        <replace>N</replace>
+      </field>
+      <field>
+        <name>bil_b2_new</name>
+        <rename>bil_b2_new</rename>
+        <type>Number</type>
+        <length>16</length>
+        <precision>2</precision>
+        <replace>N</replace>
+      </field>
+      <field>
+        <name>bil_c_new</name>
+        <rename>bil_c_new</rename>
+        <type>Number</type>
+        <length>16</length>
+        <precision>2</precision>
+        <replace>N</replace>
+      </field>
+      <field>
+        <name>kos_a1_new</name>
+        <rename>kos_a1_new</rename>
+        <type>Number</type>
+        <length>16</length>
+        <precision>2</precision>
+        <replace>N</replace>
+      </field>
+      <field>
+        <name>kos_a2_new</name>
+        <rename>kos_a2_new</rename>
+        <type>Number</type>
+        <length>16</length>
+        <precision>2</precision>
+        <replace>N</replace>
+      </field>
+      <field>
+        <name>kos_b1_new</name>
+        <rename>kos_b1_new</rename>
+        <type>Number</type>
+        <length>16</length>
+        <precision>2</precision>
+        <replace>N</replace>
+      </field>
+      <field>
+        <name>kos_b2_new</name>
+        <rename>kos_b2_new</rename>
+        <type>Number</type>
+        <length>16</length>
+        <precision>2</precision>
+        <replace>N</replace>
+      </field>
+      <field>
+        <name>kos_c_new</name>
+        <rename>kos_c_new</rename>
         <type>Number</type>
         <length>16</length>
         <precision>2</precision>
@@ -5939,8 +6361,8 @@ else
       </output>
     </remotesteps>
     <GUI>
-      <xloc>993</xloc>
-      <yloc>1139</yloc>
+      <xloc>976</xloc>
+      <yloc>1104</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -5995,8 +6417,8 @@ pejkemvalue='PEJABAT'
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1809</xloc>
-      <yloc>1171</yloc>
+      <xloc>1792</xloc>
+      <yloc>1136</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -6051,8 +6473,8 @@ pejkemvalue='PEJABAT'
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1873</xloc>
-      <yloc>883</yloc>
+      <xloc>1856</xloc>
+      <yloc>848</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -6092,8 +6514,8 @@ pejkemvalue='PEJABAT'
       </output>
     </remotesteps>
     <GUI>
-      <xloc>897</xloc>
-      <yloc>851</yloc>
+      <xloc>880</xloc>
+      <yloc>816</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -6225,8 +6647,8 @@ FROM dim_J10_PL_Kategori_Perbelanjaan
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1120</xloc>
-      <yloc>112</yloc>
+      <xloc>1104</xloc>
+      <yloc>80</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -6267,8 +6689,8 @@ FROM dim_J10_PL_Kategori_Perbelanjaan
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1520</xloc>
-      <yloc>240</yloc>
+      <xloc>1504</xloc>
+      <yloc>208</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -6320,8 +6742,8 @@ id=1;
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1137</xloc>
-      <yloc>1139</yloc>
+      <xloc>1120</xloc>
+      <yloc>1104</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -6463,8 +6885,8 @@ from  unifier_uxjcpln_view a join unifier_upi b on a.project_id=b.project_id</sq
       </output>
     </remotesteps>
     <GUI>
-      <xloc>144</xloc>
-      <yloc>384</yloc>
+      <xloc>128</xloc>
+      <yloc>352</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -6644,8 +7066,8 @@ FROM "public".dim_pejabat
       </output>
     </remotesteps>
     <GUI>
-      <xloc>320</xloc>
-      <yloc>288</yloc>
+      <xloc>304</xloc>
+      <yloc>256</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -7016,8 +7438,8 @@ order by sk_pejabat_jkr
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1473</xloc>
-      <yloc>1299</yloc>
+      <xloc>1456</xloc>
+      <yloc>1264</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -7263,8 +7685,8 @@ order by sk_pejabat_jkr
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1569</xloc>
-      <yloc>1027</yloc>
+      <xloc>1552</xloc>
+      <yloc>992</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -7510,8 +7932,8 @@ order by sk_pejabat_jkr
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1697</xloc>
-      <yloc>1027</yloc>
+      <xloc>1680</xloc>
+      <yloc>992</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -7563,8 +7985,8 @@ PEJABAT_PARAM=9999;
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1633</xloc>
-      <yloc>1091</yloc>
+      <xloc>1616</xloc>
+      <yloc>1056</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -7605,8 +8027,8 @@ PEJABAT_PARAM=9999;
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1120</xloc>
-      <yloc>240</yloc>
+      <xloc>1104</xloc>
+      <yloc>208</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -7766,8 +8188,8 @@ from unifier_uxjplpcf
       </output>
     </remotesteps>
     <GUI>
-      <xloc>560</xloc>
-      <yloc>848</yloc>
+      <xloc>544</xloc>
+      <yloc>816</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -7923,8 +8345,8 @@ FROM "public".dim_j10_pl_rmk
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1424</xloc>
-      <yloc>112</yloc>
+      <xloc>1408</xloc>
+      <yloc>80</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -8131,8 +8553,8 @@ J10_PL_5TH_ROLLING_PLAN_JKR  from unifier_uxjplpcf_view
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1232</xloc>
-      <yloc>112</yloc>
+      <xloc>1216</xloc>
+      <yloc>80</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -8177,8 +8599,8 @@ J10_PL_5TH_ROLLING_PLAN_JKR  from unifier_uxjplpcf_view
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1424</xloc>
-      <yloc>240</yloc>
+      <xloc>1408</xloc>
+      <yloc>208</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -8243,8 +8665,8 @@ J10_PL_5TH_ROLLING_PLAN_JKR  from unifier_uxjplpcf_view
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1232</xloc>
-      <yloc>240</yloc>
+      <xloc>1216</xloc>
+      <yloc>208</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -8307,8 +8729,8 @@ rpdecide='NOT AVAILABLE'
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1328</xloc>
-      <yloc>240</yloc>
+      <xloc>1312</xloc>
+      <yloc>208</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -8355,7 +8777,34 @@ rpdecide='NOT AVAILABLE'
         <name>pej</name>
       </field>
       <field>
-        <name>sah_cpc</name>
+        <name>bil_a1</name>
+      </field>
+      <field>
+        <name>bil_a2</name>
+      </field>
+      <field>
+        <name>bil_b1</name>
+      </field>
+      <field>
+        <name>bil_b2</name>
+      </field>
+      <field>
+        <name>bil_c</name>
+      </field>
+      <field>
+        <name>kos_a1</name>
+      </field>
+      <field>
+        <name>kos_a2</name>
+      </field>
+      <field>
+        <name>kos_b1</name>
+      </field>
+      <field>
+        <name>kos_b2</name>
+      </field>
+      <field>
+        <name>kos_c</name>
       </field>
       <field>
         <name>plevel</name>
@@ -8380,8 +8829,8 @@ rpdecide='NOT AVAILABLE'
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2049</xloc>
-      <yloc>1171</yloc>
+      <xloc>2032</xloc>
+      <yloc>1136</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -8428,7 +8877,34 @@ rpdecide='NOT AVAILABLE'
         <name>pej</name>
       </field>
       <field>
-        <name>sah_cpc</name>
+        <name>bil_a1</name>
+      </field>
+      <field>
+        <name>bil_a2</name>
+      </field>
+      <field>
+        <name>bil_b1</name>
+      </field>
+      <field>
+        <name>bil_b2</name>
+      </field>
+      <field>
+        <name>bil_c</name>
+      </field>
+      <field>
+        <name>kos_a1</name>
+      </field>
+      <field>
+        <name>kos_a2</name>
+      </field>
+      <field>
+        <name>kos_b1</name>
+      </field>
+      <field>
+        <name>kos_b2</name>
+      </field>
+      <field>
+        <name>kos_c</name>
       </field>
       <field>
         <name>plevel</name>
@@ -8453,8 +8929,8 @@ rpdecide='NOT AVAILABLE'
       </output>
     </remotesteps>
     <GUI>
-      <xloc>2129</xloc>
-      <yloc>883</yloc>
+      <xloc>2112</xloc>
+      <yloc>848</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -8725,6 +9201,46 @@ rpdecide='NOT AVAILABLE'
       <field>
         <name>lokasi_tempat</name>
       </field>
+      <field>
+        <name>BIL_A1</name>
+        <rename>bil_a1</rename>
+      </field>
+      <field>
+        <name>BIL_A2</name>
+        <rename>bil_a2</rename>
+      </field>
+      <field>
+        <name>BIL_B1</name>
+        <rename>bil_b1</rename>
+      </field>
+      <field>
+        <name>BIL_B2</name>
+        <rename>bil_b2</rename>
+      </field>
+      <field>
+        <name>BIL_C</name>
+        <rename>bil_c</rename>
+      </field>
+      <field>
+        <name>KOS_A1</name>
+        <rename>kos_a1</rename>
+      </field>
+      <field>
+        <name>KOS_A2</name>
+        <rename>kos_a2</rename>
+      </field>
+      <field>
+        <name>KOS_B1</name>
+        <rename>kos_b1</rename>
+      </field>
+      <field>
+        <name>KOS_B2</name>
+        <rename>kos_b2</rename>
+      </field>
+      <field>
+        <name>KOS_C</name>
+        <rename>kos_c</rename>
+      </field>
       <select_unspecified>N</select_unspecified>
     </fields>
     <attributes/>
@@ -8736,8 +9252,8 @@ rpdecide='NOT AVAILABLE'
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1440</xloc>
-      <yloc>656</yloc>
+      <xloc>1424</xloc>
+      <yloc>624</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -8788,8 +9304,8 @@ rpdecide='NOT AVAILABLE'
       </output>
     </remotesteps>
     <GUI>
-      <xloc>320</xloc>
-      <yloc>464</yloc>
+      <xloc>304</xloc>
+      <yloc>432</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -8840,8 +9356,8 @@ rpdecide='NOT AVAILABLE'
       </output>
     </remotesteps>
     <GUI>
-      <xloc>464</xloc>
-      <yloc>608</yloc>
+      <xloc>448</xloc>
+      <yloc>576</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -8892,8 +9408,8 @@ rpdecide='NOT AVAILABLE'
       </output>
     </remotesteps>
     <GUI>
-      <xloc>560</xloc>
-      <yloc>656</yloc>
+      <xloc>544</xloc>
+      <yloc>624</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -8934,8 +9450,8 @@ rpdecide='NOT AVAILABLE'
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1089</xloc>
-      <yloc>963</yloc>
+      <xloc>1072</xloc>
+      <yloc>928</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -8976,8 +9492,8 @@ rpdecide='NOT AVAILABLE'
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1297</xloc>
-      <yloc>963</yloc>
+      <xloc>1280</xloc>
+      <yloc>928</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -9018,8 +9534,8 @@ rpdecide='NOT AVAILABLE'
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1473</xloc>
-      <yloc>1203</yloc>
+      <xloc>1456</xloc>
+      <yloc>1168</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -9060,8 +9576,8 @@ rpdecide='NOT AVAILABLE'
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1633</xloc>
-      <yloc>979</yloc>
+      <xloc>1616</xloc>
+      <yloc>944</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -9124,8 +9640,8 @@ rpdecide='NOT AVAILABLE'
       </output>
     </remotesteps>
     <GUI>
-      <xloc>176</xloc>
-      <yloc>592</yloc>
+      <xloc>160</xloc>
+      <yloc>560</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -9166,8 +9682,8 @@ rpdecide='NOT AVAILABLE'
       </output>
     </remotesteps>
     <GUI>
-      <xloc>96</xloc>
-      <yloc>592</yloc>
+      <xloc>80</xloc>
+      <yloc>560</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -9220,8 +9736,8 @@ rpdecide='NOT AVAILABLE'
       </output>
     </remotesteps>
     <GUI>
-      <xloc>560</xloc>
-      <yloc>736</yloc>
+      <xloc>544</xloc>
+      <yloc>704</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -9262,8 +9778,8 @@ rpdecide='NOT AVAILABLE'
       </output>
     </remotesteps>
     <GUI>
-      <xloc>368</xloc>
-      <yloc>736</yloc>
+      <xloc>352</xloc>
+      <yloc>704</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -9326,8 +9842,8 @@ rpdecide='NOT AVAILABLE'
       </output>
     </remotesteps>
     <GUI>
-      <xloc>448</xloc>
-      <yloc>736</yloc>
+      <xloc>432</xloc>
+      <yloc>704</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -9368,8 +9884,8 @@ rpdecide='NOT AVAILABLE'
       </output>
     </remotesteps>
     <GUI>
-      <xloc>256</xloc>
-      <yloc>736</yloc>
+      <xloc>240</xloc>
+      <yloc>704</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -9410,8 +9926,8 @@ rpdecide='NOT AVAILABLE'
       </output>
     </remotesteps>
     <GUI>
-      <xloc>672</xloc>
-      <yloc>512</yloc>
+      <xloc>656</xloc>
+      <yloc>480</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -9452,8 +9968,8 @@ rpdecide='NOT AVAILABLE'
       </output>
     </remotesteps>
     <GUI>
-      <xloc>992</xloc>
-      <yloc>704</yloc>
+      <xloc>976</xloc>
+      <yloc>672</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -9494,8 +10010,8 @@ rpdecide='NOT AVAILABLE'
       </output>
     </remotesteps>
     <GUI>
-      <xloc>784</xloc>
-      <yloc>512</yloc>
+      <xloc>768</xloc>
+      <yloc>480</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -9536,8 +10052,8 @@ rpdecide='NOT AVAILABLE'
       </output>
     </remotesteps>
     <GUI>
-      <xloc>576</xloc>
-      <yloc>512</yloc>
+      <xloc>560</xloc>
+      <yloc>480</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -9618,8 +10134,8 @@ rpdecide='NOT AVAILABLE'
       </output>
     </remotesteps>
     <GUI>
-      <xloc>256</xloc>
-      <yloc>848</yloc>
+      <xloc>240</xloc>
+      <yloc>816</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -9684,9 +10200,7 @@ LEFT JOIN unifier_uxjabd j ON a.PROJECT_ID=j.PROJECT_ID
 LEFT JOIN unifier_uxjdt k ON a.PROJECT_ID=k.PROJECT_ID
 --LEFT JOIN unifier_uxjkons l ON a.PROJECT_ID=l.PROJECT_ID
 LEFT JOIN unifier_uxjlk m ON a.PROJECT_ID=m.PROJECT_ID
-LEFT JOIN unifier_uxpkd t ON a.project_id=t.project_id
-LEFT JOIN unifier_uxjsofa u ON a.project_id=u.project_id
-LEFT JOIN unifier_uxjbmj66 v ON a.project_id=v.project_id</sql>
+LEFT JOIN unifier_uxpkd t ON a.project_id=t.project_id</sql>
     <limit>0</limit>
     <lookup/>
     <execute_each_row>N</execute_each_row>
@@ -10463,8 +10977,8 @@ LEFT JOIN unifier_uxjbmj66 v ON a.project_id=v.project_id</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>688</xloc>
-      <yloc>128</yloc>
+      <xloc>608</xloc>
+      <yloc>32</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -10691,8 +11205,8 @@ LEFT JOIN unifier_uxjbmj66 v ON a.project_id=v.project_id</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>688</xloc>
-      <yloc>240</yloc>
+      <xloc>608</xloc>
+      <yloc>112</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -10733,8 +11247,8 @@ LEFT JOIN unifier_uxjbmj66 v ON a.project_id=v.project_id</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>624</xloc>
-      <yloc>240</yloc>
+      <xloc>608</xloc>
+      <yloc>208</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -10793,8 +11307,439 @@ LEFT JOIN unifier_uxjbmj66 v ON a.project_id=v.project_id</sql>
       </output>
     </remotesteps>
     <GUI>
-      <xloc>320</xloc>
-      <yloc>384</yloc>
+      <xloc>304</xloc>
+      <yloc>352</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>anggaran</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>J10</connection>
+    <sql>select 
+
+a.project_id ,
+
+sum (case when to_char(a.J10_CH_SAH_CPC_DT,'yyyy')-to_char(sysdate,'yyyy')&lt;=6 and u.J10_CH_TRIK_BAYARAN is null 
+then u.J10_CH_KOSKONSEMASA_CM - (m.J10_CH_BAYARAN_HINGGA_KINI + a.J10_PK_JUM_LAD_YANG_CA) else 0 end) as kos_a1,
+sum (case when to_char(a.J10_CH_SAH_CPC_DT,'yyyy')-to_char(sysdate,'yyyy')>6 and u.J10_CH_TRIK_BAYARAN is null 
+then u.J10_CH_KOSKONSEMASA_CM - (m.J10_CH_BAYARAN_HINGGA_KINI + a.J10_PK_JUM_LAD_YANG_CA) else 0 end) as kos_a2,
+
+sum (case when u.J10_CH_TRIK_BAYARAN is not null and v.J10CH_BAY_TARIKH_BAUCAR_DOP is null and t.J10_HO_SIAP_PEMBAIKAN is null 
+then  J10_CH_HARGAKON_TERLARAS - (J10_CH_BAYARAN_HINGGA_KINI + J10_PK_JUM_LAD_YANG_CA) else 0 end) as kos_b1,
+sum (case when u.J10_CH_TRIK_BAYARAN is not null and v.J10CH_BAY_TARIKH_BAUCAR_DOP is null and t.J10_HO_SIAP_PEMBAIKAN is not null 
+then  J10_CH_HARGAKON_TERLARAS - (J10_CH_BAYARAN_HINGGA_KINI + J10_PK_JUM_LAD_YANG_CA) else 0 end) as kos_b2,
+
+sum (case when v.J10CH_BAY_TARIKH_BAUCAR_DOP is null 
+then v.J10_CH_JUMLAH_BAYARAN_MUKT else 0 end) as kos_c
+
+FROM unifier_upi_view a
+LEFT JOIN unifier_uxjlk m ON a.PROJECT_ID=m.PROJECT_ID
+LEFT JOIN unifier_uxpkd t ON a.project_id=t.project_id
+LEFT JOIN unifier_uxjsofa u ON a.project_id=u.project_id
+LEFT JOIN unifier_uxjbmj66 v ON a.project_id=v.project_id group by a.project_id
+
+</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cached_row_meta_active>N</cached_row_meta_active>
+    <row-meta>
+      <value-meta>
+        <type>Integer</type>
+        <storagetype>normal</storagetype>
+        <name>PROJECT_ID</name>
+        <length>10</length>
+        <precision>0</precision>
+        <origin>sofa</origin>
+        <comments>PROJECT_ID</comments>
+        <conversion_Mask>####0;-####0</conversion_Mask>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_MY</date_format_locale>
+        <date_format_timezone>Asia/Singapore</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>BigNumber</type>
+        <storagetype>normal</storagetype>
+        <name>KOS6</name>
+        <length>-1</length>
+        <precision>-1</precision>
+        <origin>sofa</origin>
+        <comments>KOS6</comments>
+        <conversion_Mask>######0.0###################;-######0.0###################</conversion_Mask>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_MY</date_format_locale>
+        <date_format_timezone>Asia/Singapore</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+    </row-meta>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>720</xloc>
+      <yloc>320</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>anggaran lookup</name>
+    <type>StreamLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <from>anggaran</from>
+    <input_sorted>N</input_sorted>
+    <preserve_memory>Y</preserve_memory>
+    <sorted_list>Y</sorted_list>
+    <integer_pair>N</integer_pair>
+    <lookup>
+      <key>
+        <name>PROJECT_ID</name>
+        <field>PROJECT_ID</field>
+      </key>
+      <value>
+        <name>KOS_A1</name>
+        <rename>KOS_A1</rename>
+        <default/>
+        <type>BigNumber</type>
+      </value>
+      <value>
+        <name>KOS_A2</name>
+        <rename>KOS_A2</rename>
+        <default/>
+        <type>BigNumber</type>
+      </value>
+      <value>
+        <name>KOS_B1</name>
+        <rename>KOS_B1</rename>
+        <default/>
+        <type>BigNumber</type>
+      </value>
+      <value>
+        <name>KOS_B2</name>
+        <rename>KOS_B2</rename>
+        <default/>
+        <type>BigNumber</type>
+      </value>
+      <value>
+        <name>KOS_C</name>
+        <rename>KOS_C</rename>
+        <default/>
+        <type>BigNumber</type>
+      </value>
+    </lookup>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>720</xloc>
+      <yloc>208</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>bil</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>J10</connection>
+    <sql>select 
+
+a.project_id ,
+sum (case when to_char(a.J10_CH_SAH_CPC_DT,'yyyy')-to_char(sysdate,'yyyy')&lt;=6 and u.J10_CH_TRIK_BAYARAN is null 
+then 1 else 0 end) as bil_a1,
+sum (case when to_char(a.J10_CH_SAH_CPC_DT,'yyyy')-to_char(sysdate,'yyyy')>6 and u.J10_CH_TRIK_BAYARAN is null 
+then 1 else 0 end) as bil_a2,
+
+sum (case when u.J10_CH_TRIK_BAYARAN is not null and v.J10CH_BAY_TARIKH_BAUCAR_DOP is null and t.J10_HO_SIAP_PEMBAIKAN is null 
+then 1 else 0 end) as bil_b1,
+sum (case when u.J10_CH_TRIK_BAYARAN is not null and v.J10CH_BAY_TARIKH_BAUCAR_DOP is null and t.J10_HO_SIAP_PEMBAIKAN is not null 
+then 1 else 0 end) as bil_b2,
+
+sum (case when v.J10CH_BAY_TARIKH_BAUCAR_DOP is not null 
+then 1 else 0 end) as bil_c
+
+FROM unifier_upi_view a
+LEFT JOIN unifier_uxjlk m ON a.PROJECT_ID=m.PROJECT_ID
+LEFT JOIN unifier_uxpkd t ON a.project_id=t.project_id
+LEFT JOIN unifier_uxjsofa u ON a.project_id=u.project_id
+LEFT JOIN unifier_uxjbmj66 v ON a.project_id=v.project_id group by a.project_id
+
+</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cached_row_meta_active>N</cached_row_meta_active>
+    <row-meta>
+      <value-meta>
+        <type>Integer</type>
+        <storagetype>normal</storagetype>
+        <name>PROJECT_ID</name>
+        <length>10</length>
+        <precision>0</precision>
+        <origin>bil</origin>
+        <comments>PROJECT_ID</comments>
+        <conversion_Mask>####0;-####0</conversion_Mask>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_MY</date_format_locale>
+        <date_format_timezone>Asia/Singapore</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>BigNumber</type>
+        <storagetype>normal</storagetype>
+        <name>BIL_A1</name>
+        <length>-1</length>
+        <precision>-1</precision>
+        <origin>bil</origin>
+        <comments>BIL_A1</comments>
+        <conversion_Mask>######0.0###################;-######0.0###################</conversion_Mask>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_MY</date_format_locale>
+        <date_format_timezone>Asia/Singapore</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>BigNumber</type>
+        <storagetype>normal</storagetype>
+        <name>BIL_A2</name>
+        <length>-1</length>
+        <precision>-1</precision>
+        <origin>bil</origin>
+        <comments>BIL_A2</comments>
+        <conversion_Mask>######0.0###################;-######0.0###################</conversion_Mask>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_MY</date_format_locale>
+        <date_format_timezone>Asia/Singapore</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>BigNumber</type>
+        <storagetype>normal</storagetype>
+        <name>BIL_B1</name>
+        <length>-1</length>
+        <precision>-1</precision>
+        <origin>bil</origin>
+        <comments>BIL_B1</comments>
+        <conversion_Mask>######0.0###################;-######0.0###################</conversion_Mask>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_MY</date_format_locale>
+        <date_format_timezone>Asia/Singapore</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>BigNumber</type>
+        <storagetype>normal</storagetype>
+        <name>BIL_B2</name>
+        <length>-1</length>
+        <precision>-1</precision>
+        <origin>bil</origin>
+        <comments>BIL_B2</comments>
+        <conversion_Mask>######0.0###################;-######0.0###################</conversion_Mask>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_MY</date_format_locale>
+        <date_format_timezone>Asia/Singapore</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>BigNumber</type>
+        <storagetype>normal</storagetype>
+        <name>BIL_C</name>
+        <length>-1</length>
+        <precision>-1</precision>
+        <origin>bil</origin>
+        <comments>BIL_C</comments>
+        <conversion_Mask>######0.0###################;-######0.0###################</conversion_Mask>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_MY</date_format_locale>
+        <date_format_timezone>Asia/Singapore</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+    </row-meta>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>720</xloc>
+      <yloc>32</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>bil look up</name>
+    <type>StreamLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <from>bil</from>
+    <input_sorted>N</input_sorted>
+    <preserve_memory>Y</preserve_memory>
+    <sorted_list>Y</sorted_list>
+    <integer_pair>N</integer_pair>
+    <lookup>
+      <key>
+        <name>PROJECT_ID</name>
+        <field>PROJECT_ID</field>
+      </key>
+      <value>
+        <name>BIL_A1</name>
+        <rename>BIL_A1</rename>
+        <default/>
+        <type>BigNumber</type>
+      </value>
+      <value>
+        <name>BIL_A2</name>
+        <rename>BIL_A2</rename>
+        <default/>
+        <type>BigNumber</type>
+      </value>
+      <value>
+        <name>BIL_B1</name>
+        <rename>BIL_B1</rename>
+        <default/>
+        <type>BigNumber</type>
+      </value>
+      <value>
+        <name>BIL_B2</name>
+        <rename>BIL_B2</rename>
+        <default/>
+        <type>BigNumber</type>
+      </value>
+      <value>
+        <name>BIL_C</name>
+        <rename>BIL_C</rename>
+        <default/>
+        <type>BigNumber</type>
+      </value>
+    </lookup>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>720</xloc>
+      <yloc>112</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -10817,29 +11762,17 @@ LEFT JOIN unifier_uxjbmj66 v ON a.project_id=v.project_id</sql>
         <jsScript_name>Script 1</jsScript_name>
         <jsScript_script>//Script here
 
-COUNT((J10_CH_SAH_CPC_DT - current date) &lt; = 6mths and  J10_CH_TRIK_BAYARAN is null)
- J10_CH_KOSKONSEMASA_CM - (J10_CH_BAYARAN_HINGGA_KINI + J10_PK_JUM_LAD_YANG_CA)
-COUNT((J10_CH_SAH_CPC_DT - current date) >  6mths and  J10_CH_TRIK_BAYARAN is null)
- J10_CH_KOSKONSEMASA_CM - (J10_CH_BAYARAN_HINGGA_KINI + J10_PK_JUM_LAD_YANG_CA)
-"1. Telah Sah SOFA - 
-if (J10_CH_TRIK_BAYARAN) then max(J10_CH_TRIK_BAYARAN) and 
-2. Belum Sah JKR66A -
-there is a record where J10CH_BAY_TARIKH_BAUCAR_DOP is null and
-3. Belum CMGD -
-there is a record where J10_HO_SIAP_PEMBAIKAN is null"
- J10_CH_HARGAKON_TERLARAS - (J10_CH_BAYARAN_HINGGA_KINI + J10_PK_JUM_LAD_YANG_CA)
-"1. Telah Sah SOFA - 
-if (J10_CH_TRIK_BAYARAN) then max(J10_CH_TRIK_BAYARAN) and 
-2. Belum Sah JKR66A -
-there is a record where J10CH_BAY_TARIKH_BAUCAR_DOP is null and
-3. Telah CMGD -
-all records where the J10_HO_SIAP_PEMBAIKAN is not null"
- J10_CH_HARGAKON_TERLARAS - (J10_CH_BAYARAN_HINGGA_KINI + J10_PK_JUM_LAD_YANG_CA)
-"1. Telah Sah JKR66A -
-all records where the J10CH_BAY_TARIKH_BAUCAR_DOP is not null and
-2.  Belum Sah Bayaran Akhir - ?"
-sum  ( J10_CH_JUMLAH_BAYARAN_MUKT) where the J10CH_BAY_TARIKH_BAUCAR_DOP is null
+var sah_cpc=0;
+var jumlah=0;
 
+if (SAH_CPC_BELUM_TUTUP_AKAUN!=0)
+	sah_cpc= SAH_CPC_BELUM_TUTUP_AKAUN;
+else
+	sah_cpc= 0;
+
+
+if (SAH_CPC_BELUM_TUTUP_AKAUN!=0)
+	jumlah++;
 </jsScript_script>
       </jsScript>
     </jsScripts>
@@ -10870,8 +11803,8 @@ sum  ( J10_CH_JUMLAH_BAYARAN_MUKT) where the J10CH_BAY_TARIKH_BAUCAR_DOP is null
       </output>
     </remotesteps>
     <GUI>
-      <xloc>832</xloc>
-      <yloc>240</yloc>
+      <xloc>816</xloc>
+      <yloc>208</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -11051,8 +11984,8 @@ FROM "public".dim_pejabat where organization='LOKASITAPAK'
       </output>
     </remotesteps>
     <GUI>
-      <xloc>448</xloc>
-      <yloc>848</yloc>
+      <xloc>432</xloc>
+      <yloc>816</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -11226,8 +12159,8 @@ FROM "public".dim_pejabat where organization='LOKASITAPAK'
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1536</xloc>
-      <yloc>416</yloc>
+      <xloc>1520</xloc>
+      <yloc>384</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -11401,8 +12334,8 @@ FROM "public".dim_pejabat where organization='LOKASITAPAK'
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1440</xloc>
-      <yloc>496</yloc>
+      <xloc>1424</xloc>
+      <yloc>464</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -11441,6 +12374,9 @@ FROM "public".dim_pejabat where organization='LOKASITAPAK'
       </field>
       <field>
         <name>HIERARCHY</name>
+      </field>
+      <field>
+        <name>J10_CH_SAH_CPC_DT</name>
       </field>
       <field>
         <name>sah_cpc_belum_tutup_akaun</name>
@@ -11500,6 +12436,24 @@ FROM "public".dim_pejabat where organization='LOKASITAPAK'
         <name>kelas_pkk</name>
       </field>
       <field>
+        <name>TKH_MILIK_TAPAK</name>
+      </field>
+      <field>
+        <name>TKH_SIAP_ASAL</name>
+      </field>
+      <field>
+        <name>TKH_SIAP_SEMASA</name>
+      </field>
+      <field>
+        <name>TKH_SIAP_SEBENAR</name>
+      </field>
+      <field>
+        <name>TKH_SERAHAN_PROJEK</name>
+      </field>
+      <field>
+        <name>TKH_LUKISAN_SIAP_BINA</name>
+      </field>
+      <field>
         <name>j10_kos_prj_semasa</name>
       </field>
       <field>
@@ -11516,6 +12470,15 @@ FROM "public".dim_pejabat where organization='LOKASITAPAK'
       </field>
       <field>
         <name>byrn_hingga_kini</name>
+      </field>
+      <field>
+        <name>J10_PL_TARIKH_JANGKA_MULA_P</name>
+      </field>
+      <field>
+        <name>J10_PL_TARIKH_JANGKA_SIAP_P</name>
+      </field>
+      <field>
+        <name>J10_PL_TARIKH_JANGKA_SERAHA</name>
       </field>
       <field>
         <name>terima_brif</name>
@@ -11537,6 +12500,12 @@ FROM "public".dim_pejabat where organization='LOKASITAPAK'
       </field>
       <field>
         <name>j10_pl_penarafan_hijau_sdt</name>
+      </field>
+      <field>
+        <name>TKH_SAH_BRIF_SKOP</name>
+      </field>
+      <field>
+        <name>TKH_TAMAT_KECACATAN</name>
       </field>
       <field>
         <name>acat</name>
@@ -11596,6 +12565,36 @@ FROM "public".dim_pejabat where organization='LOKASITAPAK'
         <name>lokasi_tempat</name>
       </field>
       <field>
+        <name>bil_a1</name>
+      </field>
+      <field>
+        <name>bil_a2</name>
+      </field>
+      <field>
+        <name>bil_b1</name>
+      </field>
+      <field>
+        <name>bil_b2</name>
+      </field>
+      <field>
+        <name>bil_c</name>
+      </field>
+      <field>
+        <name>kos_a1</name>
+      </field>
+      <field>
+        <name>kos_a2</name>
+      </field>
+      <field>
+        <name>kos_b1</name>
+      </field>
+      <field>
+        <name>kos_b2</name>
+      </field>
+      <field>
+        <name>kos_c</name>
+      </field>
+      <field>
         <name>LEVEL</name>
       </field>
       <field>
@@ -11636,8 +12635,8 @@ FROM "public".dim_pejabat where organization='LOKASITAPAK'
       </output>
     </remotesteps>
     <GUI>
-      <xloc>993</xloc>
-      <yloc>963</yloc>
+      <xloc>976</xloc>
+      <yloc>928</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -11706,8 +12705,8 @@ lokasi_tempat = null;
       </output>
     </remotesteps>
     <GUI>
-      <xloc>992</xloc>
-      <yloc>512</yloc>
+      <xloc>960</xloc>
+      <yloc>448</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -11887,8 +12886,8 @@ from unifier_upi a left join sys_data_option on J10_PL_Lokasi_Tapak_Negeri=OPTIO
       </output>
     </remotesteps>
     <GUI>
-      <xloc>256</xloc>
-      <yloc>656</yloc>
+      <xloc>240</xloc>
+      <yloc>624</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -11929,8 +12928,8 @@ from unifier_upi a left join sys_data_option on J10_PL_Lokasi_Tapak_Negeri=OPTIO
       </output>
     </remotesteps>
     <GUI>
-      <xloc>672</xloc>
-      <yloc>688</yloc>
+      <xloc>656</xloc>
+      <yloc>656</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -12014,8 +13013,8 @@ SELECT project_id, J10_NAMA_PEGWAI_PENGASA_UPK as nama_pegawai_penguasa  FROM un
       </output>
     </remotesteps>
     <GUI>
-      <xloc>848</xloc>
-      <yloc>608</yloc>
+      <xloc>832</xloc>
+      <yloc>576</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -12056,8 +13055,8 @@ SELECT project_id, J10_NAMA_PEGWAI_PENGASA_UPK as nama_pegawai_penguasa  FROM un
       </output>
     </remotesteps>
     <GUI>
-      <xloc>848</xloc>
-      <yloc>704</yloc>
+      <xloc>832</xloc>
+      <yloc>672</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -12140,8 +13139,8 @@ SELECT K__UUU_SHELL_CREATOR AS PROJECT_ID, J10_PL_Nama_Pegawai_Pendaft AS pegawa
       </output>
     </remotesteps>
     <GUI>
-      <xloc>672</xloc>
-      <yloc>576</yloc>
+      <xloc>656</xloc>
+      <yloc>544</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -12225,8 +13224,8 @@ SELECT project_id, J10_DE_PEJABAT as pejabat_pengawai_penguasa FROM unifier_uxop
       </output>
     </remotesteps>
     <GUI>
-      <xloc>992</xloc>
-      <yloc>608</yloc>
+      <xloc>976</xloc>
+      <yloc>576</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -12375,8 +13374,8 @@ SELECT project_id, J10_DE_PEJABAT as pejabat_pengawai_penguasa FROM unifier_uxop
       </output>
     </remotesteps>
     <GUI>
-      <xloc>576</xloc>
-      <yloc>416</yloc>
+      <xloc>560</xloc>
+      <yloc>384</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -12457,8 +13456,8 @@ SELECT project_id, J10_DE_PEJABAT as pejabat_pengawai_penguasa FROM unifier_uxop
       </output>
     </remotesteps>
     <GUI>
-      <xloc>624</xloc>
-      <yloc>352</yloc>
+      <xloc>608</xloc>
+      <yloc>320</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -12562,8 +13561,8 @@ SELECT project_id, J10_CH_NAMA_WPP_UTA_TB AS nama_seliatapak, J10_CH_PJBT_WPP_UT
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1152</xloc>
-      <yloc>608</yloc>
+      <xloc>1136</xloc>
+      <yloc>576</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -12610,565 +13609,8 @@ SELECT project_id, J10_CH_NAMA_WPP_UTA_TB AS nama_seliatapak, J10_CH_PJBT_WPP_UT
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1152</xloc>
-      <yloc>704</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>siap sofa</name>
-    <type>TableInput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>J10</connection>
-    <sql>select 
-a.project_id,
-u.J10_CH_TRIK_BAYARAN,
-a.J10_CH_SAH_CPC_DT as J10_CH_SAH_CPC_DT,
-CAST(u.J10_CH_KOSKONSEMASA_CM as DOUBLE PRECISION) as j10_ch_koskonsemasa_cm,
-CAST(m.J10_CH_BAYARAN_HINGGA_KINI as DOUBLE PRECISION) as j10_ch_bayaran_hingga_kini,
-CAST(a.J10_PK_JUM_LAD_YANG_CA as DOUBLE PRECISION) as J10_PK_JUM_LAD_YANG_CA,
-v.J10CH_BAY_TARIKH_BAUCAR_DOP,
-t.J10_HO_SIAP_PEMBAIKAN,
-CAST(u.J10_CH_HARGAKON_TERLARAS as DOUBLE PRECISION) as j10_ch_hargakon_terlaras,
-CAST(v.J10_CH_JUMLAH_BAYARAN_MUKT as DOUBLE PRECISION) as j10_ch_jumlah_bayaran_mukt,
-
-case when to_char(J10_CH_SAH_CPC_DT,'MM')-to_char(sysdate,'MM')&lt;=6 and J10_CH_TRIK_BAYARAN is null then 1 else 0 end as less6,
-(u.J10_CH_KOSKONSEMASA_CM- (j10_ch_bayaran_hingga_kini+J10_PK_JUM_LAD_YANG_CA)) as a1,
-case when to_char(J10_CH_SAH_CPC_DT,'MM')-to_char(sysdate,'MM')>6 and J10_CH_TRIK_BAYARAN is null then 1 else 0 end as more6,
-(u.J10_CH_KOSKONSEMASA_CM- (j10_ch_bayaran_hingga_kini+J10_PK_JUM_LAD_YANG_CA)) as a2,
-
-case when u.J10_CH_TRIK_BAYARAN is not null and
-v.J10CH_BAY_TARIKH_BAUCAR_DOP is null and
-t.J10_HO_SIAP_PEMBAIKAN is null then 1 else 0 end as belum_cmgd,
-
-(j10_ch_hargakon_terlaras- (j10_ch_bayaran_hingga_kini+J10_PK_JUM_LAD_YANG_CA)) as b
-
-
-FROM unifier_upi_view a
-LEFT JOIN unifier_uxjlk m ON a.PROJECT_ID=m.PROJECT_ID
-LEFT JOIN unifier_uxpkd t ON a.project_id=t.project_id
-LEFT JOIN unifier_uxjsofa u ON a.project_id=u.project_id
-LEFT JOIN unifier_uxjbmj66 v ON a.project_id=v.project_id</sql>
-    <limit>0</limit>
-    <lookup/>
-    <execute_each_row>N</execute_each_row>
-    <variables_active>N</variables_active>
-    <lazy_conversion_active>N</lazy_conversion_active>
-    <cached_row_meta_active>N</cached_row_meta_active>
-    <row-meta>
-      <value-meta>
-        <type>Integer</type>
-        <storagetype>normal</storagetype>
-        <name>PROJECT_ID</name>
-        <length>10</length>
-        <precision>0</precision>
-        <origin>siap sofa</origin>
-        <comments>PROJECT_ID</comments>
-        <conversion_Mask>####0;-####0</conversion_Mask>
-        <decimal_symbol>.</decimal_symbol>
-        <grouping_symbol>,</grouping_symbol>
-        <currency_symbol/>
-        <trim_type>none</trim_type>
-        <case_insensitive>N</case_insensitive>
-        <collator_disabled>Y</collator_disabled>
-        <collator_strength>0</collator_strength>
-        <sort_descending>N</sort_descending>
-        <output_padding>N</output_padding>
-        <date_format_lenient>N</date_format_lenient>
-        <date_format_locale>en_MY</date_format_locale>
-        <date_format_timezone>Asia/Singapore</date_format_timezone>
-        <lenient_string_to_number>N</lenient_string_to_number>
-      </value-meta>
-      <value-meta>
-        <type>Timestamp</type>
-        <storagetype>normal</storagetype>
-        <name>J10_CH_TRIK_BAYARAN</name>
-        <length>0</length>
-        <precision>-1</precision>
-        <origin>siap sofa</origin>
-        <comments>J10_CH_TRIK_BAYARAN</comments>
-        <conversion_Mask/>
-        <decimal_symbol>.</decimal_symbol>
-        <grouping_symbol>,</grouping_symbol>
-        <currency_symbol/>
-        <trim_type>none</trim_type>
-        <case_insensitive>N</case_insensitive>
-        <collator_disabled>Y</collator_disabled>
-        <collator_strength>0</collator_strength>
-        <sort_descending>N</sort_descending>
-        <output_padding>N</output_padding>
-        <date_format_lenient>N</date_format_lenient>
-        <date_format_locale>en_MY</date_format_locale>
-        <date_format_timezone>Asia/Singapore</date_format_timezone>
-        <lenient_string_to_number>N</lenient_string_to_number>
-      </value-meta>
-      <value-meta>
-        <type>Timestamp</type>
-        <storagetype>normal</storagetype>
-        <name>J10_CH_SAH_CPC_DT</name>
-        <length>0</length>
-        <precision>-1</precision>
-        <origin>siap sofa</origin>
-        <comments>J10_CH_SAH_CPC_DT</comments>
-        <conversion_Mask/>
-        <decimal_symbol>.</decimal_symbol>
-        <grouping_symbol>,</grouping_symbol>
-        <currency_symbol/>
-        <trim_type>none</trim_type>
-        <case_insensitive>N</case_insensitive>
-        <collator_disabled>Y</collator_disabled>
-        <collator_strength>0</collator_strength>
-        <sort_descending>N</sort_descending>
-        <output_padding>N</output_padding>
-        <date_format_lenient>N</date_format_lenient>
-        <date_format_locale>en_MY</date_format_locale>
-        <date_format_timezone>Asia/Singapore</date_format_timezone>
-        <lenient_string_to_number>N</lenient_string_to_number>
-      </value-meta>
-      <value-meta>
-        <type>BigNumber</type>
-        <storagetype>normal</storagetype>
-        <name>J10_CH_KOSKONSEMASA_CM</name>
-        <length>-1</length>
-        <precision>-1</precision>
-        <origin>siap sofa</origin>
-        <comments>J10_CH_KOSKONSEMASA_CM</comments>
-        <conversion_Mask>######0.0###################;-######0.0###################</conversion_Mask>
-        <decimal_symbol>.</decimal_symbol>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <trim_type>none</trim_type>
-        <case_insensitive>N</case_insensitive>
-        <collator_disabled>Y</collator_disabled>
-        <collator_strength>0</collator_strength>
-        <sort_descending>N</sort_descending>
-        <output_padding>N</output_padding>
-        <date_format_lenient>N</date_format_lenient>
-        <date_format_locale>en_MY</date_format_locale>
-        <date_format_timezone>Asia/Singapore</date_format_timezone>
-        <lenient_string_to_number>N</lenient_string_to_number>
-      </value-meta>
-      <value-meta>
-        <type>BigNumber</type>
-        <storagetype>normal</storagetype>
-        <name>J10_CH_BAYARAN_HINGGA_KINI</name>
-        <length>-1</length>
-        <precision>-1</precision>
-        <origin>siap sofa</origin>
-        <comments>J10_CH_BAYARAN_HINGGA_KINI</comments>
-        <conversion_Mask>######0.0###################;-######0.0###################</conversion_Mask>
-        <decimal_symbol>.</decimal_symbol>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <trim_type>none</trim_type>
-        <case_insensitive>N</case_insensitive>
-        <collator_disabled>Y</collator_disabled>
-        <collator_strength>0</collator_strength>
-        <sort_descending>N</sort_descending>
-        <output_padding>N</output_padding>
-        <date_format_lenient>N</date_format_lenient>
-        <date_format_locale>en_MY</date_format_locale>
-        <date_format_timezone>Asia/Singapore</date_format_timezone>
-        <lenient_string_to_number>N</lenient_string_to_number>
-      </value-meta>
-      <value-meta>
-        <type>BigNumber</type>
-        <storagetype>normal</storagetype>
-        <name>J10_PK_JUM_LAD_YANG_CA</name>
-        <length>-1</length>
-        <precision>-1</precision>
-        <origin>siap sofa</origin>
-        <comments>J10_PK_JUM_LAD_YANG_CA</comments>
-        <conversion_Mask>######0.0###################;-######0.0###################</conversion_Mask>
-        <decimal_symbol>.</decimal_symbol>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <trim_type>none</trim_type>
-        <case_insensitive>N</case_insensitive>
-        <collator_disabled>Y</collator_disabled>
-        <collator_strength>0</collator_strength>
-        <sort_descending>N</sort_descending>
-        <output_padding>N</output_padding>
-        <date_format_lenient>N</date_format_lenient>
-        <date_format_locale>en_MY</date_format_locale>
-        <date_format_timezone>Asia/Singapore</date_format_timezone>
-        <lenient_string_to_number>N</lenient_string_to_number>
-      </value-meta>
-      <value-meta>
-        <type>Timestamp</type>
-        <storagetype>normal</storagetype>
-        <name>J10CH_BAY_TARIKH_BAUCAR_DOP</name>
-        <length>0</length>
-        <precision>-1</precision>
-        <origin>siap sofa</origin>
-        <comments>J10CH_BAY_TARIKH_BAUCAR_DOP</comments>
-        <conversion_Mask/>
-        <decimal_symbol>.</decimal_symbol>
-        <grouping_symbol>,</grouping_symbol>
-        <currency_symbol/>
-        <trim_type>none</trim_type>
-        <case_insensitive>N</case_insensitive>
-        <collator_disabled>Y</collator_disabled>
-        <collator_strength>0</collator_strength>
-        <sort_descending>N</sort_descending>
-        <output_padding>N</output_padding>
-        <date_format_lenient>N</date_format_lenient>
-        <date_format_locale>en_MY</date_format_locale>
-        <date_format_timezone>Asia/Singapore</date_format_timezone>
-        <lenient_string_to_number>N</lenient_string_to_number>
-      </value-meta>
-      <value-meta>
-        <type>Timestamp</type>
-        <storagetype>normal</storagetype>
-        <name>J10_HO_SIAP_PEMBAIKAN</name>
-        <length>0</length>
-        <precision>-1</precision>
-        <origin>siap sofa</origin>
-        <comments>J10_HO_SIAP_PEMBAIKAN</comments>
-        <conversion_Mask/>
-        <decimal_symbol>.</decimal_symbol>
-        <grouping_symbol>,</grouping_symbol>
-        <currency_symbol/>
-        <trim_type>none</trim_type>
-        <case_insensitive>N</case_insensitive>
-        <collator_disabled>Y</collator_disabled>
-        <collator_strength>0</collator_strength>
-        <sort_descending>N</sort_descending>
-        <output_padding>N</output_padding>
-        <date_format_lenient>N</date_format_lenient>
-        <date_format_locale>en_MY</date_format_locale>
-        <date_format_timezone>Asia/Singapore</date_format_timezone>
-        <lenient_string_to_number>N</lenient_string_to_number>
-      </value-meta>
-      <value-meta>
-        <type>BigNumber</type>
-        <storagetype>normal</storagetype>
-        <name>J10_CH_HARGAKON_TERLARAS</name>
-        <length>-1</length>
-        <precision>-1</precision>
-        <origin>siap sofa</origin>
-        <comments>J10_CH_HARGAKON_TERLARAS</comments>
-        <conversion_Mask>######0.0###################;-######0.0###################</conversion_Mask>
-        <decimal_symbol>.</decimal_symbol>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <trim_type>none</trim_type>
-        <case_insensitive>N</case_insensitive>
-        <collator_disabled>Y</collator_disabled>
-        <collator_strength>0</collator_strength>
-        <sort_descending>N</sort_descending>
-        <output_padding>N</output_padding>
-        <date_format_lenient>N</date_format_lenient>
-        <date_format_locale>en_MY</date_format_locale>
-        <date_format_timezone>Asia/Singapore</date_format_timezone>
-        <lenient_string_to_number>N</lenient_string_to_number>
-      </value-meta>
-      <value-meta>
-        <type>BigNumber</type>
-        <storagetype>normal</storagetype>
-        <name>J10_CH_JUMLAH_BAYARAN_MUKT</name>
-        <length>-1</length>
-        <precision>-1</precision>
-        <origin>siap sofa</origin>
-        <comments>J10_CH_JUMLAH_BAYARAN_MUKT</comments>
-        <conversion_Mask>######0.0###################;-######0.0###################</conversion_Mask>
-        <decimal_symbol>.</decimal_symbol>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <trim_type>none</trim_type>
-        <case_insensitive>N</case_insensitive>
-        <collator_disabled>Y</collator_disabled>
-        <collator_strength>0</collator_strength>
-        <sort_descending>N</sort_descending>
-        <output_padding>N</output_padding>
-        <date_format_lenient>N</date_format_lenient>
-        <date_format_locale>en_MY</date_format_locale>
-        <date_format_timezone>Asia/Singapore</date_format_timezone>
-        <lenient_string_to_number>N</lenient_string_to_number>
-      </value-meta>
-      <value-meta>
-        <type>BigNumber</type>
-        <storagetype>normal</storagetype>
-        <name>LESS6</name>
-        <length>-1</length>
-        <precision>-1</precision>
-        <origin>siap sofa</origin>
-        <comments>LESS6</comments>
-        <conversion_Mask>######0.0###################;-######0.0###################</conversion_Mask>
-        <decimal_symbol>.</decimal_symbol>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <trim_type>none</trim_type>
-        <case_insensitive>N</case_insensitive>
-        <collator_disabled>Y</collator_disabled>
-        <collator_strength>0</collator_strength>
-        <sort_descending>N</sort_descending>
-        <output_padding>N</output_padding>
-        <date_format_lenient>N</date_format_lenient>
-        <date_format_locale>en_MY</date_format_locale>
-        <date_format_timezone>Asia/Singapore</date_format_timezone>
-        <lenient_string_to_number>N</lenient_string_to_number>
-      </value-meta>
-      <value-meta>
-        <type>BigNumber</type>
-        <storagetype>normal</storagetype>
-        <name>A1</name>
-        <length>-1</length>
-        <precision>-1</precision>
-        <origin>siap sofa</origin>
-        <comments>A1</comments>
-        <conversion_Mask>######0.0###################;-######0.0###################</conversion_Mask>
-        <decimal_symbol>.</decimal_symbol>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <trim_type>none</trim_type>
-        <case_insensitive>N</case_insensitive>
-        <collator_disabled>Y</collator_disabled>
-        <collator_strength>0</collator_strength>
-        <sort_descending>N</sort_descending>
-        <output_padding>N</output_padding>
-        <date_format_lenient>N</date_format_lenient>
-        <date_format_locale>en_MY</date_format_locale>
-        <date_format_timezone>Asia/Singapore</date_format_timezone>
-        <lenient_string_to_number>N</lenient_string_to_number>
-      </value-meta>
-      <value-meta>
-        <type>BigNumber</type>
-        <storagetype>normal</storagetype>
-        <name>MORE6</name>
-        <length>-1</length>
-        <precision>-1</precision>
-        <origin>siap sofa</origin>
-        <comments>MORE6</comments>
-        <conversion_Mask>######0.0###################;-######0.0###################</conversion_Mask>
-        <decimal_symbol>.</decimal_symbol>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <trim_type>none</trim_type>
-        <case_insensitive>N</case_insensitive>
-        <collator_disabled>Y</collator_disabled>
-        <collator_strength>0</collator_strength>
-        <sort_descending>N</sort_descending>
-        <output_padding>N</output_padding>
-        <date_format_lenient>N</date_format_lenient>
-        <date_format_locale>en_MY</date_format_locale>
-        <date_format_timezone>Asia/Singapore</date_format_timezone>
-        <lenient_string_to_number>N</lenient_string_to_number>
-      </value-meta>
-      <value-meta>
-        <type>BigNumber</type>
-        <storagetype>normal</storagetype>
-        <name>A2</name>
-        <length>-1</length>
-        <precision>-1</precision>
-        <origin>siap sofa</origin>
-        <comments>A2</comments>
-        <conversion_Mask>######0.0###################;-######0.0###################</conversion_Mask>
-        <decimal_symbol>.</decimal_symbol>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <trim_type>none</trim_type>
-        <case_insensitive>N</case_insensitive>
-        <collator_disabled>Y</collator_disabled>
-        <collator_strength>0</collator_strength>
-        <sort_descending>N</sort_descending>
-        <output_padding>N</output_padding>
-        <date_format_lenient>N</date_format_lenient>
-        <date_format_locale>en_MY</date_format_locale>
-        <date_format_timezone>Asia/Singapore</date_format_timezone>
-        <lenient_string_to_number>N</lenient_string_to_number>
-      </value-meta>
-      <value-meta>
-        <type>BigNumber</type>
-        <storagetype>normal</storagetype>
-        <name>BELUM_CMGD</name>
-        <length>-1</length>
-        <precision>-1</precision>
-        <origin>siap sofa</origin>
-        <comments>BELUM_CMGD</comments>
-        <conversion_Mask>######0.0###################;-######0.0###################</conversion_Mask>
-        <decimal_symbol>.</decimal_symbol>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <trim_type>none</trim_type>
-        <case_insensitive>N</case_insensitive>
-        <collator_disabled>Y</collator_disabled>
-        <collator_strength>0</collator_strength>
-        <sort_descending>N</sort_descending>
-        <output_padding>N</output_padding>
-        <date_format_lenient>N</date_format_lenient>
-        <date_format_locale>en_MY</date_format_locale>
-        <date_format_timezone>Asia/Singapore</date_format_timezone>
-        <lenient_string_to_number>N</lenient_string_to_number>
-      </value-meta>
-      <value-meta>
-        <type>BigNumber</type>
-        <storagetype>normal</storagetype>
-        <name>B</name>
-        <length>-1</length>
-        <precision>-1</precision>
-        <origin>siap sofa</origin>
-        <comments>B</comments>
-        <conversion_Mask>######0.0###################;-######0.0###################</conversion_Mask>
-        <decimal_symbol>.</decimal_symbol>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <trim_type>none</trim_type>
-        <case_insensitive>N</case_insensitive>
-        <collator_disabled>Y</collator_disabled>
-        <collator_strength>0</collator_strength>
-        <sort_descending>N</sort_descending>
-        <output_padding>N</output_padding>
-        <date_format_lenient>N</date_format_lenient>
-        <date_format_locale>en_MY</date_format_locale>
-        <date_format_timezone>Asia/Singapore</date_format_timezone>
-        <lenient_string_to_number>N</lenient_string_to_number>
-      </value-meta>
-    </row-meta>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>752</xloc>
-      <yloc>128</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>siap sofa lookup</name>
-    <type>StreamLookup</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <from>siap sofa</from>
-    <input_sorted>N</input_sorted>
-    <preserve_memory>Y</preserve_memory>
-    <sorted_list>Y</sorted_list>
-    <integer_pair>N</integer_pair>
-    <lookup>
-      <key>
-        <name>PROJECT_ID</name>
-        <field>PROJECT_ID</field>
-      </key>
-      <value>
-        <name>J10_CH_TRIK_BAYARAN</name>
-        <rename>J10_CH_TRIK_BAYARAN</rename>
-        <default/>
-        <type>Timestamp</type>
-      </value>
-      <value>
-        <name>J10_CH_SAH_CPC_DT</name>
-        <rename>J10_CH_SAH_CPC_DT</rename>
-        <default/>
-        <type>Timestamp</type>
-      </value>
-      <value>
-        <name>J10_CH_KOSKONSEMASA_CM</name>
-        <rename>J10_CH_KOSKONSEMASA_CM</rename>
-        <default/>
-        <type>BigNumber</type>
-      </value>
-      <value>
-        <name>J10_CH_BAYARAN_HINGGA_KINI</name>
-        <rename>J10_CH_BAYARAN_HINGGA_KINI</rename>
-        <default/>
-        <type>BigNumber</type>
-      </value>
-      <value>
-        <name>J10_PK_JUM_LAD_YANG_CA</name>
-        <rename>J10_PK_JUM_LAD_YANG_CA</rename>
-        <default/>
-        <type>BigNumber</type>
-      </value>
-      <value>
-        <name>J10CH_BAY_TARIKH_BAUCAR_DOP</name>
-        <rename>J10CH_BAY_TARIKH_BAUCAR_DOP</rename>
-        <default/>
-        <type>Timestamp</type>
-      </value>
-      <value>
-        <name>J10_HO_SIAP_PEMBAIKAN</name>
-        <rename>J10_HO_SIAP_PEMBAIKAN</rename>
-        <default/>
-        <type>Timestamp</type>
-      </value>
-      <value>
-        <name>J10_CH_HARGAKON_TERLARAS</name>
-        <rename>J10_CH_HARGAKON_TERLARAS</rename>
-        <default/>
-        <type>BigNumber</type>
-      </value>
-      <value>
-        <name>J10_CH_JUMLAH_BAYARAN_MUKT</name>
-        <rename>J10_CH_JUMLAH_BAYARAN_MUKT</rename>
-        <default/>
-        <type>BigNumber</type>
-      </value>
-      <value>
-        <name>LESS6</name>
-        <rename>LESS6</rename>
-        <default/>
-        <type>BigNumber</type>
-      </value>
-      <value>
-        <name>A1</name>
-        <rename>A1</rename>
-        <default/>
-        <type>BigNumber</type>
-      </value>
-      <value>
-        <name>MORE6</name>
-        <rename>MORE6</rename>
-        <default/>
-        <type>BigNumber</type>
-      </value>
-      <value>
-        <name>A2</name>
-        <rename>A2</rename>
-        <default/>
-        <type>BigNumber</type>
-      </value>
-      <value>
-        <name>BELUM_CMGD</name>
-        <rename>BELUM_CMGD</rename>
-        <default/>
-        <type>BigNumber</type>
-      </value>
-      <value>
-        <name>B</name>
-        <rename>B</rename>
-        <default/>
-        <type>BigNumber</type>
-      </value>
-    </lookup>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>752</xloc>
-      <yloc>240</yloc>
+      <xloc>1136</xloc>
+      <yloc>672</yloc>
       <draw>Y</draw>
     </GUI>
   </step>

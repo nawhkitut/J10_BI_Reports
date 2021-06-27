@@ -12003,6 +12003,299 @@ FROM "public".dim_pejabat where organization='LOKASITAPAK'
     </GUI>
   </step>
   <step>
+    <name>kos</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>J10</connection>
+    <sql>--select id,cal from (
+select 
+
+a.project_id ,
+--case when to_char(a.J10_CH_SAH_CPC_DT,'yyyy')&lt;to_char(sysdate,'yyyy')-8 and u.J10_CH_TRIK_BAYARAN is null then 1 else 0 end as befo,
+
+sum (case when to_char(a.J10_CH_SAH_CPC_DT,'yyyy')&lt;to_char(sysdate,'yyyy')-8 and u.J10_CH_TRIK_BAYARAN is null 
+then (u.J10_CH_KOSKONSEMASA_CM - m.j10_ch_bayaran_hingga_kini) else 0 end) as kos1,
+sum (case when to_char(a.J10_CH_SAH_CPC_DT,'yyyy')=to_char(sysdate,'yyyy')-8 and u.J10_CH_TRIK_BAYARAN is null 
+then (u.J10_CH_KOSKONSEMASA_CM - m.j10_ch_bayaran_hingga_kini) else 0 end) as kos2,
+sum (case when to_char(a.J10_CH_SAH_CPC_DT,'yyyy')=to_char(sysdate,'yyyy')-7 and u.J10_CH_TRIK_BAYARAN is null 
+then (u.J10_CH_KOSKONSEMASA_CM - m.j10_ch_bayaran_hingga_kini) else 0 end) as kos3,
+sum (case when to_char(a.J10_CH_SAH_CPC_DT,'yyyy')=to_char(sysdate,'yyyy')-6 and u.J10_CH_TRIK_BAYARAN is null 
+then (u.J10_CH_KOSKONSEMASA_CM - m.j10_ch_bayaran_hingga_kini) else 0 end) as kos4,
+sum (case when to_char(a.J10_CH_SAH_CPC_DT,'yyyy')=to_char(sysdate,'yyyy')-5 and u.J10_CH_TRIK_BAYARAN is null 
+then (u.J10_CH_KOSKONSEMASA_CM - m.j10_ch_bayaran_hingga_kini) else 0 end) as kos5,
+sum (case when to_char(a.J10_CH_SAH_CPC_DT,'yyyy')=to_char(sysdate,'yyyy')-4 and u.J10_CH_TRIK_BAYARAN is null 
+then (u.J10_CH_KOSKONSEMASA_CM - m.j10_ch_bayaran_hingga_kini) else 0 end) as kos6
+
+FROM unifier_upi_view a
+LEFT JOIN unifier_uxjlk m ON a.PROJECT_ID=m.PROJECT_ID
+LEFT JOIN unifier_uxpkd t ON a.project_id=t.project_id
+LEFT JOIN unifier_uxjsofa u ON a.project_id=u.project_id
+LEFT JOIN unifier_uxjbmj66 v ON a.project_id=v.project_id group by a.project_id
+
+</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+    <cached_row_meta_active>N</cached_row_meta_active>
+    <row-meta>
+      <value-meta>
+        <type>Integer</type>
+        <storagetype>normal</storagetype>
+        <name>PROJECT_ID</name>
+        <length>10</length>
+        <precision>0</precision>
+        <origin>kos</origin>
+        <comments>PROJECT_ID</comments>
+        <conversion_Mask>####0;-####0</conversion_Mask>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_MY</date_format_locale>
+        <date_format_timezone>Asia/Singapore</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>BigNumber</type>
+        <storagetype>normal</storagetype>
+        <name>KOS1</name>
+        <length>-1</length>
+        <precision>-1</precision>
+        <origin>kos</origin>
+        <comments>KOS1</comments>
+        <conversion_Mask>######0.0###################;-######0.0###################</conversion_Mask>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_MY</date_format_locale>
+        <date_format_timezone>Asia/Singapore</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>BigNumber</type>
+        <storagetype>normal</storagetype>
+        <name>KOS2</name>
+        <length>-1</length>
+        <precision>-1</precision>
+        <origin>kos</origin>
+        <comments>KOS2</comments>
+        <conversion_Mask>######0.0###################;-######0.0###################</conversion_Mask>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_MY</date_format_locale>
+        <date_format_timezone>Asia/Singapore</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>BigNumber</type>
+        <storagetype>normal</storagetype>
+        <name>KOS3</name>
+        <length>-1</length>
+        <precision>-1</precision>
+        <origin>kos</origin>
+        <comments>KOS3</comments>
+        <conversion_Mask>######0.0###################;-######0.0###################</conversion_Mask>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_MY</date_format_locale>
+        <date_format_timezone>Asia/Singapore</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>BigNumber</type>
+        <storagetype>normal</storagetype>
+        <name>KOS4</name>
+        <length>-1</length>
+        <precision>-1</precision>
+        <origin>kos</origin>
+        <comments>KOS4</comments>
+        <conversion_Mask>######0.0###################;-######0.0###################</conversion_Mask>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_MY</date_format_locale>
+        <date_format_timezone>Asia/Singapore</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>BigNumber</type>
+        <storagetype>normal</storagetype>
+        <name>KOS5</name>
+        <length>-1</length>
+        <precision>-1</precision>
+        <origin>kos</origin>
+        <comments>KOS5</comments>
+        <conversion_Mask>######0.0###################;-######0.0###################</conversion_Mask>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_MY</date_format_locale>
+        <date_format_timezone>Asia/Singapore</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>BigNumber</type>
+        <storagetype>normal</storagetype>
+        <name>KOS6</name>
+        <length>-1</length>
+        <precision>-1</precision>
+        <origin>kos</origin>
+        <comments>KOS6</comments>
+        <conversion_Mask>######0.0###################;-######0.0###################</conversion_Mask>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_MY</date_format_locale>
+        <date_format_timezone>Asia/Singapore</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+    </row-meta>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>793</xloc>
+      <yloc>108</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>kos look up</name>
+    <type>StreamLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <from>kos</from>
+    <input_sorted>N</input_sorted>
+    <preserve_memory>Y</preserve_memory>
+    <sorted_list>Y</sorted_list>
+    <integer_pair>N</integer_pair>
+    <lookup>
+      <key>
+        <name>PROJECT_ID</name>
+        <field>PROJECT_ID</field>
+      </key>
+      <value>
+        <name>KOS1</name>
+        <rename>KOS1</rename>
+        <default/>
+        <type>BigNumber</type>
+      </value>
+      <value>
+        <name>KOS2</name>
+        <rename>KOS2</rename>
+        <default/>
+        <type>BigNumber</type>
+      </value>
+      <value>
+        <name>KOS3</name>
+        <rename>KOS3</rename>
+        <default/>
+        <type>BigNumber</type>
+      </value>
+      <value>
+        <name>KOS4</name>
+        <rename>KOS4</rename>
+        <default/>
+        <type>BigNumber</type>
+      </value>
+      <value>
+        <name>KOS5</name>
+        <rename>KOS5</rename>
+        <default/>
+        <type>BigNumber</type>
+      </value>
+      <value>
+        <name>KOS6</name>
+        <rename>KOS6</rename>
+        <default/>
+        <type>BigNumber</type>
+      </value>
+    </lookup>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>793</xloc>
+      <yloc>220</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
     <name>level</name>
     <type>SelectValues</type>
     <description/>
@@ -13280,299 +13573,6 @@ SELECT project_id, J10_CH_NAMA_WPP_UTA_TB AS nama_seliatapak, J10_CH_PJBT_WPP_UT
     <GUI>
       <xloc>1209</xloc>
       <yloc>780</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>kos</name>
-    <type>TableInput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>J10</connection>
-    <sql>--select id,cal from (
-select 
-
-a.project_id ,
---case when to_char(a.J10_CH_SAH_CPC_DT,'yyyy')&lt;to_char(sysdate,'yyyy')-8 and u.J10_CH_TRIK_BAYARAN is null then 1 else 0 end as befo,
-
-sum (case when to_char(a.J10_CH_SAH_CPC_DT,'yyyy')&lt;to_char(sysdate,'yyyy')-8 and u.J10_CH_TRIK_BAYARAN is null 
-then (u.J10_CH_KOSKONSEMASA_CM - m.j10_ch_bayaran_hingga_kini) else 0 end) as kos1,
-sum (case when to_char(a.J10_CH_SAH_CPC_DT,'yyyy')=to_char(sysdate,'yyyy')-8 and u.J10_CH_TRIK_BAYARAN is null 
-then (u.J10_CH_KOSKONSEMASA_CM - m.j10_ch_bayaran_hingga_kini) else 0 end) as kos2,
-sum (case when to_char(a.J10_CH_SAH_CPC_DT,'yyyy')=to_char(sysdate,'yyyy')-7 and u.J10_CH_TRIK_BAYARAN is null 
-then (u.J10_CH_KOSKONSEMASA_CM - m.j10_ch_bayaran_hingga_kini) else 0 end) as kos3,
-sum (case when to_char(a.J10_CH_SAH_CPC_DT,'yyyy')=to_char(sysdate,'yyyy')-6 and u.J10_CH_TRIK_BAYARAN is null 
-then (u.J10_CH_KOSKONSEMASA_CM - m.j10_ch_bayaran_hingga_kini) else 0 end) as kos4,
-sum (case when to_char(a.J10_CH_SAH_CPC_DT,'yyyy')=to_char(sysdate,'yyyy')-5 and u.J10_CH_TRIK_BAYARAN is null 
-then (u.J10_CH_KOSKONSEMASA_CM - m.j10_ch_bayaran_hingga_kini) else 0 end) as kos5,
-sum (case when to_char(a.J10_CH_SAH_CPC_DT,'yyyy')=to_char(sysdate,'yyyy')-4 and u.J10_CH_TRIK_BAYARAN is null 
-then (u.J10_CH_KOSKONSEMASA_CM - m.j10_ch_bayaran_hingga_kini) else 0 end) as kos6
-
-FROM unifier_upi_view a
-LEFT JOIN unifier_uxjlk m ON a.PROJECT_ID=m.PROJECT_ID
-LEFT JOIN unifier_uxpkd t ON a.project_id=t.project_id
-LEFT JOIN unifier_uxjsofa u ON a.project_id=u.project_id
-LEFT JOIN unifier_uxjbmj66 v ON a.project_id=v.project_id group by a.project_id
-
-</sql>
-    <limit>0</limit>
-    <lookup/>
-    <execute_each_row>N</execute_each_row>
-    <variables_active>N</variables_active>
-    <lazy_conversion_active>N</lazy_conversion_active>
-    <cached_row_meta_active>N</cached_row_meta_active>
-    <row-meta>
-      <value-meta>
-        <type>Integer</type>
-        <storagetype>normal</storagetype>
-        <name>PROJECT_ID</name>
-        <length>10</length>
-        <precision>0</precision>
-        <origin>kos</origin>
-        <comments>PROJECT_ID</comments>
-        <conversion_Mask>####0;-####0</conversion_Mask>
-        <decimal_symbol>.</decimal_symbol>
-        <grouping_symbol>,</grouping_symbol>
-        <currency_symbol/>
-        <trim_type>none</trim_type>
-        <case_insensitive>N</case_insensitive>
-        <collator_disabled>Y</collator_disabled>
-        <collator_strength>0</collator_strength>
-        <sort_descending>N</sort_descending>
-        <output_padding>N</output_padding>
-        <date_format_lenient>N</date_format_lenient>
-        <date_format_locale>en_MY</date_format_locale>
-        <date_format_timezone>Asia/Singapore</date_format_timezone>
-        <lenient_string_to_number>N</lenient_string_to_number>
-      </value-meta>
-      <value-meta>
-        <type>BigNumber</type>
-        <storagetype>normal</storagetype>
-        <name>KOS1</name>
-        <length>-1</length>
-        <precision>-1</precision>
-        <origin>kos</origin>
-        <comments>KOS1</comments>
-        <conversion_Mask>######0.0###################;-######0.0###################</conversion_Mask>
-        <decimal_symbol>.</decimal_symbol>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <trim_type>none</trim_type>
-        <case_insensitive>N</case_insensitive>
-        <collator_disabled>Y</collator_disabled>
-        <collator_strength>0</collator_strength>
-        <sort_descending>N</sort_descending>
-        <output_padding>N</output_padding>
-        <date_format_lenient>N</date_format_lenient>
-        <date_format_locale>en_MY</date_format_locale>
-        <date_format_timezone>Asia/Singapore</date_format_timezone>
-        <lenient_string_to_number>N</lenient_string_to_number>
-      </value-meta>
-      <value-meta>
-        <type>BigNumber</type>
-        <storagetype>normal</storagetype>
-        <name>KOS2</name>
-        <length>-1</length>
-        <precision>-1</precision>
-        <origin>kos</origin>
-        <comments>KOS2</comments>
-        <conversion_Mask>######0.0###################;-######0.0###################</conversion_Mask>
-        <decimal_symbol>.</decimal_symbol>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <trim_type>none</trim_type>
-        <case_insensitive>N</case_insensitive>
-        <collator_disabled>Y</collator_disabled>
-        <collator_strength>0</collator_strength>
-        <sort_descending>N</sort_descending>
-        <output_padding>N</output_padding>
-        <date_format_lenient>N</date_format_lenient>
-        <date_format_locale>en_MY</date_format_locale>
-        <date_format_timezone>Asia/Singapore</date_format_timezone>
-        <lenient_string_to_number>N</lenient_string_to_number>
-      </value-meta>
-      <value-meta>
-        <type>BigNumber</type>
-        <storagetype>normal</storagetype>
-        <name>KOS3</name>
-        <length>-1</length>
-        <precision>-1</precision>
-        <origin>kos</origin>
-        <comments>KOS3</comments>
-        <conversion_Mask>######0.0###################;-######0.0###################</conversion_Mask>
-        <decimal_symbol>.</decimal_symbol>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <trim_type>none</trim_type>
-        <case_insensitive>N</case_insensitive>
-        <collator_disabled>Y</collator_disabled>
-        <collator_strength>0</collator_strength>
-        <sort_descending>N</sort_descending>
-        <output_padding>N</output_padding>
-        <date_format_lenient>N</date_format_lenient>
-        <date_format_locale>en_MY</date_format_locale>
-        <date_format_timezone>Asia/Singapore</date_format_timezone>
-        <lenient_string_to_number>N</lenient_string_to_number>
-      </value-meta>
-      <value-meta>
-        <type>BigNumber</type>
-        <storagetype>normal</storagetype>
-        <name>KOS4</name>
-        <length>-1</length>
-        <precision>-1</precision>
-        <origin>kos</origin>
-        <comments>KOS4</comments>
-        <conversion_Mask>######0.0###################;-######0.0###################</conversion_Mask>
-        <decimal_symbol>.</decimal_symbol>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <trim_type>none</trim_type>
-        <case_insensitive>N</case_insensitive>
-        <collator_disabled>Y</collator_disabled>
-        <collator_strength>0</collator_strength>
-        <sort_descending>N</sort_descending>
-        <output_padding>N</output_padding>
-        <date_format_lenient>N</date_format_lenient>
-        <date_format_locale>en_MY</date_format_locale>
-        <date_format_timezone>Asia/Singapore</date_format_timezone>
-        <lenient_string_to_number>N</lenient_string_to_number>
-      </value-meta>
-      <value-meta>
-        <type>BigNumber</type>
-        <storagetype>normal</storagetype>
-        <name>KOS5</name>
-        <length>-1</length>
-        <precision>-1</precision>
-        <origin>kos</origin>
-        <comments>KOS5</comments>
-        <conversion_Mask>######0.0###################;-######0.0###################</conversion_Mask>
-        <decimal_symbol>.</decimal_symbol>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <trim_type>none</trim_type>
-        <case_insensitive>N</case_insensitive>
-        <collator_disabled>Y</collator_disabled>
-        <collator_strength>0</collator_strength>
-        <sort_descending>N</sort_descending>
-        <output_padding>N</output_padding>
-        <date_format_lenient>N</date_format_lenient>
-        <date_format_locale>en_MY</date_format_locale>
-        <date_format_timezone>Asia/Singapore</date_format_timezone>
-        <lenient_string_to_number>N</lenient_string_to_number>
-      </value-meta>
-      <value-meta>
-        <type>BigNumber</type>
-        <storagetype>normal</storagetype>
-        <name>KOS6</name>
-        <length>-1</length>
-        <precision>-1</precision>
-        <origin>kos</origin>
-        <comments>KOS6</comments>
-        <conversion_Mask>######0.0###################;-######0.0###################</conversion_Mask>
-        <decimal_symbol>.</decimal_symbol>
-        <grouping_symbol/>
-        <currency_symbol/>
-        <trim_type>none</trim_type>
-        <case_insensitive>N</case_insensitive>
-        <collator_disabled>Y</collator_disabled>
-        <collator_strength>0</collator_strength>
-        <sort_descending>N</sort_descending>
-        <output_padding>N</output_padding>
-        <date_format_lenient>N</date_format_lenient>
-        <date_format_locale>en_MY</date_format_locale>
-        <date_format_timezone>Asia/Singapore</date_format_timezone>
-        <lenient_string_to_number>N</lenient_string_to_number>
-      </value-meta>
-    </row-meta>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>793</xloc>
-      <yloc>108</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>kos look up</name>
-    <type>StreamLookup</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <from>kos</from>
-    <input_sorted>N</input_sorted>
-    <preserve_memory>Y</preserve_memory>
-    <sorted_list>Y</sorted_list>
-    <integer_pair>N</integer_pair>
-    <lookup>
-      <key>
-        <name>PROJECT_ID</name>
-        <field>PROJECT_ID</field>
-      </key>
-      <value>
-        <name>KOS1</name>
-        <rename>KOS1</rename>
-        <default/>
-        <type>BigNumber</type>
-      </value>
-      <value>
-        <name>KOS2</name>
-        <rename>KOS2</rename>
-        <default/>
-        <type>BigNumber</type>
-      </value>
-      <value>
-        <name>KOS3</name>
-        <rename>KOS3</rename>
-        <default/>
-        <type>BigNumber</type>
-      </value>
-      <value>
-        <name>KOS4</name>
-        <rename>KOS4</rename>
-        <default/>
-        <type>BigNumber</type>
-      </value>
-      <value>
-        <name>KOS5</name>
-        <rename>KOS5</rename>
-        <default/>
-        <type>BigNumber</type>
-      </value>
-      <value>
-        <name>KOS6</name>
-        <rename>KOS6</rename>
-        <default/>
-        <type>BigNumber</type>
-      </value>
-    </lookup>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>793</xloc>
-      <yloc>220</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
