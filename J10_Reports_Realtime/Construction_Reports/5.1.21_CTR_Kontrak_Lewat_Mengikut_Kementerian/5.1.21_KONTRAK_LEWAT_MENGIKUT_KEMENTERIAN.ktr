@@ -51,7 +51,7 @@
       </parameter>
       <parameter>
         <name>pejabat_filter</name>
-        <default_value>Pengurus Program</default_value>
+        <default_value>KEMENTERIAN</default_value>
         <description/>
       </parameter>
       <parameter>
