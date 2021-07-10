@@ -9450,8 +9450,8 @@ rpdecide='NOT AVAILABLE'
       </output>
     </remotesteps>
     <GUI>
-      <xloc>464</xloc>
-      <yloc>608</yloc>
+      <xloc>272</xloc>
+      <yloc>592</yloc>
       <draw>Y</draw>
     </GUI>
   </step>

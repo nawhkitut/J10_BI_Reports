@@ -812,11 +812,11 @@
     <name>J10</name>
     <server>10.8.69.233</server>
     <type>ORACLE</type>
-    <access>Native</access>
-    <database>j10</database>
+    <access>JNDI</access>
+    <database>J10</database>
     <port>1521</port>
-    <username>unifier</username>
-    <password>Encrypted 2be98afc86aa7f2e4cb0ca079d89baac8</password>
+    <username/>
+    <password>Encrypted </password>
     <servername/>
     <data_tablespace>j10</data_tablespace>
     <index_tablespace/>
@@ -867,11 +867,11 @@
     <name>J10_Reports_DM</name>
     <server>10.8.69.165</server>
     <type>POSTGRESQL</type>
-    <access>Native</access>
+    <access>JNDI</access>
     <database>J10_Reports_DM</database>
     <port>5432</port>
-    <username>postgres</username>
-    <password>Encrypted 2be98afb80bd48193fb0baa508cc2fe83</password>
+    <username/>
+    <password>Encrypted </password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
@@ -3756,6 +3756,71 @@ from unifier_uxjpcs_view
     <GUI>
       <xloc>432</xloc>
       <yloc>304</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Filter rows 10</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <send_true_to/>
+    <send_false_to>Group by</send_false_to>
+    <compare>
+      <condition>
+        <negated>N</negated>
+        <conditions>
+          <condition>
+            <negated>N</negated>
+            <leftvalue>PEJABAT1</leftvalue>
+            <function>LIKE</function>
+            <rightvalue/>
+            <value>
+              <name>constant</name>
+              <type>String</type>
+              <text>KEMENTERIAN</text>
+              <length>-1</length>
+              <precision>-1</precision>
+              <isnull>N</isnull>
+              <mask/>
+            </value>
+          </condition>
+          <condition>
+            <negated>N</negated>
+            <operator>OR</operator>
+            <leftvalue>PEJABAT1</leftvalue>
+            <function>LIKE</function>
+            <rightvalue/>
+            <value>
+              <name>constant</name>
+              <type>String</type>
+              <text>Lokasi Tapak</text>
+              <length>-1</length>
+              <precision>-1</precision>
+              <isnull>N</isnull>
+              <mask/>
+            </value>
+          </condition>
+        </conditions>
+      </condition>
+    </compare>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>880</xloc>
+      <yloc>1024</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -18695,71 +18760,6 @@ select project_id,J10_PL_Rujukan_Kod_Projek from unifier_uxjactte_view where J10
     <GUI>
       <xloc>1648</xloc>
       <yloc>640</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Filter rows 10</name>
-    <type>FilterRows</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <send_true_to/>
-    <send_false_to>Group by</send_false_to>
-    <compare>
-      <condition>
-        <negated>N</negated>
-        <conditions>
-          <condition>
-            <negated>N</negated>
-            <leftvalue>PEJABAT1</leftvalue>
-            <function>LIKE</function>
-            <rightvalue/>
-            <value>
-              <name>constant</name>
-              <type>String</type>
-              <text>KEMENTERIAN</text>
-              <length>-1</length>
-              <precision>-1</precision>
-              <isnull>N</isnull>
-              <mask/>
-            </value>
-          </condition>
-          <condition>
-            <negated>N</negated>
-            <operator>OR</operator>
-            <leftvalue>PEJABAT1</leftvalue>
-            <function>LIKE</function>
-            <rightvalue/>
-            <value>
-              <name>constant</name>
-              <type>String</type>
-              <text>Lokasi Tapak</text>
-              <length>-1</length>
-              <precision>-1</precision>
-              <isnull>N</isnull>
-              <mask/>
-            </value>
-          </condition>
-        </conditions>
-      </condition>
-    </compare>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>880</xloc>
-      <yloc>1024</yloc>
       <draw>Y</draw>
     </GUI>
   </step>

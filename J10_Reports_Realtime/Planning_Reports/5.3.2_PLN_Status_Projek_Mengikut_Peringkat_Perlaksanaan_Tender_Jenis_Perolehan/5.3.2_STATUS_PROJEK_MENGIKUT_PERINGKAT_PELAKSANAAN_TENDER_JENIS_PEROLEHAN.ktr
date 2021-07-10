@@ -500,11 +500,11 @@
     <name>J10</name>
     <server>10.8.69.233</server>
     <type>ORACLE</type>
-    <access>Native</access>
-    <database>j10</database>
+    <access>JNDI</access>
+    <database>J10</database>
     <port>1521</port>
-    <username>unifier</username>
-    <password>Encrypted 2be98afc86aa7f2e4cb0ca079d89baac8</password>
+    <username/>
+    <password>Encrypted </password>
     <servername/>
     <data_tablespace>unifier</data_tablespace>
     <index_tablespace/>
@@ -555,11 +555,11 @@
     <name>J10_Reports_DM</name>
     <server>10.8.69.165</server>
     <type>POSTGRESQL</type>
-    <access>Native</access>
+    <access>JNDI</access>
     <database>J10_Reports_DM</database>
     <port>5432</port>
-    <username>postgres</username>
-    <password>Encrypted 2be98afb80bd48193fb0baa508cc2fe83</password>
+    <username/>
+    <password>Encrypted </password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
